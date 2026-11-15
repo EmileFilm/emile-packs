@@ -1,0 +1,11 @@
+{
+  "id": "emile/push",
+  "kind": "transition",
+  "version": "1.0.0",
+  "title": { "en": "Push", "zh-CN": "推移" },
+  "description": { "en": "The next picture slides in and pushes this one away: onward.", "zh-CN": "下一个画面滑进来，把这一个推走：往前走。" },
+  "params": [],
+  "backends": { "glsl": "shader.glsl" },
+  "licence": "MIT",
+  "publisher": "emile"
+}

@@ -1,0 +1,314 @@
+{
+ "format": 1,
+ "tag": "v1.0.0",
+ "published": "2026-11-15T14:30:29.719Z",
+ "contract": 1,
+ "packs": [
+  {
+   "id": "emile/dissolve",
+   "version": "1.0.0",
+   "kind": "transition",
+   "category": null,
+   "title": {
+    "en": "Dissolve",
+    "zh-CN": "溶解"
+   },
+   "description": {
+    "en": "The two pictures melt into each other, gently at both ends.",
+    "zh-CN": "两个画面慢慢融进彼此，首尾都很轻。"
+   },
+   "params": [],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 461,
+     "sha256": "ff40df26db246a89ada3431e518be08ef5bcdfc4ea4fb7507e86b1f6fa8e1a7b"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 382,
+     "sha256": "4bc70383654a11df39cc2a008489a84f2578500772d93c6def5949340cd8b467"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 170,
+     "sha256": "c8d39ecff771d68f1aa27f5904cb331eef1282228f10e2165a5cc986a92ca62a"
+    }
+   ]
+  },
+  {
+   "id": "emile/grain",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "texture",
+   "title": {
+    "en": "Grain",
+    "zh-CN": "颗粒"
+   },
+   "description": {
+    "en": "A picture you can almost touch: fine grain that lives from frame to frame.",
+    "zh-CN": "画面摸起来有颗粒：细细的颗粒，每一帧都在动。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 0.35,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "size",
+     "type": "float",
+     "default": 1.6,
+     "min": 0.5,
+     "max": 6,
+     "step": 0.1,
+     "label": {
+      "en": "Grain size",
+      "zh-CN": "颗粒大小"
+     }
+    },
+    {
+     "id": "colour",
+     "type": "bool",
+     "default": false,
+     "label": {
+      "en": "Coloured grain",
+      "zh-CN": "彩色颗粒"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 665,
+     "sha256": "7843eedf1a0b3135b4e383df4b95c2ae1952185a8e6f54260bce6b6352aaccad"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1069,
+     "sha256": "3756c128eeb5860eeefb1c074085d98b9256325984fe42ca2bec18c82006a797"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1428,
+     "sha256": "48678d3ed7e06744fa31e6ad95fe4faf73199775d227221e9ca50064214f4d49"
+    }
+   ]
+  },
+  {
+   "id": "emile/halftone",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "print",
+   "title": {
+    "en": "Halftone",
+    "zh-CN": "网点"
+   },
+   "description": {
+    "en": "Like a photo in an old newspaper: the picture made of ink dots on paper.",
+    "zh-CN": "像旧报纸上的照片：画面由纸上的油墨点组成。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "cell",
+     "type": "float",
+     "default": 12,
+     "min": 4,
+     "max": 60,
+     "step": 1,
+     "label": {
+      "en": "Dot spacing",
+      "zh-CN": "网点间距"
+     }
+    },
+    {
+     "id": "angle",
+     "type": "float",
+     "default": 45,
+     "min": 0,
+     "max": 90,
+     "step": 1,
+     "label": {
+      "en": "Screen angle",
+      "zh-CN": "网线角度"
+     }
+    },
+    {
+     "id": "mode",
+     "type": "choice",
+     "default": "ink",
+     "options": [
+      "ink",
+      "colour"
+     ],
+     "label": {
+      "en": "Dots in",
+      "zh-CN": "网点颜色"
+     }
+    },
+    {
+     "id": "ink",
+     "type": "color",
+     "default": "#1c1b1a",
+     "label": {
+      "en": "Ink",
+      "zh-CN": "油墨"
+     }
+    },
+    {
+     "id": "paper",
+     "type": "color",
+     "default": "#f2ede3",
+     "label": {
+      "en": "Paper",
+      "zh-CN": "纸"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 699,
+     "sha256": "8e4c9a7b9a95ddf0242449b70c324edb07cc8aec628db64071d5ef56f02846e2"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1621,
+     "sha256": "afa2f1caccec697ed03489822884b39fd47b0246c114f931710005bb4d9341c2"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1165,
+     "sha256": "4ee99fe9ff22585cbfd0d0d57e0b8348b46960d9e14b4b360174c6af62e1d2e3"
+    }
+   ]
+  },
+  {
+   "id": "emile/push",
+   "version": "1.0.0",
+   "kind": "transition",
+   "category": null,
+   "title": {
+    "en": "Push",
+    "zh-CN": "推移"
+   },
+   "description": {
+    "en": "The next picture slides in and pushes this one away: onward.",
+    "zh-CN": "下一个画面滑进来，把这一个推走：往前走。"
+   },
+   "params": [],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 468,
+     "sha256": "880883b1e41243e60daea417c3955d8b34b7b33b0fdcbfd507e2dd283e34eb7c"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 384,
+     "sha256": "442a74fc0c6285e4381c013b95e9079713722c7099a7aa1492d0a2823270aa6e"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 269,
+     "sha256": "b7fb4f74013f5d1015f9f445d761b7585b44e0cecff591a020e491c3ac6d4a7e"
+    }
+   ]
+  },
+  {
+   "id": "emile/wipe",
+   "version": "1.0.0",
+   "kind": "transition",
+   "category": null,
+   "title": {
+    "en": "Wipe",
+    "zh-CN": "擦除"
+   },
+   "description": {
+    "en": "A clean, designed change, like turning a page sideways.",
+    "zh-CN": "干净、有设计感的切换，像侧着翻过一页。"
+   },
+   "params": [],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 464,
+     "sha256": "24ffef60e9ce1dc799ba483b1aa9a6c7f4b9c22d252f0c63fbec579ff74ee6bc"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 376,
+     "sha256": "5371df071486998f8e66866a2604ea4ca9b63af1bea29c81946310f9519697c9"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 262,
+     "sha256": "5e223fd1176610ee091c96b67b54b46585f089f619766e701aed7c77aa6371e3"
+    }
+   ]
+  },
+  {
+   "id": "emile/zoom",
+   "version": "1.0.0",
+   "kind": "transition",
+   "category": null,
+   "title": {
+    "en": "Zoom",
+    "zh-CN": "缩放"
+   },
+   "description": {
+    "en": "Flying in: going deeper, into the next idea.",
+    "zh-CN": "飞进去：往深处走，进到下一个想法。"
+   },
+   "params": [],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 401,
+     "sha256": "e25bb17421b69cfdda5db8263bc616fb8e93b6ed87f83c174cc1cd56acbba84e"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 359,
+     "sha256": "b2e2728c9996bb578b89457e463408ec3630b353c020b38073e2708ab7e363f3"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 309,
+     "sha256": "336eabf74a37382a82ee1137148a43e47f436e2c675d37d71227e866b60e46dc"
+    }
+   ]
+  }
+ ]
+}

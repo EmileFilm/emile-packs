@@ -1,0 +1,5 @@
+# Signing keys never go into this repository
+*.pem
+*.key
+node_modules/
+.DS_Store
