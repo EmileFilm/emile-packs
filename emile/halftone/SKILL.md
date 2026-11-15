@@ -30,6 +30,9 @@ Only when the story asks for print, never as decoration.
 ## 俗套
 The tired version is a film of tiny grey dots that only makes the picture dirty, or rainbow pop-art dots on yellow. Keep cell at 10 or more, one ink, paper off-white (never pure white), and no neon ink.
 
+## 时长
+点缀：一个时刻 1–4 秒（一句话、一张海报定格），一段最多 5 秒左右。不放在要读信息的镜头上（界面、数字、正文）。
+
 ## 参数
 - `amount` 0–1: 1 is the print; 0.5 dots over the picture's own colours.
 - `cell` 6–80 (pixels of a 1080-pixel frame): 10–14 a fine screen, 18 the default, 28–40 poster dots.

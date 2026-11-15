@@ -28,6 +28,9 @@ Only for one of two reasons.
 ## 俗套
 The tired version is a fat red-and-cyan split over the whole frame, all the time. Default to lens; keep strength at 0.4 or under for anything longer than a second.
 
+## 时长
+lens（弱）可以跟着整个镜头，甚至全片给渲染画面一点镜头感；shift 只给 0.3–1 秒的冲击。
+
 ## 参数
 - `amount` 0–1: scales how far the colours part.
 - `strength` 0–1: 0.3 the default.

@@ -28,6 +28,9 @@ Only when the film should feel printed, written or drawn.
 ## 俗套
 The tired version is yellowed parchment with stains and burnt edges. Keep the tone close to white (#f1e8d6 warm, #eef0ec cool), texture at 0.6 or under.
 
+## 时长
+收尾质感，可以长：绘本式讲解、信纸式文字可以整段甚至全片（texture 0.5 以下）；实拍与产品镜头不要。
+
 ## 参数
 - `amount` 0–1: 1 is the print on the sheet.
 - `texture` 0–1: the tooth and the mottle; 0.5 the default.

@@ -28,6 +28,9 @@ Only when a dark picture should glow.
 ## 俗套
 The tired version is a milky glow over everything that washes the contrast out, or lens flares. Keep threshold at 0.6 or more and leave the dark parts dark.
 
+## 时长
+跟着镜头：暗场有亮点的那个镜头多长就多长；它很克制，不挡信息。
+
 ## 参数
 - `amount` 0–1: how much light spills.
 - `threshold` 0.3–0.95: how bright something must be to spill; 0.7 the default.

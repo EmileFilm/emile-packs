@@ -29,6 +29,9 @@ Only when the picture is a recording of the past.
 ## 俗套
 The tired version is thick bars of static, a "PLAY ▶" overlay and a rainbow glitch on every frame. Keep jitter at 0.6 or under and noise at 0.5 or under; add no overlays.
 
+## 时长
+一段：回忆、旧素材那一段 2–6 秒，然后切回干净的现在；全片只在整支片子讲过去时。
+
 ## 参数
 - `amount` 0–1: how worn the tape is.
 - `jitter` 0–1: how far lines wander and how hard the bottom tears.

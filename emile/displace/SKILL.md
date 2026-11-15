@@ -30,6 +30,9 @@ Only when something in the story breaks, slips or hits.
 ## 俗套
 The tired version is the whole frame split into red and cyan and flickering every frame, with scan lines on top. Keep speed at 0.5 or under unless the music hits, split at 0.3 or under, slices at 0.6 or under.
 
+## 时长
+点缀：0.3–1.5 秒，卡在节拍或「出问题」的那一下；超过 2 秒就没有意义了。
+
 ## 参数
 - `amount` 0–1: scales how far bands slip.
 - `slices` 0–1: how much of the picture slips; 0.5 the default.

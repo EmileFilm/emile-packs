@@ -32,6 +32,9 @@ Only when the film wants a designed world. Each palette says something different
 ## 俗套
 The tired versions are rainbow posterizing, the purple-and-orange sunset, and the green handheld-console joke. None is here; don't rebuild them by stacking a duotone on top.
 
+## 时长
+点缀：2–5 秒，一个设计感的时刻；热成像这类可以撑一个「看见看不见的东西」的镜头。不铺全片。
+
 ## 参数
 - `amount` 0–1: 1 is five inks; 0.5 tints the picture.
 - `palette`: `poster`, `thermal`, `cyanotype`, `moss`, `silver`, `primary`.

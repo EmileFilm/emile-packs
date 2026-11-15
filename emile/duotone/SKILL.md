@@ -29,6 +29,9 @@ Only when the film needs one mood or one brand over pictures that don't share it
 ## 俗套
 The tired version is a neon pair, hot pink with electric blue or purple with orange. Keep the dark colour really dark and the light one really light (a dark under a fifth of full brightness, a light over four fifths), and both a little muted.
 
+## 时长
+一段：一个镜头到一个场景（回忆、强调、给字当底）；全片只在把杂乱来源统一成品牌两色、且人这么要求时。
+
 ## 参数
 - `amount` 0–1: 1 is two colours; 0.5 tints the picture.
 - `dark`, `light`: the two colours.

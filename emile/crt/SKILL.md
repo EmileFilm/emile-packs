@@ -29,6 +29,9 @@ Only when the picture is meant to be on a screen inside the story.
 ## 俗套
 The tired version is a heavy fish-eye bulge, thick black bars, a green tint and a blinking "REC". Keep curvature at 0.4 or under and scanlines at 0.7 or under; add no overlays.
 
+## 时长
+一段：「当年」那一段 2–6 秒，或画中画里的一块屏幕；不铺全片。
+
 ## 参数
 - `amount` 0–1: how much tube.
 - `curvature` 0–1: the bulge of the face; 0.3 the default.

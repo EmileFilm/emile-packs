@@ -30,6 +30,9 @@ Only when the film wants to feel made by hand, by people.
 ## 俗套
 The tired version is a pink-and-cyan gradient with noise laid on top. Choose inks that exist in a print shop's drums and are not neon: blue #2f4fa2 with bright red #f0523f (default), teal #00838a with orange #ff6c2f, black #232323 with red #e8452c. Keep misregister under 0.5: more looks like a mistake, not a print.
 
+## 时长
+点缀为主：标题卡、章节卡、片尾 2–5 秒；整个开场段（10 秒左右）只在品牌本身就是独立、手作气质时。
+
 ## 参数
 - `amount` 0–1: 1 is the print.
 - `ink_a`, `ink_b`: the two inks. Cool and dark things go to the one nearer them, warm things to the other.

@@ -29,6 +29,9 @@ Only when the picture is too clean for what it is saying.
 ## 俗套
 The tired version is television static at full strength, or "cinematic" grain on everything. For a whole film stay at 0.3 or under; size 1–2; coloured grain only for a deliberately rough look.
 
+## 时长
+收尾质感，可以长：amount 0.25 以下可以盖全片，把不同来源的画面统一成一种表面；更重的（0.4 以上）只给一段情绪戏。
+
 ## 参数
 - `amount` 0–1: 0.15–0.3 a touch, 0.35 the default, 0.4–0.7 an obvious film look.
 - `size` 0.5–6 (pixels of a 1080-pixel frame): 1–2 fine, 3 and up coarse.

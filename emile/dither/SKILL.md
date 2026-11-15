@@ -31,6 +31,9 @@ Only when the film speaks about machines, data, or a rough hand-made copy.
 ## 俗套
 The tired version is a one-pixel dither that looks like a broken GIF, or a green "Matrix" tint. Keep size at 2 or more, and ink and paper off-black and off-white or the brand's dark and light.
 
+## 时长
+点缀：1–4 秒，「机器的视角」那一下；夹在干净的镜头之间才有意思。不铺长段。
+
 ## 参数
 - `amount` 0–1: 1 is one bit.
 - `size` 1–12 (pixels of a 1080-pixel frame): 2–3 fine, 4–6 chunky.

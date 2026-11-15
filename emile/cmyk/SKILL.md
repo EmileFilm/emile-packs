@@ -29,6 +29,9 @@ Only when the picture should be seen as something printed in thousands.
 ## 俗套
 The tired version darkens the whole picture under a rainbow moiré. Keep dots at 8 or more so the rosette reads as dots, and offset under 0.5.
 
+## 时长
+点缀：1–3 秒，一个「印出来了」的时刻。不铺长段，不放在要读信息的镜头上。
+
 ## 参数
 - `amount` 0–1: 1 is the print.
 - `dots` 5–40 (pixels of a 1080-pixel frame): 8–12 a fine rosette, 16–24 dots you can count.

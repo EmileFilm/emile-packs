@@ -6,6 +6,21 @@
 
 Émile ships no packs of its own: a film downloads what it uses from this repository the first time, checks every file against a signed index, and keeps it on the Mac for offline use. Nothing here copies another product's code, presets or examples — every shader, name and parameter is written for Émile.
 
+## What it does
+
+Tell Émile's AI how a moment should feel, and it lays the right filter over it: it picks the pack by what each one brings, reads that pack's guide, and sets it the way the guide says. You never need a filter's name or a parameter.
+
+| Say | What happens |
+|---|---|
+| "Add a touch of grain." | `emile/grain` over the whole film at amount 0.15–0.25: a light grain is a finish, the one kind of filter that may run the whole length. |
+| "Make the flashback feel like an old tape." | `emile/vhs` over that scene only, two to six seconds, then back to the clean present. |
+| "Put the second scene behind fluted glass before the reveal." | `emile/fluted-glass` over the seconds before the reveal; the AI warns that words under it won't read, and suggests keeping them on a track above. |
+| "Turn the whole film navy and cream." | `emile/duotone` with those two colours as hex, over the whole film because it was asked for. |
+
+## Seconds, not minutes
+
+Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say (see the second gallery below). Every `SKILL.md` says how long its filter holds up (`时长`), and Émile's AI keeps to it unless you ask for more. The exceptions are finishes so light they read as a surface rather than an effect: a little grain, paper under an illustrated film, a weak lens fringe.
+
 ## A quick look
 
 One picture, every filter at its defaults, side by side — this is how a pack is judged before it ships (see [The bar](#the-bar)):
@@ -58,6 +73,7 @@ A filter here is not just a shader: every pack folder has a `SKILL.md` — a sho
 - **when to use it**: the moments in a story that call for it, each with the settings that work, and the words a person might reach for — in English and in Chinese.
 - **what it suits and what it fails on**, as a review of real pictures showed it (a product shot, an app's screen, a portrait in low light), with the setting that mends a failure where one exists.
 - **the tired version of the effect**, named outright, so the defaults steer away from it.
+- **how long it holds up**: seconds for most, a whole film only for the lightest finishes.
 - **its parameters**, with the values that actually work, not just their ranges.
 
 That makes this repository more than an asset pack: a coding agent working on a video, inside Émile or anywhere else, can read a pack's `SKILL.md` the way it would read a project's own docs, before it ever writes a parameter. Ask for "a touch of grain" or "make it feel like a nineties camcorder," and the agent has, in that one file, enough to pick the right pack and set it well — not guess.

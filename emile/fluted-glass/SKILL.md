@@ -29,6 +29,9 @@ Only when something should be sensed before it is seen, or kept private.
 ## 俗套
 The tired version is a weak wavy wobble like a shower door, or a rainbow "glass" sticker. Keep refraction at 0.4 or more so it reads as glass, width 0.03–0.06, and the ribs upright (angle 0) or level (90).
 
+## 时长
+点缀：揭晓前 1–3 秒，或给一行大字当底；不放在要读的信息上，字放在滤镜上面的轨道。
+
 ## 参数
 - `amount` 0–1: how much glass.
 - `width` 0.01–0.2 (share of the frame's short side): 0.02 fine reeds, 0.04 the default, 0.08 wide flutes.
