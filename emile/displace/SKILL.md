@@ -7,33 +7,33 @@ description: Bands of the picture slip sideways, something has shifted, and hold
 
 A break in the picture: a few bands slip sideways, their colours parting a little, and the arrangement holds until the next beat. Most of the frame stays where it was, so the picture is still whole.
 
-## 角色
-光学 (optics): over the picture and its colour, under a finish.
+## Role
+Optics: over the picture and its colour, under a finish.
 
-## 何时用
+## When to use
 Only when something in the story breaks, slips or hits.
 - **The problem** (the outage, the error, the mess before the product arrives): half a second to a second and a half, then a clean cut to the answer.
 - **A hit on the music** (a drop, a hard cut): speed 0.5–1 for the bar, shift 0.6.
 - **A breach, a failure, a system out of control** (security, a crashed process, a wrong answer).
 - **A still poster** (a title with the picture slipped once and held): speed 0.
-- Words that call for it: glitch, slice, slip, displaced, corrupted, broken signal, jitter, tension, impact; 错位、故障、撕裂、信号丢失、卡顿、紧张、故障风.
+- Words that call for it: glitch, slice, slip, displaced, corrupted, broken signal, jitter, tension, impact.
 
-## 适合
+## Suits
 - Portraits, products and type alike: the picture stays whole under it (checked on every kind of picture).
 - Short spans, two seconds or less, placed on a beat.
 
-## 不适合
+## Doesn't suit
 - Long spans: it tires and stops meaning anything.
 - Calm, trust and reassurance (money, health, safety).
 - Words that must be read during the hit: a slipped band cuts through letters.
 
-## 俗套
+## The tired version
 The tired version is the whole frame split into red and cyan and flickering every frame, with scan lines on top. Keep speed at 0.5 or under unless the music hits, split at 0.3 or under, slices at 0.6 or under.
 
-## 时长
-点缀：0.3–1.5 秒，卡在节拍或「出问题」的那一下；超过 2 秒就没有意义了。
+## How long
+An accent: 0.3–1.5 seconds, on the beat or the moment something goes wrong. Past two seconds it means nothing.
 
-## 参数
+## Parameters
 - `amount` 0–1: scales how far bands slip.
 - `slices` 0–1: how much of the picture slips; 0.5 the default.
 - `shift` 0–1: how far; 0.5 slips a thin band about a twentieth of the width.

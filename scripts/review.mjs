@@ -42,7 +42,7 @@
 //               correlation under 0.6)
 //
 // A ✗ keeps a filter out. A △ is answered in its SKILL.md: the kind of
-// picture goes under 不适合, or the setting that mends it is given (and
+// picture goes under Doesn't suit, or the setting that mends it is given (and
 // tried with --set).
 
 import fs from 'node:fs'

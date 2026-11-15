@@ -151,18 +151,16 @@ A filter here is not just a shader. Each pack's `SKILL.md` is a short guide writ
 | Section | What it holds |
 |---|---|
 | first line | The feeling it brings, in a sentence. |
-| `角色` | Its role when filters are stacked: colour, structure, optics, medium or finish. |
-| `何时用` | The moments in a story that call for it, each with the settings that work, and the words people use for it, in English and Chinese. |
-| `适合` / `不适合` | The pictures it holds up on and the ones it fails on — product shots, interfaces, portraits by day and in low light — with the setting that mends a failure where one exists. |
-| `俗套` | The tired version of the effect, named outright, so nobody falls back into it. |
-| `时长` | How long it holds up: seconds for most, the whole film only for a light finish. |
-| `参数` | Each parameter with the values that actually work, not just its range. |
+| Role | Its role when filters are stacked: colour, structure, optics, medium or finish. |
+| When to use | The moments in a story that call for it, each with the settings that work, and the words people use when they want it. |
+| Suits / Doesn't suit | The pictures it holds up on and the ones it fails on — product shots, interfaces, portraits by day and in low light — with the setting that mends a failure where one exists. |
+| The tired version | The tired version of the effect, named outright, so nobody falls back into it. |
+| How long | How long it holds up: seconds for most, the whole film only for a light finish. |
+| Parameters | Each parameter with the values that actually work, not just its range. |
 
 For example, from `emile/displace`:
 
-> **时长** 点缀：0.3–1.5 秒，卡在节拍或「出问题」的那一下；超过 2 秒就没有意义了。
->
-> *(an accent of 0.3–1.5 seconds, on the beat or the moment something goes wrong; past two seconds it means nothing)*
+> **How long** — An accent: 0.3–1.5 seconds, on the beat or the moment something goes wrong. Past two seconds it means nothing.
 
 An agent that reads this before it places a filter picks the right one, sets it well, keeps it short, and tells you when your picture is one it fails on.
 
@@ -198,7 +196,7 @@ node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measu
 ```
 
 - ✗ keeps a filter out: `amount` 0 changes a byte of the frame; one frame drawn twice differs; a filter that isn't `animated` changes between frames, or an animated one makes the whole frame's brightness wander; 720p and 4K don't look alike; a 1080p frame costs more than 4 ms.
-- △ is answered in its SKILL.md: on some kind of picture, at its defaults, less than 0.7 of the run from dark to light is left, or the picture is hard to find in it (rank correlation under 0.6). The kind of picture goes under `不适合`, or the setting that mends it is given and tried with `--set`.
+- △ is answered in its SKILL.md: on some kind of picture, at its defaults, less than 0.7 of the run from dark to light is left, or the picture is hard to find in it (rank correlation under 0.6). The kind of picture goes under Doesn't suit, or the setting that mends it is given and tried with `--set`.
 
 **Judged** from the sheets it writes (each picture as it is, at the defaults and at `amount` 0.5; pieces of the 1080p frame pixel for pixel; upright and square frames; one gallery per picture with every filter side by side, like the two above). Each answer must be yes:
 
