@@ -4,6 +4,7 @@
 //
 //   node scripts/review.mjs --out <folder outside this repository> [name…]
 //       [--photo <file>]… [--set <name>.<param>=<value>]… [--quick]
+//       [--tiles <folder> [--tile-base <name>=<picture>]…]
 //       [--no-measure] [--engine <Emile/engine>]
 //
 // Each filter is drawn by Émile's own compositor over pictures made here
@@ -20,6 +21,9 @@
 //   <out>/gallery-<picture>.jpg   one picture under every filter's default:
 //                      which filters suit that kind of picture
 //   <out>/report.json  the measures, and which of them a filter fails
+//   --tiles <folder>   also each filter's card for the README, 640 × 360,
+//                      over the first --photo (or --tile-base name=picture,
+//                      for a filter that shows best on another: bloom=night)
 //
 // The measures (the look itself is judged by eye, from the sheet):
 //
@@ -55,6 +59,8 @@ const { values, positionals } = parseArgs({
     set: { type: 'string', multiple: true },
     quick: { type: 'boolean' },
     'no-measure': { type: 'boolean' },
+    tiles: { type: 'string' },
+    'tile-base': { type: 'string', multiple: true },
     engine: { type: 'string' }
   }
 })
@@ -148,6 +154,16 @@ try {
     console.log(`${m.fails.length ? '✗' : '✓'} ${name} · ${m.ms.toFixed(2)} ms · motion ${m.motion.toFixed(2)} · pumping ${m.pumping.toFixed(4)} · sizes ${m.sizes.toFixed(1)} · spill ${(m.spill * 100).toFixed(1)}%\n    tone ${tone}\n    keeps ${keeps}`)
     for (const f of m.fails) console.log(`    ✗ ${f}`)
     for (const w of m.weak) console.log(`    △ ${w}`)
+  }
+  if (values.tiles) {
+    fs.mkdirSync(path.resolve(values.tiles), { recursive: true })
+    const over = Object.fromEntries((values['tile-base'] ?? []).map(s => s.split('=')))
+    const first = photos[0] ?? 'studio'
+    save(await page.evaluate(`Review.tile(null, ${JSON.stringify(first)}, 640, 360)`), path.join(path.resolve(values.tiles), 'original.jpg'))
+    for (const id of ids) {
+      const name = id.split('/')[1]
+      save(await page.evaluate(`Review.tile(${JSON.stringify(id)}, ${JSON.stringify(over[name] ?? first)}, 640, 360)`), path.join(path.resolve(values.tiles), `${name}.jpg`))
+    }
   }
   if (!values.quick) for (const b of bases.filter(b => b !== 'graphic')) save(await page.evaluate(`Review.gallery(${JSON.stringify(ids)}, ${JSON.stringify(b)})`), path.join(out, `gallery-${b}.jpg`))
   if (report.length) fs.writeFileSync(path.join(out, 'report.json'), JSON.stringify(report, null, 1) + '\n')

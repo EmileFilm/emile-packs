@@ -1,10 +1,25 @@
-# Émile packs
+<h1 align="center">Émile packs</h1>
 
-**Free, open-source filters and transitions for [Émile](https://emilefilm.com)**, the video editor built for AI — and a guide any coding agent can read before it reaches for one.
+<p align="center">
+  <b>Fourteen filters and four transitions, free and open, each with a guide an AI reads before it uses one.</b><br>
+  For <a href="https://emilefilm.com">Émile</a>, the video editor built for AI — and for any coding agent that makes video.
+</p>
 
-![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![14 filters](https://img.shields.io/badge/filters-14-orange) ![4 transitions](https://img.shields.io/badge/transitions-4-orange) ![WebGL2](https://img.shields.io/badge/runtime-WebGL2-informational)
+<p align="center">
+  <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT licence">
+  <img src="https://img.shields.io/badge/filters-14-orange" alt="14 filters">
+  <img src="https://img.shields.io/badge/transitions-4-orange" alt="4 transitions">
+  <img src="https://img.shields.io/badge/WebGL2-Chrome%20%26%20WebKit-informational" alt="WebGL2 in Chrome and WebKit">
+</p>
 
-Émile ships no packs of its own: a film downloads what it uses from this repository the first time, checks every file against a signed index, and keeps it on the Mac for offline use. Nothing here copies another product's code, presets or examples — every shader, name and parameter is written for Émile.
+<p align="center">
+  <a href="#the-filters">Filters</a> ·
+  <a href="#use-them">Use them</a> ·
+  <a href="#reading-a-skillmd">Reading a SKILL.md</a> ·
+  <a href="#for-pack-authors">For pack authors</a>
+</p>
+
+<img src="docs/gallery-portrait.jpg" width="100%" alt="One studio portrait through all fourteen filters at their defaults">
 
 ## What it does
 
@@ -14,49 +29,77 @@ Tell Émile's AI how a moment should feel, and it lays the right filter over it:
 |---|---|
 | "Add a touch of grain." | `emile/grain` over the whole film at amount 0.15–0.25: a light grain is a finish, the one kind of filter that may run the whole length. |
 | "Make the flashback feel like an old tape." | `emile/vhs` over that scene only, two to six seconds, then back to the clean present. |
-| "Put the second scene behind fluted glass before the reveal." | `emile/fluted-glass` over the seconds before the reveal; the AI warns that words under it won't read, and suggests keeping them on a track above. |
+| "Some tape feel, please." | No span named, so the AI asks where, recommending the opening seconds, and says why: tape over a whole product demo blurs its interface. |
 | "Turn the whole film navy and cream." | `emile/duotone` with those two colours as hex, over the whole film because it was asked for. |
 
-## Seconds, not minutes
+### Seconds, not minutes
 
-Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say (see the second gallery below). Every `SKILL.md` says how long its filter holds up (`时长`), and Émile's AI keeps to it unless you ask for more. The exceptions are finishes so light they read as a surface rather than an effect: a little grain, paper under an illustrated film, a weak lens fringe.
+Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say:
 
-## A quick look
+<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through all fourteen filters: the strong ones make its words hard to read">
 
-One picture, every filter at its defaults, side by side — this is how a pack is judged before it ships (see [The bar](#the-bar)):
-
-<img src="docs/gallery-portrait.jpg" width="100%" alt="A studio portrait through all fourteen filters">
-
-<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through all fourteen filters">
+Every guide says how long its filter holds up, and Émile's AI keeps to it unless you ask for more. The exceptions are finishes light enough to read as a surface: a little grain, paper under an illustrated film, a faint lens fringe.
 
 ## The filters
 
-| Pack | What it brings |
-|---|---|
-| **Print** — ink on paper | |
-| `emile/halftone` | A picture pulled through a printer's screen: ink dots on paper, bold enough to read as print. |
-| `emile/risograph` | A two-colour print run: two inks laid one over the other, a little out of register, on uncoated paper. |
-| `emile/cmyk` | Four-colour process seen up close: cyan, magenta, yellow and black dots that never quite line up. |
-| **Texture** — a surface, not a filter | |
-| `emile/grain` | A picture you can almost touch: fine grain that lives from frame to frame. |
-| `emile/dither` | A one-bit picture: two colours, and a pattern of pixels doing the work of every grey. |
-| `emile/paper` | Printed on real paper: the tooth of the sheet under the picture, whites warmed to the paper's tone. |
-| **Distort** — glass, not glitch | |
-| `emile/fluted-glass` | Seen through reeded glass: the picture breaks into upright ribs of light, its shapes kept, its detail hidden. |
-| `emile/displace` | Bands of the picture slip sideways: something has shifted, and holds there. |
-| **Color** — fewer inks, more intent | |
-| `emile/duotone` | The whole picture in two inks: one for the darks, one for the lights. |
-| `emile/palette` | The picture reduced to a handful of chosen inks, like a screen print, a blueprint or a thermal camera. |
-| **Glow** — light behaving like light | |
-| `emile/bloom` | Light spills from the brightest points into the dark around them, with the warm edge film gives it. |
-| **Film** — a medium between the picture and the eye | |
-| `emile/crt` | A picture on a glass tube: scan lines, phosphor stripes, a gently curved face. |
-| `emile/vhs` | A tape that has been played many times: soft, colours bleeding sideways, the bottom edge tearing. |
-| `emile/chromatic-aberration` | A lens that splits light at its edges: colours part towards the corners, the centre stays sharp. |
+Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect) and two to four parameters of its own. Shown at their defaults.
 
-A filter is a clip on Émile's timeline that changes every track under it. Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect) and two to four parameters of its own.
+### Print — ink on paper
 
-## The transitions
+<table>
+<tr>
+<td width="33%"><img src="docs/filters/halftone.jpg" alt="halftone"><br><b>Halftone</b> · <code>emile/halftone</code><br>A picture pulled through a printer's screen: ink dots on paper, bold enough to read as print.</td>
+<td width="33%"><img src="docs/filters/risograph.jpg" alt="risograph"><br><b>Risograph</b> · <code>emile/risograph</code><br>A two-colour print run: two inks laid one over the other, a little out of register.</td>
+<td width="33%"><img src="docs/filters/cmyk.jpg" alt="cmyk"><br><b>CMYK</b> · <code>emile/cmyk</code><br>Four-colour process seen up close: dots that never quite line up.</td>
+</tr>
+</table>
+
+### Texture — a surface, not an effect
+
+<table>
+<tr>
+<td width="33%"><img src="docs/filters/grain.jpg" alt="grain"><br><b>Grain</b> · <code>emile/grain</code><br>A picture you can almost touch: fine grain that lives from frame to frame.</td>
+<td width="33%"><img src="docs/filters/dither.jpg" alt="dither"><br><b>Dither</b> · <code>emile/dither</code><br>A one-bit picture: two colours, and a pattern of pixels doing the work of every grey.</td>
+<td width="33%"><img src="docs/filters/paper.jpg" alt="paper"><br><b>Paper</b> · <code>emile/paper</code><br>Printed on real paper: the tooth of the sheet under the picture, whites warmed to its tone.</td>
+</tr>
+</table>
+
+### Distort — glass, not glitch
+
+<table>
+<tr>
+<td width="33%"><img src="docs/filters/fluted-glass.jpg" alt="fluted glass"><br><b>Fluted glass</b> · <code>emile/fluted-glass</code><br>Seen through reeded glass: shapes kept, detail hidden.</td>
+<td width="33%"><img src="docs/filters/displace.jpg" alt="displace"><br><b>Displace</b> · <code>emile/displace</code><br>Bands of the picture slip sideways: something has shifted, and holds there.</td>
+<td width="33%"></td>
+</tr>
+</table>
+
+### Color — fewer inks, more intent
+
+<table>
+<tr>
+<td width="33%"><img src="docs/filters/duotone.jpg" alt="duotone"><br><b>Duotone</b> · <code>emile/duotone</code><br>The whole picture in two inks: one for the darks, one for the lights.</td>
+<td width="33%"><img src="docs/filters/palette.jpg" alt="palette"><br><b>Palette</b> · <code>emile/palette</code><br>A handful of chosen inks, like a screen print, a blueprint or a thermal camera.</td>
+<td width="33%"></td>
+</tr>
+</table>
+
+### Glow and film — light, and the medium it passes through
+
+<table>
+<tr>
+<td width="33%"><img src="docs/filters/bloom.jpg" alt="bloom"><br><b>Bloom</b> · <code>emile/bloom</code><br>Light spills from the brightest points into the dark, with the warm edge film gives it.</td>
+<td width="33%"><img src="docs/filters/crt.jpg" alt="crt"><br><b>CRT</b> · <code>emile/crt</code><br>A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.</td>
+<td width="33%"><img src="docs/filters/vhs.jpg" alt="vhs"><br><b>VHS</b> · <code>emile/vhs</code><br>A tape played many times: soft, colours bleeding sideways, the bottom edge tearing.</td>
+</tr>
+<tr>
+<td width="33%"><img src="docs/filters/chromatic-aberration.jpg" alt="chromatic aberration"><br><b>Chromatic aberration</b> · <code>emile/chromatic-aberration</code><br>A lens that splits light at its edges; the centre stays sharp.</td>
+<td width="33%"></td>
+<td width="33%"></td>
+</tr>
+</table>
+
+### Transitions
 
 | Pack | What it brings |
 |---|---|
@@ -65,22 +108,72 @@ A filter is a clip on Émile's timeline that changes every track under it. Each 
 | `emile/wipe` | A clean, designed change, like turning a page sideways. |
 | `emile/zoom` | Flying in: going deeper, into the next idea. |
 
-## Each pack carries its own judgement
+## Use them
 
-A filter here is not just a shader: every pack folder has a `SKILL.md` — a short guide written for an AI to read, not a human to skim. Open `emile/grain/SKILL.md` and you'll find:
+### In Émile
 
-- **what it brings**, in a sentence, and its role when filters are stacked — does it set the colour, remake the structure, or finish the surface on top?
-- **when to use it**: the moments in a story that call for it, each with the settings that work, and the words a person might reach for — in English and in Chinese.
-- **what it suits and what it fails on**, as a review of real pictures showed it (a product shot, an app's screen, a portrait in low light), with the setting that mends a failure where one exists.
-- **the tired version of the effect**, named outright, so the defaults steer away from it.
-- **how long it holds up**: seconds for most, a whole film only for the lightest finishes.
-- **its parameters**, with the values that actually work, not just their ranges.
+Nothing to install. Say what you want in the chat, or type `#` and a filter's name; the first time a film uses a pack Émile downloads it from here, checks every file against the signed index, and keeps it for offline use. A filter is a clip on the timeline: it changes every track under it for as long as it lasts.
 
-That makes this repository more than an asset pack: a coding agent working on a video, inside Émile or anywhere else, can read a pack's `SKILL.md` the way it would read a project's own docs, before it ever writes a parameter. Ask for "a touch of grain" or "make it feel like a nineties camcorder," and the agent has, in that one file, enough to pick the right pack and set it well — not guess.
+### With your own agent
 
-**If you're an AI agent reading this on a task that touches video effects:** clone or fetch this repository, read the `SKILL.md` of the pack you're considering in full before you use it, and follow its parameter values — they are not placeholders.
+Every pack is plain files: a `shader.glsl`, a `pack.json` and a `SKILL.md`. To let Claude Code, Codex or any other agent choose and use them, hand it the link:
 
-## A pack
+```text
+Read https://github.com/EmileFilm/emile-packs. Pick the filter that fits this moment
+from what each one brings, read its SKILL.md in full, and use its parameter values.
+```
+
+or clone it next to your project and point your agent at the folder:
+
+```bash
+git clone https://github.com/EmileFilm/emile-packs.git
+```
+
+To run a shader in your own WebGL2 renderer, wrap it the way Émile does: a header, one uniform per parameter, `getColor` over your picture, and `main`. Colours in and out are premultiplied.
+
+```glsl
+#version 300 es
+precision highp float;
+in vec2 uv;
+out vec4 outColor;
+uniform vec2 resolution;                     // the frame in pixels
+uniform float ratio, frame, fps, seed;       // no clock: what moves reads frame and seed
+uniform sampler2D picture;                   // premultiplied
+uniform float p_amount;                      // one p_<id> per parameter in pack.json
+uniform float p_size;                        //   (color → vec3, choice → int, bool, int, vec2)
+uniform bool p_colour;
+vec4 getColor(vec2 p) { return texture(picture, p); }
+#line 1
+/* … the pack's shader.glsl here … */
+void main() { outColor = filterColor(uv); }
+```
+
+## Reading a SKILL.md
+
+A filter here is not just a shader. Each pack's `SKILL.md` is a short guide written for an AI to read, not a person to skim — the judgement of someone who has looked at the filter on real pictures. Its sections:
+
+| Section | What it holds |
+|---|---|
+| first line | The feeling it brings, in a sentence. |
+| `角色` | Its role when filters are stacked: colour, structure, optics, medium or finish. |
+| `何时用` | The moments in a story that call for it, each with the settings that work, and the words people use for it, in English and Chinese. |
+| `适合` / `不适合` | The pictures it holds up on and the ones it fails on — product shots, interfaces, portraits by day and in low light — with the setting that mends a failure where one exists. |
+| `俗套` | The tired version of the effect, named outright, so nobody falls back into it. |
+| `时长` | How long it holds up: seconds for most, the whole film only for a light finish. |
+| `参数` | Each parameter with the values that actually work, not just its range. |
+
+For example, from `emile/displace`:
+
+> **时长** 点缀：0.3–1.5 秒，卡在节拍或「出问题」的那一下；超过 2 秒就没有意义了。
+>
+> *(an accent of 0.3–1.5 seconds, on the beat or the moment something goes wrong; past two seconds it means nothing)*
+
+An agent that reads this before it places a filter picks the right one, sets it well, keeps it short, and tells you when your picture is one it fails on.
+
+## For pack authors
+
+<details>
+<summary><b>A pack</b>: the folder, <code>pack.json</code> and the shader contract</summary>
 
 A folder `<publisher>/<name>/`:
 
@@ -91,32 +184,39 @@ A folder `<publisher>/<name>/`:
   - both get `vec2 resolution`, `float ratio`, `float frame`, `float fps`, `float seed`, and one uniform `p_<id>` per parameter (`color` is a `vec3`, `choice` the chosen option's index as an `int`). There is no clock: what moves reads `frame` and `seed`.
   - a shader declares no uniforms, inputs or outputs of its own, samples no texture directly, defines no `main()` and uses no extension. It draws in one pass: it can read the picture as often as it likes, never its own result.
   - sizes are in pixels of a frame 1080 pixels on its short side (or a share of that side), so 720p and 4K look alike, upright and square frames too.
-- `SKILL.md`: what Émile's AI — and any other agent — reads, as data, before it uses the pack (see [above](#each-pack-carries-its-own-judgement)).
+- `SKILL.md`: the sections [above](#reading-a-skillmd).
 
-## The bar
+</details>
 
-A filter is published when it clears this, not when it compiles. Few good ones over many.
+<details>
+<summary><b>The bar</b>: what a filter clears before it is published</summary>
+
+Few good ones over many. A filter is published when it clears this, not when it compiles.
 
 **Measured** by `scripts/review.mjs`, which draws each filter with Émile's own compositor over a product on a backdrop by day and by night, a product's screen, shapes on nothing, and the photographs given to it (portraits above all: a face is where a filter fails first):
 
 ```bash
 node scripts/review.mjs --out <a folder outside this repository> --photo <portrait.jpg> --photo <another.jpg>
 node scripts/review.mjs --out <folder> --photo <dark-portrait.jpg> --set halftone.exposure=0.7 halftone   # try what a SKILL.md recommends
+node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measure --tiles docs/filters --tile-base bloom=night   # the cards above
 ```
 
 - ✗ keeps a filter out: `amount` 0 changes a byte of the frame; one frame drawn twice differs; a filter that isn't `animated` changes between frames, or an animated one makes the whole frame's brightness wander; 720p and 4K don't look alike; a 1080p frame costs more than 4 ms.
 - △ is answered in its SKILL.md: on some kind of picture, at its defaults, less than 0.7 of the run from dark to light is left, or the picture is hard to find in it (rank correlation under 0.6). The kind of picture goes under `不适合`, or the setting that mends it is given and tried with `--set`.
 
-**Judged** from the sheets it writes (each picture as it is, at the defaults and at `amount` 0.5; pieces of the 1080p frame pixel for pixel; upright and square frames; one gallery per picture with every filter side by side — like the two above). Each answer must be yes:
+**Judged** from the sheets it writes (each picture as it is, at the defaults and at `amount` 0.5; pieces of the 1080p frame pixel for pixel; upright and square frames; one gallery per picture with every filter side by side, like the two above). Each answer must be yes:
 
 1. **At a glance.** In the gallery, is the filter itself, and is the subject still the subject?
 2. **Not the tired version.** Name the most worn-out version of this effect. Do the defaults avoid every mark of it?
 3. **A process, not a decoration.** Does it follow how a real thing works (ink on paper, glass, tape, a tube, a lens), so you could say what in the world it is?
 4. **Few colours.** Is the frame carried by the picture's own colours, or by at most five chosen ones, none neon by default?
 5. **Half is still a look.** At `amount` 0.5, is it a lighter version of the same thing, not a dirty mix of two pictures?
-6. **A reason in a film.** Can you name three moments of a story that call for it, and the pictures it fails on?
+6. **A reason in a film.** Can you name three moments of a story that call for it, how long it holds up, and the pictures it fails on?
 
-## Releases
+</details>
+
+<details>
+<summary><b>Releases</b>: the signed index</summary>
 
 `index.json` lists every pack's newest version with each file's size and SHA-256; `index.json.sig` is its Ed25519 signature. Émile holds the public key, refuses an index whose signature doesn't match, and keeps out a pack with a file whose hash doesn't. Files are served by jsDelivr from the release's tag.
 
@@ -130,6 +230,8 @@ git commit -am "…" && git tag v1.1.0 && git push --follow-tags
 
 The check compiles every shader with WebGL2 in Chrome and in the Mac's WebKit, so it runs on a Mac. The private key is never committed.
 
+</details>
+
 ## Licence
 
-MIT (see `LICENSE`). Every pack here is written for Émile; none copies another product's code, presets or examples.
+MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Samuel Dixon](https://unsplash.com/@samueldixon) on [Unsplash](https://unsplash.com/photos/photo-of-woman-looking-right--fQ5XNOcqFQ), under the Unsplash License; the other pictures are drawn by `scripts/review.html`.

@@ -405,6 +405,16 @@ window.Review = {
     return out.toDataURL('image/jpeg', 0.9)
   },
 
+  // One filter at its defaults over one picture, unlabelled: a card for
+  // the README
+  tile(id, base, w, h) {
+    const st = stage(w, h)
+    draw(st, base, id && { id, params: {} })
+    const out = canvasOf(w, h)
+    out.getContext('2d').drawImage(st.canvas, 0, 0)
+    return out.toDataURL('image/jpeg', 0.86)
+  },
+
   // One picture under every filter at its default, side by side: is each
   // filter itself at a glance, and which ones suit this kind of picture?
   gallery(ids, base) {
