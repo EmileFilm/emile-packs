@@ -1,0 +1,86 @@
+{
+  "id": "emile/palette",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Palette",
+    "zh-CN": "限色"
+  },
+  "description": {
+    "en": "The picture reduced to a handful of chosen inks, like a screen print, a blueprint or a thermal camera.",
+    "zh-CN": "把画面压到几种选定的颜色，像丝网海报、蓝晒图，或者热成像。"
+  },
+  "category": "color",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "palette",
+      "type": "choice",
+      "default": "poster",
+      "options": [
+        "poster",
+        "thermal",
+        "cyanotype",
+        "moss",
+        "silver",
+        "primary"
+      ],
+      "label": {
+        "en": "Palette",
+        "zh-CN": "色板"
+      }
+    },
+    {
+      "id": "soft",
+      "type": "float",
+      "default": 0.1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Band softness",
+        "zh-CN": "色带柔和"
+      }
+    },
+    {
+      "id": "smooth",
+      "type": "float",
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Smoothing",
+        "zh-CN": "平滑"
+      }
+    },
+    {
+      "id": "exposure",
+      "type": "float",
+      "default": 0,
+      "min": -1,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Exposure",
+        "zh-CN": "曝光"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}
