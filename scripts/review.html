@@ -1,0 +1,491 @@
+<!doctype html>
+<meta charset="utf-8">
+<body style="margin:0;background:#111">
+<script type="module">
+// The page scripts/review.mjs drives: it draws the review's pictures here
+// (so they exist at any size and belong to nobody), runs each filter over
+// them with Émile's own compositor, lays the sheets out and measures.
+
+const query = new URLSearchParams(location.search)
+const { createCompositor } = await import(query.get('compositor'))
+
+const FONT = '"Helvetica Neue", Helvetica, Arial, sans-serif'
+const canvasOf = (w, h) => Object.assign(document.createElement('canvas'), { width: w, height: h })
+
+function roundRect(g, x, y, w, h, r) {
+  g.beginPath()
+  g.roundRect(x, y, w, h, r)
+}
+
+// A product on a seamless backdrop, lit from the upper left: a matte
+// sphere (a full run of tones, saturated), a glossy black capsule (true
+// black, thin highlights), a pale block (hard edges), a wordmark and two
+// sizes of small type. dark: the same set at night, with a lit face, a
+// thin bright line and points of light
+function studio(w, h, dark) {
+  const c = canvasOf(w, h), g = c.getContext('2d'), m = Math.min(w, h)
+  const wall = g.createLinearGradient(0, 0, 0, h)
+  if (dark) { wall.addColorStop(0, '#07080b'); wall.addColorStop(0.62, '#11131a'); wall.addColorStop(0.7, '#0c0d12'); wall.addColorStop(1, '#040406') }
+  else { wall.addColorStop(0, '#c9c3b8'); wall.addColorStop(0.62, '#e4dfd5'); wall.addColorStop(0.7, '#d6d0c5'); wall.addColorStop(1, '#aaa399') }
+  g.fillStyle = wall
+  g.fillRect(0, 0, w, h)
+  const spot = g.createRadialGradient(w * 0.34, h * 0.36, 0, w * 0.34, h * 0.36, m * 0.95)
+  spot.addColorStop(0, dark ? 'rgba(70,96,170,0.34)' : 'rgba(255,251,242,0.7)')
+  spot.addColorStop(1, 'rgba(0,0,0,0)')
+  g.fillStyle = spot
+  g.fillRect(0, 0, w, h)
+
+  const shadow = (x, y, rx, ry, a) => {
+    g.save()
+    g.translate(x, y)
+    g.scale(1, ry / rx)
+    const s = g.createRadialGradient(0, 0, 0, 0, 0, rx)
+    s.addColorStop(0, `rgba(0,0,0,${a})`)
+    s.addColorStop(0.55, `rgba(0,0,0,${a * 0.45})`)
+    s.addColorStop(1, 'rgba(0,0,0,0)')
+    g.fillStyle = s
+    g.beginPath()
+    g.arc(0, 0, rx, 0, 7)
+    g.fill()
+    g.restore()
+  }
+
+  // The sphere
+  const sx = w * 0.3, sy = h * 0.57, r = m * 0.25
+  shadow(sx + r * 0.3, sy + r * 0.98, r * 1.25, r * 0.2, dark ? 0.7 : 0.42)
+  const ball = g.createRadialGradient(sx - r * 0.38, sy - r * 0.42, r * 0.04, sx - r * 0.1, sy - r * 0.08, r * 1.08)
+  const tones = dark ? ['#ff9d74', '#c9502a', '#54180b', '#120403', '#2a1a2c'] : ['#ffc3a4', '#e56a3d', '#a63a1c', '#4a160b', '#84341f']
+  ;[0, 0.28, 0.62, 0.9, 1].forEach((p, i) => ball.addColorStop(p, tones[i]))
+  g.fillStyle = ball
+  g.beginPath()
+  g.arc(sx, sy, r, 0, 7)
+  g.fill()
+  const glint = g.createRadialGradient(sx - r * 0.42, sy - r * 0.46, 0, sx - r * 0.42, sy - r * 0.46, r * 0.2)
+  glint.addColorStop(0, 'rgba(255,255,255,0.85)')
+  glint.addColorStop(1, 'rgba(255,255,255,0)')
+  g.fillStyle = glint
+  g.fillRect(sx - r, sy - r, r * 2, r * 2)
+  if (dark) {
+    // A rim of cool light on the far side
+    g.save()
+    g.beginPath()
+    g.arc(sx, sy, r, 0, 7)
+    g.clip()
+    g.strokeStyle = 'rgba(150,190,255,0.75)'
+    g.lineWidth = r * 0.05
+    g.filter = `blur(${r * 0.03}px)`
+    g.beginPath()
+    g.arc(sx, sy, r * 0.985, -0.5, 1.2)
+    g.stroke()
+    g.restore()
+  }
+
+  // The capsule
+  const px = w * 0.56, py = h * 0.5, pw = m * 0.13, ph = m * 0.52
+  shadow(px + pw * 0.5, py + ph * 0.5, pw * 1.5, pw * 0.26, dark ? 0.7 : 0.45)
+  const gloss = g.createLinearGradient(px - pw / 2, 0, px + pw / 2, 0)
+  ;[[0, '#020202'], [0.16, '#2c2c30'], [0.3, '#060607'], [0.62, '#0b0b0c'], [0.84, '#4a4a50'], [1, '#0c0c0d']].forEach(([p, col]) => gloss.addColorStop(p, col))
+  g.fillStyle = gloss
+  roundRect(g, px - pw / 2, py - ph / 2, pw, ph, pw / 2)
+  g.fill()
+  const streak = g.createLinearGradient(0, py - ph * 0.4, 0, py + ph * 0.4)
+  streak.addColorStop(0, 'rgba(255,255,255,0)')
+  streak.addColorStop(0.2, 'rgba(255,255,255,0.95)')
+  streak.addColorStop(0.75, 'rgba(255,255,255,0.5)')
+  streak.addColorStop(1, 'rgba(255,255,255,0)')
+  g.fillStyle = streak
+  roundRect(g, px - pw * 0.3, py - ph * 0.4, pw * 0.045, ph * 0.8, pw * 0.02)
+  g.fill()
+
+  // The block: three faces
+  const bx = w * 0.78, by = h * 0.69, b = m * 0.15
+  shadow(bx + b * 0.2, by + b * 0.62, b * 1.2, b * 0.2, dark ? 0.7 : 0.4)
+  const face = (points, col) => {
+    g.fillStyle = col
+    g.beginPath()
+    points.forEach(([x, y], i) => (i ? g.lineTo(bx + x * b, by + y * b) : g.moveTo(bx + x * b, by + y * b)))
+    g.closePath()
+    g.fill()
+  }
+  face([[-0.6, -0.25], [0, -0.55], [0.6, -0.25], [0, 0.05]], dark ? '#ffe2b0' : '#f6f3ec')
+  face([[-0.6, -0.25], [0, 0.05], [0, 0.75], [-0.6, 0.45]], dark ? '#d58a3c' : '#c9c3b7')
+  face([[0, 0.05], [0.6, -0.25], [0.6, 0.45], [0, 0.75]], dark ? '#7a4317' : '#8d877c')
+
+  if (dark) {
+    // A thin line of light and a row of points
+    g.fillStyle = '#eaf2ff'
+    g.fillRect(w * 0.06, h * 0.86, w * 0.3, Math.max(1, m * 0.004))
+    for (let i = 0; i < 9; i++) {
+      g.beginPath()
+      g.arc(w * 0.66 + i * m * 0.035, h * 0.2, m * 0.006, 0, 7)
+      g.fillStyle = i % 3 ? '#fff4dc' : '#ff5a36'
+      g.fill()
+    }
+  }
+
+  // Type: a wordmark, a line, a small line
+  g.fillStyle = dark ? '#f4f1ea' : '#141414'
+  g.textBaseline = 'alphabetic'
+  g.font = `700 ${m * 0.13}px ${FONT}`
+  g.fillText('ÉMILE', w * 0.055, h * 0.2)
+  g.font = `500 ${m * 0.032}px ${FONT}`
+  g.fillStyle = dark ? '#c9c6bf' : '#2b2a28'
+  g.fillText('Twenty-four frames a second', w * 0.057, h * 0.2 + m * 0.055)
+  g.font = `400 ${m * 0.019}px ${FONT}`
+  g.fillStyle = dark ? '#8f8c86' : '#55524d'
+  g.fillText('Every clip is drawn in code and cut on a real timeline', w * 0.057, h * 0.2 + m * 0.092)
+  return c
+}
+
+// A product's screen as a film shows it: a headline, body text, cards
+// with small type, an accent, a dark panel with bars
+function page(w, h) {
+  const c = canvasOf(w, h), g = c.getContext('2d'), m = Math.min(w, h)
+  g.fillStyle = '#faf7f0'
+  g.fillRect(0, 0, w, h)
+  const wide = w > h * 1.2
+  const left = w * 0.07, top = h * 0.12
+  g.textBaseline = 'alphabetic'
+  g.fillStyle = '#16181d'
+  g.font = `700 ${m * 0.085}px ${FONT}`
+  g.fillText('See your week', left, top + m * 0.085)
+  g.fillStyle = '#ff5a1f'
+  g.fillText('at a glance.', left, top + m * 0.185)
+  g.fillStyle = '#55565b'
+  g.font = `400 ${m * 0.03}px ${FONT}`
+  g.fillText('Six of seven days. One tap to log today.', left, top + m * 0.25)
+  g.fillStyle = '#ff5a1f'
+  roundRect(g, left, top + m * 0.3, m * 0.3, m * 0.075, m * 0.0375)
+  g.fill()
+  g.fillStyle = '#fff'
+  g.font = `600 ${m * 0.03}px ${FONT}`
+  g.fillText('Start a streak', left + m * 0.055, top + m * 0.348)
+
+  // A light card of rows
+  const cx = wide ? w * 0.52 : left, cy = wide ? h * 0.1 : top + m * 0.44, cw = wide ? w * 0.2 : w * 0.86, ch = wide ? h * 0.8 : m * 0.42
+  g.fillStyle = '#ffffff'
+  g.strokeStyle = '#e4dfd3'
+  g.lineWidth = Math.max(1, m * 0.002)
+  roundRect(g, cx, cy, cw, ch, m * 0.03)
+  g.fill()
+  g.stroke()
+  g.fillStyle = '#16181d'
+  g.font = `600 ${m * 0.028}px ${FONT}`
+  g.fillText('This week', cx + m * 0.03, cy + m * 0.06)
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  const rows = wide ? 7 : 4
+  for (let i = 0; i < rows; i++) {
+    const y = cy + m * 0.105 + i * (ch - m * 0.13) / rows
+    g.fillStyle = '#6c6d72'
+    g.font = `400 ${m * 0.021}px ${FONT}`
+    g.fillText(days[i], cx + m * 0.03, y + m * 0.022)
+    g.fillStyle = '#efeadf'
+    roundRect(g, cx + m * 0.095, y + m * 0.004, cw - m * 0.13, m * 0.022, m * 0.011)
+    g.fill()
+    g.fillStyle = i === 5 ? '#16181d' : '#ff5a1f'
+    roundRect(g, cx + m * 0.095, y + m * 0.004, (cw - m * 0.13) * [0.9, 0.6, 0.75, 1, 0.45, 0.82, 0.2][i], m * 0.022, m * 0.011)
+    g.fill()
+  }
+
+  // A dark panel with bars
+  if (wide) {
+    const dx = w * 0.75, dy = h * 0.1, dw = w * 0.19, dh = h * 0.8
+    g.fillStyle = '#16181d'
+    roundRect(g, dx, dy, dw, dh, m * 0.03)
+    g.fill()
+    g.fillStyle = '#f4f1ea'
+    g.font = `600 ${m * 0.028}px ${FONT}`
+    g.fillText('Longest streak', dx + m * 0.03, dy + m * 0.06)
+    g.font = `700 ${m * 0.11}px ${FONT}`
+    g.fillText('42', dx + m * 0.03, dy + m * 0.19)
+    g.fillStyle = '#9a9ba0'
+    g.font = `400 ${m * 0.021}px ${FONT}`
+    g.fillText('days, since the third of March', dx + m * 0.03, dy + m * 0.235)
+    for (let i = 0; i < 9; i++) {
+      const bh = dh * [0.12, 0.2, 0.16, 0.28, 0.24, 0.34, 0.3, 0.42, 0.38][i]
+      g.fillStyle = i === 7 ? '#ff5a1f' : '#3b3e47'
+      roundRect(g, dx + m * 0.03 + i * (dw - m * 0.06) / 9, dy + dh - m * 0.04 - bh, (dw - m * 0.06) / 9 - m * 0.006, bh, m * 0.004)
+      g.fill()
+    }
+  }
+  return c
+}
+
+// Shapes and a wordmark on nothing: the picture stacked as the compositor
+// reads a clip with alpha, its colour over its alpha
+function graphic(w, h) {
+  const c = canvasOf(w, h * 2), g = c.getContext('2d'), m = Math.min(w, h)
+  const shapes = (alpha, oy) => {
+    g.save()
+    g.translate(0, oy)
+    const disc = g.createLinearGradient(w * 0.18, h * 0.3, w * 0.18 + m * 0.4, h * 0.3 + m * 0.4)
+    disc.addColorStop(0, '#ff7a45')
+    disc.addColorStop(1, '#6a3df0')
+    g.fillStyle = alpha ? '#fff' : disc
+    g.beginPath()
+    g.arc(w * 0.28, h * 0.5, m * 0.26, 0, 7)
+    g.fill()
+    g.fillStyle = alpha ? '#fff' : '#12b89a'
+    roundRect(g, w * 0.52, h * 0.24, w * 0.3, m * 0.17, m * 0.03)
+    g.fill()
+    g.fillStyle = alpha ? '#fff' : '#e8b931'
+    roundRect(g, w * 0.52, h * 0.24 + m * 0.22, w * 0.2, m * 0.15, m * 0.075)
+    g.fill()
+    g.fillStyle = '#fff'
+    g.font = `600 ${m * 0.13}px ${FONT}`
+    g.textBaseline = 'alphabetic'
+    g.fillText('Émile', w * 0.52, h * 0.24 + m * 0.53)
+    g.strokeStyle = '#fff'
+    g.lineWidth = m * 0.014
+    g.beginPath()
+    g.arc(w * 0.28, h * 0.5, m * 0.11, 0, 7)
+    g.stroke()
+    g.restore()
+  }
+  g.fillStyle = '#000'
+  g.fillRect(0, 0, w, h * 2)
+  shapes(false, 0)
+  shapes(true, h)
+  return c
+}
+
+// A picture from a file, cropped to cover the frame
+const files = {}
+async function loadFile(name, url) {
+  const image = new Image()
+  image.src = url
+  await image.decode()
+  files[name] = image
+  return true
+}
+function fromFile(name, w, h) {
+  const image = files[name], c = canvasOf(w, h), g = c.getContext('2d')
+  const k = Math.max(w / image.naturalWidth, h / image.naturalHeight)
+  const iw = image.naturalWidth * k, ih = image.naturalHeight * k
+  g.imageSmoothingQuality = 'high'
+  g.drawImage(image, (w - iw) / 2, (h - ih) / 2, iw, ih)
+  return c
+}
+
+const scenes = {}
+function scene(name, w, h) {
+  const key = `${name}@${w}x${h}`
+  if (!scenes[key]) {
+    const image = name === 'studio' ? studio(w, h, false) : name === 'night' ? studio(w, h, true) : name === 'page' ? page(w, h) : name === 'graphic' ? graphic(w, h) : fromFile(name, w, h)
+    scenes[key] = { image, stacked: name === 'graphic' }
+  }
+  return scenes[key]
+}
+
+// One compositor per frame size
+let packs = {}, settings = {}
+const stages = {}
+function stage(w, h) {
+  const key = `${w}x${h}`
+  if (!stages[key]) {
+    const canvas = canvasOf(w, h)
+    const problems = []
+    const comp = createCompositor(canvas, { width: w, height: h, packs, fps: 24, onProblem: m => problems.push(m) })
+    stages[key] = { canvas, comp, gl: canvas.getContext('webgl2'), w, h, problems }
+  }
+  return stages[key]
+}
+const leaf = { op: 'clip', id: 'base', f: 0 }
+function draw(st, base, fx, frame = 12) {
+  const tree = fx ? { op: 'stack', layers: [{ op: 'filter', id: fx.id, params: { ...settings[fx.id], ...fx.params }, seed: fx.seed ?? 1234, frame, src: { op: 'stack', layers: [leaf] } }] } : { op: 'stack', layers: [leaf] }
+  const picture = scene(base, st.w, st.h)
+  st.comp.frame(tree, () => picture)
+  if (st.problems.length) throw new Error(st.problems.join('; '))
+}
+function pixels(st) {
+  const p = new Uint8Array(st.w * st.h * 4)
+  st.gl.readPixels(0, 0, st.w, st.h, st.gl.RGBA, st.gl.UNSIGNED_BYTE, p)
+  return p
+}
+const differing = (a, b) => { let n = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) n++; return n }
+const luma = (p, i) => (0.2126 * p[i] + 0.7152 * p[i + 1] + 0.0722 * p[i + 2]) / 255
+
+// The frame's luminance averaged into a small grid (gw × gh)
+function grid(p, w, h, gw, gh) {
+  const sum = new Float64Array(gw * gh), n = new Uint32Array(gw * gh)
+  for (let y = 0; y < h; y++) {
+    const gy = Math.min(gh - 1, Math.floor(y * gh / h))
+    for (let x = 0; x < w; x++) {
+      const k = gy * gw + Math.min(gw - 1, Math.floor(x * gw / w))
+      sum[k] += luma(p, (y * w + x) * 4)
+      n[k]++
+    }
+  }
+  return sum.map((s, i) => s / n[i])
+}
+// Each value's rank (values within 1/255 share one), so the order of the
+// darks counts as much as the order of the lights: a subject lost in the
+// dark is lost
+function ranks(a) {
+  const order = [...a.keys()].sort((i, j) => a[i] - a[j]), r = new Float64Array(a.length)
+  for (let i = 0; i < order.length;) {
+    let j = i
+    while (j + 1 < order.length && a[order[j + 1]] - a[order[i]] < 1 / 255) j++
+    for (let k = i; k <= j; k++) r[order[k]] = (i + j) / 2
+    i = j + 1
+  }
+  return r
+}
+function correlation(a, b) {
+  const n = a.length
+  let ma = 0, mb = 0
+  for (let i = 0; i < n; i++) { ma += a[i]; mb += b[i] }
+  ma /= n; mb /= n
+  let sab = 0, saa = 0, sbb = 0
+  for (let i = 0; i < n; i++) { sab += (a[i] - ma) * (b[i] - mb); saa += (a[i] - ma) ** 2; sbb += (b[i] - mb) ** 2 }
+  return saa && sbb ? sab / Math.sqrt(saa * sbb) : 0
+}
+// The 2nd and 98th percentile of luminance, the mean saturation, and how
+// many of twelve hues each hold over 5% of the coloured pixels
+function tone(p) {
+  const hist = new Uint32Array(256), hues = new Uint32Array(12)
+  let sat = 0, coloured = 0
+  const n = p.length / 4
+  for (let i = 0; i < p.length; i += 4) {
+    hist[Math.round(luma(p, i) * 255)]++
+    const r = p[i], g = p[i + 1], b = p[i + 2], max = Math.max(r, g, b), min = Math.min(r, g, b)
+    const s = max ? (max - min) / max : 0
+    sat += s
+    if (s > 0.25 && max > 40) {
+      const d = max - min
+      const hue = max === r ? ((g - b) / d + 6) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4
+      hues[Math.floor(hue * 2) % 12]++
+      coloured++
+    }
+  }
+  const at = q => { let acc = 0; for (let i = 0; i < 256; i++) { acc += hist[i]; if (acc >= q * n) return i / 255 } return 1 }
+  return { low: at(0.02), high: at(0.98), saturation: sat / n, hues: coloured > n * 0.02 ? [...hues].filter(v => v > coloured * 0.05).length : 0 }
+}
+
+const SHEET = { w: 480, h: 270 }
+window.Review = {
+  // all: the packs; set: { id: { param: value } } drawn instead of the defaults
+  setup(all, set) { packs = all; settings = set ?? {}; return true },
+  loadFile,
+
+  // The sheet of one filter. Rows: each base as it is, at its default, at
+  // amount 0.5; then three pieces of the 1080p frame pixel for pixel; then
+  // the upright and the square frame, and the shapes on nothing
+  sheet(id, bases, quick) {
+    const fx = { id, params: {} }, half = { id, params: { amount: 0.5 } }
+    const rows = quick ? 4 : bases.length + 2
+    const out = canvasOf(SHEET.w * 3, SHEET.h * rows), g = out.getContext('2d')
+    g.imageSmoothingQuality = 'high'
+    g.fillStyle = '#111'
+    g.fillRect(0, 0, out.width, out.height)
+    const st = stage(1280, 720)
+    const put = (base, f, col, row) => { draw(st, base, f); g.drawImage(st.canvas, col * SHEET.w, row * SHEET.h, SHEET.w, SHEET.h) }
+    if (quick) {
+      put(bases[0], null, 0, 0); put(bases[0], fx, 1, 0); put(bases[0], half, 2, 0)
+      bases.slice(1, 4).forEach((b, i) => put(b, fx, i, 1))
+    } else bases.forEach((b, row) => { put(b, null, 0, row); put(b, fx, 1, row); put(b, half, 2, row) })
+    const pieces = rows - 2, last = rows - 1, full = stage(1920, 1080)
+    ;[['studio', 330, 440], ['night', 60, 70], ['page', 110, 130]].forEach(([b, x, y], i) => {
+      draw(full, b, fx)
+      g.drawImage(full.canvas, x, y, SHEET.w, SHEET.h, i * SHEET.w, pieces * SHEET.h, SHEET.w, SHEET.h)
+    })
+    const tall = stage(720, 1280), square = stage(1080, 1080)
+    draw(tall, 'studio', fx)
+    g.drawImage(tall.canvas, 40, last * SHEET.h, SHEET.h * 9 / 16, SHEET.h)
+    draw(tall, 'page', fx)
+    g.drawImage(tall.canvas, 230, last * SHEET.h, SHEET.h * 9 / 16, SHEET.h)
+    draw(square, 'studio', fx)
+    g.drawImage(square.canvas, SHEET.w + 105, last * SHEET.h, SHEET.h, SHEET.h)
+    put('graphic', fx, 2, last)
+    g.font = '600 15px Helvetica'
+    const label = (text, x, y) => { g.fillStyle = 'rgba(0,0,0,0.65)'; g.fillRect(x, y, g.measureText(text).width + 12, 22); g.fillStyle = '#fff'; g.fillText(text, x + 6, y + 16) }
+    label(`${id}   as it is | default | amount 0.5`, 0, 0)
+    label('1080p, pixel for pixel', 0, pieces * SHEET.h)
+    label('9:16 | 1:1 | on nothing', 0, last * SHEET.h)
+    return out.toDataURL('image/jpeg', 0.9)
+  },
+
+  // One picture under every filter at its default, side by side: is each
+  // filter itself at a glance, and which ones suit this kind of picture?
+  gallery(ids, base) {
+    const cols = 3, all = [null, ...ids]
+    const out = canvasOf(SHEET.w * cols, SHEET.h * Math.ceil(all.length / cols)), g = out.getContext('2d')
+    g.imageSmoothingQuality = 'high'
+    g.fillStyle = '#111'
+    g.fillRect(0, 0, out.width, out.height)
+    const st = stage(1280, 720)
+    g.font = '600 15px Helvetica'
+    all.forEach((id, i) => {
+      const x = (i % cols) * SHEET.w, y = Math.floor(i / cols) * SHEET.h
+      draw(st, base, id && { id, params: {} })
+      g.drawImage(st.canvas, x, y, SHEET.w, SHEET.h)
+      const text = id ? id.split('/')[1] : `${base}, as it is`
+      g.fillStyle = 'rgba(0,0,0,0.65)'
+      g.fillRect(x, y, g.measureText(text).width + 12, 22)
+      g.fillStyle = '#fff'
+      g.fillText(text, x + 6, y + 16)
+    })
+    return out.toDataURL('image/jpeg', 0.9)
+  },
+
+  // What can be measured of one filter
+  measure(id, { animated, bases }) {
+    const fx = { id, params: {} }, zero = { id, params: { amount: 0 } }
+    const st = stage(1280, 720), out = { id }
+    let amount0 = 0, twice = 0
+    out.tone = {}
+    out.keeps = {}
+    for (const b of bases) {
+      draw(st, b, null); const bare = pixels(st)
+      draw(st, b, zero, 37); amount0 += differing(bare, pixels(st))
+      draw(st, b, fx, 37); const one = pixels(st)
+      draw(st, b, fx, 44); draw(st, b, null)
+      draw(st, b, fx, 37); twice += differing(one, pixels(st))
+      if (b === 'graphic') {
+        let clear = 0, lit = 0
+        for (let i = 0; i < bare.length; i += 4) if (bare[i] + bare[i + 1] + bare[i + 2] === 0) { clear++; if (one[i] + one[i + 1] + one[i + 2] > 6) lit++ }
+        out.spill = lit / clear
+        continue
+      }
+      const before = tone(bare), after = tone(one)
+      out.tone[b] = { was: [before.low, before.high], is: [after.low, after.high], range: (after.high - after.low) / Math.max(0.01, before.high - before.low), saturation: [before.saturation, after.saturation], hues: [before.hues, after.hues] }
+      out.keeps[b] = Math.abs(correlation(ranks(grid(bare, st.w, st.h, 96, 54)), ranks(grid(one, st.w, st.h, 96, 54))))
+    }
+    out.amount0 = amount0
+    out.twice = twice
+    // Two seconds at 24 fps: how much a frame differs from the one before
+    // (0–255, mean), and how much the whole frame's brightness wanders
+    const small = stage(640, 360)
+    let prev = null, moved = 0
+    const means = []
+    for (let f = 0; f < 48; f++) {
+      draw(small, bases[0], fx, f)
+      const p = pixels(small)
+      let mean = 0
+      for (let i = 0; i < p.length; i += 4) mean += luma(p, i)
+      means.push(mean / (p.length / 4))
+      if (prev) { let s = 0; for (let i = 0; i < p.length; i += 4) s += Math.abs(p[i] - prev[i]) + Math.abs(p[i + 1] - prev[i + 1]) + Math.abs(p[i + 2] - prev[i + 2]); moved += s / (p.length / 4 * 3) }
+      prev = p
+    }
+    const avg = means.reduce((a, b) => a + b) / means.length
+    out.motion = moved / 47
+    out.pumping = Math.sqrt(means.reduce((a, b) => a + (b - avg) ** 2, 0) / means.length)
+    // 720p against 4K, each drawn at its own size, both averaged to 160 × 90
+    const big = stage(3840, 2160)
+    draw(st, bases[0], fx, 5); const a = grid(pixels(st), st.w, st.h, 160, 90)
+    draw(big, bases[0], fx, 5); const b = grid(pixels(big), big.w, big.h, 160, 90)
+    draw(st, bases[0], null); const a0 = grid(pixels(st), st.w, st.h, 160, 90)
+    draw(big, bases[0], null); const b0 = grid(pixels(big), big.w, big.h, 160, 90)
+    let d = 0, d0 = 0
+    for (let i = 0; i < a.length; i++) { d += Math.abs(a[i] - b[i]); d0 += Math.abs(a0[i] - b0[i]) }
+    out.sizes = (d - d0) / a.length * 255
+    // Milliseconds a 1080p frame takes more than the bare picture
+    const full = stage(1920, 1080), one = new Uint8Array(4)
+    const run = f => { draw(full, bases[0], f, 0); full.gl.readPixels(0, 0, 1, 1, full.gl.RGBA, full.gl.UNSIGNED_BYTE, one); const t = performance.now(); for (let i = 0; i < 40; i++) { draw(full, bases[0], f, i); full.gl.readPixels(0, 0, 1, 1, full.gl.RGBA, full.gl.UNSIGNED_BYTE, one) } return (performance.now() - t) / 40 }
+    out.ms = run(fx) - run(null)
+    out.animated = !!animated
+    return out
+  }
+}
+window.ready = true
+</script>

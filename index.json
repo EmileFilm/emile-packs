@@ -1,9 +1,434 @@
 {
  "format": 1,
  "tag": "v1.0.0",
- "published": "2026-11-15T14:30:29.719Z",
+ "published": "2026-11-15T15:55:20.004Z",
  "contract": 1,
  "packs": [
+  {
+   "id": "emile/bloom",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "glow",
+   "title": {
+    "en": "Bloom",
+    "zh-CN": "泛光"
+   },
+   "description": {
+    "en": "Light spills from the brightest points into the dark around them, with the warm edge film gives it.",
+    "zh-CN": "最亮的地方把光漏进周围的暗处，边上带一点胶片的暖晕。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "threshold",
+     "type": "float",
+     "default": 0.7,
+     "min": 0.3,
+     "max": 0.95,
+     "step": 0.01,
+     "label": {
+      "en": "Threshold",
+      "zh-CN": "阈值"
+     }
+    },
+    {
+     "id": "radius",
+     "type": "float",
+     "default": 0.6,
+     "min": 0.1,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Radius",
+      "zh-CN": "范围"
+     }
+    },
+    {
+     "id": "warmth",
+     "type": "float",
+     "default": 0.35,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Warmth",
+      "zh-CN": "暖度"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1977,
+     "sha256": "6089ae52a340b3ac39031cad269e1194ea8c795c4f5ccc4793ac377bd69a8010"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1329,
+     "sha256": "4369d7baea6d3c77b0ab41fa0f12657bb8d88f0e38a9d52ad0bfa3f79f909efd"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2403,
+     "sha256": "c78c1815474414684850c9a91c95ee01efa4defde60e7d0729c81fa910529fb4"
+    }
+   ]
+  },
+  {
+   "id": "emile/chromatic-aberration",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "film",
+   "title": {
+    "en": "Chromatic aberration",
+    "zh-CN": "色散"
+   },
+   "description": {
+    "en": "A lens that splits light at its edges: colours part towards the corners, the centre stays sharp.",
+    "zh-CN": "在边缘把光拆开的镜头：越靠近角落颜色越分离，中心保持清晰。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "strength",
+     "type": "float",
+     "default": 0.3,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Strength",
+      "zh-CN": "分离程度"
+     }
+    },
+    {
+     "id": "mode",
+     "type": "choice",
+     "default": "lens",
+     "options": [
+      "lens",
+      "shift"
+     ],
+     "label": {
+      "en": "Kind",
+      "zh-CN": "方式"
+     }
+    },
+    {
+     "id": "angle",
+     "type": "float",
+     "default": 0,
+     "min": 0,
+     "max": 360,
+     "step": 1,
+     "label": {
+      "en": "Shift angle",
+      "zh-CN": "偏移角度"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1806,
+     "sha256": "ac9576581582cc6c71857501d6bffd2594c9a9463b60ee2421574bc10e7d8f1a"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1376,
+     "sha256": "367427d0e5a69881702b78d981395247eed41bbbae277fa437e4b36a611035a3"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1397,
+     "sha256": "c2ba9f3c0036ddab55ae1d93e11691cdc5d8cdc9956949443cad393217d91f08"
+    }
+   ]
+  },
+  {
+   "id": "emile/cmyk",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "print",
+   "title": {
+    "en": "CMYK",
+    "zh-CN": "四色网点"
+   },
+   "description": {
+    "en": "Four-colour process seen up close: cyan, magenta, yellow and black dots that never quite line up.",
+    "zh-CN": "凑近看的四色印刷：青、品红、黄、黑四层网点，总差一点没对齐。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "dots",
+     "type": "float",
+     "default": 10,
+     "min": 5,
+     "max": 40,
+     "step": 1,
+     "label": {
+      "en": "Dot spacing",
+      "zh-CN": "网点间距"
+     }
+    },
+    {
+     "id": "offset",
+     "type": "float",
+     "default": 0.35,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Misregistration",
+      "zh-CN": "错版"
+     }
+    },
+    {
+     "id": "paper",
+     "type": "color",
+     "default": "#f4f0e6",
+     "label": {
+      "en": "Paper",
+      "zh-CN": "纸"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1860,
+     "sha256": "e4d3d21061a0e43c91eeee2edb12e25ed94ddd8c163cc80206dd36bd8729e6fb"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1295,
+     "sha256": "78b5a62c49cc38a72dc8faed12edee691467eea4a36034dd67f9da994398148b"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2448,
+     "sha256": "cdb3c1015e6e4aeb185ba9c202b02257e2266d0536f398fdc0027b9b8e533595"
+    }
+   ]
+  },
+  {
+   "id": "emile/crt",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "film",
+   "title": {
+    "en": "CRT",
+    "zh-CN": "显像管"
+   },
+   "description": {
+    "en": "A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.",
+    "zh-CN": "显像管上的画面：扫描线、荧光条纹、微微鼓起的屏。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "curvature",
+     "type": "float",
+     "default": 0.3,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Curvature",
+      "zh-CN": "屏幕弧度"
+     }
+    },
+    {
+     "id": "scanlines",
+     "type": "float",
+     "default": 0.6,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Scan lines",
+      "zh-CN": "扫描线"
+     }
+    },
+    {
+     "id": "mask",
+     "type": "float",
+     "default": 0.25,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Phosphor stripes",
+      "zh-CN": "荧光条纹"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1777,
+     "sha256": "28a203158524c0cb6cf92a71f8623ca27cd1aacd8714b674b06e1fda30e06b2c"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1344,
+     "sha256": "f116a4a6e592e8880c5fa97ab668f2972374f4b167417481622bfa6cf0978190"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2525,
+     "sha256": "6eda879c49d9f566418b5d5f962bb7ba8f95e1c0cc76c5f31583ca2897dc7964"
+    }
+   ]
+  },
+  {
+   "id": "emile/displace",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "distort",
+   "title": {
+    "en": "Displace",
+    "zh-CN": "错位"
+   },
+   "description": {
+    "en": "Bands of the picture slip sideways: something has shifted, and holds there.",
+    "zh-CN": "画面的横条向旁边错开：有什么东西移了位，停在那里。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "slices",
+     "type": "float",
+     "default": 0.5,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "How much slips",
+      "zh-CN": "错开的多少"
+     }
+    },
+    {
+     "id": "shift",
+     "type": "float",
+     "default": 0.5,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Distance",
+      "zh-CN": "错开的距离"
+     }
+    },
+    {
+     "id": "split",
+     "type": "float",
+     "default": 0.2,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Colour split",
+      "zh-CN": "色彩分离"
+     }
+    },
+    {
+     "id": "speed",
+     "type": "float",
+     "default": 0.2,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Speed",
+      "zh-CN": "变化速度"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2061,
+     "sha256": "21438f5b1ffabd75b97c0d8d758d691fc42f567c1c4b2ff748c3782e41c8985f"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1566,
+     "sha256": "4b7b6bc54bf47fcaa959b832d6cb2888b9c5a58c8bc95a673c8b34a29e41108d"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2183,
+     "sha256": "ad6366a5e934912cb66418ba053e40b397bdc19c9ab83572a10cdfca316ae315"
+    }
+   ]
+  },
   {
    "id": "emile/dissolve",
    "version": "1.0.0",
@@ -35,6 +460,280 @@
      "path": "shader.glsl",
      "bytes": 170,
      "sha256": "c8d39ecff771d68f1aa27f5904cb331eef1282228f10e2165a5cc986a92ca62a"
+    }
+   ]
+  },
+  {
+   "id": "emile/dither",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "texture",
+   "title": {
+    "en": "Dither",
+    "zh-CN": "抖动"
+   },
+   "description": {
+    "en": "A one-bit picture: two colours, and a pattern of pixels doing the work of every grey.",
+    "zh-CN": "一位色的画面：只有两种颜色，灰度全靠像素的排列。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "size",
+     "type": "float",
+     "default": 3,
+     "min": 1,
+     "max": 12,
+     "step": 1,
+     "label": {
+      "en": "Pixel size",
+      "zh-CN": "像素大小"
+     }
+    },
+    {
+     "id": "pattern",
+     "type": "choice",
+     "default": "ordered",
+     "options": [
+      "ordered",
+      "grain"
+     ],
+     "label": {
+      "en": "Pattern",
+      "zh-CN": "图案"
+     }
+    },
+    {
+     "id": "ink",
+     "type": "color",
+     "default": "#15161a",
+     "label": {
+      "en": "Ink",
+      "zh-CN": "深色"
+     }
+    },
+    {
+     "id": "paper",
+     "type": "color",
+     "default": "#ecebe4",
+     "label": {
+      "en": "Paper",
+      "zh-CN": "浅色"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1985,
+     "sha256": "67dc1ef2d277d70ccc2b1509ac1c8573cfd10b71dbae739706913ab4a277d6a0"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1431,
+     "sha256": "1fbcd784d51a87a28935ef7d1cc8f9bd077ca667eb0f7fad563e9fddd0d09441"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1625,
+     "sha256": "caa961d5aef6b7b0bb9fcd20e7e8dd2af9a702a9b3b528763b02a7a951a9e2f8"
+    }
+   ]
+  },
+  {
+   "id": "emile/duotone",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "color",
+   "title": {
+    "en": "Duotone",
+    "zh-CN": "双色"
+   },
+   "description": {
+    "en": "The whole picture in two inks: one for the darks, one for the lights.",
+    "zh-CN": "整幅画面只用两种颜色：一种给暗部，一种给亮部。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "dark",
+     "type": "color",
+     "default": "#0e1a33",
+     "label": {
+      "en": "Dark",
+      "zh-CN": "暗部"
+     }
+    },
+    {
+     "id": "light",
+     "type": "color",
+     "default": "#f3ead9",
+     "label": {
+      "en": "Light",
+      "zh-CN": "亮部"
+     }
+    },
+    {
+     "id": "contrast",
+     "type": "float",
+     "default": 1.5,
+     "min": 0.5,
+     "max": 2.5,
+     "step": 0.01,
+     "label": {
+      "en": "Contrast",
+      "zh-CN": "对比"
+     }
+    },
+    {
+     "id": "balance",
+     "type": "float",
+     "default": 0.5,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Balance",
+      "zh-CN": "明暗分界"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2125,
+     "sha256": "0ad9509eb3a8ec67893ded616440b43b105ec77b98e7d4dbfa8f812562414d50"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1406,
+     "sha256": "6326a89a6ea9754ae36091bc2e9f69fef15bed6f6e5b1f3cc77ee056750991fc"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2156,
+     "sha256": "dca329884237e40f40f735466edf4397eaf614e755f4d1b66ee39f55c15171e7"
+    }
+   ]
+  },
+  {
+   "id": "emile/fluted-glass",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "distort",
+   "title": {
+    "en": "Fluted glass",
+    "zh-CN": "条纹玻璃"
+   },
+   "description": {
+    "en": "Seen through reeded glass: the picture breaks into upright ribs of light, its shapes kept, its detail hidden.",
+    "zh-CN": "隔着条纹玻璃看：画面碎成一根根竖直的光条，形还在，细节藏了起来。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "width",
+     "type": "float",
+     "default": 0.04,
+     "min": 0.01,
+     "max": 0.2,
+     "step": 0.005,
+     "label": {
+      "en": "Rib width",
+      "zh-CN": "条纹宽度"
+     }
+    },
+    {
+     "id": "refraction",
+     "type": "float",
+     "default": 0.6,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Refraction",
+      "zh-CN": "折射"
+     }
+    },
+    {
+     "id": "frost",
+     "type": "float",
+     "default": 0.4,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Frost",
+      "zh-CN": "磨砂"
+     }
+    },
+    {
+     "id": "angle",
+     "type": "float",
+     "default": 0,
+     "min": 0,
+     "max": 180,
+     "step": 1,
+     "label": {
+      "en": "Angle",
+      "zh-CN": "角度"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2113,
+     "sha256": "705b8b455c54589fc8f23efa047d819daf0e82a59a61249e20f1b52972460cae"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1589,
+     "sha256": "efda37621ffbfede3657610c128969c608ac2b9d1ca8bcec72d9bb0d87a022fa"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1809,
+     "sha256": "6f47a3e5026f868a3fe1d2352d9b7175643230410366bba13e0993bee0383bee"
     }
    ]
   },
@@ -91,8 +790,8 @@
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 665,
-     "sha256": "7843eedf1a0b3135b4e383df4b95c2ae1952185a8e6f54260bce6b6352aaccad"
+     "bytes": 1698,
+     "sha256": "7af8513075b7297599f8e8707a8f79190923ac09235b8cf0aedff22c140c161b"
     },
     {
      "path": "pack.json",
@@ -101,8 +800,8 @@
     },
     {
      "path": "shader.glsl",
-     "bytes": 1428,
-     "sha256": "48678d3ed7e06744fa31e6ad95fe4faf73199775d227221e9ca50064214f4d49"
+     "bytes": 1472,
+     "sha256": "5d921b45c6a6a9ed9d330c9d465a8665530398b5ed9b1e9bf9e23150897ba060"
     }
    ]
   },
@@ -116,8 +815,8 @@
     "zh-CN": "网点"
    },
    "description": {
-    "en": "Like a photo in an old newspaper: the picture made of ink dots on paper.",
-    "zh-CN": "像旧报纸上的照片：画面由纸上的油墨点组成。"
+    "en": "A picture pulled through a printer's screen: ink dots on paper, bold enough to read as print.",
+    "zh-CN": "画面过了一遍印刷网屏：纸上的油墨网点，粗到一眼看出是印出来的。"
    },
    "params": [
     {
@@ -135,9 +834,9 @@
     {
      "id": "cell",
      "type": "float",
-     "default": 12,
-     "min": 4,
-     "max": 60,
+     "default": 18,
+     "min": 6,
+     "max": 80,
      "step": 1,
      "label": {
       "en": "Dot spacing",
@@ -145,34 +844,21 @@
      }
     },
     {
-     "id": "angle",
+     "id": "exposure",
      "type": "float",
-     "default": 45,
-     "min": 0,
-     "max": 90,
-     "step": 1,
+     "default": 0,
+     "min": -1,
+     "max": 1,
+     "step": 0.01,
      "label": {
-      "en": "Screen angle",
-      "zh-CN": "网线角度"
-     }
-    },
-    {
-     "id": "mode",
-     "type": "choice",
-     "default": "ink",
-     "options": [
-      "ink",
-      "colour"
-     ],
-     "label": {
-      "en": "Dots in",
-      "zh-CN": "网点颜色"
+      "en": "Exposure",
+      "zh-CN": "曝光"
      }
     },
     {
      "id": "ink",
      "type": "color",
-     "default": "#1c1b1a",
+     "default": "#1a1917",
      "label": {
       "en": "Ink",
       "zh-CN": "油墨"
@@ -181,7 +867,7 @@
     {
      "id": "paper",
      "type": "color",
-     "default": "#f2ede3",
+     "default": "#f1ece0",
      "label": {
       "en": "Paper",
       "zh-CN": "纸"
@@ -193,18 +879,198 @@
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 699,
-     "sha256": "8e4c9a7b9a95ddf0242449b70c324edb07cc8aec628db64071d5ef56f02846e2"
+     "bytes": 2387,
+     "sha256": "5b397c0899c2bc58c020f01ad5467f807bb2a163b422dd592bfad69b3cbf24e0"
     },
     {
      "path": "pack.json",
-     "bytes": 1621,
-     "sha256": "afa2f1caccec697ed03489822884b39fd47b0246c114f931710005bb4d9341c2"
+     "bytes": 1444,
+     "sha256": "cfb39082f1494634e08ac1600c36d2b9efa5f03d880f759f3c172c127e8852da"
     },
     {
      "path": "shader.glsl",
-     "bytes": 1165,
-     "sha256": "4ee99fe9ff22585cbfd0d0d57e0b8348b46960d9e14b4b360174c6af62e1d2e3"
+     "bytes": 2626,
+     "sha256": "cb6fa71eb9e73ae417669725d5e3ce06d79e36a0b1c9a1967af70564af6d0123"
+    }
+   ]
+  },
+  {
+   "id": "emile/palette",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "color",
+   "title": {
+    "en": "Palette",
+    "zh-CN": "限色"
+   },
+   "description": {
+    "en": "The picture reduced to a handful of chosen inks, like a screen print, a blueprint or a thermal camera.",
+    "zh-CN": "把画面压到几种选定的颜色，像丝网海报、蓝晒图，或者热成像。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "palette",
+     "type": "choice",
+     "default": "poster",
+     "options": [
+      "poster",
+      "thermal",
+      "cyanotype",
+      "moss",
+      "silver",
+      "primary"
+     ],
+     "label": {
+      "en": "Palette",
+      "zh-CN": "色板"
+     }
+    },
+    {
+     "id": "soft",
+     "type": "float",
+     "default": 0.1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Band softness",
+      "zh-CN": "色带柔和"
+     }
+    },
+    {
+     "id": "smooth",
+     "type": "float",
+     "default": 0.35,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Smoothing",
+      "zh-CN": "平滑"
+     }
+    },
+    {
+     "id": "exposure",
+     "type": "float",
+     "default": 0,
+     "min": -1,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Exposure",
+      "zh-CN": "曝光"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2437,
+     "sha256": "af82897b62d4bb27649d5320404437252a4c93fabcdec63145c0bba241bdda56"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1651,
+     "sha256": "eba921a0509c968451ffac35254cbed3abe83f60430070e044dfa44d0a98f3f5"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 3131,
+     "sha256": "7d654e8f173b8de5f04efe482bcfa65d8fa9f9a5418006a436cb5b3c423f1d91"
+    }
+   ]
+  },
+  {
+   "id": "emile/paper",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "texture",
+   "title": {
+    "en": "Paper",
+    "zh-CN": "纸纹"
+   },
+   "description": {
+    "en": "Printed on real paper: the tooth of the sheet under the picture, whites warmed to the paper's tone.",
+    "zh-CN": "印在真纸上：画面下透出纸的纹理，白色带上纸的色调。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "texture",
+     "type": "float",
+     "default": 0.5,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Tooth",
+      "zh-CN": "纸面粗细"
+     }
+    },
+    {
+     "id": "fibres",
+     "type": "float",
+     "default": 0.4,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Fibres",
+      "zh-CN": "纤维"
+     }
+    },
+    {
+     "id": "tone",
+     "type": "color",
+     "default": "#f1e8d6",
+     "label": {
+      "en": "Paper tone",
+      "zh-CN": "纸色"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1655,
+     "sha256": "230571390fbf17a919094d97d25097b3b78da37a02b07ea5e5a920eccd8696e7"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1277,
+     "sha256": "d86d6111e1d36b3738a30574ee513b51bf6df947a04f85432fc671c6581eae0a"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2205,
+     "sha256": "b579420bc1d5237306f0396c5eb729dd72a5a24923ac02bd0d292aa6300b43e1"
     }
    ]
   },
@@ -239,6 +1105,178 @@
      "path": "shader.glsl",
      "bytes": 269,
      "sha256": "b7fb4f74013f5d1015f9f445d761b7585b44e0cecff591a020e491c3ac6d4a7e"
+    }
+   ]
+  },
+  {
+   "id": "emile/risograph",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "print",
+   "title": {
+    "en": "Risograph",
+    "zh-CN": "孔版印刷"
+   },
+   "description": {
+    "en": "A two-colour print run: two inks laid one over the other, a little out of register, on uncoated paper.",
+    "zh-CN": "双色孔版印刷：两种油墨叠印，略微错位，印在不涂布的纸上。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "ink_a",
+     "type": "color",
+     "default": "#2f4fa2",
+     "label": {
+      "en": "First ink",
+      "zh-CN": "第一种油墨"
+     }
+    },
+    {
+     "id": "ink_b",
+     "type": "color",
+     "default": "#f0523f",
+     "label": {
+      "en": "Second ink",
+      "zh-CN": "第二种油墨"
+     }
+    },
+    {
+     "id": "grain",
+     "type": "float",
+     "default": 0.6,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Grain",
+      "zh-CN": "颗粒"
+     }
+    },
+    {
+     "id": "misregister",
+     "type": "float",
+     "default": 0.35,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Misregistration",
+      "zh-CN": "错版"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2422,
+     "sha256": "489c478b01858b072189110c011d84be14d65c2c690a85a2606463c0f0661498"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1490,
+     "sha256": "8487a6cbbe5132c775074e3ac31b9519f8f18726268feb618028ffad9f37c3c6"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 2751,
+     "sha256": "a637fff763e8def2a834ab6547e87ce0195bbc966c93955ca553f66e84c0d96f"
+    }
+   ]
+  },
+  {
+   "id": "emile/vhs",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "film",
+   "title": {
+    "en": "VHS",
+    "zh-CN": "录像带"
+   },
+   "description": {
+    "en": "A tape that has been played many times: soft, colours bleeding sideways, the bottom edge tearing.",
+    "zh-CN": "放过很多遍的录像带：发软，颜色向一边渗，底边在撕扯。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "jitter",
+     "type": "float",
+     "default": 0.4,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Tracking",
+      "zh-CN": "走带抖动"
+     }
+    },
+    {
+     "id": "bleed",
+     "type": "float",
+     "default": 0.6,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Colour bleed",
+      "zh-CN": "颜色渗开"
+     }
+    },
+    {
+     "id": "noise",
+     "type": "float",
+     "default": 0.4,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Tape noise",
+      "zh-CN": "磁带噪点"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1829,
+     "sha256": "b59c5c555e1fd1a17be5f3275d2f9c07ee3f3dc66877f2432abd9ea897dbfbbb"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1360,
+     "sha256": "d3a536806a73ee3ae9b2dbd242b97f40e6f650b8dc5b03ba63ff4878f379618c"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 3699,
+     "sha256": "ab12a7deafb9fba7ca7d1782440512b0768a2e3e562a9018d2a625606e8f6952"
     }
    ]
   },
