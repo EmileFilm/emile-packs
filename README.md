@@ -68,9 +68,8 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 <table>
 <tr>
-<td width="33%"><img src="docs/filters/fluted-glass.jpg" alt="fluted glass"><br><b>Fluted glass</b> · <code>emile/fluted-glass</code><br>Seen through reeded glass: shapes kept, detail hidden.</td>
-<td width="33%"><img src="docs/filters/displace.jpg" alt="displace"><br><b>Displace</b> · <code>emile/displace</code><br>Bands of the picture slip sideways: something has shifted, and holds there.</td>
-<td width="33%"></td>
+<td width="50%"><img src="docs/filters/fluted-glass.jpg" alt="fluted glass"><br><b>Fluted glass</b> · <code>emile/fluted-glass</code><br>Seen through reeded glass: shapes kept, detail hidden.</td>
+<td width="50%"><img src="docs/filters/displace.jpg" alt="displace"><br><b>Displace</b> · <code>emile/displace</code><br>Bands of the picture slip sideways: something has shifted, and holds there.</td>
 </tr>
 </table>
 
@@ -78,9 +77,8 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 <table>
 <tr>
-<td width="33%"><img src="docs/filters/duotone.jpg" alt="duotone"><br><b>Duotone</b> · <code>emile/duotone</code><br>The whole picture in two inks: one for the darks, one for the lights.</td>
-<td width="33%"><img src="docs/filters/palette.jpg" alt="palette"><br><b>Palette</b> · <code>emile/palette</code><br>A handful of chosen inks, like a screen print, a blueprint or a thermal camera.</td>
-<td width="33%"></td>
+<td width="50%"><img src="docs/filters/duotone.jpg" alt="duotone"><br><b>Duotone</b> · <code>emile/duotone</code><br>The whole picture in two inks: one for the darks, one for the lights.</td>
+<td width="50%"><img src="docs/filters/palette.jpg" alt="palette"><br><b>Palette</b> · <code>emile/palette</code><br>A handful of chosen inks, like a screen print, a blueprint or a thermal camera.</td>
 </tr>
 </table>
 
@@ -88,14 +86,12 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 <table>
 <tr>
-<td width="33%"><img src="docs/filters/bloom.jpg" alt="bloom"><br><b>Bloom</b> · <code>emile/bloom</code><br>Light spills from the brightest points into the dark, with the warm edge film gives it.</td>
-<td width="33%"><img src="docs/filters/crt.jpg" alt="crt"><br><b>CRT</b> · <code>emile/crt</code><br>A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.</td>
-<td width="33%"><img src="docs/filters/vhs.jpg" alt="vhs"><br><b>VHS</b> · <code>emile/vhs</code><br>A tape played many times: soft, colours bleeding sideways, the bottom edge tearing.</td>
+<td width="50%"><img src="docs/filters/bloom.jpg" alt="bloom"><br><b>Bloom</b> · <code>emile/bloom</code><br>Light spills from the brightest points into the dark, with the warm edge film gives it.</td>
+<td width="50%"><img src="docs/filters/crt.jpg" alt="crt"><br><b>CRT</b> · <code>emile/crt</code><br>A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.</td>
 </tr>
 <tr>
-<td width="33%"><img src="docs/filters/chromatic-aberration.jpg" alt="chromatic aberration"><br><b>Chromatic aberration</b> · <code>emile/chromatic-aberration</code><br>A lens that splits light at its edges; the centre stays sharp.</td>
-<td width="33%"></td>
-<td width="33%"></td>
+<td width="50%"><img src="docs/filters/vhs.jpg" alt="vhs"><br><b>VHS</b> · <code>emile/vhs</code><br>A tape played many times: soft, colours bleeding sideways, the bottom edge tearing.</td>
+<td width="50%"><img src="docs/filters/chromatic-aberration.jpg" alt="chromatic aberration"><br><b>Chromatic aberration</b> · <code>emile/chromatic-aberration</code><br>A lens that splits light at its edges; the centre stays sharp.</td>
 </tr>
 </table>
 
