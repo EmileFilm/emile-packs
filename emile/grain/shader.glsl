@@ -1,6 +1,6 @@
 // Grain: fine, uneven noise over the picture, a new grain every frame,
 // strongest in the mid-tones as on film. size is in pixels of a frame
-// 1080 pixels high, so the preview and the export look alike.
+// 1080 pixels on its short side, so the preview and the export look alike.
 
 float grainHash(vec3 p) {
   p = fract(p * vec3(0.1031, 0.1030, 0.0973));
@@ -25,8 +25,8 @@ float grain(vec2 q, float t) {
 vec4 filterColor(vec2 uv) {
   vec4 c = getColor(uv);
   vec3 rgb = c.a > 0.0 ? c.rgb / c.a : vec3(0.0);
-  vec2 q = uv * resolution / (p_size * resolution.y / 1080.0);
-  float t = frame + seed * 0.013;
+  vec2 q = uv * resolution / (p_size * min(resolution.x, resolution.y) / 1080.0);
+  float t = frame + mod(seed, 997.0) * 0.013;
   vec3 n = p_colour ? vec3(grain(q, t), grain(q + 31.7, t + 0.25), grain(q + 63.1, t + 0.75)) : vec3(grain(q, t));
   float l = dot(rgb, vec3(0.2126, 0.7152, 0.0722));
   float mid = mix(0.35, 1.0, 1.0 - abs(2.0 * l - 1.0));

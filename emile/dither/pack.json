@@ -1,0 +1,76 @@
+{
+  "id": "emile/dither",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Dither",
+    "zh-CN": "抖动"
+  },
+  "description": {
+    "en": "A one-bit picture: two colours, and a pattern of pixels doing the work of every grey.",
+    "zh-CN": "一位色的画面：只有两种颜色，灰度全靠像素的排列。"
+  },
+  "category": "texture",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "size",
+      "type": "float",
+      "default": 3,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Pixel size",
+        "zh-CN": "像素大小"
+      }
+    },
+    {
+      "id": "pattern",
+      "type": "choice",
+      "default": "ordered",
+      "options": [
+        "ordered",
+        "grain"
+      ],
+      "label": {
+        "en": "Pattern",
+        "zh-CN": "图案"
+      }
+    },
+    {
+      "id": "ink",
+      "type": "color",
+      "default": "#15161a",
+      "label": {
+        "en": "Ink",
+        "zh-CN": "深色"
+      }
+    },
+    {
+      "id": "paper",
+      "type": "color",
+      "default": "#ecebe4",
+      "label": {
+        "en": "Paper",
+        "zh-CN": "浅色"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}
