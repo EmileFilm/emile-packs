@@ -1,0 +1,81 @@
+{
+  "id": "emile/fluted-glass",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Fluted glass",
+    "zh-CN": "条纹玻璃"
+  },
+  "description": {
+    "en": "Seen through reeded glass: the picture breaks into upright ribs of light, its shapes kept, its detail hidden.",
+    "zh-CN": "隔着条纹玻璃看：画面碎成一根根竖直的光条，形还在，细节藏了起来。"
+  },
+  "category": "distort",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "width",
+      "type": "float",
+      "default": 0.04,
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.005,
+      "label": {
+        "en": "Rib width",
+        "zh-CN": "条纹宽度"
+      }
+    },
+    {
+      "id": "refraction",
+      "type": "float",
+      "default": 0.6,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Refraction",
+        "zh-CN": "折射"
+      }
+    },
+    {
+      "id": "frost",
+      "type": "float",
+      "default": 0.4,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Frost",
+        "zh-CN": "磨砂"
+      }
+    },
+    {
+      "id": "angle",
+      "type": "float",
+      "default": 0,
+      "min": 0,
+      "max": 180,
+      "step": 1,
+      "label": {
+        "en": "Angle",
+        "zh-CN": "角度"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}
