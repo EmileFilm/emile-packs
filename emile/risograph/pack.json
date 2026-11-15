@@ -1,0 +1,75 @@
+{
+  "id": "emile/risograph",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Risograph",
+    "zh-CN": "孔版印刷"
+  },
+  "description": {
+    "en": "A two-colour print run: two inks laid one over the other, a little out of register, on uncoated paper.",
+    "zh-CN": "双色孔版印刷：两种油墨叠印，略微错位，印在不涂布的纸上。"
+  },
+  "category": "print",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "ink_a",
+      "type": "color",
+      "default": "#2f4fa2",
+      "label": {
+        "en": "First ink",
+        "zh-CN": "第一种油墨"
+      }
+    },
+    {
+      "id": "ink_b",
+      "type": "color",
+      "default": "#f0523f",
+      "label": {
+        "en": "Second ink",
+        "zh-CN": "第二种油墨"
+      }
+    },
+    {
+      "id": "grain",
+      "type": "float",
+      "default": 0.6,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Grain",
+        "zh-CN": "颗粒"
+      }
+    },
+    {
+      "id": "misregister",
+      "type": "float",
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Misregistration",
+        "zh-CN": "错版"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

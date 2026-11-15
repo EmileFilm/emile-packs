@@ -7,8 +7,8 @@
     "zh-CN": "网点"
   },
   "description": {
-    "en": "Like a photo in an old newspaper: the picture made of ink dots on paper.",
-    "zh-CN": "像旧报纸上的照片：画面由纸上的油墨点组成。"
+    "en": "A picture pulled through a printer's screen: ink dots on paper, bold enough to read as print.",
+    "zh-CN": "画面过了一遍印刷网屏：纸上的油墨网点，粗到一眼看出是印出来的。"
   },
   "category": "print",
   "params": [
@@ -27,9 +27,9 @@
     {
       "id": "cell",
       "type": "float",
-      "default": 12,
-      "min": 4,
-      "max": 60,
+      "default": 18,
+      "min": 6,
+      "max": 80,
       "step": 1,
       "label": {
         "en": "Dot spacing",
@@ -37,34 +37,21 @@
       }
     },
     {
-      "id": "angle",
+      "id": "exposure",
       "type": "float",
-      "default": 45,
-      "min": 0,
-      "max": 90,
-      "step": 1,
+      "default": 0,
+      "min": -1,
+      "max": 1,
+      "step": 0.01,
       "label": {
-        "en": "Screen angle",
-        "zh-CN": "网线角度"
-      }
-    },
-    {
-      "id": "mode",
-      "type": "choice",
-      "default": "ink",
-      "options": [
-        "ink",
-        "colour"
-      ],
-      "label": {
-        "en": "Dots in",
-        "zh-CN": "网点颜色"
+        "en": "Exposure",
+        "zh-CN": "曝光"
       }
     },
     {
       "id": "ink",
       "type": "color",
-      "default": "#1c1b1a",
+      "default": "#1a1917",
       "label": {
         "en": "Ink",
         "zh-CN": "油墨"
@@ -73,7 +60,7 @@
     {
       "id": "paper",
       "type": "color",
-      "default": "#f2ede3",
+      "default": "#f1ece0",
       "label": {
         "en": "Paper",
         "zh-CN": "纸"
