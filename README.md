@@ -159,7 +159,8 @@ A folder `<publisher>/<name>/`:
   - a filter defines `vec4 filterColor(vec2 uv)` and reads the picture under it with `getColor(uv)`;
   - a transition defines `vec4 transition(vec2 uv)` and reads `getFromColor(uv)`, `getToColor(uv)` and `progress` (0–1), the [gl-transitions](https://github.com/gl-transitions/gl-transitions) shape;
   - both get `vec2 resolution`, `float ratio`, `float frame`, `float fps`, `float seed`, and one uniform `p_<id>` per parameter (`color` is a `vec3`, `choice` the chosen option's index as an `int`). There is no clock: what moves reads `frame` and `seed`.
-  - a shader declares no uniforms, inputs or outputs of its own, samples no texture directly, defines no `main()` and uses no extension. It draws in one pass: it can read the picture as often as it likes, never its own result.
+  - a shader declares no uniforms, inputs or outputs of its own, samples no texture directly, defines no `main()` and uses no extension. It can read the picture as often as it likes, never its own result.
+  - a filter that needs a wide reach (a glow, a blur) may draw in passes: `passes` in `pack.json` lists them (`[{ id, glsl, scale }]`), each pass's shader defines `vec4 passColor(vec2 uv)` and is drawn into a picture of its own at `scale` × the frame, and the passes after it and the last shader read it with `getPass_<id>(uv)` (`skills/emile-shaders/references/contract.md`, Passes; `emile/bloom` is one).
   - sizes are in pixels of a frame 1080 pixels on its short side (or a share of that side), so 720p and 4K look alike, upright and square frames too.
 - `SKILL.md`: the sections [above](#reading-a-skillmd).
 

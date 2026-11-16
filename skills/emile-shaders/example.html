@@ -210,7 +210,7 @@
     const entry = catalog.find(e => e.pack.id === id) ?? catalog[0]
     current?.runner.dispose()
     const make = entry.pack.kind === 'filter' ? EmileShaders.filter : EmileShaders.transition
-    current = { entry, runner: make(canvas, entry.pack, entry.glsl) }
+    current = { entry, runner: make(canvas, entry.pack, entry.glsl, entry.passes) }
     state.id = entry.pack.id
     state.params = {}
     $('pack').value = entry.pack.id

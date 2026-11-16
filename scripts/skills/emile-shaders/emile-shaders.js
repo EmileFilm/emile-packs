@@ -6,6 +6,11 @@
 //   const fx = EmileShaders.filter(canvas, pack, glsl)     // pack: its pack.json (parsed), glsl: its shader.glsl as text
 //   fx.draw(picture, { params: { cell: 24 }, frame: 0, fps: 30, seed: 0 })
 //
+//   A filter drawn in passes (pack.json has passes, emile/bloom): give each
+//   pass's shader by its id as well, and the runner draws them in order
+//   into pictures of their own before the last shader:
+//   EmileShaders.filter(canvas, pack, glsl, { bright: '…', blur_x: '…', … })
+//
 //   const tr = EmileShaders.transition(canvas, pack, glsl)
 //   tr.draw(from, to, progress, { params, frame, fps, seed })   // progress 0–1
 //
@@ -35,16 +40,23 @@ ${Object.entries(SHARED).map(([n, t]) => `uniform ${t} ${n};`).join('\n')}`
 
   const paramUniforms = params => params.map(p => `uniform ${PARAM_GLSL[p.type]} p_${p.id};`).join('\n')
 
+  // The earlier passes a shader reads, and passSize, when there are passes
+  const passReads = (earlier, passes) => (passes ? `
+uniform vec2 passSize;${earlier.map(id => `
+uniform sampler2D emile_pass_${id};
+vec4 getPass_${id}(vec2 p) { return texture(emile_pass_${id}, p); }`).join('')}` : '')
+
   // The whole fragment shader around a pack's shader.glsl. #line 1: a
-  // compile error names the line of the pack's own file
-  function fragmentSource(kind, glsl, params = []) {
-    if (kind === 'filter') return `${HEAD}
+  // compile error names the line of the pack's own file. earlier: the ids
+  // of the passes drawn before it; a pass is kind 'pass'
+  function fragmentSource(kind, glsl, params = [], earlier = []) {
+    if (kind === 'filter' || kind === 'pass') return `${HEAD}
 uniform sampler2D emile_src;
 ${paramUniforms(params)}
-vec4 getColor(vec2 p) { return texture(emile_src, p); }
+vec4 getColor(vec2 p) { return texture(emile_src, p); }${passReads(earlier, kind === 'pass' || earlier.length > 0)}
 #line 1
 ${glsl}
-void main() { emile_out = filterColor(uv); }`
+void main() { emile_out = ${kind === 'pass' ? 'passColor' : 'filterColor'}(uv); }`
     if (kind === 'transition') return `${HEAD}
 uniform sampler2D emile_from, emile_to;
 uniform float progress;
@@ -106,16 +118,28 @@ void main() { uv = pos * 0.5 + 0.5; gl_Position = vec4(pos, 0.0, 1.0); }`
     return t
   }
 
-  // A pack's shader compiled on a canvas (or a WebGL2 context), and how to draw it
-  function make(target, kind, pack, glsl) {
+  // A pack's shaders compiled on a canvas (or a WebGL2 context), and how
+  // to draw them. passes: a filter's pass shaders by id (pack.passes)
+  function make(target, kind, pack, glsl, passes = {}) {
     if (pack.kind !== kind) throw new Error(`${pack.id} is a ${pack.kind}, not a ${kind}`)
     const gl = context(target)
-    const prog = gl.createProgram()
-    gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, VERT))
-    gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, fragmentSource(kind, glsl, pack.params ?? [])))
-    gl.bindAttribLocation(prog, 0, 'pos')
-    gl.linkProgram(prog)
-    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog))
+    const params = pack.params ?? []
+    const program = frag => {
+      const prog = gl.createProgram()
+      gl.attachShader(prog, compile(gl, gl.VERTEX_SHADER, VERT))
+      gl.attachShader(prog, compile(gl, gl.FRAGMENT_SHADER, frag))
+      gl.bindAttribLocation(prog, 0, 'pos')
+      gl.linkProgram(prog)
+      if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog))
+      return prog
+    }
+    const ids = (pack.passes ?? []).map(p => p.id)
+    const steps = (pack.passes ?? []).map((p, i) => {
+      if (typeof passes[p.id] !== 'string') throw new Error(`${pack.id} draws in passes: give the shader of its pass ${p.id} (${p.glsl})`)
+      const tex = texture(gl), fb = gl.createFramebuffer()
+      return { id: p.id, scale: p.scale, prog: program(fragmentSource('pass', passes[p.id], params, ids.slice(0, i))), tex, fb, w: 0, h: 0 }
+    })
+    const prog = program(fragmentSource(kind, glsl, params, ids))
     const quad = gl.createBuffer()
     const vao = gl.createVertexArray()
     gl.bindVertexArray(vao)
@@ -127,11 +151,32 @@ void main() { uv = pos * 0.5 + 0.5; gl_Position = vec4(pos, 0.0, 1.0); }`
     const names = kind === 'filter' ? ['emile_src'] : ['emile_from', 'emile_to']
     const textures = names.map(() => texture(gl))
 
-    function draw(pictures, uniforms, { params = {}, frame = 0, fps = 30, seed = 0 } = {}) {
-      const w = gl.drawingBufferWidth, h = gl.drawingBufferHeight
-      gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+    // One shader drawn into a framebuffer (null: the canvas) of w × h
+    function run(p, fb, w, h, uniforms) {
+      gl.bindFramebuffer(gl.FRAMEBUFFER, fb)
       gl.viewport(0, 0, w, h)
-      gl.useProgram(prog)
+      gl.useProgram(p)
+      names.forEach((name, i) => {
+        gl.activeTexture(gl.TEXTURE0 + i)
+        gl.bindTexture(gl.TEXTURE_2D, textures[i])
+        gl.uniform1i(gl.getUniformLocation(p, name), i)
+      })
+      steps.forEach((s, i) => {
+        gl.activeTexture(gl.TEXTURE0 + names.length + i)
+        gl.bindTexture(gl.TEXTURE_2D, s.tex)
+        gl.uniform1i(gl.getUniformLocation(p, `emile_pass_${s.id}`), names.length + i)
+      })
+      for (const [name, { type, value }] of Object.entries(uniforms)) {
+        const at = gl.getUniformLocation(p, name)
+        if (type === 'int' || type === 'bool') gl.uniform1i(at, Number(value) | 0)
+        else if (type === 'float') gl.uniform1f(at, value)
+        else gl[`uniform${value.length}fv`](at, value)
+      }
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
+    }
+
+    function draw(pictures, extra, { params: set = {}, frame = 0, fps = 30, seed = 0 } = {}) {
+      const w = gl.drawingBufferWidth, h = gl.drawingBufferHeight
       gl.bindVertexArray(vao)
       gl.disable(gl.BLEND)
       pictures.forEach((picture, i) => {
@@ -141,26 +186,33 @@ void main() { uv = pos * 0.5 + 0.5; gl_Position = vec4(pos, 0.0, 1.0); }`
         gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true)
         gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true)
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, picture)
-        gl.uniform1i(gl.getUniformLocation(prog, names[i]), i)
       })
-      const all = {
+      const uniforms = {
         resolution: { type: 'vec2', value: [w, h] }, ratio: { type: 'float', value: w / h },
         frame: { type: 'float', value: frame }, fps: { type: 'float', value: fps },
         seed: { type: 'float', value: ((seed % 65536) + 65536) % 65536 },
-        ...uniforms, ...paramValues(pack.params ?? [], params)
+        ...extra, ...paramValues(params, set)
       }
-      for (const [name, { type, value }] of Object.entries(all)) {
-        const at = gl.getUniformLocation(prog, name)
-        if (type === 'int' || type === 'bool') gl.uniform1i(at, Number(value) | 0)
-        else if (type === 'float') gl.uniform1f(at, value)
-        else gl[`uniform${value.length}fv`](at, value)
+      // Each pass into its own picture, at its scale of the frame
+      for (const s of steps) {
+        const sw = Math.max(1, Math.round(w * s.scale)), sh = Math.max(1, Math.round(h * s.scale))
+        if (s.w !== sw || s.h !== sh) {
+          gl.bindTexture(gl.TEXTURE_2D, s.tex)
+          gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, sw, sh, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
+          gl.bindFramebuffer(gl.FRAMEBUFFER, s.fb)
+          gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, s.tex, 0)
+          s.w = sw
+          s.h = sh
+        }
+        run(s.prog, s.fb, sw, sh, { ...uniforms, passSize: { type: 'vec2', value: [sw, sh] } })
       }
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
+      run(prog, null, w, h, steps.length ? { ...uniforms, passSize: { type: 'vec2', value: [w, h] } } : uniforms)
       gl.bindVertexArray(null)
     }
 
     const dispose = () => {
       textures.forEach(t => gl.deleteTexture(t))
+      steps.forEach(s => { gl.deleteTexture(s.tex); gl.deleteFramebuffer(s.fb); gl.deleteProgram(s.prog) })
       gl.deleteBuffer(quad)
       gl.deleteVertexArray(vao)
       gl.deleteProgram(prog)
@@ -171,7 +223,7 @@ void main() { uv = pos * 0.5 + 0.5; gl_Position = vec4(pos, 0.0, 1.0); }`
   }
 
   const api = {
-    filter: (target, pack, glsl) => make(target, 'filter', pack, glsl),
+    filter: (target, pack, glsl, passes) => make(target, 'filter', pack, glsl, passes),
     transition: (target, pack, glsl) => make(target, 'transition', pack, glsl),
     fragmentSource,
     paramValues

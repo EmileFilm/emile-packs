@@ -1,7 +1,7 @@
 {
   "id": "emile/bloom",
   "kind": "filter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "title": {
     "en": "Bloom",
     "zh-CN": "泛光"
@@ -27,8 +27,8 @@
     {
       "id": "threshold",
       "type": "float",
-      "default": 0.7,
-      "min": 0.3,
+      "default": 0.8,
+      "min": 0.5,
       "max": 0.95,
       "step": 0.01,
       "label": {
@@ -39,7 +39,7 @@
     {
       "id": "radius",
       "type": "float",
-      "default": 0.6,
+      "default": 0.5,
       "min": 0.1,
       "max": 1,
       "step": 0.01,
@@ -59,6 +59,33 @@
         "en": "Warmth",
         "zh-CN": "暖度"
       }
+    }
+  ],
+  "passes": [
+    {
+      "id": "bright",
+      "glsl": "bright.glsl",
+      "scale": 0.25
+    },
+    {
+      "id": "tight_x",
+      "glsl": "tight-x.glsl",
+      "scale": 0.25
+    },
+    {
+      "id": "tight_y",
+      "glsl": "tight-y.glsl",
+      "scale": 0.25
+    },
+    {
+      "id": "blur_x",
+      "glsl": "blur-x.glsl",
+      "scale": 0.25
+    },
+    {
+      "id": "blur_y",
+      "glsl": "blur-y.glsl",
+      "scale": 0.25
     }
   ],
   "backends": {

@@ -96,12 +96,14 @@ vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'scripts', 'skills', 'emile-s
 const wrapped = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
   const glsl = fs.readFileSync(path.join(dir, pack.backends.glsl), 'utf8')
-  const same = runner.EmileShaders.fragmentSource(pack.kind, glsl, pack.params) === contract.fragmentSource(pack.kind, glsl, pack.params)
+  const ids = (pack.passes ?? []).map(p => p.id)
+  const wraps = [[pack.kind, glsl, ids], ...(pack.passes ?? []).map((p, i) => ['pass', fs.readFileSync(path.join(dir, p.glsl), 'utf8'), ids.slice(0, i)])]
+  const same = wraps.every(([kind, text, earlier]) => runner.EmileShaders.fragmentSource(kind, text, pack.params, earlier) === contract.fragmentSource(kind, text, pack.params, earlier))
     && JSON.stringify(runner.EmileShaders.paramValues(pack.params)) === JSON.stringify(contract.paramValues(pack.params))
   return same ? null : pack.id
 }).filter(Boolean)
 if (wrapped.length) fail(`emile-shaders.js wraps ${wrapped.join(', ')} differently from the engine's compose/contract.js: make its fragmentSource and paramValues the same`)
-console.log(`✓ emile-shaders.js wraps all ${packDirs.length} shaders as the compositor does`)
+console.log(`✓ emile-shaders.js wraps the shaders of all ${packDirs.length} packs, passes too, as the compositor does`)
 
 // 2. generate
 const { scanSkill } = await import(pathToFileURL(checker).href)

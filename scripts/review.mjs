@@ -79,13 +79,14 @@ const { launchBrowser } = await import(pathToFileURL(path.join(engine, 'lib', 'c
 
 // Every filter pack of this repository, or the ones named
 const all = {}
-for (const pub of fs.readdirSync(ROOT, { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.') && e.name !== 'scripts')) {
+for (const pub of fs.readdirSync(ROOT, { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'skills', 'docs'].includes(e.name))) {
   for (const e of fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })) {
     const file = path.join(ROOT, pub.name, e.name, 'pack.json')
     if (!e.isDirectory() || !fs.existsSync(file)) continue
     const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
     if (pack.kind !== 'filter') continue
-    all[pack.id] = { kind: pack.kind, category: pack.category, animated: !!pack.animated, params: pack.params, glsl: fs.readFileSync(path.join(ROOT, pub.name, e.name, pack.backends.glsl), 'utf8') }
+    const read = f => fs.readFileSync(path.join(ROOT, pub.name, e.name, f), 'utf8')
+    all[pack.id] = { kind: pack.kind, category: pack.category, animated: !!pack.animated, params: pack.params, glsl: read(pack.backends.glsl), passes: (pack.passes ?? []).map(p => ({ id: p.id, scale: p.scale, glsl: read(p.glsl) })) }
   }
 }
 const ORDER = ['print', 'texture', 'distort', 'color', 'glow', 'film']

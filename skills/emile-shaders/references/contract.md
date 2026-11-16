@@ -11,7 +11,7 @@ What every `shader.glsl` here expects from whatever runs it, and what it may do.
 - A **transition** defines `vec4 transition(vec2 uv)` and reads `getFromColor(vec2 uv)`, `getToColor(vec2 uv)` and `float progress` (0 at the outgoing picture, 1 at the incoming one): the gl-transitions shape.
 - `uv` runs 0–1 from the **bottom left** of the frame.
 - Every colour in and out is **premultiplied** (rgb already multiplied by alpha). A picture with no alpha is the same either way.
-- It draws in **one pass**: it may read the picture as often as it likes, never its own result.
+- A filter draws in **one pass** unless its `pack.json` lists `passes` (below): it may read the picture as often as it likes, never its own result.
 - It never samples a texture itself (only the getters), declares nothing of its own at the top level but functions and constants, writes no `gl_FragColor`, uses no `discard`, no extension, no name starting `emile_`, and reads no clock.
 
 ## What it is given
@@ -87,6 +87,46 @@ vec4 getToColor(vec2 p) { return texture(emile_to, p); }
 /* shader.glsl, as it is */
 void main() { emile_out = transition(uv); }
 ```
+
+## Passes
+
+A filter whose `pack.json` has `passes` (contract 2; `emile/bloom` is one) draws in several. Each pass is a file of the pack defining `vec4 passColor(vec2 uv)`, drawn in order into a picture of its own `scale` times the frame's size; the passes after it and the last shader (`backends.glsl`, `filterColor`) read it with `vec4 getPass_<id>(vec2 uv)`, linearly filtered and clamped at the edge like the picture. Every pass also reads `getColor` and gets the same uniforms plus `vec2 passSize`, its own picture in pixels (the frame's in the last shader). `resolution` stays the frame's, so sizes are worked out the same way in every pass.
+
+```json
+"passes": [
+  { "id": "bright", "glsl": "bright.glsl", "scale": 0.25 },
+  { "id": "blur_x", "glsl": "blur-x.glsl", "scale": 0.25 }
+],
+"backends": { "glsl": "shader.glsl" }
+```
+
+The wrap of a pass (here the second, which may read `bright`):
+
+```glsl
+#version 300 es
+precision highp float;
+precision highp int;
+in vec2 uv;
+out vec4 emile_out;
+uniform vec2 resolution;
+uniform float ratio;
+uniform float frame;
+uniform float fps;
+uniform float seed;
+uniform sampler2D emile_src;
+uniform float p_amount;
+uniform float p_size;
+uniform bool p_colour;
+vec4 getColor(vec2 p) { return texture(emile_src, p); }
+uniform vec2 passSize;
+uniform sampler2D emile_pass_bright;
+vec4 getPass_bright(vec2 p) { return texture(emile_pass_bright, p); }
+#line 1
+/* blur-x.glsl, as it is */
+void main() { emile_out = passColor(uv); }
+```
+
+The last shader is wrapped as a filter with the same `passSize` and `getPass_<id>` lines for every pass. Render each pass into an RGBA8 texture of `round(width × scale) × round(height × scale)` pixels (at least 1), with no blending, before drawing the last shader over the frame. A filter without `passes` is wrapped exactly as above, with none of these lines.
 
 The vertex shader draws one quad over the frame:
 

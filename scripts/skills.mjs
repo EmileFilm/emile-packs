@@ -42,7 +42,8 @@ const lengthOf = guide => /(\d[\d.]*–\d[\d.]* s)\b/.exec(guide.replace(/^---[\
 function readPacks(packDirs) {
   return packDirs.map(dir => {
     const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
-    return { dir, name: path.basename(dir), pack, guide: fs.readFileSync(path.join(dir, 'SKILL.md'), 'utf8'), glsl: fs.readFileSync(path.join(dir, pack.backends.glsl), 'utf8') }
+    const read = f => fs.readFileSync(path.join(dir, f), 'utf8')
+    return { dir, name: path.basename(dir), pack, guide: read('SKILL.md'), glsl: read(pack.backends.glsl), passes: Object.fromEntries((pack.passes ?? []).map(p => [p.id, read(p.glsl)])) }
   })
 }
 
@@ -77,7 +78,8 @@ export function generateSkills(root, packDirs, contract) {
   put(`${S}/references/contract.md`, fill(template('emile-shaders', 'references/contract.md'), {
     generated: md,
     filterWrap: contract.fragmentSource('filter', '/* shader.glsl, as it is */', grain.pack.params),
-    transitionWrap: contract.fragmentSource('transition', '/* shader.glsl, as it is */', [])
+    transitionWrap: contract.fragmentSource('transition', '/* shader.glsl, as it is */', []),
+    passWrap: contract.fragmentSource('pass', '/* blur-x.glsl, as it is */', grain.pack.params, ['bright'])
   }))
   put(`${S}/references/wiring.md`, fill(template('emile-shaders', 'references/wiring.md'), { generated: md }))
 
@@ -98,8 +100,8 @@ export function generateSkills(root, packDirs, contract) {
   const js = `// ${note(from)}\n`
   put(`${S}/emile-shaders.js`, js + template('emile-shaders', 'emile-shaders.js'))
   put(`${S}/pictures.js`, `// ${note('scripts/pictures.js')}\n` + fs.readFileSync(path.join(root, 'scripts', 'pictures.js'), 'utf8'))
-  const catalog = [...filters, ...transitions].map(p => ({ pack: p.pack, glsl: p.glsl, guide: p.guide, folder: folderOf(p) }))
-  put(`${S}/catalog.js`, `${js}// Every pack.json, shader.glsl and SKILL.md of this folder, for a page opened from file:// (which can't fetch them).\n;(function (root) {\n  (root.EmileShaders ??= {}).catalog = ${JSON.stringify(catalog, null, 1).replace(/\n/g, '\n  ')}\n})(typeof globalThis !== 'undefined' ? globalThis : this)\n`)
+  const catalog = [...filters, ...transitions].map(p => ({ pack: p.pack, glsl: p.glsl, passes: p.passes, guide: p.guide, folder: folderOf(p) }))
+  put(`${S}/catalog.js`, `${js}// Every pack.json, shader.glsl (and pass shaders) and SKILL.md of this folder, for a page opened from file:// (which can't fetch them).\n;(function (root) {\n  (root.EmileShaders ??= {}).catalog = ${JSON.stringify(catalog, null, 1).replace(/\n/g, '\n  ')}\n})(typeof globalThis !== 'undefined' ? globalThis : this)\n`)
   put(`${S}/example.html`, template('emile-shaders', 'example.html').replace(/^<!doctype html>\n/i, m => `${m}<!-- ${note(from)} -->\n`))
   for (const p of [...filters, ...transitions]) {
     for (const f of fs.readdirSync(p.dir).filter(f => !f.startsWith('.')).sort()) put(`${S}/${folderOf(p)}/${f}`, fs.readFileSync(path.join(p.dir, f)))

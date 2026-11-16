@@ -2,7 +2,7 @@
 
 # Wiring a shader into your own page
 
-`emile-shaders.js` is the whole runner: one classic script, no dependencies, under 200 lines. It wraps a pack's `shader.glsl` exactly as Émile does (`references/contract.md`), so the shader runs unchanged. Copy it next to your page, along with the effect's folder.
+`emile-shaders.js` is the whole runner: one classic script, no dependencies, about 230 lines. It wraps a pack's `shader.glsl` exactly as Émile does (`references/contract.md`), so the shader runs unchanged. Copy it next to your page, along with the effect's folder.
 
 ## The shader's files
 
@@ -41,6 +41,8 @@ A page opened from `file://` can't fetch; load `catalog.js` instead (it holds ev
   })
 </script>
 ```
+
+A filter drawn in passes (its `pack.json` lists `passes`; `emile/bloom` does) needs each pass's shader too, by its id: `EmileShaders.filter(canvas, pack, glsl, { bright: brightGlsl, tight_x: …, … })`, each fetched like `shader.glsl` (the file is the pass's `glsl`), or `entry.passes` from `catalog.js`.
 
 `params` takes the ids of `pack.json`; one left out takes its default. A colour is `'#rrggbb'`, a choice its option's name (`{ palette: 'thermal' }`), a bool `true` or `false`. A picture whose shape differs from the canvas is stretched to it: crop it to the canvas's shape first (draw it into a 2D canvas) when that matters.
 
@@ -91,12 +93,12 @@ Feed a linear progress: `dissolve`, `push` and `zoom` ease it themselves (`smoot
 
 | Call | What |
 |---|---|
-| `EmileShaders.filter(canvasOrGL, pack, glsl)` | compiles a filter; throws with the compile log if it can't |
+| `EmileShaders.filter(canvasOrGL, pack, glsl, passes?)` | compiles a filter (`passes`: its pass shaders by id, when it has any); throws with the compile log if it can't |
 | `fx.draw(picture, { params, frame, fps, seed })` | draws it over `picture` onto the canvas |
 | `EmileShaders.transition(canvasOrGL, pack, glsl)` | compiles a transition |
 | `tr.draw(from, to, progress, { params, frame, fps, seed })` | draws the change at `progress` |
 | `x.dispose()` | frees its program and textures |
-| `EmileShaders.fragmentSource(kind, glsl, params)` | the whole fragment shader, for a renderer of your own |
+| `EmileShaders.fragmentSource(kind, glsl, params, earlier?)` | the whole fragment shader, for a renderer of your own (`kind` `'pass'` for a pass; `earlier` the ids of the passes before it) |
 | `EmileShaders.paramValues(params, set)` | each `p_<id>` uniform's GLSL type and value |
 
 Pictures are anything WebGL2 takes as a texture: a loaded `<img>`, a `<video>` with a frame, a `<canvas>`, an `ImageBitmap`. Several runners may share one canvas (they share its WebGL2 context). The defaults are `frame: 0`, `fps: 30`, `seed: 0`.
@@ -106,7 +108,7 @@ Pictures are anything WebGL2 takes as a texture: a loaded `<img>`, a `<video>` w
 In another renderer (a 3D library's post-processing pass, an offline renderer writing frames, a native app on Metal or Vulkan through a GLSL translator), keep these and the shader looks as it does here:
 
 - **Build the source with the wrap**, not by editing the shader: header, getters, `#line 1`, `shader.glsl`, `main()` (`references/contract.md`, or `EmileShaders.fragmentSource`). If the host insists on its own names (an input called `vUv`, a sampler called `tDiffuse`), rename in the header and getters only: `getColor(p)` can sample any texture.
-- **One full-frame pass reading the frame under it.** A filter needs the finished picture under it as a texture: render the scene to a texture first, then draw the filter's quad with that texture behind `getColor`. It never reads its own output.
+- **Full-frame passes reading the frame under it.** A filter needs the finished picture under it as a texture: render the scene to a texture first, then draw the filter's quad with that texture behind `getColor`. A filter with `passes` draws each into a texture of its own first, at its scale (`references/contract.md`, Passes). None reads its own output.
 - **Premultiplied colour, both ways.** Hand it premultiplied pixels; treat what it returns as premultiplied when you composite or write it out (un-premultiply only to save a straight-alpha file).
 - **Linear-filtered, edge-clamped textures, `uv` from the bottom left.** If your host's texture coordinates start top left, flip once in the getter, never in the shader.
 - **The real resolution in pixels** in `resolution`, so sizes scale with the frame. Render at the output size; scaling a small render up changes dot and grain sizes.
