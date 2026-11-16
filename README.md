@@ -19,7 +19,7 @@
   <a href="#for-pack-authors">For pack authors</a>
 </p>
 
-<img src="docs/gallery-portrait.jpg" width="100%" alt="One studio portrait through the filters at their defaults">
+<img src="docs/gallery-portrait.jpg" width="100%" alt="One portrait through all fifteen filters at their defaults">
 
 ## What it does
 
@@ -36,9 +36,13 @@ Tell Émile's AI how a moment should feel, and it lays the right filter over it:
 
 Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say:
 
-<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through the filters: the strong ones make its words hard to read">
+<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through all fifteen filters: the strong ones make its words hard to read">
 
 Every guide says how long its filter holds up, and Émile's AI keeps to it unless you ask for more. The exceptions are finishes light enough to read as a surface: a little grain, paper under an illustrated film, a faint lens fringe.
+
+### By kind of film
+
+A filter that lifts a music video can ruin a product demo. [`skills/choosing-filters`](skills/choosing-filters/SKILL.md) sorts all fifteen across 29 kinds of film, from product launches, software demos and customer stories to vlogs, music videos, AI short dramas and sports highlights: which may run long, which only for a moment, which to avoid. Each kind was checked by drawing two photographs of it under every filter. In Émile it is an official reference Skill you can bring into a chat; any agent can read it.
 
 ## The filters
 
@@ -160,13 +164,13 @@ An agent that reads this before it places a filter picks the right one, sets it 
 
 A folder `<publisher>/<name>/`:
 
-- `pack.json`: `id` (`emile/grain`), `kind` (`filter`, `transition` or `look`), `version` (semver; a published version never changes), `title` and `description` (`en`, `zh-CN`; the description says the feeling, not the technique), `category` (filters: `print`, `texture`, `distort`, `color`, `glow`, `film`), `params` (`[{ id, type: float | int | bool | color | vec2 | choice, default, min, max, step, options, label }]`), `animated`, `backends` (`{ "glsl": "shader.glsl" }`), `licence`, `publisher`.
+- `pack.json`: `id` (`emile/grain`), `kind` (`filter`, `transition` or `look`), `version` (semver; a published version never changes), `title` and `description` (`en`, `zh-CN`; the description says the feeling, not the technique), `category` (filters: `print`, `texture`, `distort`, `color`, `glow`, `film`), `params` (`[{ id, type: float | int | bool | color | vec2 | choice, default, min, max, step, options, label }]`), `animated`, `backends` (`{ "glsl": "shader.glsl" }`), `passes` (a filter drawn in more than one pass, below), `licence`, `publisher`.
 - `shader.glsl`: GLSL ES 3.00 without a header. Colours in and out are premultiplied; `uv` runs 0–1 from the bottom left.
   - a filter defines `vec4 filterColor(vec2 uv)` and reads the picture under it with `getColor(uv)`;
   - a transition defines `vec4 transition(vec2 uv)` and reads `getFromColor(uv)`, `getToColor(uv)` and `progress` (0–1), the [gl-transitions](https://github.com/gl-transitions/gl-transitions) shape;
   - both get `vec2 resolution`, `float ratio`, `float frame`, `float fps`, `float seed`, and one uniform `p_<id>` per parameter (`color` is a `vec3`, `choice` the chosen option's index as an `int`). There is no clock: what moves reads `frame` and `seed`.
   - a shader declares no uniforms, inputs or outputs of its own, samples no texture directly, defines no `main()` and uses no extension. It can read the picture as often as it likes, never its own result.
-  - a filter that needs a wide reach (a glow, a blur) may draw in passes: `passes` in `pack.json` lists them (`[{ id, glsl, scale }]`), each pass's shader defines `vec4 passColor(vec2 uv)` and is drawn into a picture of its own at `scale` × the frame, and the passes after it and the last shader read it with `getPass_<id>(uv)` (`skills/emile-shaders/references/contract.md`, Passes; `emile/bloom` is one).
+  - a filter that needs a wide reach (a glow, a blur) may draw in passes: `passes` in `pack.json` lists them (`[{ id, glsl, scale }]`), each pass's shader defines `vec4 passColor(vec2 uv)` and is drawn into a picture of its own at `scale` × the frame, and the passes after it and the last shader read it with `getPass_<id>(uv)` (`skills/emile-shaders/references/contract.md`, Passes; `emile/bloom` and `emile/edge-glow` are drawn so).
   - sizes are in pixels of a frame 1080 pixels on its short side (or a share of that side), so 720p and 4K look alike, upright and square frames too.
 - `SKILL.md`: the sections [above](#reading-a-skillmd).
 
@@ -182,7 +186,7 @@ Few good ones over many. A filter is published when it clears this, not when it 
 ```bash
 node scripts/review.mjs --out <a folder outside this repository> --photo <portrait.jpg> --photo <another.jpg>
 node scripts/review.mjs --out <folder> --photo <dark-portrait.jpg> --set halftone.exposure=0.7 halftone   # try what a SKILL.md recommends
-node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measure --tiles docs/filters --tile-base bloom=night   # the cards above
+node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measure --tiles docs/filters --tile-base bloom=night --tile-base edge-glow=graphic   # the cards above
 ```
 
 - ✗ keeps a filter out: `amount` 0 changes a byte of the frame; one frame drawn twice differs; a filter that isn't `animated` changes between frames, or an animated one makes the whole frame's brightness wander; 720p and 4K don't look alike; a 1080p frame costs more than 4 ms.
@@ -218,4 +222,4 @@ The check compiles every shader with WebGL2 in Chrome and in the Mac's WebKit, s
 
 ## Licence
 
-MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Samuel Dixon](https://unsplash.com/@samueldixon) on [Unsplash](https://unsplash.com/photos/photo-of-woman-looking-right--fQ5XNOcqFQ), under the Unsplash License; the other pictures are drawn by `scripts/review.html`.
+MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Studio Urbano](https://www.pexels.com/@studio-urbano-922916462/) on [Pexels](https://www.pexels.com/photo/portrait-of-brunette-woman-in-a-forest-20001072/), under the Pexels License; the other pictures are drawn by `scripts/pictures.js`.
