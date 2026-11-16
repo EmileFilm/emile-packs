@@ -160,8 +160,9 @@ async function skillCandidate(name) {
     execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-ss', String(a.from), '-t', '4', '-i', a.path, '-an', '-vf', 'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080', '-c:v', 'libx264', '-crf', '18', piece])
     json(emile, ['new', project, '--aspect', '16:9', '--title', 'Preview', '--idea', `A four-second shot showing what the Skill ${name} is for`])
     json(emile, ['materials-add', project, piece])
-    const fps = JSON.parse(fs.readFileSync(path.join(project, 'project.json'), 'utf8')).project.fps
-    json(emile, ['film-set', project], JSON.stringify({ timeline: { clips: [{ id: 'shot', type: 'video', name: 'Shot', src: 'assets/shot.mp4', frames: [0, 4 * fps], track: 1 }], blends: [] } }))
+    const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'project.json'), 'utf8')).project.fps
+    const shot = { id: 'shot', type: 'video', name: 'Shot', frames: [0, Math.round(4 * num / den)], track: 1, video: { file: 'assets/shot.mp4', in: 0, audio: 'mute' } }
+    json(emile, ['film-set', project], JSON.stringify([{ op: 'add', path: '/timeline/clips/-', value: shot }]))
     console.log(`asking Émile's agent to use ${name} on the shot (this uses the AI)…`)
     json(agent, ['chat', project, '--request', `Use the Skill ${name} for this one shot: do what it is for, the way it says, over the whole shot.`, '--ref', `skill:${name}`, ...(values.model ? ['--model', values.model] : [])])
     const film = path.join(tmp, 'film.mp4')
