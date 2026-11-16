@@ -1,0 +1,11 @@
+{
+  "id": "emile/wipe",
+  "kind": "transition",
+  "version": "1.0.0",
+  "title": { "en": "Wipe", "zh-CN": "擦除" },
+  "description": { "en": "A clean, designed change, like turning a page sideways.", "zh-CN": "干净、有设计感的切换，像侧着翻过一页。" },
+  "params": [],
+  "backends": { "glsl": "shader.glsl" },
+  "licence": "MIT",
+  "publisher": "emile"
+}

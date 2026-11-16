@@ -1,0 +1,70 @@
+{
+  "id": "emile/chromatic-aberration",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Chromatic aberration",
+    "zh-CN": "色散"
+  },
+  "description": {
+    "en": "A lens that splits light at its edges: colours part towards the corners, the centre stays sharp.",
+    "zh-CN": "在边缘把光拆开的镜头：越靠近角落颜色越分离，中心保持清晰。"
+  },
+  "category": "film",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "strength",
+      "type": "float",
+      "default": 0.3,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Strength",
+        "zh-CN": "分离程度"
+      }
+    },
+    {
+      "id": "mode",
+      "type": "choice",
+      "default": "lens",
+      "options": [
+        "lens",
+        "shift"
+      ],
+      "label": {
+        "en": "Kind",
+        "zh-CN": "方式"
+      }
+    },
+    {
+      "id": "angle",
+      "type": "float",
+      "default": 0,
+      "min": 0,
+      "max": 360,
+      "step": 1,
+      "label": {
+        "en": "Shift angle",
+        "zh-CN": "偏移角度"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

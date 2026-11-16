@@ -1,0 +1,55 @@
+{
+  "id": "emile/grain",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Grain",
+    "zh-CN": "颗粒"
+  },
+  "description": {
+    "en": "A picture you can almost touch: fine grain that lives from frame to frame.",
+    "zh-CN": "画面摸起来有颗粒：细细的颗粒，每一帧都在动。"
+  },
+  "category": "texture",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 0.35,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "size",
+      "type": "float",
+      "default": 1.6,
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "label": {
+        "en": "Grain size",
+        "zh-CN": "颗粒大小"
+      }
+    },
+    {
+      "id": "colour",
+      "type": "bool",
+      "default": false,
+      "label": {
+        "en": "Coloured grain",
+        "zh-CN": "彩色颗粒"
+      }
+    }
+  ],
+  "animated": true,
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

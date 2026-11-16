@@ -1,0 +1,70 @@
+{
+  "id": "emile/crt",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "CRT",
+    "zh-CN": "显像管"
+  },
+  "description": {
+    "en": "A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.",
+    "zh-CN": "显像管上的画面：扫描线、荧光条纹、微微鼓起的屏。"
+  },
+  "category": "film",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "curvature",
+      "type": "float",
+      "default": 0.3,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Curvature",
+        "zh-CN": "屏幕弧度"
+      }
+    },
+    {
+      "id": "scanlines",
+      "type": "float",
+      "default": 0.6,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Scan lines",
+        "zh-CN": "扫描线"
+      }
+    },
+    {
+      "id": "mask",
+      "type": "float",
+      "default": 0.25,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Phosphor stripes",
+        "zh-CN": "荧光条纹"
+      }
+    }
+  ],
+  "animated": true,
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

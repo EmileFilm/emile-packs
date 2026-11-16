@@ -1,18 +1,28 @@
 #!/usr/bin/env node
-// Builds the index of this repository's packs: every pack checked, every
-// file hashed, index.json written and signed.
+// Builds this repository: every pack checked, the generated Skills
+// written, every file hashed, index.json written and signed.
 //
 //   node scripts/build.mjs --tag v1.0.0 [--key <ed25519 private key .pem>] [--engine <Emile/engine>]
-//   node scripts/build.mjs --check          (check every pack, write nothing)
+//   node scripts/build.mjs --check          (check every pack and that the generated Skills are current, write nothing)
 //   node scripts/build.mjs --public-key --key <pem>   (the key's public half, for the engine)
 //
 // 1. check: each <publisher>/<name>/ folder with a pack.json goes through
 //    the engine's pack check (pack.json, the shader contract, compiled with
-//    WebGL2 in Chrome and in WebKit); one problem stops the build
-// 2. hash: each file of each pack, its size and SHA-256
-// 3. index: index.json, the packs sorted by id; a pack whose files changed
-//    while its version didn't is refused (a published version never changes)
-// 4. sign: index.json signed with Ed25519 into index.json.sig (base64). The
+//    WebGL2 in Chrome and in WebKit); one problem stops the build. The
+//    Skill's runner (emile-shaders.js) must wrap every shader exactly as
+//    the engine's compositor does
+// 2. generate: skills/emile-shaders/ (the Skill other people's agents
+//    install: every pack's files as they are, the runner, the example page,
+//    the references) and skills/choosing-filters/ (an official reference
+//    Skill for Émile), from the packs and the templates in scripts/skills/.
+//    --check fails when what is on disk differs from what would be written
+// 3. hash: each file of each pack and of each Skill for Émile (every
+//    skills/<name>/ but emile-shaders), its size and SHA-256
+// 4. index: index.json, the packs sorted by id, the Skills by name; a pack
+//    whose files changed while its version didn't is refused (a published
+//    version never changes). Nothing changed since the last build: the
+//    same index, its date kept, so a second run changes nothing
+// 5. sign: index.json signed with Ed25519 into index.json.sig (base64). The
 //    private key never goes into this repository (--key or EMILE_PACKS_KEY)
 //
 // The engine (the Émile repository's engine/) does the checking: --engine
@@ -21,8 +31,10 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
+import vm from 'node:vm'
 import { parseArgs } from 'node:util'
 import { pathToFileURL } from 'node:url'
+import { generateSkills, GENERATED } from './skills.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const FORMAT = 1
@@ -55,7 +67,7 @@ if (values['public-key']) {
 
 // Every pack folder: <publisher>/<name>/pack.json
 const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
-  .filter(e => e.isDirectory() && !e.name.startsWith('.') && e.name !== 'scripts' && e.name !== 'node_modules')
+  .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs'].includes(e.name))
   .flatMap(pub => fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })
     .filter(e => e.isDirectory() && fs.existsSync(path.join(ROOT, pub.name, e.name, 'pack.json')))
     .map(e => path.join(ROOT, pub.name, e.name)))
@@ -76,10 +88,55 @@ for (const p of checked.packs) {
   bad += p.problems.length ? 1 : 0
 }
 if (bad) fail(`${bad} pack${bad > 1 ? 's' : ''} with problems`)
-if (values.check) process.exit(0)
-if (!values.tag || !/^v\d+\.\d+\.\d+$/.test(values.tag)) fail('--tag vX.Y.Z: the release this index is published as (its files are served from that tag)')
 
-// 2. hash
+// The Skill's runner wraps every shader as the compositor does, byte for byte
+const contract = await import(pathToFileURL(path.join(engine, 'emile', 'compose', 'contract.js')).href)
+const runner = {}
+vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'scripts', 'skills', 'emile-shaders', 'emile-shaders.js'), 'utf8'), runner)
+const wrapped = packDirs.map(dir => {
+  const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
+  const glsl = fs.readFileSync(path.join(dir, pack.backends.glsl), 'utf8')
+  const same = runner.EmileShaders.fragmentSource(pack.kind, glsl, pack.params) === contract.fragmentSource(pack.kind, glsl, pack.params)
+    && JSON.stringify(runner.EmileShaders.paramValues(pack.params)) === JSON.stringify(contract.paramValues(pack.params))
+  return same ? null : pack.id
+}).filter(Boolean)
+if (wrapped.length) fail(`emile-shaders.js wraps ${wrapped.join(', ')} differently from the engine's compose/contract.js: make its fragmentSource and paramValues the same`)
+console.log(`✓ emile-shaders.js wraps all ${packDirs.length} shaders as the compositor does`)
+
+// 2. generate
+const { scanSkill } = await import(pathToFileURL(checker).href)
+const generated = generateSkills(ROOT, packDirs, contract)
+const stale = []
+for (const skill of GENERATED) {
+  const dir = path.join(ROOT, 'skills', skill)
+  const want = new Map([...generated].filter(([rel]) => rel.startsWith(`skills/${skill}/`)))
+  const have = walk(dir).map(f => path.relative(ROOT, f).split(path.sep).join('/'))
+  for (const rel of have) if (!want.has(rel)) stale.push(`${rel} is not generated any more`)
+  for (const [rel, bytes] of want) {
+    const file = path.join(ROOT, rel)
+    if (!fs.existsSync(file)) stale.push(`${rel} is missing`)
+    else if (!fs.readFileSync(file).equals(bytes)) stale.push(`${rel} is out of date`)
+  }
+}
+if (values.check) {
+  if (stale.length) fail(`the generated Skills are out of date (run the build to write them):\n    ${stale.join('\n    ')}`)
+  console.log(`✓ skills/${GENERATED.join(', skills/')} are current`)
+  process.exit(0)
+}
+if (!values.tag || !/^v\d+\.\d+\.\d+$/.test(values.tag)) fail('--tag vX.Y.Z: the release this index is published as (its files are served from that tag)')
+const key = privateKey()
+for (const skill of GENERATED) {
+  const dir = path.join(ROOT, 'skills', skill)
+  for (const f of walk(dir)) if (!generated.has(path.relative(ROOT, f).split(path.sep).join('/'))) fs.rmSync(f)
+}
+for (const [rel, bytes] of generated) {
+  const file = path.join(ROOT, rel)
+  fs.mkdirSync(path.dirname(file), { recursive: true })
+  if (!fs.existsSync(file) || !fs.readFileSync(file).equals(bytes)) fs.writeFileSync(file, bytes)
+}
+console.log(stale.length ? `skills/${GENERATED.join(', skills/')}: ${stale.length} file${stale.length > 1 ? 's' : ''} written` : `skills/${GENERATED.join(', skills/')}: current`)
+
+// 3. hash
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
 const packs = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
@@ -91,19 +148,43 @@ const packs = packDirs.map(dir => {
   }
 }).sort((a, b) => a.id.localeCompare(b.id))
 
-// 3. index: a version once published keeps its files
+// The Skills for Émile: every skills/<name>/ with a SKILL.md but the one
+// for other people's agents. Its card from SKILL.md: the first heading,
+// the front matter's description; digest: the SHA-256 of its files' list
+const skillsDir = path.join(ROOT, 'skills')
+const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileTypes: true }) : [])
+  .filter(e => e.isDirectory() && e.name !== 'emile-shaders' && fs.existsSync(path.join(skillsDir, e.name, 'SKILL.md')))
+  .map(e => {
+    const dir = path.join(skillsDir, e.name)
+    const text = fs.readFileSync(path.join(dir, 'SKILL.md'), 'utf8')
+    for (const f of walk(dir).filter(f => f.endsWith('.md'))) {
+      const problems = scanSkill(fs.readFileSync(f, 'utf8'))
+      if (problems.length) fail(`${path.relative(ROOT, f)}: ${problems.join('; ')}`)
+    }
+    const description = /^---\r?\n[\s\S]*?^description:\s*(.+)$[\s\S]*?\r?\n---/m.exec(text)?.[1].trim()
+    const title = /^#\s+(.+)$/m.exec(text.replace(/^---\r?\n[\s\S]*?\r?\n---/, ''))?.[1].trim()
+    if (!description || !title) fail(`skills/${e.name}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
+    const files = walk(dir).map(f => ({ path: path.relative(dir, f).split(path.sep).join('/'), bytes: fs.statSync(f).size, sha256: sha256(f) }))
+    const digest = crypto.createHash('sha256').update(JSON.stringify(files)).digest('hex')
+    return { name: e.name, title, description, licence: 'MIT', digest, files }
+  })
+  .sort((a, b) => a.name.localeCompare(b.name))
+
+// 4. index: a version once published keeps its files
 const indexFile = path.join(ROOT, 'index.json')
 const before = fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, 'utf8')) : null
 for (const p of packs) {
   const was = before?.packs.find(x => x.id === p.id && x.version === p.version)
   if (was && JSON.stringify(was.files) !== JSON.stringify(p.files)) fail(`${p.id} ${p.version} changed since it was published: give it a new version in its pack.json`)
 }
-const { CONTRACT } = await import(pathToFileURL(path.join(engine, 'emile', 'compose', 'contract.js')).href)
-const index = { format: FORMAT, tag: values.tag, published: new Date().toISOString(), contract: CONTRACT, packs }
+const index = { format: FORMAT, tag: values.tag, published: new Date().toISOString(), contract: contract.CONTRACT, packs, skills }
+// Nothing changed: the date it was published stays
+if (before && JSON.stringify({ ...before, published: null }) === JSON.stringify({ ...index, published: null })) index.published = before.published
 const bytes = Buffer.from(JSON.stringify(index, null, 1) + '\n')
 
-// 4. sign
-const sig = crypto.sign(null, bytes, privateKey()).toString('base64')
+// 5. sign (Ed25519 signs the same bytes the same way)
+const sig = crypto.sign(null, bytes, key).toString('base64')
+const unchanged = before && index.published === before.published
 fs.writeFileSync(indexFile, bytes)
 fs.writeFileSync(path.join(ROOT, 'index.json.sig'), sig + '\n')
-console.log(`index.json: ${packs.length} packs, ${values.tag}, signed (index.json.sig)`)
+console.log(`index.json: ${packs.length} packs, ${skills.length} Skill${skills.length === 1 ? '' : 's'} for Émile, ${values.tag}, signed (index.json.sig)${unchanged ? ', unchanged' : ''}`)

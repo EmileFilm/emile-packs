@@ -1,0 +1,11 @@
+{
+  "id": "emile/dissolve",
+  "kind": "transition",
+  "version": "1.0.0",
+  "title": { "en": "Dissolve", "zh-CN": "溶解" },
+  "description": { "en": "The two pictures melt into each other, gently at both ends.", "zh-CN": "两个画面慢慢融进彼此，首尾都很轻。" },
+  "params": [],
+  "backends": { "glsl": "shader.glsl" },
+  "licence": "MIT",
+  "publisher": "emile"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "emile/halftone",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Halftone",
+    "zh-CN": "网点"
+  },
+  "description": {
+    "en": "A picture pulled through a printer's screen: ink dots on paper, bold enough to read as print.",
+    "zh-CN": "画面过了一遍印刷网屏：纸上的油墨网点，粗到一眼看出是印出来的。"
+  },
+  "category": "print",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "cell",
+      "type": "float",
+      "default": 18,
+      "min": 6,
+      "max": 80,
+      "step": 1,
+      "label": {
+        "en": "Dot spacing",
+        "zh-CN": "网点间距"
+      }
+    },
+    {
+      "id": "exposure",
+      "type": "float",
+      "default": 0,
+      "min": -1,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Exposure",
+        "zh-CN": "曝光"
+      }
+    },
+    {
+      "id": "ink",
+      "type": "color",
+      "default": "#1a1917",
+      "label": {
+        "en": "Ink",
+        "zh-CN": "油墨"
+      }
+    },
+    {
+      "id": "paper",
+      "type": "color",
+      "default": "#f1ece0",
+      "label": {
+        "en": "Paper",
+        "zh-CN": "纸"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

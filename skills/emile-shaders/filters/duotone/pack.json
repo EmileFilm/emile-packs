@@ -1,0 +1,75 @@
+{
+  "id": "emile/duotone",
+  "kind": "filter",
+  "version": "1.0.0",
+  "title": {
+    "en": "Duotone",
+    "zh-CN": "双色"
+  },
+  "description": {
+    "en": "The whole picture in two inks: one for the darks, one for the lights.",
+    "zh-CN": "整幅画面只用两种颜色：一种给暗部，一种给亮部。"
+  },
+  "category": "color",
+  "params": [
+    {
+      "id": "amount",
+      "type": "float",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+      }
+    },
+    {
+      "id": "dark",
+      "type": "color",
+      "default": "#0e1a33",
+      "label": {
+        "en": "Dark",
+        "zh-CN": "暗部"
+      }
+    },
+    {
+      "id": "light",
+      "type": "color",
+      "default": "#f3ead9",
+      "label": {
+        "en": "Light",
+        "zh-CN": "亮部"
+      }
+    },
+    {
+      "id": "contrast",
+      "type": "float",
+      "default": 1.5,
+      "min": 0.5,
+      "max": 2.5,
+      "step": 0.01,
+      "label": {
+        "en": "Contrast",
+        "zh-CN": "对比"
+      }
+    },
+    {
+      "id": "balance",
+      "type": "float",
+      "default": 0.5,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": {
+        "en": "Balance",
+        "zh-CN": "明暗分界"
+      }
+    }
+  ],
+  "backends": {
+    "glsl": "shader.glsl"
+  },
+  "licence": "MIT",
+  "publisher": "emile"
+}

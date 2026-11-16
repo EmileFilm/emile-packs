@@ -1,0 +1,11 @@
+{
+  "id": "emile/zoom",
+  "kind": "transition",
+  "version": "1.0.0",
+  "title": { "en": "Zoom", "zh-CN": "缩放" },
+  "description": { "en": "Flying in: going deeper, into the next idea.", "zh-CN": "飞进去：往深处走，进到下一个想法。" },
+  "params": [],
+  "backends": { "glsl": "shader.glsl" },
+  "licence": "MIT",
+  "publisher": "emile"
+}
