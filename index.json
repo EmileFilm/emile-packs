@@ -1,12 +1,12 @@
 {
  "format": 1,
  "tag": "v1.0.0",
- "published": "2026-11-16T01:28:59.221Z",
- "contract": 1,
+ "published": "2026-11-16T02:45:52.265Z",
+ "contract": 2,
  "packs": [
   {
    "id": "emile/bloom",
-   "version": "1.0.0",
+   "version": "2.0.0",
    "kind": "filter",
    "category": "glow",
    "title": {
@@ -33,8 +33,8 @@
     {
      "id": "threshold",
      "type": "float",
-     "default": 0.7,
-     "min": 0.3,
+     "default": 0.8,
+     "min": 0.5,
      "max": 0.95,
      "step": 0.01,
      "label": {
@@ -45,7 +45,7 @@
     {
      "id": "radius",
      "type": "float",
-     "default": 0.6,
+     "default": 0.5,
      "min": 0.1,
      "max": 1,
      "step": 0.01,
@@ -72,18 +72,43 @@
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 2060,
-     "sha256": "d3f47a8c559f8e74bf63b6198ea207e742869675f5c9300dd53d120cec7359d6"
+     "bytes": 2814,
+     "sha256": "23d83b98bbab1cbb4037edeb3355cae61e474acf2b5ce8926624d7e683516991"
+    },
+    {
+     "path": "blur-x.glsl",
+     "bytes": 628,
+     "sha256": "ddd0e884e928d46782c10a269b656c726f78c4357c3f323cf805803d222ba709"
+    },
+    {
+     "path": "blur-y.glsl",
+     "bytes": 626,
+     "sha256": "eec701eb5ce0c9035d3a5d7ba29947a57b334a71d19f7b59c8e1c43df0fde582"
+    },
+    {
+     "path": "bright.glsl",
+     "bytes": 1526,
+     "sha256": "ac8285ab23736fa4ddf1ec745775693c7ab0bd4db77be15645b0f3d94430852d"
     },
     {
      "path": "pack.json",
-     "bytes": 1329,
-     "sha256": "4369d7baea6d3c77b0ab41fa0f12657bb8d88f0e38a9d52ad0bfa3f79f909efd"
+     "bytes": 1771,
+     "sha256": "b228b49df46948c2f3f624469ac5ef91530e88afc0022c6c30e2d66a3deb0b93"
     },
     {
      "path": "shader.glsl",
-     "bytes": 2403,
-     "sha256": "c78c1815474414684850c9a91c95ee01efa4defde60e7d0729c81fa910529fb4"
+     "bytes": 1462,
+     "sha256": "bbc56fcb2e16fb19469fe14ab38e14aabba49e35394f87d5461af66a1edfe561"
+    },
+    {
+     "path": "tight-x.glsl",
+     "bytes": 612,
+     "sha256": "da1e063428e62a5ba2dc7f2a2f0dadbfa86b5c2dbbd86633d5276dd042ba154d"
+    },
+    {
+     "path": "tight-y.glsl",
+     "bytes": 611,
+     "sha256": "24180622ac89443425777021f867a76b4fbccefa5ada3126666806c445865b03"
     }
    ]
   },
@@ -1355,12 +1380,12 @@
    "title": "Choosing a filter",
    "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fourteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
    "licence": "MIT",
-   "digest": "58360cea5310285ca5bac4fcb2986c6c38c063c33d92341d5ace80f89c985c5a",
+   "digest": "2c3260406c8b2e90fb1d55a5793428d5cf7e2773e65333ef23edf3e5becec5d5",
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 11820,
-     "sha256": "f2e62da8b946880b3528d82f57595974d0c434cf3958c4807ae2c43880b20fb7"
+     "bytes": 17872,
+     "sha256": "e8f381d4ede628fcc0e2934a351d5d5aaa81451cb494b70a15bbc0b4d30092d8"
     }
    ]
   }
