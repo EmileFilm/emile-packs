@@ -145,7 +145,7 @@ async function skillCandidate(name) {
   const emile = path.join(engine, 'emile', 'cli.mjs')
   const agent = path.join(engine, '..', 'agent', 'src', 'main.ts')
   const a = await clip('a')
-  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'emile-skill-preview-'))
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'emile-skill-candidate-'))
   const project = path.join(tmp, 'film')
   const env = { ...process.env, EMILE_PACKS: process.env.EMILE_PACKS ?? ROOT }
   const json = (bin, args, input) => {
