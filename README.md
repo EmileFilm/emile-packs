@@ -209,12 +209,12 @@ node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measu
 
 Beside each pack's files lie `preview.mp4` (4 seconds, silent, a loop, 854 × 480, H.264, a few hundred KB) and `preview.jpg` (a settled frame). They are not part of the pack: `index.json` lists them apart (`preview: { video, still }`, each with its size and SHA-256, under the same signature), so a new preview changes no version, and a film using a pack never downloads its preview. Émile fetches one only when its card scrolls into view (the still) or is hovered (the video). Only people look at them; Émile's agent chooses by the words.
 
-`scripts/previews.mjs` draws them with Émile's own compositor, over the same footage for every pack: a filter wiped in from the left over a man with a cup by sunlit blinds, held, and wiped back; a transition once from him to a woman lit by a low sun. The footage is two Pexels clips under the Pexels License, recorded in `scripts/footage.json` and never kept here. The build never draws a preview, so building twice changes nothing.
+`scripts/previews.mjs` draws them with Émile's own compositor, over the same footage for every pack: a filter wiped in from the left over a man with a cup by sunlit blinds, held, and wiped back; a transition once from him to a woman lit by a low sun. The footage is two Pexels clips under the Pexels License, recorded in `scripts/footage.json` and never kept here. The build never draws a preview, so building twice changes nothing; it stops when a pack, or a Skill whose front matter says `kind: look` (it changes the picture), has no preview. A Skill that is only a function (`kind: tool`, or none) has none and isn't in 灵感: Émile lists it in the chat's Skill button.
 
 ```bash
 node scripts/previews.mjs --footage <a folder outside this repository>            # the packs without one
 node scripts/previews.mjs --footage <folder> halftone wipe                         # these again (--all: every one)
-node scripts/previews.mjs --skill choosing-filters --footage <folder> --out <folder outside>   # a candidate for an official Skill, made by Émile's agent: look at it, then copy it into skills/<name>/
+node scripts/previews.mjs --skill <name> --footage <folder> --out <folder outside>   # a candidate for an official Skill with kind: look, made by Émile's agent: look at it, then copy it into skills/<name>/
 ```
 
 </details>

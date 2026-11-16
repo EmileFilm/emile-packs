@@ -1,6 +1,7 @@
 ---
 name: choosing-filters
 description: Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fifteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.
+kind: tool
 ---
 
 {{generated}}

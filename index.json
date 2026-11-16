@@ -1,7 +1,7 @@
 {
  "format": 1,
  "tag": "v1.0.0",
- "published": "2026-11-16T04:52:09.261Z",
+ "published": "2026-11-16T06:01:34.888Z",
  "contract": 2,
  "packs": [
   {
@@ -1715,14 +1715,15 @@
    "name": "choosing-filters",
    "title": "Choosing a filter",
    "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fifteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
+   "kind": "tool",
    "licence": "MIT",
-   "digest": "a5db28b10ea352377f32a15f293391b5f1286f92ebacf8443ae899c9d72ea190",
+   "digest": "3b0fbb8b63c825f01d1ad1a15813ad7b9bfcaba427542e587922d3c01aef4cb4",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 19861,
-     "sha256": "a7a561d2a1280a941894f332a6d5e5c415f8835b1e2a9c6e21ed67d563d24273"
+     "bytes": 19872,
+     "sha256": "c55a496a5c222a4b0490df3e42f015ba8e83cf1f4c27a38d304a92a2c518e379"
     }
    ]
   }

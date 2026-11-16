@@ -14,7 +14,7 @@
 //       isn't, its SHA-256 checked); never put into this repository
 //
 //   node scripts/previews.mjs --skill <name> --footage <folder> --out <folder outside this repository> [--model <id>]
-//       a candidate preview for an official Skill: Émile's agent makes a
+//       a candidate preview for an official Skill that changes the picture (kind: look): Émile's agent makes a
 //       short film over clip a with the Skill brought in, and its preview
 //       is encoded into --out. Nothing is written here: look at it, and
 //       copy preview.mp4 and preview.jpg into skills/<name>/ by hand
@@ -142,6 +142,7 @@ async function skillCandidate(name) {
   if (!path.relative(ROOT, out).startsWith('..')) fail('--out is inside this repository: a candidate is looked at before it goes in')
   const skillDir = path.join(ROOT, 'skills', name)
   if (!fs.existsSync(path.join(skillDir, 'SKILL.md')) || name === 'emile-shaders') fail(`no official Skill skills/${name}/`)
+  if (!/^---\r?\n[\s\S]*?^kind:\s*look\s*$[\s\S]*?\r?\n---/m.test(fs.readFileSync(path.join(skillDir, 'SKILL.md'), 'utf8'))) fail(`skills/${name} doesn't change the picture (its SKILL.md has no kind: look): a function Skill has no preview`)
   const emile = path.join(engine, 'emile', 'cli.mjs')
   const agent = path.join(engine, '..', 'agent', 'src', 'main.ts')
   const a = await clip('a')

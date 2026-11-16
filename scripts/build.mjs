@@ -20,7 +20,10 @@
 //    skills/<name>/ but emile-shaders), its size and SHA-256; and its
 //    preview (preview.mp4 and preview.jpg beside its files, drawn by
 //    scripts/previews.mjs, never here), listed apart from its files: a
-//    preview changes no version and no digest
+//    preview changes no version and no digest. Whatever changes the
+//    picture has one: a pack, or a Skill whose front matter says kind: look,
+//    without both preview files stops the build (a Skill that is only a
+//    function, kind: tool or none, needs none)
 // 4. index: index.json, the packs sorted by id, the Skills by name; a pack
 //    whose files changed while its version didn't is refused (a published
 //    version never changes). Nothing changed since the last build: the
@@ -173,13 +176,19 @@ const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileT
       if (problems.length) fail(`${path.relative(ROOT, f)}: ${problems.join('; ')}`)
     }
     const description = /^---\r?\n[\s\S]*?^description:\s*(.+)$[\s\S]*?\r?\n---/m.exec(text)?.[1].trim()
+    // look: it changes the picture (in Émile's 灵感, with its preview); tool: a function (the chat's Skill button)
+    const kind = /^---\r?\n[\s\S]*?^kind:\s*(\w+)\s*$[\s\S]*?\r?\n---/m.exec(text)?.[1] === 'look' ? 'look' : 'tool'
     const title = /^#\s+(.+)$/m.exec(text.replace(/^---\r?\n[\s\S]*?\r?\n---/, ''))?.[1].trim()
     if (!description || !title) fail(`skills/${e.name}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
     const files = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => fileEntry(dir, f))
     const digest = crypto.createHash('sha256').update(JSON.stringify(files)).digest('hex')
-    return { name: e.name, title, description, licence: 'MIT', digest, preview: previewOf(dir), files }
+    return { name: e.name, title, description, kind, licence: 'MIT', digest, preview: previewOf(dir), files }
   })
   .sort((a, b) => a.name.localeCompare(b.name))
+
+// Whatever changes the picture has its preview
+const unseen = [...packs.filter(p => !p.preview).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `skills/${s.name} (kind: look)`)]
+if (unseen.length) fail(`these change the picture but have no preview.mp4 and preview.jpg: ${unseen.join(', ')} (node scripts/previews.mjs; a Skill's preview is looked at before it goes in)`)
 
 // 4. index: a version once published keeps its files
 const indexFile = path.join(ROOT, 'index.json')
@@ -198,6 +207,4 @@ const sig = crypto.sign(null, bytes, key).toString('base64')
 const unchanged = before && index.published === before.published
 fs.writeFileSync(indexFile, bytes)
 fs.writeFileSync(path.join(ROOT, 'index.json.sig'), sig + '\n')
-const without = [...packs.filter(p => !p.preview).map(p => p.id), ...skills.filter(s => !s.preview).map(s => `skills/${s.name}`)]
 console.log(`index.json: ${packs.length} packs, ${skills.length} Skill${skills.length === 1 ? '' : 's'} for Émile, ${values.tag}, signed (index.json.sig)${unchanged ? ', unchanged' : ''}`)
-if (without.length) console.log(`no preview yet (their cards in Émile stay words): ${without.join(', ')} (node scripts/previews.mjs)`)
