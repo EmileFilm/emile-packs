@@ -173,6 +173,7 @@ A folder `<publisher>/<name>/`:
   - a filter that needs a wide reach (a glow, a blur) may draw in passes: `passes` in `pack.json` lists them (`[{ id, glsl, scale }]`), each pass's shader defines `vec4 passColor(vec2 uv)` and is drawn into a picture of its own at `scale` × the frame, and the passes after it and the last shader read it with `getPass_<id>(uv)` (`skills/emile-shaders/references/contract.md`, Passes; `emile/bloom` and `emile/edge-glow` are drawn so).
   - sizes are in pixels of a frame 1080 pixels on its short side (or a share of that side), so 720p and 4K look alike, upright and square frames too.
 - `SKILL.md`: the sections [above](#reading-a-skillmd).
+- `preview.mp4` and `preview.jpg` beside them: not part of the pack (Previews, below).
 
 </details>
 
@@ -204,6 +205,21 @@ node scripts/review.mjs --out <folder> --photo <portrait.jpg> --quick --no-measu
 </details>
 
 <details>
+<summary><b>Previews</b>: the still and the loop on each card in Émile</summary>
+
+Beside each pack's files lie `preview.mp4` (4 seconds, silent, a loop, 854 × 480, H.264, a few hundred KB) and `preview.jpg` (a settled frame). They are not part of the pack: `index.json` lists them apart (`preview: { video, still }`, each with its size and SHA-256, under the same signature), so a new preview changes no version, and a film using a pack never downloads its preview. Émile fetches one only when its card scrolls into view (the still) or is hovered (the video). Only people look at them; Émile's agent chooses by the words.
+
+`scripts/previews.mjs` draws them with Émile's own compositor, over the same footage for every pack: a filter wiped in from the left over a man with a cup by sunlit blinds, held, and wiped back; a transition once from him to a woman lit by a low sun. The footage is two Pexels clips under the Pexels License, recorded in `scripts/footage.json` and never kept here. The build never draws a preview, so building twice changes nothing.
+
+```bash
+node scripts/previews.mjs --footage <a folder outside this repository>            # the packs without one
+node scripts/previews.mjs --footage <folder> halftone wipe                         # these again (--all: every one)
+node scripts/previews.mjs --skill choosing-filters --footage <folder> --out <folder outside>   # a candidate for an official Skill, made by Émile's agent: look at it, then copy it into skills/<name>/
+```
+
+</details>
+
+<details>
 <summary><b>Releases</b>: the signed index</summary>
 
 `index.json` lists every pack's newest version with each file's size and SHA-256; `index.json.sig` is its Ed25519 signature. Émile holds the public key, refuses an index whose signature doesn't match, and keeps out a pack with a file whose hash doesn't. Files are served by jsDelivr from the release's tag.
@@ -222,4 +238,4 @@ The check compiles every shader with WebGL2 in Chrome and in the Mac's WebKit, s
 
 ## Licence
 
-MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Studio Urbano](https://www.pexels.com/@studio-urbano-922916462/) on [Pexels](https://www.pexels.com/photo/portrait-of-brunette-woman-in-a-forest-20001072/), under the Pexels License; the other pictures are drawn by `scripts/pictures.js`.
+MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Studio Urbano](https://www.pexels.com/@studio-urbano-922916462/) on [Pexels](https://www.pexels.com/photo/portrait-of-brunette-woman-in-a-forest-20001072/), under the Pexels License; the other pictures are drawn by `scripts/pictures.js`. Each pack's `preview.mp4` and `preview.jpg` are drawn over two Pexels clips under the Pexels License, [one by cottonbro studio](https://www.pexels.com/video/6263195/) and [one more](https://www.pexels.com/video/8207256/) (`scripts/footage.json`).

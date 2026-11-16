@@ -17,7 +17,10 @@
 //    Skill for Émile), from the packs and the templates in scripts/skills/.
 //    --check fails when what is on disk differs from what would be written
 // 3. hash: each file of each pack and of each Skill for Émile (every
-//    skills/<name>/ but emile-shaders), its size and SHA-256
+//    skills/<name>/ but emile-shaders), its size and SHA-256; and its
+//    preview (preview.mp4 and preview.jpg beside its files, drawn by
+//    scripts/previews.mjs, never here), listed apart from its files: a
+//    preview changes no version and no digest
 // 4. index: index.json, the packs sorted by id, the Skills by name; a pack
 //    whose files changed while its version didn't is refused (a published
 //    version never changes). Nothing changed since the last build: the
@@ -78,7 +81,8 @@ if (!packDirs.length) fail('no packs (<publisher>/<name>/pack.json)')
 const engine = path.resolve(values.engine ?? process.env.EMILE_ENGINE ?? path.join(ROOT, '..', 'Emile', 'engine'))
 const checker = path.join(engine, 'emile', 'packs', 'check.mjs')
 if (!fs.existsSync(checker)) fail(`no engine at ${engine} (--engine or EMILE_ENGINE: the Émile repository's engine/)`)
-const { checkPacks, walk } = await import(pathToFileURL(checker).href)
+const { checkPacks, walk, packFiles } = await import(pathToFileURL(checker).href)
+const { PREVIEW, isPreviewFile } = await import(pathToFileURL(path.join(engine, 'emile', 'library', 'previews.mjs')).href)
 const checked = await checkPacks(packDirs)
 console.log(`compiled with WebGL2 in ${checked.renderers.chrome} (Chrome) and ${checked.renderers.webkit} (WebKit)`)
 let bad = 0
@@ -112,7 +116,7 @@ const stale = []
 for (const skill of GENERATED) {
   const dir = path.join(ROOT, 'skills', skill)
   const want = new Map([...generated].filter(([rel]) => rel.startsWith(`skills/${skill}/`)))
-  const have = walk(dir).map(f => path.relative(ROOT, f).split(path.sep).join('/'))
+  const have = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => path.relative(ROOT, f).split(path.sep).join('/'))
   for (const rel of have) if (!want.has(rel)) stale.push(`${rel} is not generated any more`)
   for (const [rel, bytes] of want) {
     const file = path.join(ROOT, rel)
@@ -129,7 +133,7 @@ if (!values.tag || !/^v\d+\.\d+\.\d+$/.test(values.tag)) fail('--tag vX.Y.Z: the
 const key = privateKey()
 for (const skill of GENERATED) {
   const dir = path.join(ROOT, 'skills', skill)
-  for (const f of walk(dir)) if (!generated.has(path.relative(ROOT, f).split(path.sep).join('/'))) fs.rmSync(f)
+  for (const f of walk(dir)) if (!isPreviewFile(path.relative(dir, f)) && !generated.has(path.relative(ROOT, f).split(path.sep).join('/'))) fs.rmSync(f)
 }
 for (const [rel, bytes] of generated) {
   const file = path.join(ROOT, rel)
@@ -140,13 +144,18 @@ console.log(stale.length ? `skills/${GENERATED.join(', skills/')}: ${stale.lengt
 
 // 3. hash
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
+const fileEntry = (dir, f) => ({ path: path.relative(dir, f).split(path.sep).join('/'), bytes: fs.statSync(f).size, sha256: sha256(f) })
+// An entry's preview: both files, or none (a card in Émile then stays words)
+const previewOf = dir => {
+  const [video, still] = [PREVIEW.video, PREVIEW.still].map(f => path.join(dir, f))
+  return fs.existsSync(video) && fs.existsSync(still) ? { video: fileEntry(dir, video), still: fileEntry(dir, still) } : null
+}
 const packs = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
-  const files = walk(dir).map(f => ({ path: path.relative(dir, f).split(path.sep).join('/'), bytes: fs.statSync(f).size, sha256: sha256(f) }))
   return {
     id: pack.id, version: pack.version, kind: pack.kind, category: pack.category ?? null,
-    title: pack.title, description: pack.description, params: pack.params, preview: pack.preview ?? null,
-    licence: pack.licence, files
+    title: pack.title, description: pack.description, params: pack.params, preview: previewOf(dir),
+    licence: pack.licence, files: packFiles(dir).map(f => fileEntry(dir, f))
   }
 }).sort((a, b) => a.id.localeCompare(b.id))
 
@@ -166,9 +175,9 @@ const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileT
     const description = /^---\r?\n[\s\S]*?^description:\s*(.+)$[\s\S]*?\r?\n---/m.exec(text)?.[1].trim()
     const title = /^#\s+(.+)$/m.exec(text.replace(/^---\r?\n[\s\S]*?\r?\n---/, ''))?.[1].trim()
     if (!description || !title) fail(`skills/${e.name}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
-    const files = walk(dir).map(f => ({ path: path.relative(dir, f).split(path.sep).join('/'), bytes: fs.statSync(f).size, sha256: sha256(f) }))
+    const files = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => fileEntry(dir, f))
     const digest = crypto.createHash('sha256').update(JSON.stringify(files)).digest('hex')
-    return { name: e.name, title, description, licence: 'MIT', digest, files }
+    return { name: e.name, title, description, licence: 'MIT', digest, preview: previewOf(dir), files }
   })
   .sort((a, b) => a.name.localeCompare(b.name))
 
@@ -189,4 +198,6 @@ const sig = crypto.sign(null, bytes, key).toString('base64')
 const unchanged = before && index.published === before.published
 fs.writeFileSync(indexFile, bytes)
 fs.writeFileSync(path.join(ROOT, 'index.json.sig'), sig + '\n')
+const without = [...packs.filter(p => !p.preview).map(p => p.id), ...skills.filter(s => !s.preview).map(s => `skills/${s.name}`)]
 console.log(`index.json: ${packs.length} packs, ${skills.length} Skill${skills.length === 1 ? '' : 's'} for Émile, ${values.tag}, signed (index.json.sig)${unchanged ? ', unchanged' : ''}`)
+if (without.length) console.log(`no preview yet (their cards in Émile stay words): ${without.join(', ')} (node scripts/previews.mjs)`)

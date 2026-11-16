@@ -1,0 +1,123 @@
+<!doctype html>
+<meta charset="utf-8">
+<body style="margin:0;background:#111">
+<script type="module">
+// The page scripts/previews.mjs drives: each frame of a pack's preview
+// drawn by Émile's own compositor over the footage (scripts/footage.json),
+// as the product draws it.
+//
+// A filter: the footage as it is, wiped to the filter from the left, held,
+// wiped back. A transition: clip a, the transition once into clip b, held,
+// then b fades back into a's first frame. Both loop: a filter's footage
+// crossfades its last frames into its first, a transition ends on the
+// frame it starts with.
+
+const query = new URLSearchParams(location.search)
+const { createCompositor } = await import(query.get('compositor'))
+
+const W = 854, H = 480
+const N = 96 // 4 s at 24 fps
+const LOOP = 12 // frames a filter's footage crossfades over at its seam
+const canvasOf = (w, h) => Object.assign(document.createElement('canvas'), { width: w, height: h })
+
+let packs = {}, comp = null, glCanvas = null
+const footage = { a: [], b: [] }
+const problems = []
+
+async function load(urls) {
+  return Promise.all(urls.map(async url => {
+    const image = new Image()
+    image.src = url
+    await image.decode()
+    return image
+  }))
+}
+
+// Footage a at frame i, its seam crossfaded: the first LOOP frames come in
+// from the frames after the end, so frame N - 1 runs on into frame 0
+const scratch = canvasOf(W, H), sg = scratch.getContext('2d')
+function looped(i) {
+  if (i >= LOOP) return footage.a[i]
+  sg.globalAlpha = 1
+  sg.drawImage(footage.a[N + i], 0, 0, W, H)
+  sg.globalAlpha = i / LOOP
+  sg.drawImage(footage.a[i], 0, 0, W, H)
+  sg.globalAlpha = 1
+  return scratch
+}
+
+const ease = t => (t <= 0 ? 0 : t >= 1 ? 1 : t * t * (3 - 2 * t))
+
+function drawTree(tree, pictures) {
+  comp.frame(tree, n => ({ image: pictures[n.id], stacked: false }))
+  if (problems.length) throw new Error(problems.join('; '))
+}
+
+const out = canvasOf(W, H), g = out.getContext('2d')
+
+// A filter's frame i: how far the wipe has gone from the left (0–1)
+const wipe = i => (i < 12 ? 0 : i < 36 ? ease((i - 12) / 24) : i < 72 ? 1 : i < 90 ? 1 - ease((i - 72) / 18) : 0)
+
+function filterFrame(id, i) {
+  const base = looped(i)
+  // The footage as it is first: base may be the scratch canvas, which the
+  // compositor reads next
+  g.drawImage(base, 0, 0, W, H)
+  const x = Math.round(wipe(i) * W)
+  if (x > 0) {
+    drawTree({ op: 'filter', id, params: {}, seed: 1234, frame: i, src: { op: 'stack', layers: [{ op: 'clip', id: 'a', f: i }] } }, { a: base })
+    g.save()
+    g.beginPath()
+    g.rect(0, 0, x, H)
+    g.clip()
+    g.drawImage(glCanvas, 0, 0, W, H)
+    g.restore()
+    // The wipe's edge, a hairline while it moves
+    if (x < W) {
+      g.fillStyle = 'rgba(255,255,255,0.75)'
+      g.fillRect(x - 1, 0, 2, H)
+    }
+  }
+}
+
+// A transition's frame i: a until 30, the blend over 30–54, b after it,
+// fading back to a's first frame over the last 12
+const FROM = 30, LEN = 24, BACK = 84
+function transitionFrame(id, i) {
+  if (i < FROM) return g.drawImage(footage.a[i], 0, 0, W, H)
+  const bAt = i - FROM
+  if (i < FROM + LEN) {
+    const p = (i - FROM + 1) / (LEN + 1)
+    drawTree({ op: 'blend', id, params: {}, p, frame: i, after: p >= 0.5, a: { op: 'clip', id: 'a', f: i }, b: { op: 'clip', id: 'b', f: bAt } }, { a: footage.a[i], b: footage.b[bAt] })
+    return g.drawImage(glCanvas, 0, 0, W, H)
+  }
+  g.globalAlpha = 1
+  g.drawImage(footage.b[bAt], 0, 0, W, H)
+  if (i >= BACK) {
+    g.globalAlpha = (i - BACK + 1) / (N - BACK + 1)
+    g.drawImage(footage.a[0], 0, 0, W, H)
+    g.globalAlpha = 1
+  }
+}
+
+window.Preview = {
+  N,
+  // all: the packs by id ({ kind, params, glsl, passes }); a, b: the
+  // footage's frames, file URLs, N + LOOP of each at least
+  async setup(all, a, b) {
+    packs = all
+    footage.a = await load(a)
+    footage.b = await load(b)
+    glCanvas = canvasOf(W, H)
+    comp = createCompositor(glCanvas, { width: W, height: H, packs, fps: 24, onProblem: m => problems.push(m) })
+    return true
+  },
+  // Frame i of a pack's preview, a JPEG data URL
+  frame(id, i) {
+    if (packs[id].kind === 'transition') transitionFrame(id, i)
+    else filterFrame(id, i)
+    return out.toDataURL('image/jpeg', 0.95)
+  }
+}
+window.ready = true
+</script>

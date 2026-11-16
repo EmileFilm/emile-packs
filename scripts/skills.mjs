@@ -104,7 +104,7 @@ export function generateSkills(root, packDirs, contract) {
   put(`${S}/catalog.js`, `${js}// Every pack.json, shader.glsl (and pass shaders) and SKILL.md of this folder, for a page opened from file:// (which can't fetch them).\n;(function (root) {\n  (root.EmileShaders ??= {}).catalog = ${JSON.stringify(catalog, null, 1).replace(/\n/g, '\n  ')}\n})(typeof globalThis !== 'undefined' ? globalThis : this)\n`)
   put(`${S}/example.html`, template('emile-shaders', 'example.html').replace(/^<!doctype html>\n/i, m => `${m}<!-- ${note(from)} -->\n`))
   for (const p of [...filters, ...transitions]) {
-    for (const f of fs.readdirSync(p.dir).filter(f => !f.startsWith('.')).sort()) put(`${S}/${folderOf(p)}/${f}`, fs.readFileSync(path.join(p.dir, f)))
+    for (const f of fs.readdirSync(p.dir).filter(f => !f.startsWith('.') && f !== 'preview.mp4' && f !== 'preview.jpg').sort()) put(`${S}/${folderOf(p)}/${f}`, fs.readFileSync(path.join(p.dir, f)))
   }
 
   // ---------------------------------------------------------------- choosing-filters
