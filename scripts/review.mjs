@@ -8,7 +8,7 @@
 //       [--no-measure] [--engine <Emile/engine>]
 //
 // Each filter is drawn by Émile's own compositor over pictures made here
-// (scripts/review.html: a product on a backdrop by day and by night, a
+// (scripts/pictures.js: a product on a backdrop by day and by night, a
 // product's screen, shapes on nothing) and over each --photo (portraits
 // above all: a face is where a filter fails first). --set draws a filter
 // with a parameter at another value than its default, to try the settings

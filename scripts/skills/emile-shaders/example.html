@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Émile shaders</title>
+<!-- Every filter and transition of this Skill on a picture, with its
+     parameters as controls. Opens from the folder as it is (file:// too):
+     emile-shaders.js runs the shaders, catalog.js holds every pack.json,
+     shader.glsl and guide, pictures.js draws the pictures. Nothing else. -->
+<style>
+  :root { color-scheme: light dark; --bg: #f4f2ee; --fg: #17171a; --muted: #66656b; --line: #d9d5cc; --card: #ffffff; --accent: #c2410c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #121214; --fg: #ececef; --muted: #9a9aa2; --line: #2d2d33; --card: #1b1b1f; --accent: #fb923c; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.45 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; padding: 16px; max-width: 1500px; margin: 0 auto; }
+  @media (max-width: 860px) { main { grid-template-columns: minmax(0, 1fr); } }
+  canvas { width: 100%; height: auto; display: block; background: #000; border-radius: 6px; }
+  aside { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px; align-self: start; }
+  label { display: block; margin: 10px 0 2px; color: var(--muted); font-size: 12px; }
+  select, input[type=number] { width: 100%; padding: 5px 6px; font: inherit; color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 5px; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .row input[type=range] { flex: 1; }
+  .row output { min-width: 3.5em; text-align: right; font-variant-numeric: tabular-nums; }
+  button { font: inherit; padding: 5px 10px; color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 5px; cursor: pointer; }
+  button[aria-pressed=true] { outline: 2px solid var(--accent); }
+  h1 { font-size: 16px; margin: 0 0 4px; }
+  p.what { margin: 4px 0 0; color: var(--muted); }
+  #status { margin-top: 8px; color: var(--muted); font-size: 12px; }
+  #long { margin-top: 10px; font-size: 12px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 14px 0 4px; }
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <canvas id="view" width="1280" height="720" aria-label="The picture through the chosen filter or transition"></canvas>
+    <div id="status" role="status"></div>
+    <div id="long"></div>
+  </section>
+  <aside>
+    <h1 id="title"></h1>
+    <p class="what" id="what"></p>
+    <label for="pack">Filter or transition</label>
+    <select id="pack" aria-label="Filter or transition"></select>
+    <div id="pictures"></div>
+    <label for="file">Your own picture or video</label>
+    <input id="file" type="file" accept="image/*,video/*" aria-label="Your own picture or video">
+    <hr>
+    <div id="params"></div>
+    <hr>
+    <div id="time"></div>
+    <div class="row" style="margin-top:12px">
+      <button id="play" type="button" aria-pressed="false">Play</button>
+      <button id="reset" type="button">Defaults</button>
+    </div>
+  </aside>
+</main>
+<script src="emile-shaders.js"></script>
+<script src="catalog.js"></script>
+<script src="pictures.js"></script>
+<script>
+(function () {
+  const $ = id => document.getElementById(id)
+  const canvas = $('view')
+  const catalog = EmileShaders.catalog
+  const GROUPS = { print: 'Print', texture: 'Texture', distort: 'Distort', color: 'Color', glow: 'Glow', film: 'Film' }
+
+  // The pictures: drawn ones, and the person's own file
+  const PICTURES = {
+    studio: { label: 'A product by day', draw: (w, h) => EmilePictures.studio(w, h, false) },
+    night: { label: 'A product by night', draw: (w, h) => EmilePictures.studio(w, h, true) },
+    page: { label: "A product's screen", draw: (w, h) => EmilePictures.page(w, h) }
+  }
+  const drawn = {}
+  let own = null // { label, element }
+  const ownSize = el => [el.videoWidth || el.naturalWidth || el.width, el.videoHeight || el.naturalHeight || el.height]
+  const cover = document.createElement('canvas')
+  // A picture the size of the canvas: drawn ones as they are, the person's
+  // cropped to cover it (passed straight through when it is that size)
+  function picture(name) {
+    const w = canvas.width, h = canvas.height
+    if (name === 'own' && own) {
+      const [iw, ih] = ownSize(own.element)
+      if (iw === w && ih === h) return own.element
+      cover.width = w; cover.height = h
+      const g = cover.getContext('2d'), k = Math.max(w / iw, h / ih)
+      g.imageSmoothingQuality = 'high'
+      g.drawImage(own.element, (w - iw * k) / 2, (h - ih * k) / 2, iw * k, ih * k)
+      return cover
+    }
+    const key = `${name}@${w}x${h}`
+    return (drawn[key] ??= (PICTURES[name] ?? PICTURES.studio).draw(w, h))
+  }
+
+  // State, in words on the page and readable from window.example
+  const state = { id: null, params: {}, picture: 'studio', from: 'studio', to: 'page', progress: 0.5, frame: 0, fps: 30, seed: 0, playing: false }
+  let current = null // { entry, runner }
+
+  for (const kind of ['filter', 'transition']) {
+    const groups = kind === 'filter' ? Object.keys(GROUPS) : ['transition']
+    for (const g of groups) {
+      const og = document.createElement('optgroup')
+      og.label = kind === 'filter' ? `Filters · ${GROUPS[g]}` : 'Transitions'
+      for (const e of catalog.filter(e => e.pack.kind === kind && (kind === 'transition' || e.pack.category === g))) og.append(new Option(e.pack.title.en, e.pack.id))
+      if (og.children.length) $('pack').append(og)
+    }
+  }
+
+  function pictureSelect(id, label, value, onChange) {
+    const wrap = document.createElement('div')
+    const choices = [...Object.entries(PICTURES).map(([k, v]) => [k, v.label]), ...(own ? [['own', own.label]] : [])]
+    wrap.innerHTML = `<label for="${id}">${label}</label>`
+    const sel = document.createElement('select')
+    sel.id = id
+    sel.setAttribute('aria-label', label)
+    for (const [k, l] of choices) sel.append(new Option(l, k, false, k === value))
+    sel.onchange = () => onChange(sel.value)
+    wrap.append(sel)
+    return wrap
+  }
+  function showPictures() {
+    const box = $('pictures')
+    box.textContent = ''
+    if (current?.entry.pack.kind === 'transition') {
+      box.append(pictureSelect('from', 'From', state.from, v => { state.from = v; draw() }))
+      box.append(pictureSelect('to', 'To', state.to, v => { state.to = v; draw() }))
+    } else box.append(pictureSelect('picture', 'Picture', state.picture, v => { state.picture = v; draw() }))
+  }
+
+  // One control per parameter, from pack.json
+  function control(p) {
+    const wrap = document.createElement('div')
+    const id = `p-${p.id}`
+    const name = p.label?.en ?? p.id
+    const value = state.params[p.id] ?? p.default
+    wrap.innerHTML = `<label for="${id}">${name} <code>${p.id}</code></label>`
+    const set = v => { state.params[p.id] = v; draw() }
+    if (p.type === 'float' || p.type === 'int') {
+      const row = document.createElement('div')
+      row.className = 'row'
+      const input = Object.assign(document.createElement('input'), { type: 'range', id, min: p.min, max: p.max, step: p.step ?? (p.type === 'int' ? 1 : (p.max - p.min) / 100), value })
+      input.setAttribute('aria-label', name)
+      const out = Object.assign(document.createElement('output'), { value })
+      input.oninput = () => { out.value = input.value; set(Number(input.value)) }
+      row.append(input, out)
+      wrap.append(row)
+    } else if (p.type === 'vec2') {
+      ;[0, 1].forEach(i => {
+        const row = document.createElement('div')
+        row.className = 'row'
+        const input = Object.assign(document.createElement('input'), { type: 'range', id: `${id}-${i}`, min: p.min, max: p.max, step: p.step ?? (p.max - p.min) / 100, value: value[i] })
+        input.setAttribute('aria-label', `${name} ${'xy'[i]}`)
+        const out = Object.assign(document.createElement('output'), { value: value[i] })
+        input.oninput = () => { out.value = input.value; const v = [...(state.params[p.id] ?? p.default)]; v[i] = Number(input.value); set(v) }
+        row.append(input, out)
+        wrap.append(row)
+      })
+    } else if (p.type === 'bool') {
+      const input = Object.assign(document.createElement('input'), { type: 'checkbox', id, checked: !!value })
+      input.setAttribute('aria-label', name)
+      input.onchange = () => set(input.checked)
+      wrap.append(input)
+    } else if (p.type === 'color') {
+      const input = Object.assign(document.createElement('input'), { type: 'color', id, value })
+      input.setAttribute('aria-label', name)
+      input.oninput = () => set(input.value)
+      wrap.append(input)
+    } else if (p.type === 'choice') {
+      const sel = document.createElement('select')
+      sel.id = id
+      sel.setAttribute('aria-label', name)
+      for (const o of p.options) sel.append(new Option(o, o, false, o === value))
+      sel.onchange = () => set(sel.value)
+      wrap.append(sel)
+    }
+    return wrap
+  }
+
+  function showTime() {
+    const box = $('time')
+    box.textContent = ''
+    const transition = current?.entry.pack.kind === 'transition'
+    const rows = transition ? [['progress', 'Progress', 0, 1, 0.01]] : []
+    rows.push(['frame', 'Frame', 0, 300, 1], ['seed', 'Seed', 0, 65535, 1])
+    for (const [key, name, min, max, step] of rows) {
+      const wrap = document.createElement('div')
+      wrap.innerHTML = `<label for="t-${key}">${name}</label>`
+      const row = document.createElement('div')
+      row.className = 'row'
+      const input = Object.assign(document.createElement('input'), { type: key === 'seed' ? 'number' : 'range', id: `t-${key}`, min, max, step, value: state[key] })
+      input.setAttribute('aria-label', name)
+      const out = Object.assign(document.createElement('output'), { value: state[key] })
+      input.oninput = () => { out.value = input.value; state[key] = Number(input.value); draw() }
+      row.append(input)
+      if (key !== 'seed') row.append(out)
+      wrap.append(row)
+      box.append(wrap)
+    }
+  }
+
+  function showParams() {
+    $('params').textContent = ''
+    for (const p of current.entry.pack.params) $('params').append(control(p))
+    if (!current.entry.pack.params.length) $('params').innerHTML = '<p class="what">No parameters.</p>'
+  }
+
+  function select(id) {
+    const entry = catalog.find(e => e.pack.id === id) ?? catalog[0]
+    current?.runner.dispose()
+    const make = entry.pack.kind === 'filter' ? EmileShaders.filter : EmileShaders.transition
+    current = { entry, runner: make(canvas, entry.pack, entry.glsl) }
+    state.id = entry.pack.id
+    state.params = {}
+    $('pack').value = entry.pack.id
+    $('title').textContent = `${entry.pack.title.en} · ${entry.pack.id}`
+    $('what').textContent = entry.pack.description.en
+    const long = /## How long\s*\n([\s\S]*?)(\n## |$)/.exec(entry.guide)?.[1].trim()
+    $('long').textContent = long ? `How long: ${long}` : ''
+    showParams()
+    showPictures()
+    showTime()
+    draw()
+  }
+
+  function draw() {
+    if (!current) return
+    const { entry, runner } = current
+    const o = { params: state.params, frame: state.frame, fps: state.fps, seed: state.seed }
+    if (entry.pack.kind === 'filter') runner.draw(picture(state.picture), o)
+    else runner.draw(picture(state.from), picture(state.to), state.progress, o)
+    const over = entry.pack.kind === 'filter' ? labelOf(state.picture) : `${labelOf(state.from)} to ${labelOf(state.to)}, progress ${state.progress.toFixed(2)}`
+    const set = Object.entries(state.params).map(([k, v]) => `${k} ${v}`).join(', ')
+    $('status').textContent = `${entry.pack.id} over ${over} · frame ${state.frame} · seed ${state.seed} · ${set || 'defaults'} · ${state.playing ? 'playing' : 'paused'} · ${canvas.width} × ${canvas.height}`
+  }
+  const labelOf = name => (name === 'own' ? own?.label : PICTURES[name]?.label) ?? name
+
+  // Play: a filter's frames advance at 30 a second; a transition runs its
+  // progress over a second and holds half a second at each end
+  let last = 0, t = 0
+  function tick(now) {
+    if (!state.playing) return
+    const dt = last ? (now - last) / 1000 : 0
+    last = now
+    t += dt
+    state.frame = Math.floor(t * state.fps) % 300
+    if (current.entry.pack.kind === 'transition') {
+      const c = t % 3
+      state.progress = c < 0.5 ? 0 : c < 1.5 ? c - 0.5 : c < 2 ? 1 : 1 - (c - 2)
+    }
+    const f = $('t-frame'), p = $('t-progress')
+    if (f) { f.value = state.frame; f.nextSibling.value = state.frame }
+    if (p) { p.value = state.progress; p.nextSibling.value = state.progress.toFixed(2) }
+    draw()
+    requestAnimationFrame(tick)
+  }
+  function play(on) {
+    state.playing = on
+    $('play').setAttribute('aria-pressed', String(on))
+    $('play').textContent = on ? 'Pause' : 'Play'
+    last = 0
+    if (on) requestAnimationFrame(tick)
+    else draw()
+  }
+  $('play').onclick = () => play(!state.playing)
+  $('reset').onclick = () => select(state.id)
+  $('pack').onchange = () => select($('pack').value)
+  // A frame of a video is redrawn as it plays, even when paused here
+  function videoLoop() {
+    if (own?.element.tagName === 'VIDEO' && !state.playing && [state.picture, state.from, state.to].includes('own')) draw()
+    requestAnimationFrame(videoLoop)
+  }
+  $('file').onchange = async () => {
+    const file = $('file').files[0]
+    if (!file) return
+    const url = URL.createObjectURL(file)
+    await useURL(url, file.type.startsWith('video/'), file.name)
+  }
+  async function useURL(url, video, label) {
+    let el
+    if (video) {
+      el = Object.assign(document.createElement('video'), { src: url, muted: true, loop: true, playsInline: true })
+      await el.play()
+      requestAnimationFrame(videoLoop)
+    } else {
+      el = new Image()
+      el.src = url
+      await el.decode()
+    }
+    own = { label: label ?? url.split('/').pop(), element: el }
+    if (current.entry.pack.kind === 'transition') state.to = 'own'
+    else state.picture = 'own'
+    showPictures()
+    draw()
+  }
+
+  // For scripts and agents driving the page: the same as the controls
+  window.example = {
+    state,
+    canvas,
+    ids: catalog.map(e => e.pack.id),
+    select,
+    set(param, value) { state.params[param] = value; showParams(); draw(); return state },
+    picture(name) { state.picture = name; showPictures(); draw() },
+    at(key, value) { state[key] = value; showTime(); draw() },
+    size(w, h) { canvas.width = w; canvas.height = h; draw() },
+    useURL,
+    play
+  }
+  const q = new URLSearchParams(location.search)
+  if (q.get('size')) { const [w, h] = q.get('size').split('x').map(Number); canvas.width = w; canvas.height = h }
+  select(q.get('pack') ?? 'emile/halftone')
+})()
+</script>
+</body>
+</html>

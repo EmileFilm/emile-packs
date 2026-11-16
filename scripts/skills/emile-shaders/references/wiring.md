@@ -1,0 +1,115 @@
+{{generated}}
+
+# Wiring a shader into your own page
+
+`emile-shaders.js` is the whole runner: one classic script, no dependencies, under 200 lines. It wraps a pack's `shader.glsl` exactly as Émile does (`references/contract.md`), so the shader runs unchanged. Copy it next to your page, along with the effect's folder.
+
+## The shader's files
+
+A page needs the effect's `pack.json` (parsed) and its `shader.glsl` as text. Over http, fetch them:
+
+```js
+const base = 'emile-shaders/filters/halftone/'
+const pack = await (await fetch(base + 'pack.json')).json()
+const glsl = await (await fetch(base + 'shader.glsl')).text()
+```
+
+A page opened from `file://` can't fetch; load `catalog.js` instead (it holds every `pack.json`, `shader.glsl` and guide of this folder) and take the entry:
+
+```html
+<script src="emile-shaders/emile-shaders.js"></script>
+<script src="emile-shaders/catalog.js"></script>
+<script>
+  const { pack, glsl } = EmileShaders.catalog.find(e => e.pack.id === 'emile/halftone')
+</script>
+```
+
+## A filter over an image
+
+```html
+<canvas id="out"></canvas>
+<script src="emile-shaders.js"></script>
+<script>
+  const image = new Image()
+  image.src = 'photo.jpg'
+  image.decode().then(() => {
+    const canvas = document.getElementById('out')
+    canvas.width = image.naturalWidth           // the frame is drawn the size of the canvas
+    canvas.height = image.naturalHeight
+    const fx = EmileShaders.filter(canvas, pack, glsl)
+    fx.draw(image, { params: { cell: 16, ink: '#1a1917', paper: '#f2ece0' } })
+  })
+</script>
+```
+
+`params` takes the ids of `pack.json`; one left out takes its default. A colour is `'#rrggbb'`, a choice its option's name (`{ palette: 'thermal' }`), a bool `true` or `false`. A picture whose shape differs from the canvas is stretched to it: crop it to the canvas's shape first (draw it into a 2D canvas) when that matters.
+
+## A filter over a video
+
+Draw every frame the video shows, and count frames so a moving filter (`"animated": true` in `pack.json`) moves:
+
+```js
+const video = document.querySelector('video')           // muted, playsinline, loop
+const canvas = document.getElementById('out')           // shown where the video was
+function start() {
+  canvas.width = video.videoWidth
+  canvas.height = video.videoHeight
+  video.style.display = 'none'
+  video.play()                                           // after hiding it: see below
+  const fx = EmileShaders.filter(canvas, pack, glsl)
+  const fps = 30
+  function tick() {
+    if (video.readyState >= 2) fx.draw(video, { params: { amount: 0.25 }, frame: Math.floor(video.currentTime * fps), fps, seed: 7 })
+    requestAnimationFrame(tick)
+  }
+  requestAnimationFrame(tick)
+}
+if (video.readyState >= 1) start()                       // its size is known
+else video.addEventListener('loadedmetadata', start, { once: true })
+```
+
+Show the canvas in the video's place and hide the `<video>` itself, then call `video.play()` yourself: Chrome pauses a muted video that only `autoplay` started once it is no longer visible, and the canvas then shows one still frame; a `play()` from the script keeps it running while hidden. A video from another origin needs `crossOrigin = 'anonymous'` and CORS headers, or WebGL refuses to read it. To keep a filter to a few seconds (most are accents: read its How long), draw the video straight through outside that span: `amount: 0` is the picture exactly as it is.
+
+## Transitions
+
+A transition reads two pictures and a progress from 0 (all the outgoing one) to 1 (all the incoming one):
+
+```js
+const tr = EmileShaders.transition(canvas, pack, glsl)   // e.g. emile/dissolve's pack.json and shader.glsl
+const seconds = 0.6, start = performance.now()
+function tick(now) {
+  const progress = Math.min(1, (now - start) / 1000 / seconds)
+  tr.draw(fromImage, toImage, progress)
+  if (progress < 1) requestAnimationFrame(tick)
+}
+requestAnimationFrame(tick)
+```
+
+Feed a linear progress: `dissolve`, `push` and `zoom` ease it themselves (`smoothstep` inside); `wipe`'s edge moves at the progress given. Each guide gives the length that works (`references/choosing.md` lists them).
+
+## The API
+
+| Call | What |
+|---|---|
+| `EmileShaders.filter(canvasOrGL, pack, glsl)` | compiles a filter; throws with the compile log if it can't |
+| `fx.draw(picture, { params, frame, fps, seed })` | draws it over `picture` onto the canvas |
+| `EmileShaders.transition(canvasOrGL, pack, glsl)` | compiles a transition |
+| `tr.draw(from, to, progress, { params, frame, fps, seed })` | draws the change at `progress` |
+| `x.dispose()` | frees its program and textures |
+| `EmileShaders.fragmentSource(kind, glsl, params)` | the whole fragment shader, for a renderer of your own |
+| `EmileShaders.paramValues(params, set)` | each `p_<id>` uniform's GLSL type and value |
+
+Pictures are anything WebGL2 takes as a texture: a loaded `<img>`, a `<video>` with a frame, a `<canvas>`, an `ImageBitmap`. Several runners may share one canvas (they share its WebGL2 context). The defaults are `frame: 0`, `fps: 30`, `seed: 0`.
+
+## Elsewhere
+
+In another renderer (a 3D library's post-processing pass, an offline renderer writing frames, a native app on Metal or Vulkan through a GLSL translator), keep these and the shader looks as it does here:
+
+- **Build the source with the wrap**, not by editing the shader: header, getters, `#line 1`, `shader.glsl`, `main()` (`references/contract.md`, or `EmileShaders.fragmentSource`). If the host insists on its own names (an input called `vUv`, a sampler called `tDiffuse`), rename in the header and getters only: `getColor(p)` can sample any texture.
+- **One full-frame pass reading the frame under it.** A filter needs the finished picture under it as a texture: render the scene to a texture first, then draw the filter's quad with that texture behind `getColor`. It never reads its own output.
+- **Premultiplied colour, both ways.** Hand it premultiplied pixels; treat what it returns as premultiplied when you composite or write it out (un-premultiply only to save a straight-alpha file).
+- **Linear-filtered, edge-clamped textures, `uv` from the bottom left.** If your host's texture coordinates start top left, flip once in the getter, never in the shader.
+- **The real resolution in pixels** in `resolution`, so sizes scale with the frame. Render at the output size; scaling a small render up changes dot and grain sizes.
+- **Time as frames.** Give `frame` and `fps` from your timeline, not wall-clock time, so a frame rendered twice, or offline, is the same picture. Keep `seed` fixed per shot.
+- **Colour space**: the shaders work on the 8-bit sRGB values they are given, as a browser canvas has them. In a linear-light pipeline, convert to sRGB before the pass and back after, or the look shifts (darker grain, harder dots).
+- **A transition** needs both pictures as textures at once and a `progress` you drive.
