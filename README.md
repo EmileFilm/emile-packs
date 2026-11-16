@@ -112,37 +112,20 @@ Nothing to install. Say what you want in the chat, or type `#` and a filter's na
 
 ### With your own agent
 
-Every pack is plain files: a `shader.glsl`, a `pack.json` and a `SKILL.md`. To let Claude Code, Codex or any other agent choose and use them, hand it the link:
-
-```text
-Read https://github.com/EmileFilm/emile-packs. Pick the filter that fits this moment
-from what each one brings, read its SKILL.md in full, and use its parameter values.
-```
-
-or clone it next to your project and point your agent at the folder:
+`skills/emile-shaders/` is a Skill: copy that one folder into your agent's skills folder and it carries everything it needs: every filter's and transition's `shader.glsl`, `pack.json` and `SKILL.md`, a one-file WebGL2 runner, an example page and the references. For Claude Code that is `.claude/skills/` in your project (or `~/.claude/skills/` for every project):
 
 ```bash
-git clone https://github.com/EmileFilm/emile-packs.git
+git clone --depth 1 https://github.com/EmileFilm/emile-packs.git
+cp -R emile-packs/skills/emile-shaders .claude/skills/
 ```
 
-To run a shader in your own WebGL2 renderer, wrap it the way Émile does: a header, one uniform per parameter, `getColor` over your picture, and `main`. Colours in and out are premultiplied.
+Then ask for the look ("put a halftone on the video in this page"): the agent finds the Skill, reads the filter's guide and wires the shader into your page. For any other agent, put the folder wherever it reads Skills from.
 
-```glsl
-#version 300 es
-precision highp float;
-in vec2 uv;
-out vec4 outColor;
-uniform vec2 resolution;                     // the frame in pixels
-uniform float ratio, frame, fps, seed;       // no clock: what moves reads frame and seed
-uniform sampler2D picture;                   // premultiplied
-uniform float p_amount;                      // one p_<id> per parameter in pack.json
-uniform float p_size;                        //   (color → vec3, choice → int, bool, int, vec2)
-uniform bool p_colour;
-vec4 getColor(vec2 p) { return texture(picture, p); }
-#line 1
-/* … the pack's shader.glsl here … */
-void main() { outColor = filterColor(uv); }
-```
+Without installing: hand your agent this repository's link, or clone it next to your project and point the agent at `skills/emile-shaders/SKILL.md`.
+
+### In your own code
+
+`skills/emile-shaders/emile-shaders.js` runs any of the shaders with plain WebGL2, unchanged: a filter over an image, a `<video>` or a canvas, a transition between two pictures. `references/wiring.md` shows each in a few lines and what to keep when you wire them into another renderer; `references/contract.md` is the shader contract and the exact GLSL wrap Émile uses. Open `skills/emile-shaders/example.html` (straight from the folder, no server) to see every effect with its parameters as sliders.
 
 ## Reading a SKILL.md
 
