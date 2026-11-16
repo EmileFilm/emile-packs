@@ -74,7 +74,7 @@ if (!path.relative(ROOT, out).startsWith('..')) fail('--out is inside this repos
 fs.mkdirSync(out, { recursive: true })
 
 const engine = path.resolve(values.engine ?? process.env.EMILE_ENGINE ?? path.join(ROOT, '..', 'Emile', 'engine'))
-if (!fs.existsSync(path.join(engine, 'emile', 'compose', 'compositor.js'))) fail(`no engine at ${engine} (--engine or EMILE_ENGINE: the Émile repository's engine/)`)
+if (!fs.existsSync(path.join(engine, 'core', 'compose', 'compositor.js'))) fail(`no engine at ${engine} (--engine or EMILE_ENGINE: the Émile repository's engine/)`)
 const { launchBrowser } = await import(pathToFileURL(path.join(engine, 'lib', 'chrome.mjs')).href)
 
 // Every filter pack of this repository, or the ones named
@@ -97,7 +97,7 @@ if (!ids.length) fail(`no filter called ${positionals.join(', ')}`)
 
 const browser = await launchBrowser({ args: ['--allow-file-access-from-files'] })
 const page = await browser.newPage({ width: 200, height: 200 })
-const compositor = pathToFileURL(path.join(engine, 'emile', 'compose', 'compositor.js')).href
+const compositor = pathToFileURL(path.join(engine, 'core', 'compose', 'compositor.js')).href
 await page.goto(`${pathToFileURL(path.join(ROOT, 'scripts', 'review.html')).href}?compositor=${encodeURIComponent(compositor)}`)
 await page.evaluate(`new Promise(r => { const c = () => window.ready ? r() : setTimeout(c, 20); c() })`)
 const settings = {}

@@ -1318,7 +1318,7 @@
     "pack": {
      "id": "emile/wipe",
      "kind": "transition",
-     "version": "1.0.0",
+     "version": "1.0.1",
      "title": {
       "en": "Wipe",
       "zh-CN": "擦除"
@@ -1334,7 +1334,7 @@
      "licence": "MIT",
      "publisher": "emile"
     },
-    "glsl": "// The incoming picture uncovered from the left, behind a soft edge\nvec4 transition(vec2 uv) {\n  float edge = 0.04;\n  float x = progress * (1.0 + edge) - edge;\n  float t = smoothstep(x, x + edge, 1.0 - uv.x);\n  return mix(getFromColor(uv), getToColor(uv), t);\n}\n",
+    "glsl": "// The incoming picture uncovered from the left, behind a soft edge\nvec4 transition(vec2 uv) {\n  float edge = 0.04;\n  // The edge travels from the left to the right: the incoming picture\n  // is behind it, the outgoing one ahead of it\n  float x = progress * (1.0 + edge) - edge;\n  float t = 1.0 - smoothstep(x, x + edge, uv.x);\n  return mix(getFromColor(uv), getToColor(uv), t);\n}\n",
     "passes": {},
     "guide": "---\nname: wipe\ndescription: The incoming picture uncovered from left to right behind a soft edge.\n---\n\n# Wipe\n\nA clean graphic change, like turning a page sideways. 0.3–0.6 s.\n\n## Suits\n- Lists, steps and comparisons: one thing after the next.\n- Explainers and product films with a flat, designed look.\n\n## Doesn't suit\n- Soft, painterly looks (ink, watercolour): the straight edge breaks them.\n- A presenter in the middle of the frame: the edge crosses the face.\n",
     "folder": "transitions/wipe"

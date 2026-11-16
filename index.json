@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.0.0",
- "published": "2026-11-16T06:01:34.888Z",
+ "tag": "v1.0.1",
+ "published": "2026-11-16T14:46:38.163Z",
  "contract": 2,
  "packs": [
   {
@@ -1621,7 +1621,7 @@
   },
   {
    "id": "emile/wipe",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "kind": "transition",
    "category": null,
    "title": {
@@ -1636,13 +1636,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 223468,
-     "sha256": "551728dbec6ab316a38cc6a4727b2969d3f1445563211d4398fce216894a9e9e"
+     "bytes": 200519,
+     "sha256": "5fee568daa00c9d20bae1de7d7acc809c90dea001e34136c4fa2841570957604"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 30153,
-     "sha256": "39ad02a011ce80f6d8f4a9d3d186e93ac4225cb05ea9d8be18e8f5c2490a583b"
+     "bytes": 29230,
+     "sha256": "d7b0325f31186d6c06a1a0e55b91d82a74f529e039eb1444b2134c2f7d742b3e"
     }
    },
    "licence": "MIT",
@@ -1655,12 +1655,12 @@
     {
      "path": "pack.json",
      "bytes": 376,
-     "sha256": "5371df071486998f8e66866a2604ea4ca9b63af1bea29c81946310f9519697c9"
+     "sha256": "f49f0a760218797e0e800df29c6dd72261a1cd86f557b0aa439606b340c1062a"
     },
     {
      "path": "shader.glsl",
-     "bytes": 262,
-     "sha256": "5e223fd1176610ee091c96b67b54b46585f089f619766e701aed7c77aa6371e3"
+     "bytes": 381,
+     "sha256": "5d87499bb06e0f572fea1d8aabe6ea09c92359c9e16117d76da115b1d431faaf"
     }
    ]
   },

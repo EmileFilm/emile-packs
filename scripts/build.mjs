@@ -97,7 +97,7 @@ for (const p of checked.packs) {
 if (bad) fail(`${bad} pack${bad > 1 ? 's' : ''} with problems`)
 
 // The Skill's runner wraps every shader as the compositor does, byte for byte
-const contract = await import(pathToFileURL(path.join(engine, 'emile', 'compose', 'contract.js')).href)
+const contract = await import(pathToFileURL(path.join(engine, 'core', 'compose', 'contract.js')).href)
 const runner = {}
 vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'scripts', 'skills', 'emile-shaders', 'emile-shaders.js'), 'utf8'), runner)
 const wrapped = packDirs.map(dir => {

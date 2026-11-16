@@ -109,7 +109,7 @@ async function packPreviews() {
     const a = await framesOf(await clip('a'), path.join(tmp, 'a'))
     const b = await framesOf(await clip('b'), path.join(tmp, 'b'))
     const page = await browser.newPage({ width: 200, height: 200 })
-    const compositor = pathToFileURL(path.join(engine, 'emile', 'compose', 'compositor.js')).href
+    const compositor = pathToFileURL(path.join(engine, 'core', 'compose', 'compositor.js')).href
     await page.goto(`${pathToFileURL(path.join(ROOT, 'scripts', 'previews.html')).href}?compositor=${encodeURIComponent(compositor)}`)
     await page.evaluate(`new Promise(r => { const c = () => window.ready ? r() : setTimeout(c, 20); c() })`)
     const packs = Object.fromEntries(Object.entries(all).map(([id, p]) => [id, { id, kind: p.kind, params: p.params, glsl: p.glsl, passes: p.passes }]))
