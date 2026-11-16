@@ -909,6 +909,135 @@
    },
    {
     "pack": {
+     "id": "emile/edge-glow",
+     "kind": "filter",
+     "version": "1.0.0",
+     "title": {
+      "en": "Edge glow",
+      "zh-CN": "轮廓光"
+     },
+     "description": {
+      "en": "The outlines of what matters light up, like a rim of light behind a subject, glowing out into the dark.",
+      "zh-CN": "主体的轮廓亮起来，像身后打来的一圈轮廓光，向暗处慢慢晕开。"
+     },
+     "category": "glow",
+     "params": [
+      {
+       "id": "amount",
+       "type": "float",
+       "default": 1,
+       "min": 0,
+       "max": 1,
+       "step": 0.01,
+       "label": {
+        "en": "Amount",
+        "zh-CN": "强度"
+       }
+      },
+      {
+       "id": "threshold",
+       "type": "float",
+       "default": 0.5,
+       "min": 0,
+       "max": 1,
+       "step": 0.01,
+       "label": {
+        "en": "Which edges",
+        "zh-CN": "哪些边"
+       }
+      },
+      {
+       "id": "radius",
+       "type": "float",
+       "default": 0.5,
+       "min": 0.1,
+       "max": 1,
+       "step": 0.01,
+       "label": {
+        "en": "Reach",
+        "zh-CN": "光晕范围"
+       }
+      },
+      {
+       "id": "colour",
+       "type": "color",
+       "default": "#ffe6c7",
+       "label": {
+        "en": "Light",
+        "zh-CN": "光的颜色"
+       }
+      },
+      {
+       "id": "dim",
+       "type": "float",
+       "default": 0.3,
+       "min": 0,
+       "max": 1,
+       "step": 0.01,
+       "label": {
+        "en": "Dim the picture",
+        "zh-CN": "压暗画面"
+       }
+      }
+     ],
+     "passes": [
+      {
+       "id": "edges",
+       "glsl": "edges.glsl",
+       "scale": 0.5
+      },
+      {
+       "id": "core_x",
+       "glsl": "core-x.glsl",
+       "scale": 0.5
+      },
+      {
+       "id": "core_y",
+       "glsl": "core-y.glsl",
+       "scale": 0.5
+      },
+      {
+       "id": "halo_x",
+       "glsl": "halo-x.glsl",
+       "scale": 0.25
+      },
+      {
+       "id": "halo_y",
+       "glsl": "halo-y.glsl",
+       "scale": 0.25
+      },
+      {
+       "id": "busy_x",
+       "glsl": "busy-x.glsl",
+       "scale": 0.125
+      },
+      {
+       "id": "busy_y",
+       "glsl": "busy-y.glsl",
+       "scale": 0.125
+      }
+     ],
+     "backends": {
+      "glsl": "shader.glsl"
+     },
+     "licence": "MIT",
+     "publisher": "emile"
+    },
+    "glsl": "// Edge glow, the last pass, over the frame: the outlines of shapes lit as\n// if from behind, a soft line of light on each (core-x.glsl, core-y.glsl)\n// fading out into a halo (halo-x.glsl, halo-y.glsl), in one colour. The\n// picture under it is dimmed by dim, most near the light, so the light\n// reads; then the light is\n// laid on as a screen through a soft shoulder (1 − e^−x), so it never\n// flattens into a hard white line. amount 0 leaves the frame exactly as\n// it is.\n\nvec4 filterColor(vec2 uv) {\n  vec4 here = getColor(uv);\n  if (p_amount <= 0.0) return here;\n  // What matters: an outline standing alone against calm parts of the\n  // picture. Where outlines crowd (a mural, a crowd, shelves) busy-x and\n  // busy-y find them dense, and the light there is held back\n  vec3 core = getPass_core_y(uv).rgb, halo = getPass_halo_y(uv).rgb;\n  float lc = max(dot(p_colour, vec3(0.2126, 0.7152, 0.0722)), 0.05);\n  float crowd = dot(getPass_busy_y(uv).rgb, vec3(0.2126, 0.7152, 0.0722)) / lc;\n  float alone = 1.0 - smoothstep(0.08, 0.2, crowd);\n  vec3 light = (core * 2.2 + halo * 2.0) * alone;\n  vec3 glow = (vec3(1.0) - exp(-light)) * p_amount;\n  // The picture dims where the light falls and a little beyond (the wide\n  // halo), so the light reads; far from any outline it is left as it is\n  float near = 1.0 - exp(-dot(halo, vec3(0.2126, 0.7152, 0.0722)) / lc * 6.0 * alone);\n  vec3 base = here.rgb * (1.0 - p_amount * mix(p_dim * p_dim, p_dim, near));\n  float lit = max(glow.r, max(glow.g, glow.b));\n  return vec4(base + glow * (1.0 - base), here.a + lit * (1.0 - here.a));\n}\n",
+    "passes": {
+     "edges": "// Edge glow, first pass, at half the frame: where the outlines are. A\n// Sobel over the picture's colour, its nine points 0.8% of the short side\n// apart and each the mean of four taps around it, so the step and the\n// softening scale with the frame (720p and 4K alike) and fine texture\n// (grass, hair, pores, grain) averages away before it is measured: what\n// is left are the edges of shapes. Each channel's gradient is measured and\n// the largest kept, so a red shape on green counts as much as dark on\n// light. Edges over the threshold, eased in, carry the light's colour.\n\nvec3 edgeAt(vec2 uv, vec2 d) {\n  vec2 q = d * 0.5;\n  return (getColor(uv + vec2(-q.x, -q.y)).rgb + getColor(uv + vec2(q.x, -q.y)).rgb\n    + getColor(uv + vec2(-q.x, q.y)).rgb + getColor(uv + vec2(q.x, q.y)).rgb) * 0.25;\n}\n\nvec4 passColor(vec2 uv) {\n  vec2 d = vec2(0.008 * min(resolution.x, resolution.y)) / resolution;\n  vec3 a = edgeAt(uv + vec2(-d.x, d.y), d), b = edgeAt(uv + vec2(0.0, d.y), d), c = edgeAt(uv + d, d);\n  vec3 l = edgeAt(uv + vec2(-d.x, 0.0), d), r = edgeAt(uv + vec2(d.x, 0.0), d);\n  vec3 e = edgeAt(uv - d, d), f = edgeAt(uv + vec2(0.0, -d.y), d), g = edgeAt(uv + vec2(d.x, -d.y), d);\n  vec3 gx = (c + 2.0 * r + g) - (a + 2.0 * l + e);\n  vec3 gy = (a + 2.0 * b + c) - (e + 2.0 * f + g);\n  vec3 m = sqrt(gx * gx + gy * gy) * 0.25;\n  float strength = max(m.r, max(m.g, m.b));\n  float from = mix(0.08, 0.5, p_threshold);\n  float edge = smoothstep(from, from + 0.12, strength);\n  return vec4(p_colour * edge, 1.0);\n}\n",
+     "core_x": "// Edge glow, at half the frame: the light's core, the outlines spread\n// across by a Gaussian over 0.4% of the short side in 13 taps.\n\nvec4 passColor(vec2 uv) {\n  float r = 0.004 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  float total = 0.0;\n  for (int i = -6; i <= 6; i++) {\n    float x = float(i) / 6.0;\n    float k = exp(-4.5 * x * x);\n    sum += getPass_edges(uv + vec2(x * r / resolution.x, 0.0)).rgb * k;\n    total += k;\n  }\n  return vec4(sum / total, 1.0);\n}\n",
+     "core_y": "// Edge glow, at half the frame: the light's core, the outlines spread\n// down by a Gaussian over 0.4% of the short side in 13 taps.\n\nvec4 passColor(vec2 uv) {\n  float r = 0.004 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  float total = 0.0;\n  for (int i = -6; i <= 6; i++) {\n    float x = float(i) / 6.0;\n    float k = exp(-4.5 * x * x);\n    sum += getPass_core_x(uv + vec2(0.0, x * r / resolution.y)).rgb * k;\n    total += k;\n  }\n  return vec4(sum / total, 1.0);\n}\n",
+     "halo_x": "// Edge glow, at a quarter of the frame: the halo, the outlines spread\n// across by a Gaussian over radius (1 is 5% of the short side) in 25 taps.\n\nvec4 passColor(vec2 uv) {\n  float r = p_radius * 0.05 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  float total = 0.0;\n  for (int i = -12; i <= 12; i++) {\n    float x = float(i) / 12.0;\n    float k = exp(-4.5 * x * x);\n    sum += getPass_edges(uv + vec2(x * r / resolution.x, 0.0)).rgb * k;\n    total += k;\n  }\n  return vec4(sum / total, 1.0);\n}\n",
+     "halo_y": "// Edge glow, at a quarter of the frame: the halo, the outlines spread\n// down by a Gaussian over radius (1 is 5% of the short side) in 25 taps.\n\nvec4 passColor(vec2 uv) {\n  float r = p_radius * 0.05 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  float total = 0.0;\n  for (int i = -12; i <= 12; i++) {\n    float x = float(i) / 12.0;\n    float k = exp(-4.5 * x * x);\n    sum += getPass_halo_x(uv + vec2(0.0, x * r / resolution.y)).rgb * k;\n    total += k;\n  }\n  return vec4(sum / total, 1.0);\n}\n",
+     "busy_x": "// Edge glow, at an eighth of the frame: how crowded the outlines are\n// around each point, the edges averaged over 8% of the short side (box,\n// 17 taps). An outline standing alone against calm parts scores low; a\n// mural, a crowd or shelves score high, and the last pass holds the light\n// back there.\n\nvec4 passColor(vec2 uv) {\n  float r = 0.08 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  for (int i = -8; i <= 8; i++) {\n    float x = float(i) / 8.0;\n    sum += getPass_edges(uv + vec2(x * r / resolution.x, 0.0)).rgb;\n  }\n  return vec4(sum / 17.0, 1.0);\n}\n",
+     "busy_y": "// Edge glow, at an eighth of the frame: how crowded the outlines are\n// around each point, the edges averaged over 8% of the short side (box,\n// 17 taps). An outline standing alone against calm parts scores low; a\n// mural, a crowd or shelves score high, and the last pass holds the light\n// back there.\n\nvec4 passColor(vec2 uv) {\n  float r = 0.08 * min(resolution.x, resolution.y);\n  vec3 sum = vec3(0.0);\n  for (int i = -8; i <= 8; i++) {\n    float x = float(i) / 8.0;\n    sum += getPass_busy_x(uv + vec2(0.0, x * r / resolution.y)).rgb;\n  }\n  return vec4(sum / 17.0, 1.0);\n}\n"
+    },
+    "guide": "---\nname: edge-glow\ndescription: The outlines of what matters light up, like a rim of light behind a subject, glowing out into the dark.\n---\n\n# Edge glow\n\nTraces the outline of a clear shape with light, as if lit from behind: a soft line on the edge, fading out into a halo, in one warm colour. It finds outlines in the picture itself, so it only works where the shape stands clear of what is behind it; it has no idea which shape is the subject.\n\n## Role\nOptics: over the picture and its colour, under a finish. Not with bloom on the same shot: two glows read as one milky haze.\n\n## When to use\nOnly for a clear shape against a calm ground, held as a moment.\n- **A silhouette against the light** (people against a sunset or a bright window, a dancer, an athlete in the air): the defaults; the strongest use.\n- **The reveal of a shape** (a product's outline on a dark set, a lamp, a box opened): dim 0.5–0.7 so the outline carries the frame, then cut to the clean picture.\n- **A title or a logo of large letters on a plain ground**: the defaults; dim 0.6 or more for a night look.\n- **A neon drawing** (the figure becomes only its outline, a drop in a music video, a poster beat): dim 1, colour the brand's or a neon tone.\n- Words that call for it: rim light, outline glow, edge light, neon outline, contour, silhouette, backlit, glowing edges.\n\n## Suits\n- Silhouettes against a bright sky or a sunset: the outlines of people come out clean and continuous (checked on people against a sunset, a skater against a window).\n- A full figure against a plain wall or a dark ground, and products with clear edges on a dark set (checked on a model against a concrete wall, a lamp and its box, players on a pitch).\n- Large letters on a plain ground (checked on a poster letter 400 px high).\n\n## Doesn't suit\n- Faces seen close: lines of light run across cheeks, brows and teeth (checked on a close portrait, a bride, two interviews). Use it on the whole figure from a distance, never on a talking head.\n- Crowded pictures (a mural, a street at night, shelves, a wall of posters): the light is held back where outlines crowd and what is left is broken pieces. Choose another filter.\n- Bright pictures: on a light ground the warm light hardly shows and the dimming only greys the picture. Raise dim to 0.6 or more, or don't use it.\n- Small type and interfaces: the letters sit too close together, so the light is held back or breaks into pieces.\n- Fine branches and foliage against the sky: the big branches light, the twigs don't, and it looks patchy.\n\n## The tired version\nThe tired version is every edge in the picture turned into a hard neon line on black, or rainbow outlines that cycle colour. Keep one colour, keep the outlines to the main shape (threshold 0.5 or more), and leave dim low unless the outline alone is the point.\n\n## How long\nAn accent: 1–3 seconds for a reveal or a beat, a section of up to about five seconds for a neon drawing. Never the whole film.\n\n## Parameters\n- `amount` 0–1: how strong the light is; 0 leaves the picture exactly as it is.\n- `threshold` 0–1: which edges light; 0.5 the main outlines, lower lights weaker edges too (and crowds sooner).\n- `radius` 0.1–1: how far the halo reaches; 1 is 5% of the frame's short side.\n- `colour`: the light's colour, warm white `#ffe6c7` by default; the brand's colour or a neon tone for a graphic look.\n- `dim` 0–1: how much the picture darkens, most near the outlines; 0.3 the default, 1 leaves only the light.\n",
+    "folder": "filters/edge-glow"
+   },
+   {
+    "pack": {
      "id": "emile/chromatic-aberration",
      "kind": "filter",
      "version": "1.0.0",

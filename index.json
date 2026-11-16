@@ -1,7 +1,7 @@
 {
  "format": 1,
  "tag": "v1.0.0",
- "published": "2026-11-16T02:45:52.265Z",
+ "published": "2026-11-16T03:09:43.066Z",
  "contract": 2,
  "packs": [
   {
@@ -664,6 +664,133 @@
      "path": "shader.glsl",
      "bytes": 2156,
      "sha256": "dca329884237e40f40f735466edf4397eaf614e755f4d1b66ee39f55c15171e7"
+    }
+   ]
+  },
+  {
+   "id": "emile/edge-glow",
+   "version": "1.0.0",
+   "kind": "filter",
+   "category": "glow",
+   "title": {
+    "en": "Edge glow",
+    "zh-CN": "轮廓光"
+   },
+   "description": {
+    "en": "The outlines of what matters light up, like a rim of light behind a subject, glowing out into the dark.",
+    "zh-CN": "主体的轮廓亮起来，像身后打来的一圈轮廓光，向暗处慢慢晕开。"
+   },
+   "params": [
+    {
+     "id": "amount",
+     "type": "float",
+     "default": 1,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Amount",
+      "zh-CN": "强度"
+     }
+    },
+    {
+     "id": "threshold",
+     "type": "float",
+     "default": 0.5,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Which edges",
+      "zh-CN": "哪些边"
+     }
+    },
+    {
+     "id": "radius",
+     "type": "float",
+     "default": 0.5,
+     "min": 0.1,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Reach",
+      "zh-CN": "光晕范围"
+     }
+    },
+    {
+     "id": "colour",
+     "type": "color",
+     "default": "#ffe6c7",
+     "label": {
+      "en": "Light",
+      "zh-CN": "光的颜色"
+     }
+    },
+    {
+     "id": "dim",
+     "type": "float",
+     "default": 0.3,
+     "min": 0,
+     "max": 1,
+     "step": 0.01,
+     "label": {
+      "en": "Dim the picture",
+      "zh-CN": "压暗画面"
+     }
+    }
+   ],
+   "preview": null,
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 3490,
+     "sha256": "f040207972328fa587bbec525f83fa2d6d51380fae2361a52944d65e7f6962cf"
+    },
+    {
+     "path": "busy-x.glsl",
+     "bytes": 578,
+     "sha256": "b9b018b4d48b0eb78e79e3d789155bbb816bc9a8e7697f1f4b89accec1340add"
+    },
+    {
+     "path": "busy-y.glsl",
+     "bytes": 579,
+     "sha256": "638ba2899b99be6f2c655670cd0cb296b47f2739d56734097e771f1d31368a12"
+    },
+    {
+     "path": "core-x.glsl",
+     "bytes": 484,
+     "sha256": "6220d5703e8d30b22f0cde830a13359f2c07b8fa319fa4c4b65011cfd90c7e58"
+    },
+    {
+     "path": "core-y.glsl",
+     "bytes": 483,
+     "sha256": "b813582782c06f932ff6c83c0839dae67f27776f91ae231cc262efcb7ca52f20"
+    },
+    {
+     "path": "edges.glsl",
+     "bytes": 1516,
+     "sha256": "f500ca5cc3df6cf73bb810ae2759ce9a1a0d5fe6470a7733469fa22151314a55"
+    },
+    {
+     "path": "halo-x.glsl",
+     "bytes": 509,
+     "sha256": "d35a71ca4be0aa31734265df8b833f76d00e64e2e1ecf19e0c30ed1899d0b1dd"
+    },
+    {
+     "path": "halo-y.glsl",
+     "bytes": 508,
+     "sha256": "ac0ffacb78db4980d696fd720d12c5822d8f8ffcaefb5eddb076ee5de150d6ae"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 2138,
+     "sha256": "6f5732a1fdca0ec336902995ada525c49a2a60d88e581cae55f3a9498999c90a"
+    },
+    {
+     "path": "shader.glsl",
+     "bytes": 1588,
+     "sha256": "8e61ec30bc256a77ef9806bdb37ade5fe6e029714136643d125dda0ae552e734"
     }
    ]
   },
@@ -1378,14 +1505,14 @@
   {
    "name": "choosing-filters",
    "title": "Choosing a filter",
-   "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fourteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
+   "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fifteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
    "licence": "MIT",
-   "digest": "2c3260406c8b2e90fb1d55a5793428d5cf7e2773e65333ef23edf3e5becec5d5",
+   "digest": "a5db28b10ea352377f32a15f293391b5f1286f92ebacf8443ae899c9d72ea190",
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 17872,
-     "sha256": "e8f381d4ede628fcc0e2934a351d5d5aaa81451cb494b70a15bbc0b4d30092d8"
+     "bytes": 19861,
+     "sha256": "a7a561d2a1280a941894f332a6d5e5c415f8835b1e2a9c6e21ed67d563d24273"
     }
    ]
   }

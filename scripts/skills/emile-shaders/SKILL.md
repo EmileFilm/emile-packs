@@ -1,13 +1,13 @@
 ---
 name: emile-shaders
-description: Fourteen GLSL filters (halftone, risograph, CMYK, grain, dither, paper, fluted glass, displace, duotone, palette, bloom, CRT, VHS, chromatic aberration) and four transitions (dissolve, push, wipe, zoom) for images and video in a browser, with a one-file WebGL2 runner and a guide per effect on when it fits, the settings that work and how long it holds up. Use when a web page, canvas, video element, slideshow or rendered frame needs a print, texture, glass, colour, glow or film look, or a shader transition between two pictures. Not for blurs, colour grading by curves or LUTs, or 3D lighting.
+description: Fifteen GLSL filters (halftone, risograph, CMYK, grain, dither, paper, fluted glass, displace, duotone, palette, bloom, edge glow, CRT, VHS, chromatic aberration) and four transitions (dissolve, push, wipe, zoom) for images and video in a browser, with a one-file WebGL2 runner and a guide per effect on when it fits, the settings that work and how long it holds up. Use when a web page, canvas, video element, slideshow or rendered frame needs a print, texture, glass, colour, glow or film look, or a shader transition between two pictures. Not for blurs, colour grading by curves or LUTs, or 3D lighting.
 ---
 
 {{generated}}
 
 # Émile shaders
 
-Fourteen filters and four transitions from Émile, a video editor, as plain files: each a `shader.glsl` (GLSL ES 3.00, no header), a `pack.json` (its parameters, ranges and defaults) and a `SKILL.md` (when it fits, the settings that work, the pictures it fails on, how long it holds up). `emile-shaders.js` runs any of them with WebGL2 in a few lines; `example.html` shows them all on a picture with their parameters as sliders.
+Fifteen filters and four transitions from Émile, a video editor, as plain files: each a `shader.glsl` (GLSL ES 3.00, no header), a `pack.json` (its parameters, ranges and defaults) and a `SKILL.md` (when it fits, the settings that work, the pictures it fails on, how long it holds up). `emile-shaders.js` runs any of them with WebGL2 in a few lines; `example.html` shows them all on a picture with their parameters as sliders.
 
 ## Filters
 

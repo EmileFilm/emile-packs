@@ -1,13 +1,13 @@
 <h1 align="center">Émile packs</h1>
 
 <p align="center">
-  <b>Fourteen filters and four transitions, free and open, each with a guide an AI reads before it uses one.</b><br>
+  <b>Fifteen filters and four transitions, free and open, each with a guide an AI reads before it uses one.</b><br>
   For <a href="https://emilefilm.com">Émile</a>, the video editor built for AI — and for any coding agent that makes video.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT licence">
-  <img src="https://img.shields.io/badge/filters-14-orange" alt="14 filters">
+  <img src="https://img.shields.io/badge/filters-15-orange" alt="15 filters">
   <img src="https://img.shields.io/badge/transitions-4-orange" alt="4 transitions">
   <img src="https://img.shields.io/badge/WebGL2-Chrome%20%26%20WebKit-informational" alt="WebGL2 in Chrome and WebKit">
 </p>
@@ -19,7 +19,7 @@
   <a href="#for-pack-authors">For pack authors</a>
 </p>
 
-<img src="docs/gallery-portrait.jpg" width="100%" alt="One studio portrait through all fourteen filters at their defaults">
+<img src="docs/gallery-portrait.jpg" width="100%" alt="One studio portrait through the filters at their defaults">
 
 ## What it does
 
@@ -36,7 +36,7 @@ Tell Émile's AI how a moment should feel, and it lays the right filter over it:
 
 Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say:
 
-<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through all fourteen filters: the strong ones make its words hard to read">
+<img src="docs/gallery-interface.jpg" width="100%" alt="An app's interface through the filters: the strong ones make its words hard to read">
 
 Every guide says how long its filter holds up, and Émile's AI keeps to it unless you ask for more. The exceptions are finishes light enough to read as a surface: a little grain, paper under an illustrated film, a faint lens fringe.
 
@@ -82,16 +82,22 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Glow and film — light, and the medium it passes through
+### Glow — light from the picture itself
 
 <table>
 <tr>
 <td width="50%"><img src="docs/filters/bloom.jpg" alt="bloom"><br><b>Bloom</b> · <code>emile/bloom</code><br>Light spills from the brightest points into the dark, with the warm edge film gives it.</td>
-<td width="50%"><img src="docs/filters/crt.jpg" alt="crt"><br><b>CRT</b> · <code>emile/crt</code><br>A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.</td>
+<td width="50%"><img src="docs/filters/edge-glow.jpg" alt="edge glow"><br><b>Edge glow</b> · <code>emile/edge-glow</code><br>The outlines of a clear shape light up, like a rim of light behind it. For silhouettes, not faces.</td>
 </tr>
+</table>
+
+### Film — the medium the picture passes through
+
+<table>
 <tr>
-<td width="50%"><img src="docs/filters/vhs.jpg" alt="vhs"><br><b>VHS</b> · <code>emile/vhs</code><br>A tape played many times: soft, colours bleeding sideways, the bottom edge tearing.</td>
-<td width="50%"><img src="docs/filters/chromatic-aberration.jpg" alt="chromatic aberration"><br><b>Chromatic aberration</b> · <code>emile/chromatic-aberration</code><br>A lens that splits light at its edges; the centre stays sharp.</td>
+<td width="33%"><img src="docs/filters/crt.jpg" alt="crt"><br><b>CRT</b> · <code>emile/crt</code><br>A picture on a glass tube: scan lines, phosphor stripes, a gently curved face.</td>
+<td width="33%"><img src="docs/filters/vhs.jpg" alt="vhs"><br><b>VHS</b> · <code>emile/vhs</code><br>A tape played many times: soft, colours bleeding sideways, the bottom edge tearing.</td>
+<td width="33%"><img src="docs/filters/chromatic-aberration.jpg" alt="chromatic aberration"><br><b>Chromatic aberration</b> · <code>emile/chromatic-aberration</code><br>A lens that splits light at its edges; the centre stays sharp.</td>
 </tr>
 </table>
 
