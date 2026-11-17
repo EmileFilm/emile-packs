@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 // The previews in Émile's Inspirations: preview.mp4 (4 s, silent, a loop,
 // 854 × 480, H.264, a few hundred KB) and preview.jpg (a settled frame)
-// beside each pack, drawn by Émile's own compositor over the footage
-// scripts/footage.json records, so a preview looks as the product draws it.
+// beside each pack, drawn by Émile's own compositor, so a preview looks as
+// the product draws it: a filter over the footage scripts/footage.json
+// records, a transition between two plain cards, A and B.
 // The build (build.mjs) lists them in index.json apart from the pack's
 // files; it never draws them, so a second build changes nothing.
 //
-//   node scripts/previews.mjs --footage <folder> [name…] [--all] [--engine <Emile/engine>]
-//       the packs without a preview, or those named, or --all; each drawn
-//       over the same footage (a filter: wiped in from the left over clip
-//       a, held, wiped back; a transition: once from clip a into clip b).
-//       The footage is read from <folder> (downloaded there first when it
-//       isn't, its SHA-256 checked); never put into this repository
+//   node scripts/previews.mjs [--footage <folder>] [name…] [--all] [--engine <Emile/engine>]
+//       the packs without a preview, or those named, or --all (a filter:
+//       wiped in from the left over the footage's clip a, held, wiped back;
+//       a transition: once from card A, a solid colour with a big A, into
+//       card B). The footage (needed for a filter) is read from <folder> (downloaded there first
+//       when it isn't, its SHA-256 checked); never put into this repository
 //
 //   node scripts/previews.mjs --skill <name> --footage <folder> --out <folder outside this repository> [--model <id>]
 //       a candidate preview for an official Skill that changes the picture (kind: look): Émile's agent makes a
@@ -43,7 +44,6 @@ const fail = message => {
   console.error(`previews: ${message}`)
   process.exit(1)
 }
-if (!values.footage) fail('--footage <folder>: where the footage of scripts/footage.json is kept (outside this repository)')
 
 const engine = path.resolve(values.engine ?? process.env.EMILE_ENGINE ?? path.join(ROOT, '..', 'Emile', 'engine'))
 if (!fs.existsSync(path.join(engine, 'emile', 'library', 'previews.mjs'))) fail(`no engine at ${engine} (--engine or EMILE_ENGINE: the Émile repository's engine/)`)
@@ -57,6 +57,7 @@ const { ffmpegPath, getTool } = await lib('lib/tools.mjs')
 const FOOTAGE = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts', 'footage.json'), 'utf8'))
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
 async function clip(name) {
+  if (!values.footage) fail('--footage <folder>: where the footage of scripts/footage.json is kept (outside this repository)')
   const c = FOOTAGE.clips[name]
   const file = path.join(path.resolve(values.footage), c.file)
   if (!fs.existsSync(file)) {
@@ -106,14 +107,14 @@ async function packPreviews() {
   const { launchBrowser } = await lib('lib/chrome.mjs')
   const browser = await launchBrowser({ args: ['--allow-file-access-from-files'] })
   try {
-    const a = await framesOf(await clip('a'), path.join(tmp, 'a'))
-    const b = await framesOf(await clip('b'), path.join(tmp, 'b'))
+    // The footage only when a filter is drawn: a transition goes between cards
+    const a = ids.some(id => all[id].kind !== 'transition') ? await framesOf(await clip('a'), path.join(tmp, 'a')) : []
     const page = await browser.newPage({ width: 200, height: 200 })
     const compositor = pathToFileURL(path.join(engine, 'core', 'compose', 'compositor.js')).href
     await page.goto(`${pathToFileURL(path.join(ROOT, 'scripts', 'previews.html')).href}?compositor=${encodeURIComponent(compositor)}`)
     await page.evaluate(`new Promise(r => { const c = () => window.ready ? r() : setTimeout(c, 20); c() })`)
     const packs = Object.fromEntries(Object.entries(all).map(([id, p]) => [id, { id, kind: p.kind, params: p.params, glsl: p.glsl, passes: p.passes }]))
-    await page.evaluate(`Preview.setup(${JSON.stringify(packs)}, ${JSON.stringify(a)}, ${JSON.stringify(b)})`)
+    await page.evaluate(`Preview.setup(${JSON.stringify(packs)}, ${JSON.stringify(a)})`)
     const n = await page.evaluate('Preview.N')
     for (const id of ids) {
       const frames = path.join(tmp, 'out', id.replace('/', '_'))

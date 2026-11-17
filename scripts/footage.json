@@ -1,5 +1,5 @@
 {
- "$comment": "The footage every pack's preview is drawn over (scripts/previews.mjs). Pexels License: free to use and change, no credit asked; the clips themselves are never put in this repository (they may not be passed on unchanged), only what is drawn over them. a: a man with a cup by sunlit blinds, a dark room and an orange lamp behind him (every filter, and the first clip of every transition); b: a woman lit from behind by a low sun, a phone in her hand (the second clip of every transition). from and seconds: the piece of each clip that is used",
+ "$comment": "The footage every filter's preview is drawn over (scripts/previews.mjs; a transition's goes between two plain cards drawn there, A and B). Pexels License: free to use and change, no credit asked; the clip itself is never put in this repository (it may not be passed on unchanged), only what is drawn over it. a: a man with a cup by sunlit blinds, a dark room and an orange lamp behind him. from and seconds: the piece of the clip that is used",
  "licence": "Pexels License (https://www.pexels.com/license/)",
  "clips": {
   "a": {
@@ -10,16 +10,6 @@
    "bytes": 50048847,
    "sha256": "eb8e8cd97d6e9c9095927275cb01a201f2b1c9eddc595a5d383fdf1ba57d9be2",
    "from": 16,
-   "seconds": 4.5
-  },
-  "b": {
-   "file": "pexels-8207256.mp4",
-   "page": "https://www.pexels.com/video/8207256/",
-   "by": null,
-   "download": "https://videos.pexels.com/video-files/8207256/8207256-hd_1920_1080_30fps.mp4",
-   "bytes": 6765895,
-   "sha256": "b6c541ce1b5f0461b11042955b05534a7259b91a2d21fe3ebd46c6205a133f35",
-   "from": 8,
    "seconds": 4.5
   }
  }

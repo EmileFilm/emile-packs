@@ -3,12 +3,13 @@
 <body style="margin:0;background:#111">
 <script type="module">
 // The page scripts/previews.mjs drives: each frame of a pack's preview
-// drawn by Émile's own compositor over the footage (scripts/footage.json),
-// as the product draws it.
+// drawn by Émile's own compositor, as the product draws it.
 //
-// A filter: the footage as it is, wiped to the filter from the left, held,
-// wiped back. A transition: clip a, the transition once into clip b, held,
-// then b fades back into a's first frame. Both loop: a filter's footage
+// A filter, over the footage (scripts/footage.json): the footage as it is,
+// wiped to the filter from the left, held, wiped back. A transition,
+// between two cards drawn here so its movement reads at a glance (a solid
+// colour each, a big A and a big B): card A, the transition once into
+// card B, held, then B fades back into A. Both loop: a filter's footage
 // crossfades its last frames into its first, a transition ends on the
 // frame it starts with.
 
@@ -21,7 +22,22 @@ const LOOP = 12 // frames a filter's footage crossfades over at its seam
 const canvasOf = (w, h) => Object.assign(document.createElement('canvas'), { width: w, height: h })
 
 let packs = {}, comp = null, glCanvas = null
-const footage = { a: [], b: [] }
+const footage = { a: [] }
+
+// The cards a transition goes between: A deep blue, B warm orange, each
+// letter in the other's colour
+function card(letter, fill, ink) {
+  const c = canvasOf(W, H), x = c.getContext('2d')
+  x.fillStyle = fill
+  x.fillRect(0, 0, W, H)
+  x.fillStyle = ink
+  x.font = `700 ${Math.round(H * 0.62)}px -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif`
+  x.textAlign = 'center'
+  x.textBaseline = 'middle'
+  x.fillText(letter, W / 2, H / 2 + H * 0.03)
+  return c
+}
+const cards = { a: card('A', '#1f3a8a', '#f59e42'), b: card('B', '#f59e42', '#1f3a8a') }
 const problems = []
 
 async function load(urls) {
@@ -80,34 +96,33 @@ function filterFrame(id, i) {
   }
 }
 
-// A transition's frame i: a until 30, the blend over 30–54, b after it,
-// fading back to a's first frame over the last 12
+// A transition's frame i: card A until 30, the blend over 30–54, card B
+// after it, fading back to A over the last 12
 const FROM = 30, LEN = 24, BACK = 84
 function transitionFrame(id, i) {
-  if (i < FROM) return g.drawImage(footage.a[i], 0, 0, W, H)
-  const bAt = i - FROM
+  if (i < FROM) return g.drawImage(cards.a, 0, 0, W, H)
   if (i < FROM + LEN) {
     const p = (i - FROM + 1) / (LEN + 1)
-    drawTree({ op: 'blend', id, params: {}, p, frame: i, after: p >= 0.5, a: { op: 'clip', id: 'a', f: i }, b: { op: 'clip', id: 'b', f: bAt } }, { a: footage.a[i], b: footage.b[bAt] })
+    drawTree({ op: 'blend', id, params: {}, p, frame: i, after: p >= 0.5, a: { op: 'clip', id: 'a', f: i }, b: { op: 'clip', id: 'b', f: i - FROM } }, cards)
     return g.drawImage(glCanvas, 0, 0, W, H)
   }
   g.globalAlpha = 1
-  g.drawImage(footage.b[bAt], 0, 0, W, H)
+  g.drawImage(cards.b, 0, 0, W, H)
   if (i >= BACK) {
     g.globalAlpha = (i - BACK + 1) / (N - BACK + 1)
-    g.drawImage(footage.a[0], 0, 0, W, H)
+    g.drawImage(cards.a, 0, 0, W, H)
     g.globalAlpha = 1
   }
 }
 
 window.Preview = {
   N,
-  // all: the packs by id ({ kind, params, glsl, passes }); a, b: the
-  // footage's frames, file URLs, N + LOOP of each at least
-  async setup(all, a, b) {
+  // all: the packs by id ({ kind, params, glsl, passes }); a: the
+  // footage's frames, file URLs, N + LOOP at least (none when only
+  // transitions are drawn)
+  async setup(all, a) {
     packs = all
     footage.a = await load(a)
-    footage.b = await load(b)
     glCanvas = canvasOf(W, H)
     comp = createCompositor(glCanvas, { width: W, height: H, packs, fps: 24, onProblem: m => problems.push(m) })
     return true

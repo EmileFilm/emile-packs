@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.0.1",
- "published": "2026-11-16T14:46:38.163Z",
+ "tag": "v1.0.2",
+ "published": "2026-11-17T15:10:39.335Z",
  "contract": 2,
  "packs": [
   {
@@ -526,13 +526,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 217575,
-     "sha256": "79d8ef483c0bec260c8149a000fabf5708cb931cf5c5f9c7e3a73136eab9624d"
+     "bytes": 35991,
+     "sha256": "eef122b905e9002332ee62596643600ebcda09407a27bd5a77a887d63877adee"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 30248,
-     "sha256": "67d781cc713c645be0901b090a7a15a3bd02663f311aa112e8725ebf0e526812"
+     "bytes": 8068,
+     "sha256": "a8599edf33fcb013ad7e33c4cbb121b4045911de6b011f3b892e8e58808b7f95"
     }
    },
    "licence": "MIT",
@@ -1397,13 +1397,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 192057,
-     "sha256": "46d176974a455bbdd4824315915a65569649b48b0bf2e89e90477149a0f43e01"
+     "bytes": 28196,
+     "sha256": "dc5f9342a16929c4fa9ef9cc50be3aa88b804f2517b9cb13a6eb5a43a834367c"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 27765,
-     "sha256": "9beb5280af588494fa839715af7c2b8849f9d59519799b0e87b3671e1c17c506"
+     "bytes": 7866,
+     "sha256": "8fd3d07d79aeae4c57ddce415dffa60cfb8a17f3215088befc17ed963811470f"
     }
    },
    "licence": "MIT",
@@ -1636,13 +1636,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 200519,
-     "sha256": "5fee568daa00c9d20bae1de7d7acc809c90dea001e34136c4fa2841570957604"
+     "bytes": 24965,
+     "sha256": "3bdbaecebef120aee9f6d8fbeaea25cff95692371618ffb6949e3939d6211bff"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 29230,
-     "sha256": "d7b0325f31186d6c06a1a0e55b91d82a74f529e039eb1444b2134c2f7d742b3e"
+     "bytes": 7823,
+     "sha256": "99206f105705c644c14f2513c07c980c42bb48a5907737994a62ae834c403df1"
     }
    },
    "licence": "MIT",
@@ -1681,13 +1681,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 289231,
-     "sha256": "ee52bd193fd125eb74fc08820e45e7a16cbe23468f95308bfc76c8ed77d1e5a4"
+     "bytes": 46661,
+     "sha256": "dc2d9b13bccf37a8e9d4d911314ea141b2297af3dbdf2225a35178964b9dd259"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 25621,
-     "sha256": "d4958c511613b60dec18875caa31b36ef80c2019f06f903b196f8b28b2fe21e8"
+     "bytes": 8865,
+     "sha256": "c337262cfddae177729958e0ee03e7e6bddc012bccd161112d83e967eff2b7fc"
     }
    },
    "licence": "MIT",
