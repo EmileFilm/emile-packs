@@ -7,7 +7,8 @@
 <!-- Every filter and transition of this Skill on a picture, with its
      parameters as controls. Opens from the folder as it is (file:// too):
      emile-shaders.js runs the shaders, catalog.js holds every pack.json,
-     shader.glsl and guide, pictures.js draws the pictures. Nothing else. -->
+     shader.glsl and guide, controls.js says what control each parameter
+     gets, pictures.js draws the pictures. Nothing else. -->
 <style>
   :root { color-scheme: light dark; --bg: #f4f2ee; --fg: #17171a; --muted: #66656b; --line: #d9d5cc; --card: #ffffff; --accent: #c2410c; }
   @media (prefers-color-scheme: dark) { :root { --bg: #121214; --fg: #ececef; --muted: #9a9aa2; --line: #2d2d33; --card: #1b1b1f; --accent: #fb923c; } }
@@ -57,6 +58,7 @@
   </aside>
 </main>
 <script src="emile-shaders.js"></script>
+<script src="controls.js"></script>
 <script src="catalog.js"></script>
 <script src="pictures.js"></script>
 <script>
@@ -128,49 +130,45 @@
     } else box.append(pictureSelect('picture', 'Picture', state.picture, v => { state.picture = v; draw() }))
   }
 
-  // One control per parameter, from pack.json
-  function control(p) {
+  // One control per parameter, by the rules of controls.js (Émile's own
+  // filter panel is drawn by the same): what each is and what it sets;
+  // here they are drawn as plain inputs
+  const rules = EmileShaders.controls
+  function control(c) {
     const wrap = document.createElement('div')
-    const id = `p-${p.id}`
-    const name = p.label?.en ?? p.id
-    const value = state.params[p.id] ?? p.default
-    wrap.innerHTML = `<label for="${id}">${name} <code>${p.id}</code></label>`
-    const set = v => { state.params[p.id] = v; draw() }
-    if (p.type === 'float' || p.type === 'int') {
+    const id = `p-${c.id}`
+    const name = c.label.en ?? c.id
+    const value = rules.controlValue(c, state.params)
+    wrap.innerHTML = `<label for="${id}">${name} <code>${c.id}</code></label>`
+    const set = v => { state.params[c.id] = rules.controlSet(c, v, state.params[c.id]); draw() }
+    // A slider for a number, its value beside it in words
+    const slider = (sid, label, v, onInput) => {
       const row = document.createElement('div')
       row.className = 'row'
-      const input = Object.assign(document.createElement('input'), { type: 'range', id, min: p.min, max: p.max, step: p.step ?? (p.type === 'int' ? 1 : (p.max - p.min) / 100), value })
-      input.setAttribute('aria-label', name)
-      const out = Object.assign(document.createElement('output'), { value })
-      input.oninput = () => { out.value = input.value; set(Number(input.value)) }
+      const input = Object.assign(document.createElement('input'), { type: 'range', id: sid, min: c.min, max: c.max, step: c.step, value: v })
+      input.setAttribute('aria-label', label)
+      const out = Object.assign(document.createElement('output'), { value: rules.valueText(c, v) })
+      input.oninput = () => { out.value = rules.valueText(c, Number(input.value)); onInput(Number(input.value)) }
       row.append(input, out)
-      wrap.append(row)
-    } else if (p.type === 'vec2') {
-      ;[0, 1].forEach(i => {
-        const row = document.createElement('div')
-        row.className = 'row'
-        const input = Object.assign(document.createElement('input'), { type: 'range', id: `${id}-${i}`, min: p.min, max: p.max, step: p.step ?? (p.max - p.min) / 100, value: value[i] })
-        input.setAttribute('aria-label', `${name} ${'xy'[i]}`)
-        const out = Object.assign(document.createElement('output'), { value: value[i] })
-        input.oninput = () => { out.value = input.value; const v = [...(state.params[p.id] ?? p.default)]; v[i] = Number(input.value); set(v) }
-        row.append(input, out)
-        wrap.append(row)
-      })
-    } else if (p.type === 'bool') {
+      return row
+    }
+    if (c.kind === 'slider') wrap.append(slider(id, name, value, set))
+    else if (c.kind === 'pair') c.parts.forEach((part, i) => wrap.append(slider(`${id}-${i}`, `${name} ${part}`, value[i], n => { const v = [...rules.controlValue(c, state.params)]; v[i] = n; set(v) })))
+    else if (c.kind === 'switch') {
       const input = Object.assign(document.createElement('input'), { type: 'checkbox', id, checked: !!value })
       input.setAttribute('aria-label', name)
       input.onchange = () => set(input.checked)
       wrap.append(input)
-    } else if (p.type === 'color') {
+    } else if (c.kind === 'color') {
       const input = Object.assign(document.createElement('input'), { type: 'color', id, value })
       input.setAttribute('aria-label', name)
       input.oninput = () => set(input.value)
       wrap.append(input)
-    } else if (p.type === 'choice') {
+    } else if (c.kind === 'choice') {
       const sel = document.createElement('select')
       sel.id = id
       sel.setAttribute('aria-label', name)
-      for (const o of p.options) sel.append(new Option(o, o, false, o === value))
+      for (const o of c.options) sel.append(new Option(o, o, false, o === value))
       sel.onchange = () => set(sel.value)
       wrap.append(sel)
     }
@@ -201,7 +199,7 @@
 
   function showParams() {
     $('params').textContent = ''
-    for (const p of current.entry.pack.params) $('params').append(control(p))
+    for (const c of rules.paramControls(current.entry.pack)) $('params').append(control(c))
     if (!current.entry.pack.params.length) $('params').innerHTML = '<p class="what">No parameters.</p>'
   }
 

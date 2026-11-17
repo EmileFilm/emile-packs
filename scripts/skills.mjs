@@ -4,8 +4,9 @@
 //   skills/emile-shaders/     the Skill other people's agents install: it
 //                             is copied on its own, so it carries every
 //                             pack's pack.json, shader.glsl and SKILL.md as
-//                             they are, the runner, the example page and
-//                             the references (templates in
+//                             they are, the runner, the example page, the
+//                             rules its controls are made by (the engine's
+//                             core/compose/controls.js) and the references (templates in
 //                             scripts/skills/emile-shaders/)
 //   skills/choosing-filters/  an official reference Skill for Émile: the
 //                             filters' guides drawn into one page to
@@ -50,7 +51,8 @@ function readPacks(packDirs) {
 const byGroup = all => all.filter(p => p.pack.kind === 'filter').sort((a, b) => ORDER.indexOf(a.pack.category) - ORDER.indexOf(b.pack.category) || a.name.localeCompare(b.name))
 
 // Every file of the generated Skills: { 'skills/<name>/<path>': Buffer }
-export function generateSkills(root, packDirs, contract) {
+// controls: the text of the engine's core/compose/controls.js (a module with no imports)
+export function generateSkills(root, packDirs, contract, controls) {
   const all = readPacks(packDirs)
   const filters = byGroup(all)
   const transitions = all.filter(p => p.pack.kind === 'transition').sort((a, b) => a.name.localeCompare(b.name))
@@ -99,6 +101,10 @@ export function generateSkills(root, packDirs, contract) {
 
   const js = `// ${note(from)}\n`
   put(`${S}/emile-shaders.js`, js + template('emile-shaders', 'emile-shaders.js'))
+  // The engine's rules for a parameter's control, as a classic script: its
+  // exports become EmileShaders.controls (file:// can't import a module)
+  const exported = [...controls.matchAll(/^export (?:const|function) (\w+)/gm)].map(m => m[1])
+  put(`${S}/controls.js`, `// ${note("Émile's engine/core/compose/controls.js (the same rules Émile's own filter panel is drawn by)")}\n;(function (root) {\n${controls.replace(/^export /gm, '').trimEnd()}\n\n(root.EmileShaders ??= {}).controls = { ${exported.join(', ')} }\n})(typeof globalThis !== 'undefined' ? globalThis : this)\n`)
   put(`${S}/pictures.js`, `// ${note('scripts/pictures.js')}\n` + fs.readFileSync(path.join(root, 'scripts', 'pictures.js'), 'utf8'))
   const catalog = [...filters, ...transitions].map(p => ({ pack: p.pack, glsl: p.glsl, passes: p.passes, guide: p.guide, folder: folderOf(p) }))
   put(`${S}/catalog.js`, `${js}// Every pack.json, shader.glsl (and pass shaders) and SKILL.md of this folder, for a page opened from file:// (which can't fetch them).\n;(function (root) {\n  (root.EmileShaders ??= {}).catalog = ${JSON.stringify(catalog, null, 1).replace(/\n/g, '\n  ')}\n})(typeof globalThis !== 'undefined' ? globalThis : this)\n`)

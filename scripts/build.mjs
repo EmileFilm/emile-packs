@@ -114,7 +114,10 @@ console.log(`✓ emile-shaders.js wraps the shaders of all ${packDirs.length} pa
 
 // 2. generate
 const { scanSkill } = await import(pathToFileURL(checker).href)
-const generated = generateSkills(ROOT, packDirs, contract)
+// The rules a parameter's control is made by are the engine's (Studio's
+// filter panel draws from the same file): written out as a classic script
+const controls = fs.readFileSync(path.join(engine, 'core', 'compose', 'controls.js'), 'utf8')
+const generated = generateSkills(ROOT, packDirs, contract, controls)
 const stale = []
 for (const skill of GENERATED) {
   const dir = path.join(ROOT, 'skills', skill)
