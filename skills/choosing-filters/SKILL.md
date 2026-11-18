@@ -107,6 +107,34 @@ What the check found beyond the guides:
 | `emile/crt` CRT | Medium: the last thing before a finish; it shows whatever is under it on a tube. | Then and now · A feed · Games and early computing | A section: the "back then" part, 2–6 seconds, or one screen inside the frame. Never the whole film. | Small text: 24 px type softens between the lines. · Fine detail that must stay crisp (a product beauty shot). · Films that will be watched very small: the phosphor stripes can shimmer when the player scales them. |
 | `emile/vhs` VHS | Medium: the last thing before a finish; it shows whatever is under it as a tape. | A memory on tape · Found footage and behind the scenes · Nostalgia on purpose · The old way | A section: the memory or the old footage, 2–6 seconds, then a cut back to the clean present. The whole film only when the whole film is about the past. | Small text: everything softens sideways, body text under 28 px blurs. · A crisp interface demo or a product beauty shot. · The whole of a film that isn't about the past. |
 
+## Looks made of several filters
+
+Some looks people ask for by name are not one filter but a few laid together, each on its own track, lowest first, over the same span. The values below were drawn on footage and are where to start; each filter clip stays its own and can be tuned or taken off afterwards. Read each pack's guide before placing it.
+
+### Pink phosphor (a one-colour screen)
+
+A monochrome monitor whose tube glows pink. Three filter clips, bottom to top:
+1. `emile/duotone`: dark `#16040d`, light `#ff9ccb`, contrast 1.7, balance 0.5.
+2. `emile/bloom`: threshold 0.6, radius 0.5, warmth 0.
+3. `emile/crt`: curvature 0.3, scanlines 0.7, mask 0.15.
+
+The same three make any one-colour tube by changing duotone's `light`: green `#7dff9a` (dark `#03120a`), amber `#ffb347` (dark `#140a02`). A bright daylight shot fills the screen with the colour; it reads best on a dark shot with a few lit things in it. For the old way, a terminal, a machine's own screen; a few seconds, as `crt`'s guide says.
+
+### Receipt (a thermal print)
+
+A picture as a till prints it: black dots on white paper. One filter clip:
+1. `emile/dither`: pattern ordered, size 3, ink `#1b1b1f`, paper `#f5f2ea`. Nothing goes over it.
+
+The slip itself is not a filter: write it as a code clip. A tall narrow column of the paper colour in the middle of a plain ground, monospaced capitals in the ink colour (a shop's name, a date and time, a few lines of items with amounts set flush right, a total, a row of dashes, a barcode drawn as bars), the dithered picture placed in the column as one of its blocks, the paper's bottom edge torn in small teeth, the whole column feeding upwards a line at a time as if printing. Put the picture clip and its dither clip under the code clip, the picture scaled to the column's width. For a list, a price, a summary, an order: a still or a few seconds.
+
+### Direct flash (a snapshot at night)
+
+The look of a small camera's own flash: the person bright and flat, a hard shadow just behind them, the room falling away into black. This is light in the scene, so no filter can add it to a shot that was lit another way: it is asked for when the shot is generated or photographed. In the prompt for the image or the video: direct on-camera flash, hard-edged shadow close behind the subject, bright foreground falling off fast into a dark background, slightly overexposed skin, a point-and-shoot snapshot at night, wide lens, everything in focus. Then, over the generated shot, to take its sheen off:
+1. `emile/chromatic-aberration`: mode lens, strength 0.2.
+2. `emile/grain`: amount 0.25, size 1.4.
+
+On a shot that already exists, say that the flash itself can't be added afterwards, and offer the two finishes alone or a new generated shot.
+
 ## Words people use
 
 - `emile/cmyk`: CMYK, four-colour, offset print, comic, pulp, billboard, catalogue, misprint

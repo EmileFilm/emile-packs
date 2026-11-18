@@ -1,8 +1,8 @@
 {
  "format": 1,
- "tag": "v1.0.2",
- "published": "2026-11-17T15:10:39.335Z",
- "contract": 2,
+ "tag": "v1.0.3",
+ "published": "2026-11-18T07:13:50.114Z",
+ "contract": 3,
  "packs": [
   {
    "id": "emile/bloom",
@@ -1717,13 +1717,13 @@
    "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fifteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "3b0fbb8b63c825f01d1ad1a15813ad7b9bfcaba427542e587922d3c01aef4cb4",
+   "digest": "2282344dd2f25c3bc50e57c4464c9a3cf7c238da66564839d699732771cb7d6d",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 19872,
-     "sha256": "c55a496a5c222a4b0490df3e42f015ba8e83cf1f4c27a38d304a92a2c518e379"
+     "bytes": 22622,
+     "sha256": "5fcdad87c57c210846b0034f34d081125c599ae22b6a986ce8b7879a2130e52b"
     }
    ]
   }
