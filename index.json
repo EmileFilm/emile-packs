@@ -1,7 +1,7 @@
 {
  "format": 1,
  "tag": "v1.0.3",
- "published": "2026-11-18T08:47:57.655Z",
+ "published": "2026-11-18T14:40:49.661Z",
  "contract": 4,
  "packs": [
   {
@@ -1724,6 +1724,22 @@
      "path": "SKILL.md",
      "bytes": 25093,
      "sha256": "1fead4b3ccfa9bf3385caed237d85aa0f52e75fe816ff0451d1c0d03397297ea"
+    }
+   ]
+  },
+  {
+   "name": "motion",
+   "title": "How things move",
+   "description": "How things in a film should move, as judgement and not a catalogue. What carries the motion, where the one accent falls, fast next to still, which words are large, and when to leave the frame alone. Read when planning a film and when writing a clip.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "46e7dfb6bf2e526730ac16768447583a46ac41ccf4542170354b115c46481d8a",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 6498,
+     "sha256": "97dfc2581397798bf7827431a1d97ebc08e6f9f578438d51ce47280536d77f12"
     }
    ]
   }
