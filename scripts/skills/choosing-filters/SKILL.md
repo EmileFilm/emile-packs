@@ -92,6 +92,26 @@ The look of a small camera's own flash: the person bright and flat, a hard shado
 
 On a shot that already exists, say that the flash itself can't be added afterwards, and offer the two finishes alone or a new generated shot.
 
+## Looks that are made when the shot is made
+
+These are not filters. They are how a shot is lit, what lens and camera it is taken with, how the camera moves: nothing laid over a finished shot can add them. Ask for them in the prompt when an image or a video is generated (or say they have to be shot that way), in these words; on a shot that already exists, say so and offer a newly generated shot instead.
+
+| Asked for | In the prompt |
+|---|---|
+| Disposable camera | shot on a disposable film camera, on-camera flash, soft plastic lens, slightly off colours leaning green in the shadows, visible film grain, the corners a little dark, a casual snapshot framing |
+| CCD camcorder (early 2000s) | filmed on an early-2000s consumer CCD camcorder, standard definition, slightly blown highlights with vertical smear on bright lights, cool white balance, handheld with small jitters, deep focus |
+| Super 8 | shot on Super 8 film, 18 frames a second, warm faded colour, heavy grain, soft focus, gentle gate weave, light leaks at the edges of the roll |
+| 16mm | shot on 16mm film, natural grain, rich but slightly muted colour, soft highlights, a documentary handheld feel |
+| Fisheye | ultra-wide fisheye lens, strong barrel distortion, the subject close to the lens, curved horizon, the edges of the frame bending |
+| FPV drone | first-person-view drone shot, fast low flight, wide lens, the horizon rolling in the turns, flying through gaps |
+| CCTV | fixed security camera high in a corner looking down, wide lens, flat lighting, low frame rate, slightly washed out, nobody looking at the camera |
+| Bodycam | chest-mounted body camera, very wide lens, the wearer's hands and arms entering the frame from below, shaky, hard on-board light at night |
+| Infrared film | colour infrared film look: foliage in pink and red, skies deep and dark, skin pale and smooth |
+| Long exposure | long exposure: moving lights drawn out into continuous ribbons, moving people blurred to ghosts, everything still perfectly sharp, shot from a tripod |
+| Tilt-shift | tilt-shift lens from a high viewpoint, a narrow band of the scene in focus, top and bottom strongly blurred, so that it reads as a miniature model |
+| Anamorphic | anamorphic lens, wide 2.39:1 framing, horizontal blue lens flares, oval out-of-focus highlights, shallow depth of field |
+| Macro | extreme macro, a very thin plane of focus, the subject filling the frame, smooth blurred background, slow gentle movement |
+
 ## Words people use
 
 {{words}}
