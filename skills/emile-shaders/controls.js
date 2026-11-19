@@ -12,7 +12,8 @@
 //   kind   slider (float, int)  pair (vec2: one slider for each of parts)
 //          switch (bool)        choice (one of options)        color (#rrggbb)
 //   label  { en, 'zh-CN'? }: the parameter's own, else its id
-//   moves  it may be given a motion (motion.js): numbers only
+//   moves  its pack says it suits a motion (motion.js; pack.json's
+//          motion: true, numbers only): where a motion is offered
 
 const KIND = { float: 'slider', int: 'slider', vec2: 'pair', bool: 'switch', choice: 'choice', color: 'color' }
 
@@ -28,7 +29,7 @@ function paramControls(pack) {
       ...(numeric ? { min: def.min, max: def.max, step: stepOf(def) } : {}),
       ...(def.type === 'vec2' ? { parts: ['x', 'y'] } : {}),
       ...(def.type === 'choice' ? { options: def.options ?? [] } : {}),
-      moves: numeric
+      moves: numeric && def.motion === true
     }
   })
 }
