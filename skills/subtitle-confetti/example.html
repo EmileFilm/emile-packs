@@ -1,0 +1,27 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #fff; --sub-stroke: #120a1f; --sub-colour-1: #ffd23f; --sub-colour-2: #3ddc84; --sub-colour-3: #ff6fb5; --sub-shadow: #000; }
+  .sub { font: 800 calc(var(--u) * 0.42) / 1.1 'Baloo 2', sans-serif; text-transform: uppercase; font-style: italic; color: var(--sub-ink);
+    -webkit-text-stroke: calc(var(--u) * 0.035) var(--sub-stroke); paint-order: stroke fill;
+    text-shadow: 0 calc(var(--u) * 0.04) 0 color-mix(in srgb, var(--sub-shadow) 55%, transparent); }
+  .sub .w { margin: 0 0.06em; opacity: var(--in); scale: calc(0.85 + 0.15 * var(--in));
+    translate: 0 calc(sin(var(--age) * 400deg + var(--i) * 70deg) * 0.04em); }
+  .sub .w:nth-child(4n+1) { color: var(--sub-colour-1); }
+  .sub .w:nth-child(4n+3) { color: var(--sub-colour-2); }
+  .sub .w:nth-child(4n) { color: var(--sub-colour-3); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'line', chunk: [26, 11], enter: 0.2 })
+  }
+</script>

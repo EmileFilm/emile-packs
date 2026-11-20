@@ -2,6 +2,7 @@
 name: subtitle-sticker
 description: One word at a time on a tilted yellow sticker that slaps into place.
 kind: look
+tags: bold, word
 ---
 
 # Sticker subtitles

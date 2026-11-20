@@ -2,6 +2,7 @@
 name: subtitle-weight-shift
 description: Light words that turn bold as they are said, the weight swelling smoothly.
 kind: look
+tags: type, karaoke
 ---
 
 # Weight shift subtitles

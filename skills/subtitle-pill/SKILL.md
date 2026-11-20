@@ -2,6 +2,7 @@
 name: subtitle-pill
 description: Bold words with the one being said on a violet rounded block.
 kind: look
+tags: block, karaoke
 ---
 
 # Pill subtitles

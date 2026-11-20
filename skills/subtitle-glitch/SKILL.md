@@ -2,6 +2,7 @@
 name: subtitle-glitch
 description: Heavy capitals that tear into red and cyan as each line arrives, then settle with a faint split.
 kind: look
+tags: glow, line
 ---
 
 # Glitch subtitles

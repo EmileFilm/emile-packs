@@ -1,0 +1,27 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #f4efe6; --sub-accent: #ff3b30; --sub-shadow: #000; }
+  .sub { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 0.26em; row-gap: 0.02em;
+    font: 400 calc(var(--u) * 0.32) / 1.15 'Instrument Serif', serif; color: var(--sub-ink);
+    text-shadow: 0 calc(var(--u) * 0.02) calc(var(--u) * 0.1) color-mix(in srgb, var(--sub-shadow) 60%, transparent); }
+  .sub::after { content: ''; order: -1; flex-basis: 100%; height: 0; }
+  .sub:not(:has(.kw)) { font-size: calc(var(--u) * 0.36); }
+  .sub .kw { order: -1; font: 400 calc(var(--u) * 0.66) / 0.98 'DM Serif Display', serif; color: var(--sub-accent); letter-spacing: -0.01em; }
+  .sub .w { opacity: calc(0.3 + 0.7 * var(--in)); translate: 0 calc((1 - var(--in)) * 0.15em); }
+  .sub .next { opacity: 0.32; }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'follow', chunk: [30, 12] })
+  }
+</script>

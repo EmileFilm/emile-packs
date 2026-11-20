@@ -2,6 +2,7 @@
 name: subtitle-pop
 description: One big word at a time, popping in with a little overshoot.
 kind: look
+tags: bold, word
 ---
 
 # Pop subtitles

@@ -2,6 +2,7 @@
 name: subtitle-slam
 description: One word at a time, huge condensed capitals that slide in from the left out of a blur; keywords in yellow.
 kind: look
+tags: bold, word
 ---
 
 # Slam subtitles

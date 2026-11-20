@@ -2,6 +2,7 @@
 name: subtitle-reveal
 description: Words light up as they are said; the rest of the chunk waits dimmed.
 kind: look
+tags: quiet, karaoke
 ---
 
 # Reveal subtitles

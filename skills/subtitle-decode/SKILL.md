@@ -2,6 +2,7 @@
 name: subtitle-decode
 description: Monospace words that arrive as scrambled characters and resolve, letter by letter, as they are said.
 kind: look
+tags: glow, karaoke
 ---
 
 # Decode subtitles

@@ -2,6 +2,7 @@
 name: subtitle-box-word
 description: White capitals; the word being said is wiped onto a red box from the left.
 kind: look
+tags: block, karaoke
 ---
 
 # Box word subtitles

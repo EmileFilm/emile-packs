@@ -2,6 +2,7 @@
 name: subtitle-word
 description: Strictly one word on screen at a time, big and clean. Only for languages that space their words.
 kind: look
+tags: quiet, word
 spaced: true
 ---
 

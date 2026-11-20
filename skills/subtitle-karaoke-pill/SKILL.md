@@ -2,6 +2,7 @@
 name: subtitle-karaoke-pill
 description: The chunk on a cream pill, its words filling from grey to ink as they are said, the one being said in coral.
 kind: look
+tags: block, karaoke
 ---
 
 # Karaoke pill subtitles

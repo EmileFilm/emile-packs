@@ -1,0 +1,32 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #e8231a; --sub-stroke: #140303; }
+  .band { left: var(--safe-left); top: var(--safe-top); width: var(--safe-width); height: var(--safe-height); }
+  .band { container-type: size; }
+  .sub { --len: 6; font: 400 min(82cqh, calc(100cqw / (var(--len) * 0.46))) / 0.9 'Instrument Serif', serif; color: var(--sub-ink); letter-spacing: -0.01em;
+    -webkit-text-stroke: max(1px, 0.006em) var(--sub-stroke); paint-order: stroke fill; }
+  .sub .w { opacity: var(--in); scale: calc(0.96 + 0.04 * var(--in)); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  // The word's letters, so its size fills the width (CSS: --len)
+  function fit(t, ctx) {
+    const sub = ctx.root.querySelector('.sub')
+    const w = sub?.querySelector('.w')
+    if (w) sub.style.setProperty('--len', String(Math.max(3, [...w.textContent].length)))
+  }
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'single', chunk: [22, 9], enter: 0.12 })
+    fit(t, ctx)
+  }
+</script>

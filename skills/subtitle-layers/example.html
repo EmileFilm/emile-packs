@@ -1,0 +1,23 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #ff2d2d; --sub-stroke: #1a0000; --sub-layer-a: #ff9aa2; --sub-layer-b: #5a0d12; }
+  .sub { font: 900 calc(var(--u) * 0.8) / 1 'Playfair Display', serif; letter-spacing: -0.01em; color: var(--sub-ink);
+    -webkit-text-stroke: calc(var(--u) * 0.012) var(--sub-stroke); paint-order: stroke fill; }
+  .sub .w { opacity: var(--in); scale: calc(0.94 + 0.06 * var(--in)); translate: calc(var(--age) * -0.04em) 0;
+    text-shadow: calc(0.07em + var(--age) * 0.06em) 0.05em 0 var(--sub-layer-a), calc(0.14em + var(--age) * 0.13em) 0.1em 0 var(--sub-layer-b); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'one', chunk: [22, 9], enter: 0.2 })
+  }
+</script>

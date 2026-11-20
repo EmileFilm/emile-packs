@@ -2,6 +2,7 @@
 name: subtitle-typewriter
 description: Monospace words typed letter by letter as they are said, a block caret at the end.
 kind: look
+tags: quiet, build
 ---
 
 # Typewriter subtitles

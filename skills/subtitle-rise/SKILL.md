@@ -2,6 +2,7 @@
 name: subtitle-rise
 description: Clean sentence case; each word rises into place as it is said, the rest of the chunk waiting unseen.
 kind: look
+tags: bold, build
 ---
 
 # Rise subtitles

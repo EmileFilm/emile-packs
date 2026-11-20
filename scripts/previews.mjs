@@ -94,6 +94,8 @@ async function framesOf(c, dir) {
 // the second its still is taken at: a chunk on screen, a word being said
 const SUBTITLE_TEXT = 'Every [[great story]] starts with one frame.'
 const SUBTITLE_STILL = 0.95
+// The part of the frame a subtitle preview keeps: [x, y, w, h], shares
+const SUBTITLE_CROP = [0.25, 0.5, 0.5, 0.5]
 
 // Every pack folder of this repository
 const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
@@ -228,7 +230,11 @@ async function subtitlePreviews(which) {
       json(['subtitle', project, '--style', n, '--text', SUBTITLE_TEXT, '--at', '0.3'])
       const film = path.join(tmp, `${n}.mp4`)
       json(['export', project, '--to', film, '--aspect', '16:9'])
-      const made = await encodePreview({ input: film, seconds: 4, still: SUBTITLE_STILL, dir: skill })
+      // The words made larger: the middle of the frame's lower half, where
+      // the subtitle band is (2×); a style that fills the frame (area:
+      // frame) whole
+      const whole = /^area:\s*frame\s*$/m.test(fs.readFileSync(path.join(skill, 'SKILL.md'), 'utf8'))
+      const made = await encodePreview({ input: film, seconds: 4, still: SUBTITLE_STILL, dir: skill, crop: whole ? null : SUBTITLE_CROP })
       console.log(`✓ subtitle-${n} · ${(made.video.bytes / 1024).toFixed(0)} KB video · ${(made.still.bytes / 1024).toFixed(0)} KB still`)
     }
   } catch (e) {

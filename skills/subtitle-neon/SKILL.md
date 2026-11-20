@@ -2,6 +2,7 @@
 name: subtitle-neon
 description: Spaced capitals in dim teal; the word being said and the keywords light up as neon, flickering on.
 kind: look
+tags: glow, karaoke
 ---
 
 # Neon subtitles

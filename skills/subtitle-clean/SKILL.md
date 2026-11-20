@@ -2,6 +2,7 @@
 name: subtitle-clean
 description: Plain white words on a soft shadow, a chunk at a time.
 kind: look
+tags: quiet, line
 ---
 
 # Clean subtitles

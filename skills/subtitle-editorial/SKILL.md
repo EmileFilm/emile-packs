@@ -2,6 +2,7 @@
 name: subtitle-editorial
 description: Two faces: plain light words, and the keywords set large in an italic serif, like a magazine pull quote.
 kind: look
+tags: type, karaoke
 ---
 
 # Editorial subtitles

@@ -2,6 +2,7 @@
 name: subtitle-classic
 description: White words in a dark glass box, a chunk at a time.
 kind: look
+tags: quiet, line
 ---
 
 # Classic subtitles

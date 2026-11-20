@@ -185,7 +185,9 @@ const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileT
     if (!description || !title) fail(`skills/${e.name}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
     const files = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => fileEntry(dir, f))
     const digest = crypto.createHash('sha256').update(JSON.stringify(files)).digest('hex')
-    return { name: e.name, title, description, kind, licence: 'MIT', digest, preview: previewOf(dir), files }
+    // tags: words for the card's second line (a subtitle style's kind and how it shows the words)
+    const tags = (/^---\r?\n[\s\S]*?^tags:\s*(.+)$[\s\S]*?\r?\n---/m.exec(text)?.[1] ?? '').split(',').map(x => x.trim()).filter(Boolean)
+    return { name: e.name, title, description, kind, ...(tags.length ? { tags } : {}), licence: 'MIT', digest, preview: previewOf(dir), files }
   })
   .sort((a, b) => a.name.localeCompare(b.name))
 

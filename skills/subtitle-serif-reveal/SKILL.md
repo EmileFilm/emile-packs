@@ -2,6 +2,7 @@
 name: subtitle-serif-reveal
 description: A display serif, each word fading up out of a soft blur as it is said.
 kind: look
+tags: type, build
 ---
 
 # Serif reveal subtitles

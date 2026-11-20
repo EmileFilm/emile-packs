@@ -2,6 +2,7 @@
 name: subtitle-highlight
 description: Heavy capitals, a chunk at a time, the word being said lit in lime and a touch bigger. The default subtitle style.
 kind: look
+tags: bold, karaoke
 ---
 
 # Highlight subtitles
