@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.0.3",
- "published": "2026-11-18T14:40:49.661Z",
+ "tag": "v1.0.4",
+ "published": "2026-11-19T16:11:42.609Z",
  "contract": 4,
  "packs": [
   {
@@ -1740,6 +1740,614 @@
      "path": "SKILL.md",
      "bytes": 6498,
      "sha256": "97dfc2581397798bf7827431a1d97ebc08e6f9f578438d51ce47280536d77f12"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-box-word",
+   "title": "Box word subtitles",
+   "description": "White capitals; the word being said is wiped onto a red box from the left.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "997841fc8ff7f6e8e91ebc86162ee733d0e07fd28aeee0ef8b701bdc6873d3d8",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 14957,
+     "sha256": "d332a78de8e0b10f65c76ba2e789fe237717a32a65897e663b08c3f903d5c7da"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6504,
+     "sha256": "ec1aae6185107b5ff13c2e4f35143bf1f9687d4d1eb5d6492598fd282e951413"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2055,
+     "sha256": "9319024f26c7595c212feaf55e2ce3ca9a680bedc1ef60c734f2cf5cd098ef77"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1556,
+     "sha256": "ef9cd3766afb6627edc2756f93c6af8009595556720240ef3826c6fcfb960c5c"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-classic",
+   "title": "Classic subtitles",
+   "description": "White words in a dark glass box, a chunk at a time.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "de5fb782c1a7615a27c7871c5df7bcdbb771436e685c6c90dc1487c358ce93ae",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 8461,
+     "sha256": "1191d0f780f26d1fe934c95362de1dc8adb9dcab09e58486923f919337817562"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6424,
+     "sha256": "a4b9a77b7ae12370a146d9b7535d7cd976bce29617e1e61a0e536e5224e08c59"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2016,
+     "sha256": "020264cbade88f3566babddb81f9f56dd49c4244997ed7053526652108a837b5"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1465,
+     "sha256": "c89efdb76dd1780fc9a4bce20f19f2bc792b1822311fd87696d4bab11f42f67b"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-clean",
+   "title": "Clean subtitles",
+   "description": "Plain white words on a soft shadow, a chunk at a time.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "64214ade34f73ae1b0b975052de535e99f7fea1e3e24d6fd3b5368418202f117",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 10688,
+     "sha256": "9f64ac6628a3a1e667f4b004b119bf1f444f1992c182f8dc2458c8c8a856968a"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6232,
+     "sha256": "34b5d33e1b2bb0d25d7ef2d109946b83b73c73db3caf75fa58fa41262202b327"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1951,
+     "sha256": "0eecca00ab2df91f42ecf553ea21f8080ed72782a7801f6f6e64df39521b1fa1"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1519,
+     "sha256": "5fa5de755acb7de43f214865429eb19c2f610076212499bffdd2e89af3a59531"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-decode",
+   "title": "Decode subtitles",
+   "description": "Monospace words that arrive as scrambled characters and resolve, letter by letter, as they are said.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "b91deea590d77f1a568ca8df2d2126fa9b9462157e15f0a0707fa25cdd15eb60",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 22127,
+     "sha256": "851b38cc6d7c8a06d5517397c52fca2b4b99bdb0ad002cdb4260a15c66a0dd48"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5036,
+     "sha256": "f79af73a2b4b97104bf0bd4646a250283c0ffa76545a31f425b9341b156cc4df"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2177,
+     "sha256": "7d72321ec3bd8a452c7dd85965e9cff34ab7c66e33178b9986e8f3108f92d38a"
+    },
+    {
+     "path": "example.html",
+     "bytes": 2238,
+     "sha256": "43f412c2ecd3a41cd2407dadda1d39b9c41b38e5abf96f03a5c792d37b338574"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-editorial",
+   "title": "Editorial subtitles",
+   "description": "Two faces: plain light words, and the keywords set large in an italic serif, like a magazine pull quote.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "3fc433fa4deb74ec7dceb16fe368e8c7a8433895417a72fd185073faf4aaa7e3",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 10693,
+     "sha256": "43994d803223a6a309487515d5fac9c4fa04409f68e65231832639e71e88668b"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5321,
+     "sha256": "5e2d192cfd8c8de461c30999a53d44a9c8005eece44a3a2e196cdbc76744b622"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2208,
+     "sha256": "14aec21d16bedccad94551429eb6a61e887b79bfbd7de9f251c63e651d9e7f7f"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1661,
+     "sha256": "a03bfc13a71def2d56903c97880211cf81a02e20f696882323a69c04bcad9046"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-glitch",
+   "title": "Glitch subtitles",
+   "description": "Heavy capitals that tear into red and cyan as each line arrives, then settle with a faint split.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "512402de40c5fec08275a7159d30f3189752f00964f778b8f7c86b53edd43584",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 20413,
+     "sha256": "e0d8c29caf2913f6673066238e30f7cf1676923512ef9ff732f1d3e01306900d"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6327,
+     "sha256": "98dd675dc1648bb2dd3a3e31a8c61970d51615bdf72517d651a77d438a77fd22"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2137,
+     "sha256": "b4d083c51614e2dfce0933e69a6ef16838022b38dde8ef75e9a4e7cdff48b445"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1631,
+     "sha256": "311b6d0d2376736232bab6f09ece9cf14f81e2f49aadda500c651d186d402368"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-highlight",
+   "title": "Highlight subtitles",
+   "description": "Heavy capitals, a chunk at a time, the word being said lit in lime and a touch bigger. The default subtitle style.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "a0f17e0ea7d37310526725201f2f305f535611160185cca97c1f883ce8b70128",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 16458,
+     "sha256": "d4be47e09f3e3c18f656dbbcf695dd03142855ec8347aa9250851137d7b17a9f"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6727,
+     "sha256": "25f0633a5368187058a9d0f667c45db2f8dc0ec6f126f1b76960888cc74d4a6b"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2205,
+     "sha256": "76afa0c9f187689bae17735d409e10d48bdd5d9aa0dfe287754b59871906aaad"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1604,
+     "sha256": "db4c224a0f53c0864131c59c78beb485486870c324dd3aa3ed3b5ed4b0efd665"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-karaoke-pill",
+   "title": "Karaoke pill subtitles",
+   "description": "The chunk on a cream pill, its words filling from grey to ink as they are said, the one being said in coral.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "c19a51f9f8c8f4ec6c3f0dead2c0e6ba7fe5eb670179584574e2543df6b31cd7",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 12640,
+     "sha256": "9ce84ecaf403d17c503dab80dab7352158ddb9b105a4020efdcc59d5bafd24c8"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5336,
+     "sha256": "15bb520fc92fdaffe40aa3fdd9ee6316a654635c52c24eb65de245ed539dcbe1"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2288,
+     "sha256": "0a3679b30b7cad241ccad1d357a29d5f87a7a1969faba8626215f852c109a636"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1642,
+     "sha256": "e5765c1381120e56c5765465cb7c4629d5245c1de9cf2b687ce466fe741dc2e0"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-neon",
+   "title": "Neon subtitles",
+   "description": "Spaced capitals in dim teal; the word being said and the keywords light up as neon, flickering on.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "cb4d360d785afaaaed78a3ce91daa3ef4b4bcd88ae1bda63b4611e3795174e71",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 15671,
+     "sha256": "fe6038d0f340f49533107fe8713ea6483a61493c5372328284c45b99e21ec1aa"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5433,
+     "sha256": "7816ee71f21010a768ce1cda8bb1a3ea8e2554c1de90449c90381e8caee8ad42"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2136,
+     "sha256": "d25ae3ad50bc788c7c19dd8645ffd5fcaec5891fe65db00cfc4363617260494c"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1829,
+     "sha256": "975a9a6f2bfc01e1087988dd6e12729f861cf3cba14b3595b28391fb76ae0a6a"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-pill",
+   "title": "Pill subtitles",
+   "description": "Bold words with the one being said on a violet rounded block.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "4f8e8e5a1d98dbfdb76045e1d533da7a6bd9bc97c733e47f82cc17837117350f",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 14347,
+     "sha256": "3e4fc75a3a83d2744dcddb8d1c4fae74025f12e49b4e7f130e89422a4a94fc9e"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5963,
+     "sha256": "ac9a23495ba6ce5fbea556ee6ea90c51e8eb9f48db95d0b5d44b74fbdb80eb55"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2018,
+     "sha256": "2cb962a563e722967aeb8f9e32d24e9c00450e20730b5488ee1b38505d08cc9a"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1582,
+     "sha256": "d83ccf8821934afeaf471bea949ad45791a715364aea7cdd356f94460ff8a5c3"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-pop",
+   "title": "Pop subtitles",
+   "description": "One big word at a time, popping in with a little overshoot.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "6c88deeac1db065c08cd924b56cde89438295b0f88b1c90c0785ba35ca1d9695",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 15679,
+     "sha256": "5f2d3b754c556de38ba0b9ff2b3914b5dadea7df2780e8cdff79d74ee91a3801"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 7000,
+     "sha256": "8087414d157963a47037195d0a48b633ca09e96e927eb3be9d184d47ceb221ab"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2121,
+     "sha256": "a2a56a43a01f63cec04cb90c13237b5e865257f4db47c212a535c3fafae2497f"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1649,
+     "sha256": "810713fd78eb68d3b7ec304ba4415d15343321d6962c41ee5bf1e3c7d77548c3"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-reveal",
+   "title": "Reveal subtitles",
+   "description": "Words light up as they are said; the rest of the chunk waits dimmed.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "aafbc2c82ab10f429a45ef7ef236e8fe81aa6ae881b0b8967bb13861658ff163",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 11581,
+     "sha256": "92586ed563aba0ba3725d052b5ad0746328f9d61bbccca260e6a8b9b54d1f84a"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 4922,
+     "sha256": "55b3706628e25a52df9b1f55f2bb96e7e0e8bf23cdbc5a99d4df9bb0594fbdbb"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2068,
+     "sha256": "09b0869d611ad263f8a802d369c381f3f70a88e0cc6dd4775da419b759eee292"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1534,
+     "sha256": "eeb53308818287e1e750906af96e79df0ab322ed951d64d777acf5141ca7974a"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-rise",
+   "title": "Rise subtitles",
+   "description": "Clean sentence case; each word rises into place as it is said, the rest of the chunk waiting unseen.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "f23fee5c02fe13a7ee6b723d991bd63e8d17c6ee6822b8464674f6818afcf9d1",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 12438,
+     "sha256": "99e26e8ecf6d0b9cc972ebfae06e0fbddd135f89eb3d5cbcbd45b1f96f5825ef"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 4948,
+     "sha256": "3b107ed248b299046f352c9f7b062be66f8307a3254634cea34e80831fe27423"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2106,
+     "sha256": "33814f26315fe99579094be3983da0f3cefe4a1fe13432e198ecc63ca62a8d37"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1530,
+     "sha256": "98fb28ae8c303c3f43efe39b717c032373b72d9c9c7e8b6894e77603a779978c"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-serif-reveal",
+   "title": "Serif reveal subtitles",
+   "description": "A display serif, each word fading up out of a soft blur as it is said.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "2e76ac3a7bfc23bf11880bf8b1ca36f888a145b7275e684986ec35fde20efd72",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 12191,
+     "sha256": "1f24f9a66e14b648b667fecd7ff7730c805a99507985d5a9787690dd00cf8f92"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 4794,
+     "sha256": "aa4c70eb301292431b1aa1328720c3370e14c6719a3b1a87eea4c11e325cdc9a"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1996,
+     "sha256": "29627c253cafd9cbaed06f62cfe056113f2628e8b003d38989073b0863f1ceb8"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1561,
+     "sha256": "a0a217ff58781267c8ab1dbfa94cb33d0b1425bd82e192c7f1f5e534377c0e3b"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-slam",
+   "title": "Slam subtitles",
+   "description": "One word at a time, huge condensed capitals that slide in from the left out of a blur; keywords in yellow.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "50eafbd2955657ae62b59c3f0b394a50bb4c48582bb4cdb965dd2f8149705753",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 18491,
+     "sha256": "5b8c437b736893b46e4f1772eee3b92a8875890226392c75a365b3b54736c530"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 7810,
+     "sha256": "a5d3ed11bf8518365ea23135a7efe9bf3e9339913a93b6cad96ddd75647ac8f1"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2114,
+     "sha256": "d22763de7fe76fc79c587febe7a28eea893239bebd7d5c62fb3f910d925b9f94"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1560,
+     "sha256": "7ec6288b8aa3169670687c486554b9e96a957bb51298fb009ee92b54bd50e9fa"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-sticker",
+   "title": "Sticker subtitles",
+   "description": "One word at a time on a tilted yellow sticker that slaps into place.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "323d334858bd42d22277dcfa94e998ccafc14a21a7d83a4667fd954d5badfc99",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 19938,
+     "sha256": "9ffbdc3d393c8887b0523a667dbe90e62d560b0074651caf17f307fc6062ebd3"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 7944,
+     "sha256": "bc2a7ccdaf04ce1579ab047b90ef74aef0404e41206e0d38f11767f1ac5b192c"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2070,
+     "sha256": "66a2db029bba8c8bb751512169abf1ecdfc3f21eed4f5dc8760e87649fabb5a9"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1532,
+     "sha256": "34a0701469bc45ce0b961afb0958f1ac8fc1ea9991cfe867afb874ac838d4805"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-typewriter",
+   "title": "Typewriter subtitles",
+   "description": "Monospace words typed letter by letter as they are said, a block caret at the end.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "cd151d145c34a584e73d1c0eb16c327c1efd179734bad2af687c4b4b3ddbc106",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 9734,
+     "sha256": "4593ca36847c4c279556fc45415513165e3e93988f1cf9714c552c63f908f22c"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 4641,
+     "sha256": "f8e6da1482445d132a6d709749c3e76d7eafbffd57de657ba4d20afac538fccb"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2025,
+     "sha256": "9f18ad6657e37e5e28a685f12a580d52d1e9764ec75937e0e4eebf49d416408a"
+    },
+    {
+     "path": "example.html",
+     "bytes": 2604,
+     "sha256": "b4cbe25f303a574bb1a33d63623451acec9b9b12875af0f28353e64d9b6027b8"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-weight-shift",
+   "title": "Weight shift subtitles",
+   "description": "Light words that turn bold as they are said, the weight swelling smoothly.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "190c2194c7470ac15de35fafa8f213ec48888995cd5fbf8a34ade3077a3deab7",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 14928,
+     "sha256": "1ed22a3afaeff29307554091ddb3bbc749393f42d118a082e578a26a89f67c82"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 5019,
+     "sha256": "e17014b8e71429cd162af948c2ab0987dcb4b7c6da1fa73617cdedf3a6e5b3b9"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2047,
+     "sha256": "2091af51e9d604dff5b65c9e72439b9e95701f02aad3c990db94ab035c351a9e"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1545,
+     "sha256": "4c18409109c4bab705c1b9f6fed60bb9617172da4503e207c6e67fd95a57a62f"
+    }
+   ]
+  },
+  {
+   "name": "subtitle-word",
+   "title": "Word subtitles",
+   "description": "Strictly one word on screen at a time, big and clean. Only for languages that space their words.",
+   "kind": "look",
+   "licence": "MIT",
+   "digest": "787fe777739ecc0a92f680379f55f97836fd2e2ad38c7e61f4a4e3a8aba504b8",
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 12952,
+     "sha256": "e041799800d1f3b643f6dcccc4e29d9b90d9a4e48565c65ad319ad7494e86975"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 6018,
+     "sha256": "db2320d28509df65db50107ec3311b7c0da895b87fcb4b4ebfd1d8ff78ab6ad7"
+    }
+   },
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2109,
+     "sha256": "58f91b59dc088721c9e686acdfa1bc0479b17cf2f74ce7a07ea9025471ebfe96"
+    },
+    {
+     "path": "example.html",
+     "bytes": 1510,
+     "sha256": "87e7fa2c3ae2c4f3ce1066372017f47a729a0ebf450941c11c302893222e5fe8"
     }
    ]
   }

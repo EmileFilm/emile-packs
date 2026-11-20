@@ -19,6 +19,16 @@
 //       short film over clip a with the Skill brought in, and its preview
 //       is encoded into --out. Nothing is written here: look at it, and
 //       copy preview.mp4 and preview.jpg into skills/<name>/ by hand
+//
+//   node scripts/previews.mjs --subtitle <name|all> [--engine <Emile/engine>]
+//       a subtitle style's preview (skills/subtitle-<name>/), drawn as Émile
+//       makes it, no AI: the engine's subtitle command lays the style over
+//       black (type is previewed on black, as a transition between plain
+//       cards) with SUBTITLE_TEXT timed at a reading speed, the film is
+//       exported, and preview.mp4 and preview.jpg are written beside the
+//       Skill (all: every subtitle style). The Skill is lent to the engine as
+//       one of a person's own (a copy), in a home of its own for the run (the
+//       rest of ~/.emile linked in), so it is drawn before the index lists it
 
 import { execFileSync } from 'node:child_process'
 import crypto from 'node:crypto'
@@ -35,6 +45,7 @@ const { values, positionals } = parseArgs({
     footage: { type: 'string' },
     all: { type: 'boolean' },
     skill: { type: 'string' },
+    subtitle: { type: 'string' },
     out: { type: 'string' },
     model: { type: 'string' },
     engine: { type: 'string' }
@@ -79,6 +90,11 @@ async function framesOf(c, dir) {
   return fs.readdirSync(dir).filter(f => f.endsWith('.jpg')).sort().map(f => pathToFileURL(path.join(dir, f)).href)
 }
 
+// The words every subtitle style's preview says (a keyword marked), and
+// the second its still is taken at: a chunk on screen, a word being said
+const SUBTITLE_TEXT = 'Every [[great story]] starts with one frame.'
+const SUBTITLE_STILL = 0.95
+
 // Every pack folder of this repository
 const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
   .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs'].includes(e.name))
@@ -88,6 +104,7 @@ const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
   .sort()
 
 if (values.skill) await skillCandidate(values.skill)
+else if (values.subtitle) await subtitlePreviews(values.subtitle)
 else await packPreviews()
 
 async function packPreviews() {
@@ -174,4 +191,48 @@ async function skillCandidate(name) {
   } catch (e) {
     fail(`${e.message}\nthe project is left in ${project}`)
   }
+}
+
+async function subtitlePreviews(which) {
+  const names = which === 'all'
+    ? fs.readdirSync(path.join(ROOT, 'skills')).filter(n => n.startsWith('subtitle-')).map(n => n.slice('subtitle-'.length)).sort()
+    : which.split(',').map(n => n.trim())
+  for (const n of names) if (!fs.existsSync(path.join(ROOT, 'skills', `subtitle-${n}`, 'SKILL.md'))) fail(`no subtitle style skills/subtitle-${n}/`)
+  const emile = path.join(engine, 'emile', 'cli.mjs')
+  const { ROOTS } = await lib('lib/paths.mjs')
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'emile-subtitle-previews-'))
+  // A home for the run: the real one's folders linked, skills/ its own
+  const home = path.join(tmp, 'home')
+  fs.mkdirSync(path.join(home, 'skills'), { recursive: true })
+  if (fs.existsSync(ROOTS.emile)) for (const f of fs.readdirSync(ROOTS.emile)) if (f !== 'skills') fs.symlinkSync(path.join(ROOTS.emile, f), path.join(home, f))
+  const env = { ...process.env, EMILE_HOME: home }
+  const json = args => {
+    const lines = execFileSync(process.execPath, [emile, ...args, '--json'], { env, encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['pipe', 'pipe', 'inherit'] }).trim().split('\n')
+    return lines.map(l => { try { return JSON.parse(l) } catch { return null } }).filter(Boolean).find(e => e.type === 'result')?.value
+  }
+  try {
+    await getTool('ffmpeg')
+    const piece = path.join(tmp, 'shot.mp4')
+    // The ground: four seconds of black
+    execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'color=c=black:s=1920x1080:r=30:d=4', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', piece])
+    for (const n of names) {
+      const skill = path.join(ROOT, 'skills', `subtitle-${n}`)
+      // A copy: a person's Skills are read as folders, a link is not one
+      fs.cpSync(skill, path.join(home, 'skills', `subtitle-${n}`), { recursive: true, filter: f => !/preview\.(mp4|jpg)$/.test(f) })
+      const project = path.join(tmp, n)
+      json(['new', project, '--aspect', '16:9', '--title', `Subtitles ${n}`, '--idea', 'A subtitle style on black'])
+      json(['materials-add', project, piece])
+      const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'project.json'), 'utf8')).project.fps
+      const shot = { id: 'shot', type: 'video', name: 'Black', frames: [0, Math.round(4 * num / den)], track: 1, video: { file: 'assets/shot.mp4', in: 0, audio: 'mute' } }
+      execFileSync(process.execPath, [emile, 'film-set', project, '--json'], { env, input: JSON.stringify([{ op: 'add', path: '/timeline/clips/-', value: shot }]), stdio: ['pipe', 'ignore', 'inherit'] })
+      json(['subtitle', project, '--style', n, '--text', SUBTITLE_TEXT, '--at', '0.3'])
+      const film = path.join(tmp, `${n}.mp4`)
+      json(['export', project, '--to', film, '--aspect', '16:9'])
+      const made = await encodePreview({ input: film, seconds: 4, still: SUBTITLE_STILL, dir: skill })
+      console.log(`✓ subtitle-${n} · ${(made.video.bytes / 1024).toFixed(0)} KB video · ${(made.still.bytes / 1024).toFixed(0)} KB still`)
+    }
+  } catch (e) {
+    fail(`${e.message}\nthe projects are left in ${tmp}`)
+  }
+  fs.rmSync(tmp, { recursive: true, force: true })
 }

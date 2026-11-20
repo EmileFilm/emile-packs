@@ -1,0 +1,45 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #fff; --sub-shadow: #000; }
+  .sub { font: 500 calc(var(--u) * 0.3) / 1.3 'IBM Plex Mono', monospace; color: var(--sub-ink);
+    text-shadow: 0 1px calc(var(--u) * 0.04) color-mix(in srgb, var(--sub-shadow) 80%, transparent), 0 0 calc(var(--u) * 0.15) color-mix(in srgb, var(--sub-shadow) 50%, transparent); }
+  .sub .next { visibility: hidden; }
+  .sub .ghost { visibility: hidden; }
+  .sub .caret { display: inline-block; width: 0.55em; height: 1em; margin-left: 0.04em; vertical-align: -0.12em; background: var(--sub-ink); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  // Each word being said (a keyword's words together) typed up to where
+  // the voice is in it; the rest kept as hidden letters so the line never
+  // moves, the caret after the last letter typed
+  function type(t, ctx) {
+    const said = [...ctx.root.querySelectorAll('.sub .on')].filter(w => parseFloat(w.style.getPropertyValue('--said')) > 0)
+    for (const w of ctx.root.querySelectorAll('.sub .on')) if (!said.includes(w)) w.style.visibility = 'hidden'
+    const on = said.at(-1)
+    for (const w of said.slice(0, -1)) w.classList.replace('on', 'past')
+    if (!on) return
+    const text = on.textContent
+    const n = Math.max(1, Math.ceil(parseFloat(on.style.getPropertyValue('--said')) * text.length))
+    on.textContent = text.slice(0, n)
+    const caret = document.createElement('span')
+    caret.className = 'caret'
+    const ghost = document.createElement('span')
+    ghost.className = 'ghost'
+    ghost.textContent = text.slice(n)
+    on.append(caret, ghost)
+  }
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'follow', chunk: [34, 14] })
+    type(t, ctx)
+  }
+</script>

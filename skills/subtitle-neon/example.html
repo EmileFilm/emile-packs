@@ -1,0 +1,24 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #e8feff; --sub-accent: #3ff0ff; --sub-dim: #2f7f86; }
+  .sub { font: 700 calc(var(--u) * 0.34) / 1.2 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sub-dim); }
+  .sub .past { color: color-mix(in srgb, var(--sub-ink) 85%, var(--sub-accent)); text-shadow: 0 0 0.12em color-mix(in srgb, var(--sub-accent) 60%, transparent); }
+  .sub .on, .sub .kw.past { color: var(--sub-ink);
+    text-shadow: 0 0 0.06em var(--sub-ink), 0 0 0.2em var(--sub-accent), 0 0 0.55em color-mix(in srgb, var(--sub-accent) 80%, transparent), 0 0 1.1em color-mix(in srgb, var(--sub-accent) 55%, transparent); }
+  .sub .on { opacity: calc(0.45 + 0.55 * var(--in) + 0.25 * (1 - var(--in)) * sin(var(--age) * 4200deg)); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'follow', chunk: [26, 11], enter: 0.24 })
+  }
+</script>

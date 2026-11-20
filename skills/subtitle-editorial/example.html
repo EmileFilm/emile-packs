@@ -1,0 +1,25 @@
+<div class="subs" data-voice="">
+  <div class="band"><div class="sub"></div></div>
+</div>
+<script type="application/json" data-words>[{"text":"Every","at":0.0,"end":0.28,"space":" "},{"text":"great","at":0.28,"end":0.6,"space":" ","kw":true},{"text":"story","at":0.6,"end":0.98,"space":" ","kw":true},{"text":"starts","at":0.98,"end":1.32,"space":" "},{"text":"with","at":1.32,"end":1.5,"space":" "},{"text":"one","at":1.5,"end":1.74,"space":" "},{"text":"frame.","at":1.74,"end":2.3}]</script>
+<style>
+  .subs { position: absolute; inset: 0; }
+  .band { position: absolute; left: var(--band-left); top: var(--band-top); width: var(--band-width); height: var(--band-height);
+    display: flex; align-items: center; justify-content: center; }
+  .sub { --u: var(--band-height); max-width: 100%; text-align: center; text-wrap: balance; }
+  .sub .w { display: inline-block; }
+  .subs { --sub-ink: #fff; --sub-accent: #fff; --sub-shadow: #000; }
+  .sub { font: 500 calc(var(--u) * 0.26) / 1.15 'Inter', sans-serif; letter-spacing: 0.01em; color: var(--sub-ink);
+    text-shadow: 0 1px calc(var(--u) * 0.05) color-mix(in srgb, var(--sub-shadow) 55%, transparent); }
+  .sub .w { vertical-align: baseline; }
+  .sub .kw { font: italic 400 calc(var(--u) * 0.62) / 1 'Instrument Serif', serif; letter-spacing: 0; margin: 0 0.06em; color: var(--sub-accent); }
+  .sub .next { opacity: 0.4; }
+  .sub .on.kw { opacity: var(--in); translate: 0 calc((1 - var(--in)) * 0.12em); }
+</style>
+<script type="module">
+  import { subtitle } from 'engine/subtitle.js'
+
+  export function draw(t, ctx) {
+    subtitle(t, ctx, { words: 'follow', chunk: [30, 12], enter: 0.3 })
+  }
+</script>
