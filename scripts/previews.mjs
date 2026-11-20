@@ -181,7 +181,7 @@ async function skillCandidate(name) {
     execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-ss', String(a.from), '-t', '4', '-i', a.path, '-an', '-vf', 'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080', '-c:v', 'libx264', '-crf', '18', piece])
     json(emile, ['new', project, '--aspect', '16:9', '--title', 'Preview', '--idea', `A four-second shot showing what the Skill ${name} is for`])
     json(emile, ['materials-add', project, piece])
-    const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'project.json'), 'utf8')).project.fps
+    const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'emile.json'), 'utf8')).project.fps
     const shot = { id: 'shot', type: 'video', name: 'Shot', frames: [0, Math.round(4 * num / den)], track: 1, video: { file: 'assets/shot.mp4', in: 0, audio: 'mute' } }
     json(emile, ['film-set', project], JSON.stringify([{ op: 'add', path: '/timeline/clips/-', value: shot }]))
     console.log(`asking Émile's agent to use ${name} on the shot (this uses the AI)…`)
@@ -189,7 +189,7 @@ async function skillCandidate(name) {
     const film = path.join(tmp, 'film.mp4')
     json(emile, ['export', project, '--to', film, '--aspect', '16:9'])
     const made = await encodePreview({ input: film, seconds: 4, still: 2, dir: out })
-    console.log(`candidate for skills/${name}/:\n  ${made.video.path} (${(made.video.bytes / 1024).toFixed(0)} KB)\n  ${made.still.path} (${(made.still.bytes / 1024).toFixed(0)} KB)\nthe film's timeline: ${path.join(project, 'project.json')}`)
+    console.log(`candidate for skills/${name}/:\n  ${made.video.path} (${(made.video.bytes / 1024).toFixed(0)} KB)\n  ${made.still.path} (${(made.still.bytes / 1024).toFixed(0)} KB)\nthe film's timeline: ${path.join(project, 'emile.json')}`)
   } catch (e) {
     fail(`${e.message}\nthe project is left in ${project}`)
   }
@@ -224,7 +224,7 @@ async function subtitlePreviews(which) {
       const project = path.join(tmp, n)
       json(['new', project, '--aspect', '16:9', '--title', `Subtitles ${n}`, '--idea', 'A subtitle style on black'])
       json(['materials-add', project, piece])
-      const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'project.json'), 'utf8')).project.fps
+      const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'emile.json'), 'utf8')).project.fps
       const shot = { id: 'shot', type: 'video', name: 'Black', frames: [0, Math.round(4 * num / den)], track: 1, video: { file: 'assets/shot.mp4', in: 0, audio: 'mute' } }
       execFileSync(process.execPath, [emile, 'film-set', project, '--json'], { env, input: JSON.stringify([{ op: 'add', path: '/timeline/clips/-', value: shot }]), stdio: ['pipe', 'ignore', 'inherit'] })
       json(['subtitle', project, '--style', n, '--text', SUBTITLE_TEXT, '--at', '0.3'])
