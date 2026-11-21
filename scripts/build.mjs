@@ -166,24 +166,28 @@ const previewOf = dir => {
   const [video, still] = [PREVIEW.video, PREVIEW.still].map(f => path.join(dir, f))
   return fs.existsSync(video) && fs.existsSync(still) ? { video: fileEntry(dir, video), still: fileEntry(dir, still) } : null
 }
-// An instrument's samples as its asset (Émile's pack-index.mjs packSource):
-// assets/<publisher>-<name>-<version>-samples.zip, made once and kept, so
-// a published version's asset never changes; uploaded to the release
-// `assets` (scripts/assets.mjs)
+// A pack's recording as its asset (Émile's pack-index.mjs packSource), never
+// in the repository (jsDelivr serves a version only under 50 MB): an
+// instrument's samples as assets/<publisher>-<name>-<version>-samples.zip,
+// a sound's WAV as …-sound.zip; made once and kept, so a published
+// version's asset never changes; uploaded to the release `assets`
+// (scripts/assets.mjs)
 const assetsDir = path.join(ROOT, 'assets')
 function assetOf(dir, pack) {
-  const name = `${pack.id.replace('/', '-')}-${pack.version}-samples.zip`
+  const what = pack.kind === 'instrument' ? 'samples' : 'sound'
+  const name = `${pack.id.replace('/', '-')}-${pack.version}-${what}.zip`
   const file = path.join(assetsDir, name)
   if (!fs.existsSync(file)) {
     fs.mkdirSync(assetsDir, { recursive: true })
-    execFileSync('ditto', ['-c', '-k', '--keepParent', path.join(dir, 'samples'), file])
+    const args = pack.kind === 'instrument' ? ['-c', '-k', '--keepParent', path.join(dir, 'samples'), file] : ['-c', '-k', path.join(dir, pack.sound.file), file]
+    execFileSync('ditto', args)
   }
   return { asset: name, bytes: fs.statSync(file).size, sha256: sha256(file) }
 }
 const packs = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
   const files = packFiles(dir).map(f => fileEntry(dir, f))
-  if (pack.kind === 'instrument') files.push(assetOf(dir, pack))
+  if (pack.kind === 'instrument' || pack.kind === 'sound') files.push(assetOf(dir, pack))
   return {
     id: pack.id, version: pack.version, kind: pack.kind, category: pack.category ?? null,
     title: pack.title, description: pack.description, params: pack.params, preview: previewOf(dir),
@@ -223,6 +227,14 @@ const unheard = packs.filter(p => p.kind === 'instrument' && !p.preview?.audio).
 if (unheard.length) fail(`these instruments have no preview.m4a: ${unheard.join(', ')} (node scripts/instruments.mjs)`)
 const unseen = [...packs.filter(p => !p.preview && ['filter', 'transition', 'look'].includes(p.kind)).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `skills/${s.name} (kind: look)`)]
 if (unseen.length) fail(`these change the picture but have no preview.mp4 and preview.jpg: ${unseen.join(', ')} (node scripts/previews.mjs; a Skill's preview is looked at before it goes in)`)
+
+// skills/emile-sounds as one download for other people's agents, its
+// sounds and all (they are never in the repository): assets/emile-sounds-<tag>.zip
+const soundsZip = path.join(assetsDir, `emile-sounds-${values.tag}.zip`)
+if (!fs.existsSync(soundsZip)) {
+  fs.mkdirSync(assetsDir, { recursive: true })
+  execFileSync('ditto', ['-c', '-k', '--keepParent', path.join(ROOT, 'skills', 'emile-sounds'), soundsZip])
+}
 
 // 4. index: a version once published keeps its files
 const indexFile = path.join(ROOT, 'index.json')

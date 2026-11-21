@@ -4,8 +4,11 @@
 node_modules/
 .DS_Store
 
-# An instrument's samples and the archives made of them: published as release assets, not committed
+# A pack's recording (an instrument's samples, a sound's WAV), the archives made of them, and the sounds of
+# skills/emile-sounds: published as release assets, never committed (jsDelivr serves a version only under 50 MB)
 emile/*/samples/
+emile/*/sound.wav
+skills/emile-sounds/sounds/
 assets/
 .instruments-work/
 .sounds-work/

@@ -159,7 +159,7 @@ The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interfac
 
 ## Instruments
 
-A film's music in Émile is made one of two ways, both on the Mac: written as a score and played on these instruments (calm, cinematic, warm: the chords change and the hits land on the cuts), or generated from a style prompt with Google's [Magenta RealTime 2](https://github.com/magenta/magenta-realtime) for what the instruments can't play (electronic, pop, funk, hip-hop, rock). [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film, how to write a score that follows the cuts, and how to write a prompt: the genres that come out full and the two that come out empty (techno, deep house), each tried with two seeds and heard. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository, and each has a phrase played on it (`preview.m4a`).
+A film's music in Émile is made one of two ways, both on the Mac: written as a score and played on these instruments (calm, cinematic, warm: the chords change and the hits land on the cuts), or generated from a style prompt with Google's [Magenta RealTime 2](https://github.com/magenta/magenta-realtime) for what the instruments can't play (electronic, pop, funk, hip-hop, rock). [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film, how to write a score that follows the cuts, and how to write a prompt: the genres that come out full and the two that come out empty (techno, deep house), each tried with two seeds and heard. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository (like every sound's WAV: the repository stays small enough for the CDN that serves it), and each has a phrase played on it (`preview.m4a`).
 
 | Instrument | | From |
 |---|---|---|
@@ -193,7 +193,7 @@ cp -R emile-packs/skills/emile-shaders .claude/skills/
 
 Then ask for the look ("put a halftone on the video in this page"): the agent finds the Skill, reads the filter's guide and wires the shader into your page. For any other agent, put the folder wherever it reads Skills from.
 
-The sounds the same way: `cp -R emile-packs/skills/emile-sounds .claude/skills/`, then ask for them ("add a click when the button is pressed at 3.2 s"). The agent picks one by its tag and how it sounds, and mixes it in with ffmpeg as the Skill shows.
+The sounds come as one download, since their files are not in the repository: unpack `emile-sounds-<version>.zip` (the newest, from the [`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets) release) into `.claude/skills/`, then ask for them ("add a click when the button is pressed at 3.2 s"). The agent picks one by its tag and how it sounds, and mixes it in with ffmpeg as the Skill shows.
 
 Without installing: hand your agent this repository's link, or clone it next to your project and point the agent at `skills/emile-shaders/SKILL.md` or `skills/emile-sounds/SKILL.md`.
 
@@ -294,7 +294,8 @@ To publish, with the Émile repository beside this one:
 
 ```bash
 node scripts/build.mjs --check                        # check every pack, write nothing
-node scripts/build.mjs --tag v1.1.0 --key <key.pem>   # check, hash, write index.json, sign it
+node scripts/build.mjs --tag v1.1.0 --key <key.pem>   # check, hash, write index.json, sign it; the recordings zipped into assets/
+node scripts/assets.mjs                               # upload the new archives to the release `assets`
 git commit -am "…" && git tag v1.1.0 && git push --follow-tags
 ```
 

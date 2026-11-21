@@ -120,7 +120,7 @@ for (const s of sounds) {
   const zh = `${length[1]}${tone[1] ? `${tone[1]}的` : ''}${nounZh}${move[1]}（${secs.toFixed(2)} 秒），来自 ${s.from}（${s.file}）。`
   const n = Number(s.name.split('-').pop())
   const pack = {
-    id: `emile/${s.name}`, kind: 'sound', version: '1.2.0',
+    id: `emile/${s.name}`, kind: 'sound', version: '1.2.1',
     title: { en: `${TITLE[s.tag][0]} ${n}`, 'zh-CN': `${TITLE[s.tag][1]} ${n}` }, description: { en, 'zh-CN': zh }, params: [],
     sound: { file: 'sound.wav', seconds: secs, cut: s.tag === 'ambience' ? 0 : Math.min(secs, loudest(wav)), tags: [s.tag] },
     sources: [{ name: s.from.replace(' · ', ', '), url: s.page, licence: 'CC0-1.0' }],

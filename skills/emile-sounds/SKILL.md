@@ -11,6 +11,8 @@ A hundred and twelve sound effects from Émile, a video editor, all CC0 (free fo
 
 **Cut at** is the moment in the file that belongs on the picture's moment: a click's or a hit's attack, a whoosh's or a sweep's peak, a riser's and a swell's end, a sub-drop's start. To lay a sound on a moment `T`, start it at `T − cut`. The transition sounds and beds (`riser-*`, `swell-*`, `boom-*`, `sub-drop-*`, `sweep-*`, `bed-*`) are synthesised by Émile; the rest were chosen from CC0 packs. How to give a film its sound from its picture (a muffle released on the jump, a music for each section, a strong last sound) is in the `sound-transitions` Skill and the five beside it in this repository.
 
+**The sound files** are not in the repository (it is served by a CDN with a size limit): download this Skill with its sounds as one zip, `emile-sounds-<version>.zip` from https://github.com/EmileFilm/emile-packs/releases/tag/assets (the newest version), and unpack it where your agent reads Skills. A `sounds/` folder that is empty means this copy came from the repository.
+
 ## Click: a tap, a button pressed
 
 | Sound | Seconds | Cut at | How it sounds |

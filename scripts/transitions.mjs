@@ -428,7 +428,7 @@ function writePack(name) {
   fs.mkdirSync(dir, { recursive: true })
   wav(path.join(dir, 'sound.wav'), channels)
   const pack = {
-    id: `emile/${name}`, kind: 'sound', version: '1.0.0',
+    id: `emile/${name}`, kind: 'sound', version: '1.0.1',
     title: { en: `${NOUN[kind][0]} ${nn}`, 'zh-CN': `${NOUN[kind][1]} ${nn}` },
     description: { en: `${en} (${seconds.toFixed(2)} s; the cut at ${WHERE[kind][0]}, ${cut.toFixed(3)} s). Synthesised by Émile.`, 'zh-CN': `${zh}（${seconds.toFixed(2)} 秒；切点在${WHERE[kind][1]}，${cut.toFixed(3)} 秒）。Émile 合成。` },
     params: [],
