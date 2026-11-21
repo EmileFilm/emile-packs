@@ -7,8 +7,8 @@
     "zh-CN": "低音下落 2"
   },
   "description": {
-    "en": "A sub drop falling from 100 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "低音从 100 Hz 落到 32 Hz（1.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A sub drop from 90 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 90 Hz 落到 32 Hz（1.50 秒；切点在开头，0.000 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {

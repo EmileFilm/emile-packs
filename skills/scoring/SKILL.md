@@ -8,6 +8,8 @@ kind: tool
 
 A film for a product or a company is short, and its music carries half its feeling. Good music for it is simple, follows the picture, and is never louder than what is said. This page is how to get there with Émile's two ways of making music.
 
+The music comes after the picture: first look at the cut film and find its sections and moments (`sound-transitions`). A film whose feeling changes gets a music for each section (`sound-music-sections`), each written or generated for its part with `from_seconds`/`to_seconds`; every film ends on a strong sound (`sound-strong-ending`).
+
 ## Which way
 
 - **Write a score** (`write_score`) when the film's style suits the instruments there are (`list_instruments`: piano, strings, a plucked bass, harp, mallets, an acoustic kit, cinematic percussion) — calm, elegant, cinematic, warm, thoughtful, premium. It is the better way whenever the music should **follow the cuts**: chords change on them, hits land on them, a section breathes over a pause. It costs nothing and is the same every time it is played.

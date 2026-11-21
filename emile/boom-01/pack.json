@@ -1,0 +1,31 @@
+{
+  "id": "emile/boom-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Boom 1",
+    "zh-CN": "重击 1"
+  },
+  "description": {
+    "en": "A cinematic hit: a click, a low thump falling away, a hall tail (3.80 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "电影式的一击：一下起音、往下落的低频、大厅的尾巴（3.80 秒；切点在起音，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 3.8,
+    "cut": 0,
+    "tags": [
+      "impact"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

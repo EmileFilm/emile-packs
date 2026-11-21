@@ -4,17 +4,17 @@
   "version": "1.0.0",
   "title": {
     "en": "Sweep 4",
-    "zh-CN": "长扫过 4"
+    "zh-CN": "掠过 4"
   },
   "description": {
-    "en": "A long, low, broad whoosh (1.50 s; the cut at its peak, 0.985 s). Synthesised by Émile.",
-    "zh-CN": "较长、低沉、宽的扫过（1.50 秒；切点在峰值，0.985 秒）。Émile 合成。"
+    "en": "A long, low, heavy pass-by (1.90 s; the cut at its peak, 0.965 s). Synthesised by Émile.",
+    "zh-CN": "较长、低、重的掠过（1.90 秒；切点在峰值，0.965 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {
     "file": "sound.wav",
-    "seconds": 1.5,
-    "cut": 0.985,
+    "seconds": 1.9,
+    "cut": 0.965,
     "tags": [
       "sweep"
     ]

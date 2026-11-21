@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/filters-15-orange" alt="15 filters">
   <img src="https://img.shields.io/badge/transitions-4-orange" alt="4 transitions">
   <img src="https://img.shields.io/badge/instruments-9-orange" alt="9 instruments">
-  <img src="https://img.shields.io/badge/sounds-96-orange" alt="96 sounds">
+  <img src="https://img.shields.io/badge/sounds-112-orange" alt="112 sounds">
   <img src="https://img.shields.io/badge/WebGL2-Chrome%20%26%20WebKit-informational" alt="WebGL2 in Chrome and WebKit">
 </p>
 
@@ -31,7 +31,7 @@ One kind of part per section; more kinds will come, each a section of its own.
 | Kind | What | For your own agent | In Émile |
 |---|---|---|---|
 | [Shaders](#shaders) | 15 filters and 4 transitions, GLSL with a WebGL2 runner | [`skills/emile-shaders`](skills/emile-shaders/SKILL.md) | a filter clip over the tracks under it, a transition between two clips |
-| [Sounds](#sounds) | 96 sound effects, 8 for each kind of moment, CC0 WAV, each marked with the moment it goes on | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
+| [Sounds](#sounds) | 112 sound effects, 8 for each kind of moment, CC0 WAV, each marked with the moment it goes on | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
 | [Instruments](#instruments) | 9 sampled instruments (SFZ over CC0 samples) | — (they need an SFZ player; the samples are a release asset) | the film's music, written as a score and played on them |
 | [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, motion, subtitle styles | `skills/<name>` | read by Émile's AI with the task they belong to |
 
@@ -136,7 +136,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 ## Sounds
 
-Ninety-six short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS, with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
+A hundred and twelve short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS, with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
 
 | Tag | For |
 |---|---|
@@ -148,12 +148,14 @@ Ninety-six short sound effects to lay where something happens on screen, eight f
 | `impact` | a hit on a cut, a title landing |
 | `notify` | a message, a success, an error |
 | `ambience` | a bed under a scene |
-| `riser` | building for 1–4 s into a cut, loudest at its end |
-| `swell` | a reversed reverb drawn into a cut |
-| `sub-drop` | a low fall under a hit, from the cut on |
-| `sweep` | a long whoosh whose peak is the cut |
+| `riser` | building for 1–4 s into a turn, loudest at its end |
+| `swell` | a reversed reverb drawn into a turn |
+| `impact` (`boom-*`) | a cinematic hit on the turn or the end, with its tail |
+| `sub-drop` | a low fall under a hit |
+| `sweep` | a pass-by, left to right, whose peak is the moment |
+| `ambience` (`bed-*`) | a room, a building, a city at night, wind, rain, water: for footage without sound |
 
-The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital Audio, Sci-fi Sounds) and rubberduck's CC0 breaking, falling and hit sounds; [`scripts/sounds.json`](scripts/sounds.json) lists the choice and [`scripts/sounds.mjs`](scripts/sounds.mjs) makes the packs from the original files. The four transition kinds are synthesised by [`scripts/transitions.mjs`](scripts/transitions.mjs) (seeded noise, swept filters, oscillators, a reversed hall), the same every time, so each one's cut is exact. In Émile the AI picks one by its tag and description and lays it as an effect clip; [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) gives the same sounds to any agent, with the rules for using them and how to mix one into a video with ffmpeg.
+The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital Audio, Sci-fi Sounds) and rubberduck's CC0 breaking, falling and hit sounds; [`scripts/sounds.json`](scripts/sounds.json) lists the choice and [`scripts/sounds.mjs`](scripts/sounds.mjs) makes the packs from the original files. The transition sounds and the beds (`riser`, `swell`, `boom`, `sub-drop`, `sweep`, `bed`) are synthesised by [`scripts/transitions.mjs`](scripts/transitions.mjs), layered as a sound designer would (a Shepard tone, a reversed cymbal, a falling low thump in a hall, a pass-by moving left to right), the same every time, so each one's cut is exact, and levelled by loudness so at gain 1 they sit right under music at −16 LUFS. In Émile the AI picks one by its tag and description and lays it as an effect clip; [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) gives the same sounds to any agent, with the rules for using them and how to mix one into a video with ffmpeg.
 
 ## Instruments
 
@@ -172,7 +174,7 @@ Any SFZ player plays them (Émile uses [sfizz](https://github.com/sfztools/sfizz
 
 ## Reference Skills
 
-Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](skills/sound-transitions/SKILL.md) (sound across a cut, as professional editors do it: which of seven ways suits each cut, and why most cuts get nothing) with one Skill for each way: [`sound-j-cut`](skills/sound-j-cut/SKILL.md), [`sound-l-cut`](skills/sound-l-cut/SKILL.md), [`sound-ambience-crossfade`](skills/sound-ambience-crossfade/SKILL.md), [`sound-whoosh`](skills/sound-whoosh/SKILL.md), [`sound-riser-hit`](skills/sound-riser-hit/SKILL.md), [`sound-match-cut`](skills/sound-match-cut/SKILL.md), [`sound-music-handoff`](skills/sound-music-handoff/SKILL.md), each with its timings, levels, how to do it in Émile and with ffmpeg; [`scoring`](skills/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
+Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](skills/sound-transitions/SKILL.md) (a film's sound following its picture's feeling, as editors do it: look at the cut film first, find its sections and moments, then a checklist of the few moves the picture asks for) with one Skill for each move: [`sound-muffle-release`](skills/sound-muffle-release/SKILL.md) (muffled before the jump, opened on it), [`sound-ambience-carry`](skills/sound-ambience-carry/SKILL.md) (a place's sound carried across a cut), [`sound-music-sections`](skills/sound-music-sections/SKILL.md) (a music for each section, handed over with a riser and a hit), [`sound-strong-ending`](skills/sound-strong-ending/SKILL.md), [`sound-match-cut`](skills/sound-match-cut/SKILL.md); [`scoring`](skills/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
 
 ## Use them
 

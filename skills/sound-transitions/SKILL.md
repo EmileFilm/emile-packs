@@ -1,62 +1,57 @@
 ---
 name: sound-transitions
-description: How a film's sound carries it across a cut or a transition, and which of the seven ways suits each one (J-cut, L-cut, ambience crossfade, whoosh, riser into a hit, sound match cut, music handoff). Read before laying any sound on a cut, and when the person asks for transitions "with sound", "more cinematic" or "like an ad".
+description: How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be "better", "more cinematic" or "like an ad".
 kind: tool
 ---
 
-# Sound across a cut
+# Sound follows the picture
 
-In a professional edit the cut is felt more through the sound than seen: the next place is heard before it is shown, a moment rings on after the picture has moved on, a reveal is pushed up to, held for a breath of silence, and then lands. Done well nobody notices it; the film just flows and its big moments hit.
+The sound of a good edit is not effects. It is the picture's feeling made audible: the breath held before a jump, the world rushing back when it lands, a calm place giving way to an exciting one, a last moment that rings. None of it is decided before the picture is cut, and none of it is decided by the cuts alone: by what happens in them.
 
-## First: most cuts get nothing
+## 1. Picture first
 
-A sound on every cut is the cheap version. In a 30–60 s film, design two to four transitions: the turn (the reveal, the product, the title) and one or two scene changes. Every other cut is a plain cut, carried by the music.
+Never lay music or sound on a film whose picture isn't cut. Then look at it: `view_frames` of `"film"` over the whole length (a sheet), then closer (`from_seconds`/`to_seconds`, more frames) around every moment that matters, until you can say to the frame where each happens. Write it down for yourself as a sound map:
 
-## Which one
+| Part | Seconds | What we see | Feeling |
+|---|---|---|---|
+| the canyon | 0–12.2 | green walls, a cave's light, a pool | calm, mysterious |
+| at the edge | 12.2–14.0 | a woman, then a man leaning over the drop | holding the breath |
+| the fall | 14.0–15.35 | he steps off, falls | suspense |
+| the landing | 15.35 | he hits the water | release |
+| the second jump | 15.35–20.8 | ripples, the next one leaps, lands | joy, energy |
+| the end | 20.8–23 | spray settling | done |
 
-| The cut | Use | Skill |
-|---|---|---|
-| Into a new place whose own sound we have (street, room, nature) | Hear it before you see it | `sound-j-cut` |
-| Out of a moment that should linger (a line, a reaction, a sound that matters) | Let it ring into the next shot | `sound-l-cut` |
-| A dissolve, or any soft change between two places with sound | Cross their beds, never a hole | `sound-ambience-crossfade` |
-| A push, wipe, zoom, whip pan, a fast move across the frame | A whoosh peaking on the seam | `sound-whoosh` |
-| The turn: the reveal, the product appearing, the title | Build, a breath of silence, then land | `sound-riser-hit` |
-| Two shots that share a shape, a motion or a sound | One sound becomes the other | `sound-match-cut` |
-| The music has to change: a new section, a new track, the end | Change it on a downbeat, end on a hit | `sound-music-handoff` |
+Measure the moments, don't guess: a body touching the water is one frame. A sound a few frames off the picture feels wrong even when nobody can say why.
 
-Read the one you use; each gives its timings, its levels and how to do it.
+## 2. The moves the picture asks for
 
-## With the music
+Go down this list with your sound map. Each line the picture has, do; each it doesn't, skip. The Skill named on each line has the detail.
 
-- Lay the designed transitions where the music's beats are (`write_score` and `generate_music` give them): a sound that lands off the beat fights the music.
-- When the music itself hits on the cut (a downbeat, a drum fill landing), a whoosh or a hit on top is one too many: let the music do it, or use a lighter sound.
-- The riser into the turn and the music's build are one gesture: thin the music just before the cut (`sound-riser-hit`).
+1. **A film with no sound of its own** (most stock and generated footage): a bed that matches what we see under all of it, `bed-*` at gain 1, beds overlapping 0.5 s with 0.5 s fades (`sound-ambience-carry`).
+2. **Its feeling changes at a turn** (calm to exciting, the jump, the reveal): **two musics**, one per section. `generate_music` (or `write_score`) for part 1 with `from_seconds` 0 and `to_seconds` the turn, and again for part 2 from the turn to the end moment; a `riser-*` ending on the turn, a `boom-*` and a `sub-drop-*` on it (`sound-music-sections`).
+3. **A held moment before the turn** (someone at the edge, a pause): from where it starts, **muffle the music and the bed** together with `timeline_edit` `sound` `lowpass` (`[[start, 20000], [start + 1.5, 500], [turn, 450]]` on music 1; on a bed that plays through, open it again at the turn); the riser stays unmuffled (`sound-muffle-release`).
+4. **The last moment** (the last landing, the logo): music 2 ends on it (`to_seconds` that moment, `fade_out` 0.05) and **one strong sound** lands on it, a `boom-*` ringing out over the last 1.5–3 s (`sound-strong-ending`).
+5. **A cut between places**: the next place's bed in 0.5–1.5 s early, or this one's carried on (`sound-ambience-carry`).
+6. **Two shots that move or look alike**: one sound across the cut (`sound-match-cut`).
+
+A 20–60 s film has one or two sections, one turn, one end. Every other cut gets nothing: the music carries it. If you cannot point at the picture and say why a sound is there, leave it out.
+
+## Levels
+
+The music is at −16 LUFS. The transition sounds (riser, swell, sweep, sub-drop, boom, bed) are levelled for it: leave them at gain 1 (0.6–0.8 under a voice). The older interface sounds (`click`, `pop`, `whoosh`, `rise`, `drop`, `impact`, `notify`, `ambience-*`) peak at −1 dBFS: give them 0.2–0.4. A sound that jumps out of the mix is the cheap version.
+
+## Placing by the moment
+
+Every catalogue sound has a `cut`, the moment in it that belongs on the picture's moment (a riser's end, a boom's attack, a sweep's peak). `place_sound` lays that on `at_seconds`: give it the moment's time from your sound map.
 
 ## With a voice
 
-- Never a whoosh, a riser or a hit over spoken words. Move the transition to the gap between sentences, or leave it.
-- Effects are lowered under a voice automatically; still keep them under it: the voice always wins.
-
-## Levels in Émile
-
-`place_sound` returns the clip; set its volume with `timeline_edit` `sound` (gain 1 is as it is). The catalogue's sounds peak at −1 dBFS, much louder than music at −16 LUFS, so almost every effect needs bringing down:
-
-| Sound | gain |
-|---|---|
-| sweep, whoosh under music | 0.3–0.5 |
-| riser | 0.4–0.6 |
-| impact on the turn | 0.6–0.9 |
-| sub-drop | 0.7–1.0 (it is mostly felt, not heard) |
-| swell | 0.4–0.6 |
-
-## Placing by the cut
-
-Every catalogue sound has a `cut`: the moment of it that belongs on the picture's change (a riser's end, a swell's end, a sweep's peak, a sub-drop's start, a hit's attack). `place_sound` lays that moment on `at_seconds`: give it the seam's time, never work out the start yourself.
+No rise, hit or muffle over spoken words: put the turn where nobody speaks, or leave it.
 
 ## The tired version
 
-- A whoosh on every cut, a riser before every scene.
-- A hit on a cut nothing happens on.
-- Sound effects louder than the music, or over words.
-- The film's own sound cut dead at every cut, so each shot starts in a vacuum.
-- The music faded out at the end instead of ending on a hit.
+- Sounds chosen before the picture was looked at.
+- A whoosh or a riser on every cut.
+- One music under everything, start to end, ending in a fade.
+- A hit on a cut where nothing happens.
+- Everything at full level.

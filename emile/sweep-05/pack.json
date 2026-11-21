@@ -4,17 +4,17 @@
   "version": "1.0.0",
   "title": {
     "en": "Sweep 5",
-    "zh-CN": "长扫过 5"
+    "zh-CN": "掠过 5"
   },
   "description": {
-    "en": "A long slow whoosh with a late peak and a long tail (2.00 s; the cut at its peak, 1.395 s). Synthesised by Émile.",
-    "zh-CN": "很长很慢的扫过，峰值靠后，拖尾长（2.00 秒；切点在峰值，1.395 秒）。Émile 合成。"
+    "en": "A slow pass-by with a long tail in a room (2.40 s; the cut at its peak, 1.405 s). Synthesised by Émile.",
+    "zh-CN": "慢的掠过，在空间里拖长尾（2.40 秒；切点在峰值，1.405 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {
     "file": "sound.wav",
-    "seconds": 2,
-    "cut": 1.395,
+    "seconds": 2.4,
+    "cut": 1.405,
     "tags": [
       "sweep"
     ]

@@ -1,15 +1,15 @@
 ---
 name: emile-sounds
-description: Ninety-six CC0 sound effects as WAV files (clicks, pops, whooshes, rises, drops, impacts, notification chimes, ambience beds, and for transitions risers, reversed swells, sub drops and long sweeps), each with its length, the moment in it that goes on the picture's moment, and a line on how it sounds, and how to lay one at a moment of a video with ffmpeg. Use when a video, an animation, an app or product demo, a slideshow or a presentation needs a sound on a moment (a tap, a card appearing, a transition, a title landing, a success). Not for music, voice, or long field recordings.
+description: A hundred and twelve CC0 sound effects as WAV files (clicks, pops, whooshes, rises, drops, impacts and cinematic booms, notification chimes, ambience beds of rooms, cities, wind, rain and water, and for transitions risers, reversed swells, sub drops and pass-by sweeps), each with its length, the moment in it that goes on the picture's moment, and a line on how it sounds, and how to lay one at a moment of a video with ffmpeg. Use when a video, an animation, an app or product demo, a slideshow or a presentation needs a sound on a moment (a tap, a card appearing, a transition, a title landing, a success). Not for music, voice, or long field recordings.
 ---
 
 {{generated}}
 
 # Émile sounds
 
-Ninety-six sound effects from Émile, a video editor, all CC0 (free for any use, no credit needed): eight for each of twelve kinds of moment. Each is `sounds/<name>.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS. `sounds.json` lists them for a program: name, tag, seconds, cut, how it sounds, source.
+A hundred and twelve sound effects from Émile, a video editor, all CC0 (free for any use, no credit needed), by the kind of moment they are for. Each is `sounds/<name>.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS. `sounds.json` lists them for a program: name, tag, seconds, cut, how it sounds, source.
 
-**Cut at** is the moment in the file that belongs on the picture's moment: a click's or a hit's attack, a whoosh's or a sweep's peak, a riser's and a swell's end, a sub-drop's start. To lay a sound on a moment `T`, start it at `T − cut`. The four transition kinds (riser, swell, sub-drop, sweep) are synthesised by Émile; the rest were chosen from CC0 packs. How to use them across a cut (a whoosh on a push, a riser into a reveal, a J-cut) is in the `sound-transitions` Skill and the seven beside it in this repository.
+**Cut at** is the moment in the file that belongs on the picture's moment: a click's or a hit's attack, a whoosh's or a sweep's peak, a riser's and a swell's end, a sub-drop's start. To lay a sound on a moment `T`, start it at `T − cut`. The transition sounds and beds (`riser-*`, `swell-*`, `boom-*`, `sub-drop-*`, `sweep-*`, `bed-*`) are synthesised by Émile and levelled by loudness (at their own level they sit right under music at −16 LUFS); the rest were chosen from CC0 packs and peak at −1 dBFS (bring them down 8–14 dB under music). How to give a film its sound from its picture (a muffle released on the jump, a music for each section, a strong last sound) is in the `sound-transitions` Skill and the five beside it in this repository.
 
 {{sounds}}
 

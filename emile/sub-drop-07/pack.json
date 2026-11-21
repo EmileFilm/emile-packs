@@ -7,8 +7,8 @@
     "zh-CN": "低音下落 7"
   },
   "description": {
-    "en": "A heavily driven low drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "失真重的低音下落，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A deep, short sub drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "深而短的低音，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {

@@ -4,16 +4,16 @@
   "version": "1.0.0",
   "title": {
     "en": "Sweep 6",
-    "zh-CN": "长扫过 6"
+    "zh-CN": "掠过 6"
   },
   "description": {
-    "en": "A fast, bright, high whoosh (1.00 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
-    "zh-CN": "快、亮、偏高的扫过（1.00 秒；切点在峰值，0.495 秒）。Émile 合成。"
+    "en": "A fast, bright, light pass-by (1.30 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+    "zh-CN": "快、亮、轻的掠过（1.30 秒；切点在峰值，0.495 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {
     "file": "sound.wav",
-    "seconds": 1,
+    "seconds": 1.3,
     "cut": 0.495,
     "tags": [
       "sweep"

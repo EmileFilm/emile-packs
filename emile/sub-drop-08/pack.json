@@ -7,8 +7,8 @@
     "zh-CN": "低音下落 8"
   },
   "description": {
-    "en": "A long, driven sub drop from 110 to 30 Hz with a click (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "较长、带失真的低音，从 110 Hz 落到 30 Hz，前面一下咔嗒（2.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A long sub drop from 100 to 30 Hz (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低音，从 100 Hz 落到 30 Hz（2.50 秒；切点在开头，0.000 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {

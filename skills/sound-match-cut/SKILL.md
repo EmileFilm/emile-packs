@@ -1,33 +1,36 @@
 ---
 name: sound-match-cut
-description: A sound match cut, one sound turning into another across a cut (a helicopter's blades into a ceiling fan, a keyboard's tap into a raindrop) so two shots are joined by what we hear. When it works, how to find one, and how to time it. Read when two shots share a motion, a rhythm or a shape.
+description: A sound match cut, one sound becoming another across a cut because the two shots move or look alike (a splash into the pop of a bottle, a ball's bounce into a heartbeat, a spinning wheel into a fan): an advanced edit that only works when it comes from the picture. How to find a pair in the film, cut it and voice it in Émile. Read when two shots share a motion, a rhythm or a shape.
 kind: tool
 ---
 
-# Sound match cut: one sound becomes another
+# Sound match cut
 
-Two shots are joined by a sound that belongs to both: the click of a pen becomes the click of a camera's shutter, a heartbeat becomes a kick drum, the hiss of a coffee machine becomes the hiss of the sea. The cut is a small surprise and an idea at once: these two things are alike.
+Two shots are joined by a sound that belongs to both: a diver hits the water and the splash becomes the fizz of a drink poured; the click of a pen becomes a camera's shutter; a door slams and becomes a drum hit. The cut becomes an idea: these two are alike. It is one of the most admired moves an editor has, and it only works when the picture gives it.
 
-## When
+## Finding a pair
 
-- Two shots share a motion or a rhythm (something spinning, tapping, pulsing, pouring) or a shape that makes the same kind of sound.
-- The film wants to say the two are connected: the everyday task and the product that does it, before and after.
-- Once in a film. It is a flourish; twice is a trick.
+Look at the cut film (`view_frames`, close around each cut) for two shots, next to each other or that could be, that share:
+- a motion: falling, spinning, pouring, tapping, closing;
+- a rhythm: steps, a heartbeat, waves;
+- a shape and a moment: a splash and a burst, a ball and a sun.
+
+None in the film: don't force one. A match between things that have nothing else in common is a pun.
 
 ## How
 
-1. Find the pair: the last beat of the sound in the shot before and the first in the shot after should fall on the same rhythm.
-2. Cut on the sound's attack: the shot before's sound ends on a hit, and the shot after starts on the matching hit (or one beat later).
-3. Cross the two over 0.1–0.3 s around the cut, the first fading out under the second, so the ear hears one sound changing, not two.
-4. When neither shot has the sound, the catalogue can lend one to both: the same click, pop or impact laid at the end of the first and on the cut (two `place_sound`, the second louder).
+1. Cut on the sound's moment: the first shot ends on its action (the hit, the tap) and the second starts on its matching one, or a few frames later. Re-cut the picture when needed so the two actions meet exactly at the cut.
+2. One sound across the cut: the first shot's sound ends as the second's starts, crossing over 0.1–0.3 s, so the ear hears one sound changing.
+3. When neither shot has the sound, lend one: the same sound (a `boom-*`, a `pop`, a `sweep-*`) on both actions, the second a little louder, or two related ones (a splash bed into a fizz).
+4. For a moment, lower the music (gain 0.5 for a second around the cut) so the match is heard.
 
 ## In Émile
 
-- The two shots' own sounds: put a transition of 0.2 s between them (it crosses their sounds) or, for a hard cut, set `fade_out` 0.1 on the first and `fade_in` 0.1 on the second.
-- A lent sound: `place_sound` it on the last tap in the first shot and on the cut; gain 0.5 and 0.8.
-- Choosing the cut point within a shot's movement needs its picture: look at the frames (read the shot) before you move the cut.
+- The cut: `timeline_edit` `split`, `trim`, `move` until the two actions meet at the cut.
+- The sounds: `place_sound` on each action's moment, or the two shots' own sounds with `fade_out` 0.1 on the first and `fade_in` 0.1 on the second.
+- The music around it: `split` it around the cut and set the piece's gain, or leave the music out of that second.
 
 ## The tired version
 
-- A match nobody can hear because the two sounds are buried under music: lower the music for that second, or don't do it.
-- A pun: matching sounds whose shots have nothing else in common.
+- A match nobody hears, buried in music.
+- Matches on every cut.

@@ -7,8 +7,8 @@
     "zh-CN": "低音下落 6"
   },
   "description": {
-    "en": "A smooth sub drop from 140 to 35 Hz, no click (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "平滑的低音下落，从 140 Hz 到 35 Hz，没有咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A sub drop from 120 to 35 Hz (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 120 Hz 落到 35 Hz（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {

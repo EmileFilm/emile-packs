@@ -1,7 +1,7 @@
 {
  "format": 1,
  "tag": "v1.2.0",
- "published": "2026-11-21T09:12:18.566Z",
+ "published": "2026-11-21T09:46:18.227Z",
  "contract": 4,
  "packs": [
   {
@@ -357,6 +357,358 @@
    ]
   },
   {
+   "id": "emile/bed-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 1",
+    "zh-CN": "环境 1"
+   },
+   "description": {
+    "en": "A quiet room: soft low air, nothing in it (room tone) (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "安静的房间：轻轻的低频空气声，里面什么都没有（房间底噪）（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 840,
+     "sha256": "aded3f9c2243593d739103cbe27d6b08c681c4e0fd502c7105d0a0d020e2486b"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "bb6f9e6c5f82ed4fc369a17bca48a3a2d6c589fc5db1681b93feacac393968d6"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 2",
+    "zh-CN": "环境 2"
+   },
+   "description": {
+    "en": "A quiet room, another take (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "安静的房间，另一段（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 756,
+     "sha256": "c3e70c682340c5d8d2efaa797ae829877c1543785f685003fdbfd7c84fc5fcc5"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "16e98d0558831f3b10114a3f2a9a37ae001f6abb939affe2e72d36a6cbe52dbc"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 3",
+    "zh-CN": "环境 3"
+   },
+   "description": {
+    "en": "Inside a building: air conditioning and a faint hum (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "楼里：空调的风与很轻的嗡声（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 793,
+     "sha256": "090286c3fb25a340357f3703025ca36c3f83e41a1a0cf024107bbd699c9dca59"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "12ec0119109ba0a4aaf342c9c49254882fdbe5f8d2fc4145552e9b5d1d095fff"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 4",
+    "zh-CN": "环境 4"
+   },
+   "description": {
+    "en": "A city at night from a window: a low rumble, cars passing now and then (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "窗外的夜晚城市：低沉的底噪，偶尔有车开过（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 833,
+     "sha256": "2cb86ccd39fc51dcc43698227041b53945fb287396741fae5c5d5ed6d81eb88d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "9c17b6d5478c009875cd8da191f77450bb7baa682e61719fd3ab2ce779ae2d89"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 5",
+    "zh-CN": "环境 5"
+   },
+   "description": {
+    "en": "A city at night, another take (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "夜晚的城市，另一段（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 759,
+     "sha256": "a622922a0dcc3624fd5e6ef5b63e6d0979ff65fda10b6b0cd30393d6eeebb744"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "2098a9ebe50a3075ef44b0e9535b4ca5c71daf9f1a6ea8530c9caffaa192e7ce"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 6",
+    "zh-CN": "环境 6"
+   },
+   "description": {
+    "en": "Wind outside, in slow gusts (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "外面的风，一阵一阵（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 757,
+     "sha256": "e23e9471bfbd6ca2d5eeb85e3b35855979f1aeec538cc66f9a856380e7842b41"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "2b2c523c11a88c56737dd36a4487a95d9879ee24cb11f3191c2d585a8b8f6dd8"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 7",
+    "zh-CN": "环境 7"
+   },
+   "description": {
+    "en": "Steady rain (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "持续的雨（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 726,
+     "sha256": "572dd13af25a5a8da8ed47a5cd5447f515e11df1c15c41663caa6f27bd06b49e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "59e45748675ebf1fbc77623d7e647701696358f04fcb54d8c78944f87a173eca"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 8",
+    "zh-CN": "环境 8"
+   },
+   "description": {
+    "en": "A waterfall or a river close by: a broad roar of falling water (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "近处的瀑布或河流：落水的宽厚轰声（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 813,
+     "sha256": "8fdf7b18bbca39c6f56fa7e87c47a10de69805ad09442e6e3e189e86cdc41eb7"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1920044,
+     "sha256": "df22e2843dcb128dfd60514801db54434d47b0a9ee9fbed8da519a2bc382ba94"
+    }
+   ]
+  },
+  {
    "id": "emile/bloom",
    "version": "2.0.0",
    "kind": "filter",
@@ -472,6 +824,358 @@
      "path": "tight-y.glsl",
      "bytes": 611,
      "sha256": "24180622ac89443425777021f867a76b4fbccefa5ada3126666806c445865b03"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 1",
+    "zh-CN": "重击 1"
+   },
+   "description": {
+    "en": "A cinematic hit: a click, a low thump falling away, a hall tail (3.80 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "电影式的一击：一下起音、往下落的低频、大厅的尾巴（3.80 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3.8,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 838,
+     "sha256": "aea270a386ec1ae52013ff4da16d69815680fe4652094886a3dcb9ea1e89f5af"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 729644,
+     "sha256": "303dbcc0292d6aaa01c6a972dabcb717df6705a45c0aaa00bbecb99a994a7877"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 2",
+    "zh-CN": "重击 2"
+   },
+   "description": {
+    "en": "A big, deep hit with a metal ring and a long tail: the reveal (5.40 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "大而深的一击，带金属余韵与长尾：揭示用（5.40 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5.4,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 821,
+     "sha256": "9bc327074a650a317db6cc016fc2204553f06d17caf3b65b62c227ff7f5db6de"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1036844,
+     "sha256": "8e4068ce8ec73b9670691e1cd3f01c42d0b4c7a551cab4a773fa4e0d38c01484"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 3",
+    "zh-CN": "重击 3"
+   },
+   "description": {
+    "en": "A tight, short hit, little tail: a title landing (2.40 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "紧而短的一击，尾巴短：标题落下（2.40 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2.4,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 796,
+     "sha256": "3db848d676e6d676ed145b3c45334f6bab5978ec7f8524c3f11abe324c887114"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 460844,
+     "sha256": "4b652dc38b94fca3047b231be7d189c44ef9223a19323b6e5d09e63eb90ebf5d"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 4",
+    "zh-CN": "重击 4"
+   },
+   "description": {
+    "en": "A hit with a strong metal ring (4.30 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "金属感强的一击（4.30 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 4.3,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 754,
+     "sha256": "2f5326e36dc7a506669c17c444a0c7fccfa655d16dc44475292ec38150cde37e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 825644,
+     "sha256": "9b3485ccd24c6125c85ca5970da2aafde32d343d89b18287fce85829dd0c2dab"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 5",
+    "zh-CN": "重击 5"
+   },
+   "description": {
+    "en": "A soft, dark, round hit, almost no click (3.80 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "柔和、暗、圆的一击，几乎没有起音的咔（3.80 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3.8,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 797,
+     "sha256": "ab4ecfd7bcbfab61440a334a9d059c1b90d8f8df21a04ddefbc520862a1f999e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 729644,
+     "sha256": "48b161dcc313f033b78e74514510dce5309f4954357f813290283be850bd517e"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 6",
+    "zh-CN": "重击 6"
+   },
+   "description": {
+    "en": "A hit in a huge space, a very long tail (6.00 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "巨大空间里的一击，尾巴很长（6.00 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 6,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 779,
+     "sha256": "b2c44e52eee72b47f579d1fc57884d55d0c9b51309b929aac03bcaee4dab8ecf"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 1152044,
+     "sha256": "c4ec17b12913ba60b31c12aef0399c2c590e8e629ff530915418497bf3f12508"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 7",
+    "zh-CN": "重击 7"
+   },
+   "description": {
+    "en": "A light, crisp hit for a fast film (2.22 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "轻、脆的一击，快片子用（2.22 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2.22,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 771,
+     "sha256": "7f04d30324f71f278b89f63ca3559cb00275c9dd818bf87693b3b77f1a7e8c63"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 426284,
+     "sha256": "c4d7650b224893e6e7ec62ff827b6c74387d12fa563d9a40c8143cd387d9beec"
+    }
+   ]
+  },
+  {
+   "id": "emile/boom-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Boom 8",
+    "zh-CN": "重击 8"
+   },
+   "description": {
+    "en": "A medium cinematic hit (4.30 s; the cut at its attack, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "中等分量的电影式一击（4.30 秒；切点在起音，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 4.3,
+    "cut": 0,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 755,
+     "sha256": "41ff5ac724f752d410668f4229e051c720e24ffcab25f933e639658f3f817231"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 825644,
+     "sha256": "39c73da72b918d128d685c0a76649ffc48d271f38bd565a61a364efc30951078"
     }
    ]
   },
@@ -4284,8 +4988,8 @@
     "zh-CN": "上升 1"
    },
    "description": {
-    "en": "A short bright riser, noise opening upward over a thin climbing tone (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
-    "zh-CN": "短而亮的上升：噪声往上打开，下面一层细的音往上爬（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
+    "en": "A short riser: a bright tone climbing, air tightening, a reversed cymbal (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+    "zh-CN": "短的上升：明亮的音往上爬，气声收紧，反向的镲（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4308,13 +5012,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 839,
-     "sha256": "dee4059d9d6f3f7571c1063cb2918b8a46267d3601dac546f141d6664937518b"
+     "bytes": 837,
+     "sha256": "bb9d9b2787baff83526b4e23fb33693bdc9fdb28515020eb756a799d7cf9841d"
     },
     {
      "path": "sound.wav",
      "bytes": 192044,
-     "sha256": "359cfaac7dc22daf63fec08b845922dd4078fae4dc0b574781a59869a50a2d6b"
+     "sha256": "10962004ae504888ad69809f086bdf71b558d677a982ea0d54e7200ff3c58374"
     }
    ]
   },
@@ -4328,8 +5032,8 @@
     "zh-CN": "上升 2"
    },
    "description": {
-    "en": "A riser of noise and a climbing synth chord, an octave and a half (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
-    "zh-CN": "噪声加一组往上爬一个半八度的合成器和弦（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+    "en": "A riser of a climbing Shepard tone, tightening air and a pulse speeding up (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一直往上爬的 Shepard 音、收紧的气声、越来越快的脉动（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4352,13 +5056,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 821,
-     "sha256": "7da19abf7a810f9bfeab53e93fbf5759f6d7400a19dae829b437ec4231572f5e"
+     "bytes": 845,
+     "sha256": "652c7b8c67596a80e00924fd314e3f1ee231176cb50d731833288b683f972555"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "16e67d573f690481f3a92322004968aba31b5deb00b91d300eff0c345e6912d2"
+     "sha256": "f3469203065c67965df5d4f3cf07c82b74d40bdc6fddc160400c8bc3a95e3e3c"
     }
    ]
   },
@@ -4372,8 +5076,8 @@
     "zh-CN": "上升 3"
    },
    "description": {
-    "en": "A riser of noise alone, opening from dark to bright (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
-    "zh-CN": "只有噪声的上升，从暗打开到亮（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+    "en": "A smooth riser, more air and cymbal than tone, no pulse (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "平滑的上升，气声与镲多于音，没有脉动（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4396,13 +5100,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 792,
-     "sha256": "cfbaad5fdb926174c74ef9b8c03415011511bcd9d57486eb1e9b981cfb2fc6ea"
+     "bytes": 808,
+     "sha256": "b714ae8152bd66410cc41e98d8077f316e1128e6a3449ea49eabf594e9dd87c6"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "abe7ec647d58e9752280a07ecee976bc3d7b46fb61341fe41327e3cc41bc85bb"
+     "sha256": "d20de9b74813166885f2fe583f4ef96bd9b462425720cc2deb1f01ede4df9f32"
     }
    ]
   },
@@ -4416,8 +5120,8 @@
     "zh-CN": "上升 4"
    },
    "description": {
-    "en": "A long riser with a strong climbing synth chord, two octaves (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
-    "zh-CN": "较长的上升，合成器和弦往上爬两个八度，音调感强（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+    "en": "A long tense riser: two octaves of climb, a pulse racing at the end (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "较长、紧张的上升：爬两个八度，结尾脉动越来越急（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4440,13 +5144,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 828,
-     "sha256": "be932bc5f5e188fc1cc640ac481067e28027aeca88d8a9b39b2def74239b3aff"
+     "bytes": 835,
+     "sha256": "cbba5a52f8007dbae722ecdfa884f60e804c9e158d33a14b49e81a8852c219b4"
     },
     {
      "path": "sound.wav",
      "bytes": 576044,
-     "sha256": "b879063c0c438ac15d1351bfd443183b27b4c05d7ed4ab700e642f9a7b117f7a"
+     "sha256": "5e9f9995f8f86633def41821b24106df66da17612bcbd3c9bbcdee8c8d51142b"
     }
    ]
   },
@@ -4460,8 +5164,8 @@
     "zh-CN": "上升 5"
    },
    "description": {
-    "en": "A long, slow riser from very low, noise and a deep chord climbing two octaves (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
-    "zh-CN": "很长很慢的上升，从很低处起，噪声与低沉的和弦往上爬两个八度（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
+    "en": "A long, dark riser from low, building slowly (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+    "zh-CN": "很长、偏暗的上升，从低处慢慢推（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4484,13 +5188,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 863,
-     "sha256": "107fd410c330f340df939b641965d44dc0b251ef66656aa773c601a4c3641155"
+     "bytes": 788,
+     "sha256": "14b129008477646d0fc44442a46a8d253e9a7d2e4ea37dafffa7aa3a0bb650c2"
     },
     {
      "path": "sound.wav",
      "bytes": 768044,
-     "sha256": "314fd85240891111dc79b2a48cf4208aecb94e91a94311db68bf342ee95d2a4c"
+     "sha256": "3d3d65db361130f12fdc8d0d1fc1ba48ffdac11c22c00029e94f91eb4d52f0cf"
     }
    ]
   },
@@ -4504,8 +5208,8 @@
     "zh-CN": "上升 6"
    },
    "description": {
-    "en": "A long riser carried by its chord more than its noise, one octave (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
-    "zh-CN": "很长的上升，主要是和弦（一个八度），噪声在后（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
+    "en": "A long, bright, airy riser with a big reversed cymbal (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+    "zh-CN": "很长、明亮、带气声的上升，反向的大镲（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4528,13 +5232,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 830,
-     "sha256": "45831a35f7833aa4ba84eb7520e33db6afc60c61b4f9813ebbff0d747e79c1ff"
+     "bytes": 806,
+     "sha256": "ffcfab7f2a48b265abd0452713dccd9019bf4c45288104ba35817fb561ae8149"
     },
     {
      "path": "sound.wav",
      "bytes": 768044,
-     "sha256": "c789eb488bc97ba3efa65cc0bc60ca38f42b3694f1fbbb3e0ee74c2f10d09f90"
+     "sha256": "0b151853447cbf3a4f8582119f9b1e51ede43417edfa34b91e07ce716355c2db"
     }
    ]
   },
@@ -4548,8 +5252,8 @@
     "zh-CN": "上升 7"
    },
    "description": {
-    "en": "A long, high, airy riser, thin noise and a high tone climbing far (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
-    "zh-CN": "较长、偏高偏亮的上升，细的噪声与一个高音爬得很远（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+    "en": "A low, heavy riser with a pulse, little air (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "低而重的上升，有脉动，气声少（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4572,13 +5276,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 836,
-     "sha256": "12cacdc6a1cbba08cac99b80e9e4352ad2cf9313f946290a525148b7c3c4c291"
+     "bytes": 784,
+     "sha256": "fcb744576c2cb80ceeb6fca4a8fe451e2b2133ca655540608e9a95ce3a5d3384"
     },
     {
      "path": "sound.wav",
      "bytes": 576044,
-     "sha256": "70e8815ec88157146320a818086e777fda0ff5fd1191bbcce0ac11a177122559"
+     "sha256": "55e4c41d91958cf8f5ac43832bdae2de442b4ffbf3dd830b2cc213b540864d4b"
     }
    ]
   },
@@ -4592,8 +5296,8 @@
     "zh-CN": "上升 8"
    },
    "description": {
-    "en": "A short riser led by a low chord, one octave (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
-    "zh-CN": "短的上升，以低和弦为主，一个八度（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+    "en": "A quick riser for a fast film (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "快片子用的短上升（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4616,13 +5320,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 795,
-     "sha256": "400ce6f726bc6a7e3d7687c1f8890cb06783332b0c7f0aef640c2948066ae515"
+     "bytes": 756,
+     "sha256": "0a774de9f019da760d34bad17a4d7d523643cd0c61aa8b5c3d65ab126c47045f"
     },
     {
      "path": "sound.wav",
      "bytes": 288044,
-     "sha256": "23068f06b9e2a1cfccd6611670f05178ab3523cdc9578bb7df016605d27500cf"
+     "sha256": "e4380c2684d432ff24048a95a8135f2796cdf9410db05471237032caf31624ef"
     }
    ]
   },
@@ -4860,8 +5564,8 @@
     "zh-CN": "低音下落 1"
    },
    "description": {
-    "en": "A sub drop falling from 120 to 40 Hz with a click on its front (1.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "低音从 120 Hz 落到 40 Hz，前面一下咔嗒（1.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A short sub drop from 110 to 40 Hz (1.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "短的低音下落，从 110 Hz 到 40 Hz（1.00 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4884,13 +5588,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 828,
-     "sha256": "93b92d1d3a6cf774d181239e4fe17359e454c5b6fd721d5f062dad1bd7f2e81f"
+     "bytes": 791,
+     "sha256": "58d230852fde13df4f469d9938f0d89aa401d34215cc3af6fd80a45c545282d4"
     },
     {
      "path": "sound.wav",
      "bytes": 192044,
-     "sha256": "afe7de89f26cccf815b1765aa298b76f0d57482a06a6be7f2a447965f2ab74f3"
+     "sha256": "c6ceb34b0f29969bbde50a4ce471e07514e2d20f1fcbadb812eff0fc858f39a2"
     }
    ]
   },
@@ -4904,8 +5608,8 @@
     "zh-CN": "低音下落 2"
    },
    "description": {
-    "en": "A sub drop falling from 100 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "低音从 100 Hz 落到 32 Hz（1.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A sub drop from 90 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 90 Hz 落到 32 Hz（1.50 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4928,13 +5632,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 783,
-     "sha256": "f50f038ea7c4891abd141964dffa9591907b4868a2a282a7917c2630e829fcc2"
+     "bytes": 773,
+     "sha256": "8553c4d1268e10c8399c32e302bf01c53b1d54a935fc1d8080bd10e254ae5c5f"
     },
     {
      "path": "sound.wav",
      "bytes": 288044,
-     "sha256": "6d2be455a2c2d4f84ed776c6215b213e09fb5196235d699e10f6031fa6b4f1d8"
+     "sha256": "095865b41db71a88e25a5af3876940d289a1bcdf4a76693cea36befafd48e7c5"
     }
    ]
   },
@@ -4948,8 +5652,8 @@
     "zh-CN": "低音下落 3"
    },
    "description": {
-    "en": "A long sub drop from 90 to 28 Hz with a firm click on its front (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "较长的低音从 90 Hz 落到 28 Hz，前面一下清楚的咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A long sub drop from 80 to 28 Hz (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低音，从 80 Hz 落到 28 Hz（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -4972,13 +5676,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 846,
-     "sha256": "8e1913d0eb6a6130b744e0a3e1b0455d1cf9ea2a5f271f0a0ef9afc69e574d65"
+     "bytes": 788,
+     "sha256": "f6aa36bb081965a8a15cd1fdb2783ab4ed75019c17ff43dd6995d0a60547b14f"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "e462129edf78f225add09e2d974bb025d9659c4d4030c274f87453befaa87f67"
+     "sha256": "129bff6620a7e9c3d04a8c3b3f8706cf35af258192c6a1bddc528bb5d272ee51"
     }
    ]
   },
@@ -4992,8 +5696,8 @@
     "zh-CN": "低音下落 4"
    },
    "description": {
-    "en": "A very long, gritty sub drop from 80 to 25 Hz (3.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "很长、带颗粒的低音，从 80 Hz 落到 25 Hz（3.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A very long sub drop from 75 to 25 Hz (3.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "很长的低音下落，从 75 Hz 到 25 Hz（3.00 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5016,13 +5720,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 813,
-     "sha256": "ed1552212809a76cb12c4d5d4ee28bc170ed31f07ec551fd30fb03d0c8897fa1"
+     "bytes": 796,
+     "sha256": "6cc5600987cd47f2fc979d32eb64d5c89d6ae381e11ba9e60fffbc36dbe0d572"
     },
     {
      "path": "sound.wav",
      "bytes": 576044,
-     "sha256": "4ddd5e345003875aa1581695b128584cb8a9f73ff12276c39448159c24dfe261"
+     "sha256": "c845b7c9750c5d609f059e05b3393f24c03886cd97f5f03efbb363ec6d7e467b"
     }
    ]
   },
@@ -5036,14 +5740,14 @@
     "zh-CN": "低音下落 5"
    },
    "description": {
-    "en": "A short, punchy drop from 160 to 50 Hz with a sharp click (0.60 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "短促有力的下落，从 160 Hz 到 50 Hz，前面一下脆的咔嗒（0.60 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A short, punchy drop from 140 to 50 Hz (0.70 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "短促的下落，从 140 Hz 到 50 Hz（0.70 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
    "sound": {
     "file": "sound.wav",
-    "seconds": 0.6,
+    "seconds": 0.7,
     "cut": 0,
     "tags": [
      "sub-drop"
@@ -5060,13 +5764,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 846,
-     "sha256": "c6043b08ce3154c825506d01c32011ce868d3ecbe6d9c6e5cc3d8fab357a02c5"
+     "bytes": 794,
+     "sha256": "12d77ac71056b8d18d3ffb296fddbdeb43c243fe85362e7ebf3cc35bbbfa4158"
     },
     {
      "path": "sound.wav",
-     "bytes": 115244,
-     "sha256": "fa9b90f9aef5e7885687e09c482f9c742b7d7814eab7f41e2c97595aaa6b1235"
+     "bytes": 134444,
+     "sha256": "bb3e1f56d98e17bae95970e8421f9e6af3c263214b560f67b97d1fe0e311ddb7"
     }
    ]
   },
@@ -5080,8 +5784,8 @@
     "zh-CN": "低音下落 6"
    },
    "description": {
-    "en": "A smooth sub drop from 140 to 35 Hz, no click (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "平滑的低音下落，从 140 Hz 到 35 Hz，没有咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A sub drop from 120 to 35 Hz (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 120 Hz 落到 35 Hz（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5104,13 +5808,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 820,
-     "sha256": "46d4b41a0f2f95b1566dc33801190ac633a122c26ba26a70b4c60aa0336f9c38"
+     "bytes": 773,
+     "sha256": "5864598e1a0d38299a77e0babb1a2b40321c84ce36a23d82ab3b864e55de1cab"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "daf5e62a37c8ac71308f0c59b22d70e76c8a755470c0e0c11bb394b972810191"
+     "sha256": "521855c6f3c8dce0aef9d9d3c288d55d06771feadc6d528702a46eeb8034d141"
     }
    ]
   },
@@ -5124,8 +5828,8 @@
     "zh-CN": "低音下落 7"
    },
    "description": {
-    "en": "A heavily driven low drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "失真重的低音下落，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A deep, short sub drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "深而短的低音，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5148,13 +5852,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 806,
-     "sha256": "11167b047f38c20ffbd33e94a3d625ee88e57535478a1bcf91088a23c86a6b8f"
+     "bytes": 797,
+     "sha256": "a070ade5f58afa15768a380b42dc07fc49811238f2f54cbfb590d6aeb755d0a4"
     },
     {
      "path": "sound.wav",
      "bytes": 230444,
-     "sha256": "0c7bfb257bf8fb0781d7fa3fdec2d287c326d9f18949b2c3d1abb46cc2bac888"
+     "sha256": "25fdb59e3eac840355b4446cf5887c18d76606575470fcc79f30ebb6984fd258"
     }
    ]
   },
@@ -5168,8 +5872,8 @@
     "zh-CN": "低音下落 8"
    },
    "description": {
-    "en": "A long, driven sub drop from 110 to 30 Hz with a click (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
-    "zh-CN": "较长、带失真的低音，从 110 Hz 落到 30 Hz，前面一下咔嗒（2.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+    "en": "A long sub drop from 100 to 30 Hz (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低音，从 100 Hz 落到 30 Hz（2.50 秒；切点在开头，0.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5192,13 +5896,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 846,
-     "sha256": "1e4ed82d0a8d4682c39081fb71808088a4817176da4be7592c1752a738bb50de"
+     "bytes": 792,
+     "sha256": "0f17f36ce6488e81112de03db53e2a5f7adeb4c2468f8d931d669593e2d5ace3"
     },
     {
      "path": "sound.wav",
      "bytes": 480044,
-     "sha256": "3eb09f81e9adb45af66514892a919a5b354c845ebc0a129bf05d3826b2313177"
+     "sha256": "3c8b234c0905d3ad68a7312d4a2bd5b0cae3f17d20f0b988628e8c4be2b40fc7"
     }
    ]
   },
@@ -5209,237 +5913,17 @@
    "category": null,
    "title": {
     "en": "Sweep 1",
-    "zh-CN": "长扫过 1"
+    "zh-CN": "掠过 1"
    },
    "description": {
-    "en": "A short airy whoosh passing by (0.80 s; the cut at its peak, 0.475 s). Synthesised by Émile.",
-    "zh-CN": "短的、带气声的扫过（0.80 秒；切点在峰值，0.475 秒）。Émile 合成。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.8,
-    "cut": 0.475,
-    "tags": [
-     "sweep"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Émile, synthesised by scripts/transitions.mjs",
-     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 766,
-     "sha256": "91284d3b695c09c283132547861b029205500263305b5828178fb351a30eb37d"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 153644,
-     "sha256": "f1e4e3d41f126f6b563194e0e9abd1c209b989c6d91e22ebd84c61e63041fc7d"
-    }
-   ]
-  },
-  {
-   "id": "emile/sweep-02",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Sweep 2",
-    "zh-CN": "长扫过 2"
-   },
-   "description": {
-    "en": "A whoosh passing by, mid-weight (1.00 s; the cut at its peak, 0.545 s). Synthesised by Émile.",
-    "zh-CN": "中等分量的扫过（1.00 秒；切点在峰值，0.545 秒）。Émile 合成。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 1,
-    "cut": 0.545,
-    "tags": [
-     "sweep"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Émile, synthesised by scripts/transitions.mjs",
-     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 759,
-     "sha256": "2854a81a82ecca4297d86db7a2a30c2f7ca08cf27163f36f4baf9397f3c4678a"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 192044,
-     "sha256": "afc299e4715d0823caa284195e4f33655bfd3651d4a614d751201dc0fddd64c2"
-    }
-   ]
-  },
-  {
-   "id": "emile/sweep-03",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Sweep 3",
-    "zh-CN": "长扫过 3"
-   },
-   "description": {
-    "en": "A narrow, tonal whoosh passing by (1.20 s; the cut at its peak, 0.725 s). Synthesised by Émile.",
-    "zh-CN": "窄带、有点音调感的扫过（1.20 秒；切点在峰值，0.725 秒）。Émile 合成。"
+    "en": "A short pass-by, left to right, airy (1.20 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+    "zh-CN": "短的掠过，从左到右，带气声（1.20 秒；切点在峰值，0.495 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
    "sound": {
     "file": "sound.wav",
     "seconds": 1.2,
-    "cut": 0.725,
-    "tags": [
-     "sweep"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Émile, synthesised by scripts/transitions.mjs",
-     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 775,
-     "sha256": "5f8546a495c08819e3888d4bae41496b9717df6a79cfd73ae12198ac6089b20f"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 230444,
-     "sha256": "a86e473c14cb065a4d3fc255d91621346e7d4b61580c57d5b6bf5e7774a4780a"
-    }
-   ]
-  },
-  {
-   "id": "emile/sweep-04",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Sweep 4",
-    "zh-CN": "长扫过 4"
-   },
-   "description": {
-    "en": "A long, low, broad whoosh (1.50 s; the cut at its peak, 0.985 s). Synthesised by Émile.",
-    "zh-CN": "较长、低沉、宽的扫过（1.50 秒；切点在峰值，0.985 秒）。Émile 合成。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 1.5,
-    "cut": 0.985,
-    "tags": [
-     "sweep"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Émile, synthesised by scripts/transitions.mjs",
-     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 764,
-     "sha256": "b90c4fbee9cdff2aac2af11315989606d16bc34ce5c568b9fa3753d78082be93"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 288044,
-     "sha256": "663a4bd4e024ce0eb618ba70ef1f0eb56fd5714f7d7c03b0aa716965d442a7f5"
-    }
-   ]
-  },
-  {
-   "id": "emile/sweep-05",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Sweep 5",
-    "zh-CN": "长扫过 5"
-   },
-   "description": {
-    "en": "A long slow whoosh with a late peak and a long tail (2.00 s; the cut at its peak, 1.395 s). Synthesised by Émile.",
-    "zh-CN": "很长很慢的扫过，峰值靠后，拖尾长（2.00 秒；切点在峰值，1.395 秒）。Émile 合成。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 2,
-    "cut": 1.395,
-    "tags": [
-     "sweep"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Émile, synthesised by scripts/transitions.mjs",
-     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 806,
-     "sha256": "1fbee717bee9a768db3c1489647c3fccb4e89e99b106d7a847784bd7564dadee"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 384044,
-     "sha256": "15b0a519369e57b8ef3ced07276986612ab6e5e8938ccb2efda755ef87580e34"
-    }
-   ]
-  },
-  {
-   "id": "emile/sweep-06",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Sweep 6",
-    "zh-CN": "长扫过 6"
-   },
-   "description": {
-    "en": "A fast, bright, high whoosh (1.00 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
-    "zh-CN": "快、亮、偏高的扫过（1.00 秒；切点在峰值，0.495 秒）。Émile 合成。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 1,
     "cut": 0.495,
     "tags": [
      "sweep"
@@ -5456,13 +5940,233 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 761,
-     "sha256": "6d3b318086f12a9d4b79019febf6dae2a33665cda280fbf63130e5b97345112a"
+     "bytes": 781,
+     "sha256": "8cbef67f927b0b3784b276e5bb44897e277632e3f47b6640e292ed7e01f40336"
     },
     {
      "path": "sound.wav",
-     "bytes": 192044,
-     "sha256": "b4cdc675a8f54d35289bd4b9be5b55b40e87a353c4ca6208d2a7df17f193c072"
+     "bytes": 230444,
+     "sha256": "76dcca076336b2789038ae8869999e50e9360cbb5ccff356c0f0ca049f9508e8"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 2",
+    "zh-CN": "掠过 2"
+   },
+   "description": {
+    "en": "A pass-by, left to right, its pitch dropping as it goes (1.40 s; the cut at its peak, 0.615 s). Synthesised by Émile.",
+    "zh-CN": "掠过，从左到右，过去时音高往下（1.40 秒；切点在峰值，0.615 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.4,
+    "cut": 0.615,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 806,
+     "sha256": "587aa2f87284c922606bdb645166906522f8c25c9f32d19083249c66be7ddd75"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 268844,
+     "sha256": "416337805c6199a6b4d1aac7a11ffd816fc3ff26f9dc78080fc078d8bbb92877"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 3",
+    "zh-CN": "掠过 3"
+   },
+   "description": {
+    "en": "A pass-by with more tone, like something big flying past (1.60 s; the cut at its peak, 0.725 s). Synthesised by Émile.",
+    "zh-CN": "音调更重的掠过，像大的东西飞过（1.60 秒；切点在峰值，0.725 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.6,
+    "cut": 0.725,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 807,
+     "sha256": "fbd1a429a042f51d8c9e216157917c4a60e867ee1253980e93875c932ab888a4"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 307244,
+     "sha256": "0f960dce4c2c90e2b0de1123cda65a23f8df3268904f8308d30b97077a03c96a"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 4",
+    "zh-CN": "掠过 4"
+   },
+   "description": {
+    "en": "A long, low, heavy pass-by (1.90 s; the cut at its peak, 0.965 s). Synthesised by Émile.",
+    "zh-CN": "较长、低、重的掠过（1.90 秒；切点在峰值，0.965 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.9,
+    "cut": 0.965,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 759,
+     "sha256": "c16da5c208ce8de25324c3ee0cee3957ecbafe3d27909c9bdcb2d5c0359db02d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 364844,
+     "sha256": "38db4dab6875e219ef271829821b3df540a4f892079d667a66258dffefb75aa6"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 5",
+    "zh-CN": "掠过 5"
+   },
+   "description": {
+    "en": "A slow pass-by with a long tail in a room (2.40 s; the cut at its peak, 1.405 s). Synthesised by Émile.",
+    "zh-CN": "慢的掠过，在空间里拖长尾（2.40 秒；切点在峰值，1.405 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2.4,
+    "cut": 1.405,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 783,
+     "sha256": "a73814afdc460f0670bfb57d9a9f5adf81dc47f8c393abfe34f748d1d96b9b43"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 460844,
+     "sha256": "0dca5e07b555e472303d9c34666a07a211691536b3a66e5bd9073c795111f2ad"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 6",
+    "zh-CN": "掠过 6"
+   },
+   "description": {
+    "en": "A fast, bright, light pass-by (1.30 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+    "zh-CN": "快、亮、轻的掠过（1.30 秒；切点在峰值，0.495 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.3,
+    "cut": 0.495,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 759,
+     "sha256": "e0c004f5b150b3821e63d61b836ca061bb84ed7fdeaafc8ccc606f21359a45ce"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 249644,
+     "sha256": "de8ecce0290f15147ab9737ec1007260e095c852085c3faf05155943c5c8a00b"
     }
    ]
   },
@@ -5473,18 +6177,18 @@
    "category": null,
    "title": {
     "en": "Sweep 7",
-    "zh-CN": "长扫过 7"
+    "zh-CN": "掠过 7"
    },
    "description": {
-    "en": "A whoosh with a rough flutter in it, like air through a gap (1.20 s; the cut at its peak, 0.715 s). Synthesised by Émile.",
-    "zh-CN": "带粗糙颤动的扫过，像风穿过缝隙（1.20 秒；切点在峰值，0.715 秒）。Émile 合成。"
+    "en": "A pass-by, right to left (1.40 s; the cut at its peak, 0.615 s). Synthesised by Émile.",
+    "zh-CN": "掠过，从右到左（1.40 秒；切点在峰值，0.615 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
    "sound": {
     "file": "sound.wav",
-    "seconds": 1.2,
-    "cut": 0.715,
+    "seconds": 1.4,
+    "cut": 0.615,
     "tags": [
      "sweep"
     ]
@@ -5500,13 +6204,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 813,
-     "sha256": "f4b1ce914b05b3e7e7983e3107d317bd5513ab1d8c95f8753160d03cd32c18e0"
+     "bytes": 751,
+     "sha256": "3693e9f630c20a959688d5d18b7135089e03ceca1b846349bf483d54356f6006"
     },
     {
      "path": "sound.wav",
-     "bytes": 230444,
-     "sha256": "beb109e0ec1894afa9a53233544bb328ba969c1c99694a99ebabc4f248d7270b"
+     "bytes": 268844,
+     "sha256": "74706eb15ff642306c4a7079a139c2f22d865d254c41192f78c99713795a4971"
     }
    ]
   },
@@ -5517,18 +6221,18 @@
    "category": null,
    "title": {
     "en": "Sweep 8",
-    "zh-CN": "长扫过 8"
+    "zh-CN": "掠过 8"
    },
    "description": {
-    "en": "A very short, bright, narrow whoosh: a flick (0.70 s; the cut at its peak, 0.335 s). Synthesised by Émile.",
-    "zh-CN": "很短、亮、窄的扫过：一甩（0.70 秒；切点在峰值，0.335 秒）。Émile 合成。"
+    "en": "A very short flick, left to right (1.00 s; the cut at its peak, 0.305 s). Synthesised by Émile.",
+    "zh-CN": "很短的一甩，从左到右（1.00 秒；切点在峰值，0.305 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
    "sound": {
     "file": "sound.wav",
-    "seconds": 0.7,
-    "cut": 0.335,
+    "seconds": 1,
+    "cut": 0.305,
     "tags": [
      "sweep"
     ]
@@ -5544,13 +6248,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 789,
-     "sha256": "c44b9dd31a26a349922c67afd284f8a2d6f6cae032dda4531d7c889fe3664d81"
+     "bytes": 767,
+     "sha256": "862b3abaf9bcb49b19ec725e6626be60679756be697713457f60b320f5e236ef"
     },
     {
      "path": "sound.wav",
-     "bytes": 134444,
-     "sha256": "b29349db78be5596d95693dc21c32a6a8f05be83c8680aa31bd04dd0f228e725"
+     "bytes": 192044,
+     "sha256": "a44e58bbb94147fe0351497f2d1df6251c635a11d1a34ad6855f34f41f41504f"
     }
    ]
   },
@@ -5564,8 +6268,8 @@
     "zh-CN": "吸入 1"
    },
    "description": {
-    "en": "A short reversed swell of noise, drawn into the cut (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
-    "zh-CN": "短的反向噪声，被吸进切点（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
+    "en": "A short reversed cymbal drawn into the cut (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+    "zh-CN": "短的反向镲，被吸进切点（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5588,13 +6292,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 786,
-     "sha256": "ba3223762b49779c2abeaba814b1ccc4aea4b7bba5f5be59958efde3adf2deca"
+     "bytes": 774,
+     "sha256": "c8f990c0f885c7a1f52ac644c9d45b60177b47236d8c43b6017354e17fa066c1"
     },
     {
      "path": "sound.wav",
      "bytes": 192044,
-     "sha256": "b62aec2693d295eceade17f47a2a9e3535d919649c79391193b6472b2bdee9fd"
+     "sha256": "145a783a91a750318b4f1abf71ad4c09c77a9b66a13a68101834d44e96d3b92b"
     }
    ]
   },
@@ -5608,8 +6312,8 @@
     "zh-CN": "吸入 2"
    },
    "description": {
-    "en": "A reversed swell of noise from a large hall (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
-    "zh-CN": "大厅里一下噪声的混响倒放（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+    "en": "A reversed cymbal in a large hall (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "大厅里一下镲的混响倒放（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5632,13 +6336,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 778,
-     "sha256": "d59d9c12e967791e16c5f6e1f65496f6027fb5371a8c4a02616247f88382bd4f"
+     "bytes": 765,
+     "sha256": "8f20bdc91a5f65c8fd256cfecdbd3d190c7ab422edc0d2b04199e8883c80d7ce"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "7ed86bc248f6b3d9dcbe3eb66c211057a4d9c088362d3e2025a7b3f30575ca5d"
+     "sha256": "20f01b23fb9f4d9bb12d1172cde453ed32f20b2bc50602f5fd4f3b6f0736f015"
     }
    ]
   },
@@ -5652,8 +6356,8 @@
     "zh-CN": "吸入 3"
    },
    "description": {
-    "en": "A reversed swell of a struck chord: tonal, drawn in (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
-    "zh-CN": "一下敲出的和弦倒放：有音调，被吸进去（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+    "en": "A reversed struck chord: tonal, soft, drawn in (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一下和弦的倒放：有音调、柔和（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5676,13 +6380,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 804,
-     "sha256": "605addc8f16831651a1f90054266b4eebb7f34751f470a44ac1b2c7154e3d956"
+     "bytes": 787,
+     "sha256": "2f27c6573e9b46781d026a02c95947f1487575ecefcf7840bd8d1a4148397525"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "625f380ae14984cbffe582bc6526391db5ed46c655e6f4f9e83bb3851f303f35"
+     "sha256": "22104497933220e3498dddd3a7bdb3387079bcc13e64f2202164d45596a022a1"
     }
    ]
   },
@@ -5696,7 +6400,7 @@
     "zh-CN": "吸入 4"
    },
    "description": {
-    "en": "A long reversed swell of a low struck chord (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "en": "A long reversed low chord (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
     "zh-CN": "较长的低和弦倒放（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
    },
    "params": [],
@@ -5720,13 +6424,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 766,
-     "sha256": "d0baa9453738f153168fcdfbb379c4a1c9b3b66161923929d071270c357dc852"
+     "bytes": 748,
+     "sha256": "c5c8c3eff9cefe6e0a4f62a0fb4889aab8beccca70ea54c2e33cd5b18bddb7f6"
     },
     {
      "path": "sound.wav",
      "bytes": 576044,
-     "sha256": "c74ef958ca7716169675eeb291d4c540fda231869e3aaec6bcbd5dd057815aee"
+     "sha256": "e0ad707301978a80e7d54f4f511d16fc52600e60962be7ce5d1df1f9125d52d8"
     }
    ]
   },
@@ -5740,8 +6444,8 @@
     "zh-CN": "吸入 5"
    },
    "description": {
-    "en": "A reversed swell of a low thump: dark and heavy (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
-    "zh-CN": "一下闷响的倒放：暗而重（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+    "en": "A reversed boom: dark and heavy, sucked into the cut (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一下重击的倒放：暗而重，被吸进切点（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5764,13 +6468,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 779,
-     "sha256": "227aef3f9334c8133730b5a426692774c07bb499dae34175d7a843881c88cb64"
+     "bytes": 802,
+     "sha256": "19ff0a61217ace4ddd987fcc6c7bf9b1b4f8a2e0a3851c43e32e8547cd84871b"
     },
     {
      "path": "sound.wav",
      "bytes": 384044,
-     "sha256": "ae7745c9858c6da7c762c93a8436add2bbd7d9e26ccf7f6eca0325efcfef4882"
+     "sha256": "261e377cff3473582d7460bc213460f99427a3faef5f8bfc8aa6a1312bb58580"
     }
    ]
   },
@@ -5784,8 +6488,8 @@
     "zh-CN": "吸入 6"
    },
    "description": {
-    "en": "A long, dark reversed swell of noise from a very large hall (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
-    "zh-CN": "很大的空间里噪声的长混响倒放，偏暗（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+    "en": "A long reversed cymbal from a very large space (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "很大的空间里镲的长混响倒放（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5808,13 +6512,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 809,
-     "sha256": "5d78126e3b26e7fdd9c3f81ab2272dff51ae216c219583841166e89a1eb7b59b"
+     "bytes": 784,
+     "sha256": "a9208d9b24c2337d35fa8bf01c3e6dc9c1d3cdcf6406149fceab2b9ea2fda906"
     },
     {
      "path": "sound.wav",
      "bytes": 576044,
-     "sha256": "066ee2c82702d5fc52f2cd82ac30663127ff1926270752072dbafb34d7174ebf"
+     "sha256": "f624958176e3dc2a0535c935131d209c7afaf9a34f03ab37da019c433676f19b"
     }
    ]
   },
@@ -5828,8 +6532,8 @@
     "zh-CN": "吸入 7"
    },
    "description": {
-    "en": "A short, bright reversed swell of a high struck chord (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
-    "zh-CN": "短而亮的高和弦倒放（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+    "en": "A short, bright reversed chord (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "短而亮的和弦倒放（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5852,13 +6556,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 783,
-     "sha256": "c8ec0a3ecac3d51a0fff5dcac414f4a5a4d62b71c68bf2cd019cf69736d381af"
+     "bytes": 757,
+     "sha256": "3c772f1d9cdaa03e22558a6f0d3c58339c40af5de7c187141adfe784f46af3e2"
     },
     {
      "path": "sound.wav",
      "bytes": 288044,
-     "sha256": "66627b672028071dea07dec53a78e2c3780bcb827f7ad3a0553677f6a8a826e9"
+     "sha256": "33972a6f9c0f4923a9b7b05ba1e3864f2c643e839e07693b393b08eac640ba51"
     }
    ]
   },
@@ -5872,8 +6576,8 @@
     "zh-CN": "吸入 8"
    },
    "description": {
-    "en": "A long reversed swell of a deep thump (2.50 s; the cut at its end, 2.500 s). Synthesised by Émile.",
-    "zh-CN": "较长的低沉闷响倒放（2.50 秒；切点在结尾，2.500 秒）。Émile 合成。"
+    "en": "A long reversed boom (2.50 s; the cut at its end, 2.500 s). Synthesised by Émile.",
+    "zh-CN": "较长的重击倒放（2.50 秒；切点在结尾，2.500 秒）。Émile 合成。"
    },
    "params": [],
    "preview": null,
@@ -5896,13 +6600,13 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 767,
-     "sha256": "f428c7812bbea352364b6a5fa51fd99dcb25f3779b00188efd5268a1c897fb0e"
+     "bytes": 744,
+     "sha256": "f64209beaf15bf2de4586835b5c5a53226235dd5367ce4e2395d4f6cdbb5f1aa"
     },
     {
      "path": "sound.wav",
      "bytes": 480044,
-     "sha256": "6d009d3e80fbcab4bd464af62dc409aa61b28f3aba9748917450e00de1a14489"
+     "sha256": "fcb902098a3d02d887dc451d457ed52ab98826f67f8258290e853eb0c4c12144"
     }
    ]
   },
@@ -6544,141 +7248,109 @@
    "description": "How to give a film its music in Émile: when to write a score on the instrument packs and when to generate music from a prompt, how to choose a tempo the cuts land on, how to shape the music to the film's sections, voice it so it sounds good, leave room for a voice-over, and the mistakes that make film music sound cheap. Read it before write_score or generate_music.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "2de235dc37503317b56a5d728144ee70957d21527aade4d3a8fdf6fd5c492980",
+   "digest": "db626acf96d6973d5088483ddf90965162fabd0b3078aad3156c6c9392de40a2",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 8815,
-     "sha256": "403735512eb3575b6afff02ca6ceb9862d34e27a8e5a73cc7664bc5dbb27b2f5"
+     "bytes": 9152,
+     "sha256": "3413b1a13babb3bd182f7e381f752b24456fc5ca633c7b3807ae376617e08f8c"
     }
    ]
   },
   {
-   "name": "sound-ambience-crossfade",
-   "title": "Ambience crossfade: never a hole",
-   "description": "Crossing two places' sound beds over a dissolve or a soft cut so the film never drops into silence: lengths, curves, and filling a gap with a bed. Read when a dissolve joins two shots with sound, or a cut leaves a hole in the sound.",
+   "name": "sound-ambience-carry",
+   "title": "A place's sound across the cut",
+   "description": "A place's sound carried across a cut: run on into the next shot (an L-cut) or coming in before it (a J-cut), and a bed under shots that have no sound of their own so the film never drops into silence. Which way, how long, and how in Émile and with ffmpeg. Read for every cut between places, and when footage has no sound.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "79a52af355688c45130faf1ddb934a7f53eecd07c4efee212fcf20b733caa63f",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 2222,
-     "sha256": "d3d31fce6bbe245d158d0554382ec44f16960703f4682e5b8e15bbb121ca6fd2"
-    }
-   ]
-  },
-  {
-   "name": "sound-j-cut",
-   "title": "J-cut: hear it before you see it",
-   "description": "A J-cut, the next shot's sound heard before its picture (audio lead, pre-lap): what it is for, how far ahead, and how to do it on Émile's timeline and with ffmpeg. Read when a cut goes into a new place that has a sound of its own.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "cc5771739788a131d380e1ab358caf35ed9bc09cf43ae3a5e8cfb1193c68f9f0",
+   "digest": "6ab1302d1ae8d5ac7c67054c755e77a060b28a7614208e5c0599480c50f1396f",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
      "bytes": 2938,
-     "sha256": "4074b0d56d7f35dea074ddc018926daa0b040234f16156e46bbfb092c4de7e81"
-    }
-   ]
-  },
-  {
-   "name": "sound-l-cut",
-   "title": "L-cut: let it ring on",
-   "description": "An L-cut, a shot's sound carried on into the next picture (audio tail, post-lap): what it is for, how long, and how to do it on Émile's timeline and with ffmpeg. Read when a moment's sound should linger past its cut.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "bf695a5ccc017df43a61415733f6371e2915a6453adff677af1bae79c4acf5d2",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 2073,
-     "sha256": "a5e599096e5605376b12dc0cceb061a696279a5f48d286984f961a4d564b6cfb"
+     "sha256": "0919590d8ffcbea47804715c4019d3c89cd7fddee2a9f343d084a4f587b19e96"
     }
    ]
   },
   {
    "name": "sound-match-cut",
-   "title": "Sound match cut: one sound becomes another",
-   "description": "A sound match cut, one sound turning into another across a cut (a helicopter's blades into a ceiling fan, a keyboard's tap into a raindrop) so two shots are joined by what we hear. When it works, how to find one, and how to time it. Read when two shots share a motion, a rhythm or a shape.",
+   "title": "Sound match cut",
+   "description": "A sound match cut, one sound becoming another across a cut because the two shots move or look alike (a splash into the pop of a bottle, a ball's bounce into a heartbeat, a spinning wheel into a fan): an advanced edit that only works when it comes from the picture. How to find a pair in the film, cut it and voice it in Émile. Read when two shots share a motion, a rhythm or a shape.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "27f26d97e738803ea94abc5a026ae9876b3b6693bab1313a63a0e232a1eecedf",
+   "digest": "21fc8c77491e891cfc770bd79b7aacc038ddc0b664ca17215f1af24bea87865b",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 2212,
-     "sha256": "e62f74c735671594cdcc0c0c23c85325aecda457ba3ca5300551b0c12db69cbe"
+     "bytes": 2337,
+     "sha256": "f64308e7240cc9391060e74a5ac22942a510f0df0f77e69af72b393701c75b9b"
     }
    ]
   },
   {
-   "name": "sound-music-handoff",
-   "title": "Music handoff: change on the downbeat, end on a hit",
-   "description": "Changing or ending the film's music at a cut: on a downbeat, from one section or track to the next, stopping dead for effect, and ending on a hit instead of a fade. Read when the music has to change at a scene change, and for every film's end.",
+   "name": "sound-muffle-release",
+   "title": "Muffle, then release",
+   "description": "The held breath before an action and the release on it: everything muffled (a low-pass closing) while someone stands at the edge, and the sound opening, full and bright, on the jump, the landing, the press, the reveal. When, how far, how fast, and how to do it with Émile's low-pass. Read when the picture holds still before something happens.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "5afeddf82331f006c1e319152e3607114e1e7799709d51b33b03d5b80dd94543",
+   "digest": "958d13c4d17ae05b89e51bb2dcd4e39f7de7a7c0e28c6655bc8bb9df12ecb951",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 2825,
-     "sha256": "811f544364181a10c27b7b2e49272cee3043ecc4a5963b4521b6c46406eac5f4"
+     "bytes": 2997,
+     "sha256": "ebb963a57e934e31f64c7d342f6a87d72f49c8f19a7aa501a5a630363dea6b1f"
     }
    ]
   },
   {
-   "name": "sound-riser-hit",
-   "title": "Riser into a hit: build, breathe, land",
-   "description": "The turn of a film made to land: a riser or a swell building into the cut, a breath of near-silence just before it, then a hit and a sub-drop on it with the music re-entering. Timings, sounds, levels, and how to do it. Read for the reveal, the product's first appearance, the title, the drop.",
+   "name": "sound-music-sections",
+   "title": "A music for each section",
+   "description": "More than one music in a film, one for each of its sections, handed over where the picture's feeling changes: the first music rising (a riser), a hit and an impact on the change, the next music starting with them. Where the change goes, how the two overlap, which sounds, and how in Émile. Read when a film's feeling changes partway (calm to exciting, problem to solution, story to call to action).",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "79f69cc0f75cfbc9d2ff15df2047891bb3bf1a6efffb0477357f1687d24f40bc",
+   "digest": "dfea78505d619225d3599073c3def0ff9ec2757fbcd18c475ba024575c6a808b",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 3178,
-     "sha256": "c6146f96d17da4a8dd12625aaf9ec0fa71cce08719406d1ba63252b3cd243e20"
+     "bytes": 2966,
+     "sha256": "9b5c8639fe6b673764de8b66fa7b986a1a73e1daff80afadbdb29e2598fe1320"
+    }
+   ]
+  },
+  {
+   "name": "sound-strong-ending",
+   "title": "End on a strong sound",
+   "description": "Ending a film on one strong sound instead of a fade: the music cut on its last hit with the picture's last moment, a big boom ringing out over the final shot or into black. Where, which sound, and how in Émile. Read for the end of every film.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "95f68557b4b237d4e2ae2776540ebc0cccaf2cd4d01420329517351508cbf4f3",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1774,
+     "sha256": "9c5035a9a2c4140cb509dd848815d13fc2275eaaad96f3d30475f8ccd9b40321"
     }
    ]
   },
   {
    "name": "sound-transitions",
-   "title": "Sound across a cut",
-   "description": "How a film's sound carries it across a cut or a transition, and which of the seven ways suits each one (J-cut, L-cut, ambience crossfade, whoosh, riser into a hit, sound match cut, music handoff). Read before laying any sound on a cut, and when the person asks for transitions \"with sound\", \"more cinematic\" or \"like an ad\".",
+   "title": "Sound follows the picture",
+   "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "551f970c1fe1f3ec4481793a3bfc2a4fdbd9203d06df7a1a83ac5efe0be89dde",
+   "digest": "0ecc9ec08728b81a8b33c3556f9e1fca1a00359b1c867a812f122177fde5a66d",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 3697,
-     "sha256": "af096df58b87ebf9274969bba0b0df1c02a614e177c2f5af7384814046bfff4d"
-    }
-   ]
-  },
-  {
-   "name": "sound-whoosh",
-   "title": "Whoosh: the sound of the move",
-   "description": "A whoosh on a moving transition (push, wipe, zoom, whip pan, something flying across the frame): which length, where its peak goes, how loud, and when to leave it out. Read before laying a whoosh or a sweep.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "d98306ca89495b8f5a21e4cf396dd1f2e2b4d70e03991f7234782fce32483fbd",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 2138,
-     "sha256": "164ec90d2fdd7e902d830ff3e137e539ca4deb39b3ea8c51cce6c63d10a9a8b5"
+     "bytes": 4624,
+     "sha256": "8629101b76ab44a73f6adbe6683dfd97ac3cf41b4692befd84c47053e5ab4ee6"
     }
    ]
   },

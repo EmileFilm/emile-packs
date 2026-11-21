@@ -1,0 +1,31 @@
+{
+  "id": "emile/bed-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Bed 1",
+    "zh-CN": "环境 1"
+  },
+  "description": {
+    "en": "A quiet room: soft low air, nothing in it (room tone) (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "安静的房间：轻轻的低频空气声，里面什么都没有（房间底噪）（10.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 10,
+    "cut": 0,
+    "tags": [
+      "ambience"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

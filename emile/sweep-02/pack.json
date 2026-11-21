@@ -4,17 +4,17 @@
   "version": "1.0.0",
   "title": {
     "en": "Sweep 2",
-    "zh-CN": "长扫过 2"
+    "zh-CN": "掠过 2"
   },
   "description": {
-    "en": "A whoosh passing by, mid-weight (1.00 s; the cut at its peak, 0.545 s). Synthesised by Émile.",
-    "zh-CN": "中等分量的扫过（1.00 秒；切点在峰值，0.545 秒）。Émile 合成。"
+    "en": "A pass-by, left to right, its pitch dropping as it goes (1.40 s; the cut at its peak, 0.615 s). Synthesised by Émile.",
+    "zh-CN": "掠过，从左到右，过去时音高往下（1.40 秒；切点在峰值，0.615 秒）。Émile 合成。"
   },
   "params": [],
   "sound": {
     "file": "sound.wav",
-    "seconds": 1,
-    "cut": 0.545,
+    "seconds": 1.4,
+    "cut": 0.615,
     "tags": [
       "sweep"
     ]
