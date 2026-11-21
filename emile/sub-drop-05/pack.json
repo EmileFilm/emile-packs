@@ -1,0 +1,31 @@
+{
+  "id": "emile/sub-drop-05",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sub drop 5",
+    "zh-CN": "低音下落 5"
+  },
+  "description": {
+    "en": "A short, punchy drop from 160 to 50 Hz with a sharp click (0.60 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "短促有力的下落，从 160 Hz 到 50 Hz，前面一下脆的咔嗒（0.60 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.6,
+    "cut": 0,
+    "tags": [
+      "sub-drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

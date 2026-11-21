@@ -1,0 +1,31 @@
+{
+  "id": "emile/sub-drop-03",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sub drop 3",
+    "zh-CN": "低音下落 3"
+  },
+  "description": {
+    "en": "A long sub drop from 90 to 28 Hz with a firm click on its front (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低音从 90 Hz 落到 28 Hz，前面一下清楚的咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 0,
+    "tags": [
+      "sub-drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -4,7 +4,9 @@
 // original fetched from its CC0 pack, levelled to a -1 dBFS peak, written
 // as sound.wav (48 kHz, 16-bit stereo), and pack.json with its tag, length,
 // source and a line from what it measures (how long, how bright, whether
-// it rises or falls), since that is what the AI chooses by.
+// it rises or falls), since that is what the AI chooses by; and its cut,
+// the loudest 10 ms (where its hit is: the moment it is laid on); a bed
+// of ambience starts where it is laid, its cut 0.
 //
 //   node scripts/sounds.mjs [name…]
 //
@@ -59,6 +61,14 @@ function centroids(file) {
   return [...out.matchAll(/centroid=([\d.]+)/g)].map(m => Number(m[1])).filter(x => x > 0)
 }
 
+// The middle of its loudest 10 ms, in seconds: its hit
+function loudest(file) {
+  const out = spawnSync(FFMPEG, ['-hide_banner', '-nostats', '-i', file, '-af', 'asetnsamples=n=480:p=0,astats=metadata=1:reset=1:measure_overall=RMS_level:measure_perchannel=none,ametadata=print:key=lavfi.astats.Overall.RMS_level:file=-', '-f', 'null', '-'], { encoding: 'utf8' }).stdout
+  const levels = [...out.matchAll(/RMS_level=(-?[\d.]+|-inf)/g)].map(m => (m[1] === '-inf' ? -Infinity : Number(m[1])))
+  const at = levels.indexOf(Math.max(...levels))
+  return Math.round((at * 480 + 240) / 48000 * 1000) / 1000
+}
+
 // Which way its brightness moves; not said of a rise or a drop, whose tag
 // says it (and whose brightness can move against its pitch)
 function moveOf(tag, rises, falls) {
@@ -93,9 +103,9 @@ for (const s of sounds) {
   const zh = `${length[1]}${tone[1] ? `${tone[1]}的` : ''}${nounZh}${move[1]}（${secs.toFixed(2)} 秒），来自 ${s.from}（${s.file}）。`
   const n = Number(s.name.split('-').pop())
   const pack = {
-    id: `emile/${s.name}`, kind: 'sound', version: '1.0.0',
+    id: `emile/${s.name}`, kind: 'sound', version: '1.1.0',
     title: { en: `${TITLE[s.tag][0]} ${n}`, 'zh-CN': `${TITLE[s.tag][1]} ${n}` }, description: { en, 'zh-CN': zh }, params: [],
-    sound: { file: 'sound.wav', seconds: secs, tags: [s.tag] },
+    sound: { file: 'sound.wav', seconds: secs, cut: s.tag === 'ambience' ? 0 : Math.min(secs, loudest(wav)), tags: [s.tag] },
     sources: [{ name: s.from.replace(' · ', ', '), url: s.page, licence: 'CC0-1.0' }],
     licence: 'CC0-1.0', publisher: 'emile'
   }

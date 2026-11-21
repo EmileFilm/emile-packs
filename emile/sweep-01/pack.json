@@ -1,0 +1,31 @@
+{
+  "id": "emile/sweep-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sweep 1",
+    "zh-CN": "长扫过 1"
+  },
+  "description": {
+    "en": "A short airy whoosh passing by (0.80 s; the cut at its peak, 0.475 s). Synthesised by Émile.",
+    "zh-CN": "短的、带气声的扫过（0.80 秒；切点在峰值，0.475 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.8,
+    "cut": 0.475,
+    "tags": [
+      "sweep"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

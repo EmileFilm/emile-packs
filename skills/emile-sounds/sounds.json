@@ -4,6 +4,7 @@
   "file": "sounds/ambience-01.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -17,6 +18,7 @@
   "file": "sounds/ambience-02.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -30,6 +32,7 @@
   "file": "sounds/ambience-03.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long bright steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -43,6 +46,7 @@
   "file": "sounds/ambience-04.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -56,6 +60,7 @@
   "file": "sounds/ambience-05.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -69,6 +74,7 @@
   "file": "sounds/ambience-06.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -82,6 +88,7 @@
   "file": "sounds/ambience-07.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -95,6 +102,7 @@
   "file": "sounds/ambience-08.wav",
   "tag": "ambience",
   "seconds": 5,
+  "cut": 0,
   "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -108,6 +116,7 @@
   "file": "sounds/click-01.wav",
   "tag": "click",
   "seconds": 0.097,
+  "cut": 0.005,
   "description": "A short click, falling (0.10 s), from Kenney · Interface Sounds (click_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -121,6 +130,7 @@
   "file": "sounds/click-02.wav",
   "tag": "click",
   "seconds": 0.094,
+  "cut": 0.015,
   "description": "A short bright click, rising (0.09 s), from Kenney · UI Audio (click1.wav).",
   "source": {
    "name": "Kenney, UI Audio",
@@ -134,6 +144,7 @@
   "file": "sounds/click-03.wav",
   "tag": "click",
   "seconds": 0.045,
+  "cut": 0.005,
   "description": "A short bright click (0.04 s), from Kenney · Interface Sounds (tick_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -147,6 +158,7 @@
   "file": "sounds/click-04.wav",
   "tag": "click",
   "seconds": 0.04,
+  "cut": 0.005,
   "description": "A short click (0.04 s), from Kenney · Interface Sounds (select_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -160,6 +172,7 @@
   "file": "sounds/click-05.wav",
   "tag": "click",
   "seconds": 0.059,
+  "cut": 0.015,
   "description": "A short bright click (0.06 s), from Kenney · UI Audio (mouseclick1.wav).",
   "source": {
    "name": "Kenney, UI Audio",
@@ -173,6 +186,7 @@
   "file": "sounds/click-06.wav",
   "tag": "click",
   "seconds": 0.315,
+  "cut": 0.075,
   "description": "A short bright click, falling (0.32 s), from Kenney · UI Audio (switch1.wav).",
   "source": {
    "name": "Kenney, UI Audio",
@@ -186,6 +200,7 @@
   "file": "sounds/click-07.wav",
   "tag": "click",
   "seconds": 0.012,
+  "cut": 0.005,
   "description": "A short click (0.01 s), from Kenney · Interface Sounds (click_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -199,6 +214,7 @@
   "file": "sounds/click-08.wav",
   "tag": "click",
   "seconds": 0.056,
+  "cut": 0.015,
   "description": "A short click (0.06 s), from Kenney · UI Audio (click2.wav).",
   "source": {
    "name": "Kenney, UI Audio",
@@ -212,6 +228,7 @@
   "file": "sounds/drop-01.wav",
   "tag": "drop",
   "seconds": 0.132,
+  "cut": 0.005,
   "description": "A short falling tone (0.13 s), from Kenney · Interface Sounds (drop_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -225,6 +242,7 @@
   "file": "sounds/drop-02.wav",
   "tag": "drop",
   "seconds": 0.258,
+  "cut": 0.005,
   "description": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -238,6 +256,7 @@
   "file": "sounds/drop-03.wav",
   "tag": "drop",
   "seconds": 0.418,
+  "cut": 0.165,
   "description": "A falling tone (0.42 s), from Kenney · Digital Audio (phaserDown1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -251,6 +270,7 @@
   "file": "sounds/drop-04.wav",
   "tag": "drop",
   "seconds": 0.453,
+  "cut": 0.155,
   "description": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -264,6 +284,7 @@
   "file": "sounds/drop-05.wav",
   "tag": "drop",
   "seconds": 0.731,
+  "cut": 0.395,
   "description": "A falling tone (0.73 s), from Kenney · Digital Audio (lowDown.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -277,6 +298,7 @@
   "file": "sounds/drop-06.wav",
   "tag": "drop",
   "seconds": 1.277,
+  "cut": 0.165,
   "description": "A falling tone (1.28 s), from Kenney · Digital Audio (zapThreeToneDown.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -290,6 +312,7 @@
   "file": "sounds/drop-07.wav",
   "tag": "drop",
   "seconds": 0.148,
+  "cut": 0.005,
   "description": "A short bright falling tone (0.15 s), from Kenney · Interface Sounds (close_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -303,6 +326,7 @@
   "file": "sounds/drop-08.wav",
   "tag": "drop",
   "seconds": 0.188,
+  "cut": 0.005,
   "description": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -316,6 +340,7 @@
   "file": "sounds/impact-01.wav",
   "tag": "impact",
   "seconds": 0.729,
+  "cut": 0.015,
   "description": "A bright hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
@@ -329,6 +354,7 @@
   "file": "sounds/impact-02.wav",
   "tag": "impact",
   "seconds": 0.635,
+  "cut": 0.005,
   "description": "A dark hit, rising (0.64 s), from Kenney · Sci-fi Sounds (impactMetal_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -342,6 +368,7 @@
   "file": "sounds/impact-03.wav",
   "tag": "impact",
   "seconds": 0.238,
+  "cut": 0.005,
   "description": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
@@ -355,6 +382,7 @@
   "file": "sounds/impact-04.wav",
   "tag": "impact",
   "seconds": 0.248,
+  "cut": 0.025,
   "description": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
@@ -368,6 +396,7 @@
   "file": "sounds/impact-05.wav",
   "tag": "impact",
   "seconds": 0.777,
+  "cut": 0.005,
   "description": "A hit (0.78 s), from Kenney · Sci-fi Sounds (explosionCrunch_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -381,6 +410,7 @@
   "file": "sounds/impact-06.wav",
   "tag": "impact",
   "seconds": 0.129,
+  "cut": 0.005,
   "description": "A short hit, falling (0.13 s), from rubberduck · Breaking, falling & hit (bfh1_rock_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
@@ -394,6 +424,7 @@
   "file": "sounds/impact-07.wav",
   "tag": "impact",
   "seconds": 0.797,
+  "cut": 0.105,
   "description": "A hit, rising (0.80 s), from rubberduck · Breaking, falling & hit (bfh1_hit_02.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
@@ -407,6 +438,7 @@
   "file": "sounds/impact-08.wav",
   "tag": "impact",
   "seconds": 0.688,
+  "cut": 0.005,
   "description": "A dark hit, rising (0.69 s), from Kenney · Sci-fi Sounds (impactMetal_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -420,6 +452,7 @@
   "file": "sounds/notify-01.wav",
   "tag": "notify",
   "seconds": 0.29,
+  "cut": 0.005,
   "description": "A short dark chime, rising (0.29 s), from Kenney · Interface Sounds (confirmation_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -433,6 +466,7 @@
   "file": "sounds/notify-02.wav",
   "tag": "notify",
   "seconds": 0.491,
+  "cut": 0.165,
   "description": "A dark chime, falling (0.49 s), from Kenney · Interface Sounds (question_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -446,6 +480,7 @@
   "file": "sounds/notify-03.wav",
   "tag": "notify",
   "seconds": 1.161,
+  "cut": 0.075,
   "description": "A bright chime, rising (1.16 s), from Kenney · Digital Audio (twoTone1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -459,6 +494,7 @@
   "file": "sounds/notify-04.wav",
   "tag": "notify",
   "seconds": 1.672,
+  "cut": 0.145,
   "description": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -472,6 +508,7 @@
   "file": "sounds/notify-05.wav",
   "tag": "notify",
   "seconds": 0.162,
+  "cut": 0.005,
   "description": "A short bright chime, falling (0.16 s), from Kenney · Interface Sounds (error_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -485,6 +522,7 @@
   "file": "sounds/notify-06.wav",
   "tag": "notify",
   "seconds": 0.539,
+  "cut": 0.005,
   "description": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -498,6 +536,7 @@
   "file": "sounds/notify-07.wav",
   "tag": "notify",
   "seconds": 0.333,
+  "cut": 0.055,
   "description": "A short dark chime (0.33 s), from Kenney · Interface Sounds (question_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -511,6 +550,7 @@
   "file": "sounds/notify-08.wav",
   "tag": "notify",
   "seconds": 1.498,
+  "cut": 0.135,
   "description": "A bright chime, rising (1.50 s), from Kenney · Digital Audio (twoTone2.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -524,6 +564,7 @@
   "file": "sounds/pop-01.wav",
   "tag": "pop",
   "seconds": 0.258,
+  "cut": 0.255,
   "description": "A short bright pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -537,6 +578,7 @@
   "file": "sounds/pop-02.wav",
   "tag": "pop",
   "seconds": 0.148,
+  "cut": 0.145,
   "description": "A short bright pop (0.15 s), from Kenney · Interface Sounds (open_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -550,6 +592,7 @@
   "file": "sounds/pop-03.wav",
   "tag": "pop",
   "seconds": 0.1,
+  "cut": 0.005,
   "description": "A short bright pop, falling (0.10 s), from Kenney · Interface Sounds (pluck_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -563,6 +606,7 @@
   "file": "sounds/pop-04.wav",
   "tag": "pop",
   "seconds": 0.12,
+  "cut": 0.005,
   "description": "A short dark pop, rising (0.12 s), from Kenney · Interface Sounds (bong_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -576,6 +620,7 @@
   "file": "sounds/pop-05.wav",
   "tag": "pop",
   "seconds": 0.276,
+  "cut": 0.005,
   "description": "A short pop (0.28 s), from Kenney · Interface Sounds (glass_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -589,6 +634,7 @@
   "file": "sounds/pop-06.wav",
   "tag": "pop",
   "seconds": 0.258,
+  "cut": 0.255,
   "description": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -602,6 +648,7 @@
   "file": "sounds/pop-07.wav",
   "tag": "pop",
   "seconds": 0.314,
+  "cut": 0.314,
   "description": "A short bright pop, rising (0.31 s), from Kenney · Interface Sounds (open_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -615,6 +662,7 @@
   "file": "sounds/pop-08.wav",
   "tag": "pop",
   "seconds": 0.162,
+  "cut": 0.005,
   "description": "A short pop, falling (0.16 s), from Kenney · Interface Sounds (pluck_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -628,6 +676,7 @@
   "file": "sounds/rise-01.wav",
   "tag": "rise",
   "seconds": 1.126,
+  "cut": 0.055,
   "description": "A bright rising tone (1.13 s), from Kenney · Digital Audio (powerUp1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -641,6 +690,7 @@
   "file": "sounds/rise-02.wav",
   "tag": "rise",
   "seconds": 0.43,
+  "cut": 0.335,
   "description": "A rising tone (0.43 s), from Kenney · Digital Audio (phaserUp1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -654,6 +704,7 @@
   "file": "sounds/rise-03.wav",
   "tag": "rise",
   "seconds": 1.138,
+  "cut": 0.075,
   "description": "A rising tone (1.14 s), from Kenney · Digital Audio (zapThreeToneUp.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -667,6 +718,7 @@
   "file": "sounds/rise-04.wav",
   "tag": "rise",
   "seconds": 0.476,
+  "cut": 0.145,
   "description": "A bright rising tone (0.48 s), from Kenney · Digital Audio (highUp.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -680,6 +732,7 @@
   "file": "sounds/rise-05.wav",
   "tag": "rise",
   "seconds": 0.581,
+  "cut": 0.385,
   "description": "A bright rising tone (0.58 s), from Kenney · Digital Audio (powerUp10.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -693,6 +746,7 @@
   "file": "sounds/rise-06.wav",
   "tag": "rise",
   "seconds": 0.36,
+  "cut": 0.145,
   "description": "A short rising tone (0.36 s), from Kenney · Digital Audio (phaserUp2.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -706,6 +760,7 @@
   "file": "sounds/rise-07.wav",
   "tag": "rise",
   "seconds": 0.604,
+  "cut": 0.065,
   "description": "A bright rising tone (0.60 s), from Kenney · Digital Audio (powerUp11.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -719,6 +774,7 @@
   "file": "sounds/rise-08.wav",
   "tag": "rise",
   "seconds": 0.453,
+  "cut": 0.255,
   "description": "A rising tone (0.45 s), from Kenney · Digital Audio (phaserUp3.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -728,10 +784,459 @@
   "licence": "CC0-1.0"
  },
  {
+  "name": "riser-01",
+  "file": "sounds/riser-01.wav",
+  "tag": "riser",
+  "seconds": 1,
+  "cut": 1,
+  "description": "A short bright riser, noise opening upward over a thin climbing tone (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-02",
+  "file": "sounds/riser-02.wav",
+  "tag": "riser",
+  "seconds": 2,
+  "cut": 2,
+  "description": "A riser of noise and a climbing synth chord, an octave and a half (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-03",
+  "file": "sounds/riser-03.wav",
+  "tag": "riser",
+  "seconds": 2,
+  "cut": 2,
+  "description": "A riser of noise alone, opening from dark to bright (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-04",
+  "file": "sounds/riser-04.wav",
+  "tag": "riser",
+  "seconds": 3,
+  "cut": 3,
+  "description": "A long riser with a strong climbing synth chord, two octaves (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-05",
+  "file": "sounds/riser-05.wav",
+  "tag": "riser",
+  "seconds": 4,
+  "cut": 4,
+  "description": "A long, slow riser from very low, noise and a deep chord climbing two octaves (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-06",
+  "file": "sounds/riser-06.wav",
+  "tag": "riser",
+  "seconds": 4,
+  "cut": 4,
+  "description": "A long riser carried by its chord more than its noise, one octave (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-07",
+  "file": "sounds/riser-07.wav",
+  "tag": "riser",
+  "seconds": 3,
+  "cut": 3,
+  "description": "A long, high, airy riser, thin noise and a high tone climbing far (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "riser-08",
+  "file": "sounds/riser-08.wav",
+  "tag": "riser",
+  "seconds": 1.5,
+  "cut": 1.5,
+  "description": "A short riser led by a low chord, one octave (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-01",
+  "file": "sounds/sub-drop-01.wav",
+  "tag": "sub-drop",
+  "seconds": 1,
+  "cut": 0,
+  "description": "A sub drop falling from 120 to 40 Hz with a click on its front (1.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-02",
+  "file": "sounds/sub-drop-02.wav",
+  "tag": "sub-drop",
+  "seconds": 1.5,
+  "cut": 0,
+  "description": "A sub drop falling from 100 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-03",
+  "file": "sounds/sub-drop-03.wav",
+  "tag": "sub-drop",
+  "seconds": 2,
+  "cut": 0,
+  "description": "A long sub drop from 90 to 28 Hz with a firm click on its front (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-04",
+  "file": "sounds/sub-drop-04.wav",
+  "tag": "sub-drop",
+  "seconds": 3,
+  "cut": 0,
+  "description": "A very long, gritty sub drop from 80 to 25 Hz (3.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-05",
+  "file": "sounds/sub-drop-05.wav",
+  "tag": "sub-drop",
+  "seconds": 0.6,
+  "cut": 0,
+  "description": "A short, punchy drop from 160 to 50 Hz with a sharp click (0.60 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-06",
+  "file": "sounds/sub-drop-06.wav",
+  "tag": "sub-drop",
+  "seconds": 2,
+  "cut": 0,
+  "description": "A smooth sub drop from 140 to 35 Hz, no click (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-07",
+  "file": "sounds/sub-drop-07.wav",
+  "tag": "sub-drop",
+  "seconds": 1.2,
+  "cut": 0,
+  "description": "A heavily driven low drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sub-drop-08",
+  "file": "sounds/sub-drop-08.wav",
+  "tag": "sub-drop",
+  "seconds": 2.5,
+  "cut": 0,
+  "description": "A long, driven sub drop from 110 to 30 Hz with a click (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-01",
+  "file": "sounds/sweep-01.wav",
+  "tag": "sweep",
+  "seconds": 0.8,
+  "cut": 0.475,
+  "description": "A short airy whoosh passing by (0.80 s; the cut at its peak, 0.475 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-02",
+  "file": "sounds/sweep-02.wav",
+  "tag": "sweep",
+  "seconds": 1,
+  "cut": 0.545,
+  "description": "A whoosh passing by, mid-weight (1.00 s; the cut at its peak, 0.545 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-03",
+  "file": "sounds/sweep-03.wav",
+  "tag": "sweep",
+  "seconds": 1.2,
+  "cut": 0.725,
+  "description": "A narrow, tonal whoosh passing by (1.20 s; the cut at its peak, 0.725 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-04",
+  "file": "sounds/sweep-04.wav",
+  "tag": "sweep",
+  "seconds": 1.5,
+  "cut": 0.985,
+  "description": "A long, low, broad whoosh (1.50 s; the cut at its peak, 0.985 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-05",
+  "file": "sounds/sweep-05.wav",
+  "tag": "sweep",
+  "seconds": 2,
+  "cut": 1.395,
+  "description": "A long slow whoosh with a late peak and a long tail (2.00 s; the cut at its peak, 1.395 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-06",
+  "file": "sounds/sweep-06.wav",
+  "tag": "sweep",
+  "seconds": 1,
+  "cut": 0.495,
+  "description": "A fast, bright, high whoosh (1.00 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-07",
+  "file": "sounds/sweep-07.wav",
+  "tag": "sweep",
+  "seconds": 1.2,
+  "cut": 0.715,
+  "description": "A whoosh with a rough flutter in it, like air through a gap (1.20 s; the cut at its peak, 0.715 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "sweep-08",
+  "file": "sounds/sweep-08.wav",
+  "tag": "sweep",
+  "seconds": 0.7,
+  "cut": 0.335,
+  "description": "A very short, bright, narrow whoosh: a flick (0.70 s; the cut at its peak, 0.335 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-01",
+  "file": "sounds/swell-01.wav",
+  "tag": "swell",
+  "seconds": 1,
+  "cut": 1,
+  "description": "A short reversed swell of noise, drawn into the cut (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-02",
+  "file": "sounds/swell-02.wav",
+  "tag": "swell",
+  "seconds": 2,
+  "cut": 2,
+  "description": "A reversed swell of noise from a large hall (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-03",
+  "file": "sounds/swell-03.wav",
+  "tag": "swell",
+  "seconds": 2,
+  "cut": 2,
+  "description": "A reversed swell of a struck chord: tonal, drawn in (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-04",
+  "file": "sounds/swell-04.wav",
+  "tag": "swell",
+  "seconds": 3,
+  "cut": 3,
+  "description": "A long reversed swell of a low struck chord (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-05",
+  "file": "sounds/swell-05.wav",
+  "tag": "swell",
+  "seconds": 2,
+  "cut": 2,
+  "description": "A reversed swell of a low thump: dark and heavy (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-06",
+  "file": "sounds/swell-06.wav",
+  "tag": "swell",
+  "seconds": 3,
+  "cut": 3,
+  "description": "A long, dark reversed swell of noise from a very large hall (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-07",
+  "file": "sounds/swell-07.wav",
+  "tag": "swell",
+  "seconds": 1.5,
+  "cut": 1.5,
+  "description": "A short, bright reversed swell of a high struck chord (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "swell-08",
+  "file": "sounds/swell-08.wav",
+  "tag": "swell",
+  "seconds": 2.5,
+  "cut": 2.5,
+  "description": "A long reversed swell of a deep thump (2.50 s; the cut at its end, 2.500 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
   "name": "whoosh-01",
   "file": "sounds/whoosh-01.wav",
   "tag": "whoosh",
   "seconds": 1,
+  "cut": 0.905,
   "description": "A bright swish (1.00 s), from Kenney · Interface Sounds (scroll_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -745,6 +1250,7 @@
   "file": "sounds/whoosh-02.wav",
   "tag": "whoosh",
   "seconds": 0.954,
+  "cut": 0.155,
   "description": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_000.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -758,6 +1264,7 @@
   "file": "sounds/whoosh-03.wav",
   "tag": "whoosh",
   "seconds": 0.406,
+  "cut": 0.115,
   "description": "A swish, falling (0.41 s), from Kenney · Digital Audio (phaseJump1.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -771,6 +1278,7 @@
   "file": "sounds/whoosh-04.wav",
   "tag": "whoosh",
   "seconds": 0.139,
+  "cut": 0.015,
   "description": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_001.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -784,6 +1292,7 @@
   "file": "sounds/whoosh-05.wav",
   "tag": "whoosh",
   "seconds": 1,
+  "cut": 0.205,
   "description": "A dark swish (1.00 s), from Kenney · Interface Sounds (scroll_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
@@ -797,6 +1306,7 @@
   "file": "sounds/whoosh-06.wav",
   "tag": "whoosh",
   "seconds": 0.953,
+  "cut": 0.155,
   "description": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_001.ogg).",
   "source": {
    "name": "Kenney, Sci-fi Sounds",
@@ -810,6 +1320,7 @@
   "file": "sounds/whoosh-07.wav",
   "tag": "whoosh",
   "seconds": 0.337,
+  "cut": 0.045,
   "description": "A short dark swish, rising (0.34 s), from Kenney · Digital Audio (phaseJump2.mp3).",
   "source": {
    "name": "Kenney, Digital Audio",
@@ -823,6 +1334,7 @@
   "file": "sounds/whoosh-08.wav",
   "tag": "whoosh",
   "seconds": 0.139,
+  "cut": 0.055,
   "description": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",

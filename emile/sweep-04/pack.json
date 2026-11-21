@@ -1,0 +1,31 @@
+{
+  "id": "emile/sweep-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sweep 4",
+    "zh-CN": "长扫过 4"
+  },
+  "description": {
+    "en": "A long, low, broad whoosh (1.50 s; the cut at its peak, 0.985 s). Synthesised by Émile.",
+    "zh-CN": "较长、低沉、宽的扫过（1.50 秒；切点在峰值，0.985 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 0.985,
+    "tags": [
+      "sweep"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

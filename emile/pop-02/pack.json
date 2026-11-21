@@ -1,7 +1,7 @@
 {
   "id": "emile/pop-02",
   "kind": "sound",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": {
     "en": "Pop 2",
     "zh-CN": "弹出 2"
@@ -14,6 +14,7 @@
   "sound": {
     "file": "sound.wav",
     "seconds": 0.148,
+    "cut": 0.145,
     "tags": [
       "pop"
     ]

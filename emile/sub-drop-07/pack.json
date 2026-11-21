@@ -1,0 +1,31 @@
+{
+  "id": "emile/sub-drop-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sub drop 7",
+    "zh-CN": "低音下落 7"
+  },
+  "description": {
+    "en": "A heavily driven low drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "失真重的低音下落，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.2,
+    "cut": 0,
+    "tags": [
+      "sub-drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

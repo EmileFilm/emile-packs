@@ -1,0 +1,31 @@
+{
+  "id": "emile/sweep-08",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sweep 8",
+    "zh-CN": "长扫过 8"
+  },
+  "description": {
+    "en": "A very short, bright, narrow whoosh: a flick (0.70 s; the cut at its peak, 0.335 s). Synthesised by Émile.",
+    "zh-CN": "很短、亮、窄的扫过：一甩（0.70 秒；切点在峰值，0.335 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.7,
+    "cut": 0.335,
+    "tags": [
+      "sweep"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

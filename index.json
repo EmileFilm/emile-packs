@@ -1,12 +1,12 @@
 {
  "format": 1,
- "tag": "v1.1.1",
- "published": "2026-11-21T08:32:28.082Z",
+ "tag": "v1.2.0",
+ "published": "2026-11-21T09:12:18.566Z",
  "contract": 4,
  "packs": [
   {
    "id": "emile/ambience-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -22,6 +22,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -37,8 +38,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 697,
-     "sha256": "5480ecdfee1b6b07444cb704f36a6f6497d74f90453791363e6cd9fdb70c4ccc"
+     "bytes": 711,
+     "sha256": "c843a75b154c512ab09cdffbc5d08a54fcb72fb76f40a3efb08166698fc57041"
     },
     {
      "path": "sound.wav",
@@ -49,7 +50,7 @@
   },
   {
    "id": "emile/ambience-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -65,6 +66,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -80,8 +82,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 713,
-     "sha256": "302ccfc29c8fe3c796f672cca1e231ce5581bbc32a24125cccc91e42f9daa5f6"
+     "bytes": 727,
+     "sha256": "f2f0753d61a9c6b9cd39218f081ce5f9e0486b7777c6a0df414a21e2cd2f6e69"
     },
     {
      "path": "sound.wav",
@@ -92,7 +94,7 @@
   },
   {
    "id": "emile/ambience-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -108,6 +110,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -123,8 +126,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 715,
-     "sha256": "321c0a5dd981e813f3e8e74cba3172976fcd03e436a845ae3f3cef88fca33987"
+     "bytes": 729,
+     "sha256": "658b470e0c1b6e28bf6a2db4d18fad218f1eb55804e7a68c281a2e029f085504"
     },
     {
      "path": "sound.wav",
@@ -135,7 +138,7 @@
   },
   {
    "id": "emile/ambience-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -151,6 +154,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -166,8 +170,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 707,
-     "sha256": "244fb77ddc068be7972dd84ec977cfd7dde7c8805783f4198f76392804620a8a"
+     "bytes": 721,
+     "sha256": "3da6c2018161d461c8dde34bd9467fccc5187386f6aaa3016d67bfbf229f5483"
     },
     {
      "path": "sound.wav",
@@ -178,7 +182,7 @@
   },
   {
    "id": "emile/ambience-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -194,6 +198,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -209,8 +214,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 697,
-     "sha256": "7f051d8420219830267a3c7598bd809b87d78489f0a1d621865b04192b7d362a"
+     "bytes": 711,
+     "sha256": "c88d6af7687141364787cfb1bdf4d4cf712db7d56774624f4d6866808f964cb5"
     },
     {
      "path": "sound.wav",
@@ -221,7 +226,7 @@
   },
   {
    "id": "emile/ambience-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -237,6 +242,51 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 727,
+     "sha256": "b465c3e8e0803cc61472fdf9e9574f84da56471a53ba2af69f67c9df0547f019"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "03eadf97ab54f4236bdffb2fa1d002c0c2256e890852c6cc128cd9403e18c7da"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-07",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 7",
+    "zh-CN": "环境 7"
+   },
+   "description": {
+    "en": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_001.ogg).",
+    "zh-CN": "较长的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（engineCircular_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -253,50 +303,7 @@
     {
      "path": "pack.json",
      "bytes": 713,
-     "sha256": "2d4e2820b44eb0096ddb6bcd512bbc0423af4ff74d49f8bd869ab7b4fa23c119"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 960078,
-     "sha256": "03eadf97ab54f4236bdffb2fa1d002c0c2256e890852c6cc128cd9403e18c7da"
-    }
-   ]
-  },
-  {
-   "id": "emile/ambience-07",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Ambience 7",
-    "zh-CN": "环境 7"
-   },
-   "description": {
-    "en": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_001.ogg).",
-    "zh-CN": "较长的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（engineCircular_001.ogg）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 5,
-    "tags": [
-     "ambience"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Sci-fi Sounds",
-     "url": "https://opengameart.org/content/sci-fi-sounds",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 699,
-     "sha256": "a9dabf079ff580373c0e8a696bf9cd7d95b4d80566f0f94532b12cb4d35ef5c3"
+     "sha256": "a56b9d9888570a30072547be3791c3d4eeb3816d35f4c8ff4f6dec982d9cd534"
     },
     {
      "path": "sound.wav",
@@ -307,7 +314,7 @@
   },
   {
    "id": "emile/ambience-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -323,6 +330,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 5,
+    "cut": 0,
     "tags": [
      "ambience"
     ]
@@ -338,8 +346,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 707,
-     "sha256": "bde7becc07343139dc3857a6c80c8cd07d192f6e2e3b93d2bdeec9c95a60b824"
+     "bytes": 721,
+     "sha256": "dbc0dfae0bd5cdf3e285ff291b1840200b6f6f98801d6608c62da02227603d0b"
     },
     {
      "path": "sound.wav",
@@ -632,7 +640,7 @@
   },
   {
    "id": "emile/click-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -648,6 +656,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.097,
+    "cut": 0.005,
     "tags": [
      "click"
     ]
@@ -663,8 +672,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 699,
-     "sha256": "78e59bb01b6e1a3a7865eed605270a29dc5e2d8bc0d1d2fee9307e4410782fb9"
+     "bytes": 717,
+     "sha256": "2ccc7419ff4f9e912710112bcb235ccc6948bcf42960892f55b88d596eaa3d6c"
     },
     {
      "path": "sound.wav",
@@ -675,7 +684,7 @@
   },
   {
    "id": "emile/click-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -691,6 +700,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.094,
+    "cut": 0.015,
     "tags": [
      "click"
     ]
@@ -706,8 +716,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 715,
-     "sha256": "4ef7bf123410185fd9c91a87d3503d205becb7819bdcb1042953d7a225938197"
+     "bytes": 733,
+     "sha256": "2f6f4d9172fbd2b444d2b262b345d3612198ffc7d0e4ce14f1c20a7032ee0aef"
     },
     {
      "path": "sound.wav",
@@ -718,7 +728,7 @@
   },
   {
    "id": "emile/click-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -734,6 +744,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.045,
+    "cut": 0.005,
     "tags": [
      "click"
     ]
@@ -749,8 +760,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 692,
-     "sha256": "32cfc70a95584c39c4d632af1ecaa2416654d6167cc94420eb1d4cb11d24e43e"
+     "bytes": 710,
+     "sha256": "dbc10ab62a9b835b253f6bea2824b952542505966bddb6b21eac6f38e497f9db"
     },
     {
      "path": "sound.wav",
@@ -761,7 +772,7 @@
   },
   {
    "id": "emile/click-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -777,6 +788,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.04,
+    "cut": 0.005,
     "tags": [
      "click"
     ]
@@ -792,8 +804,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 679,
-     "sha256": "7aa7322deae19a9e4a14d326d12b1d044c418c914ac50218db2d763b59067071"
+     "bytes": 697,
+     "sha256": "7cad0c196fcad2aa37c6c95caf817e263588bf6371a3b06b720c86b15d688ce4"
     },
     {
      "path": "sound.wav",
@@ -804,7 +816,7 @@
   },
   {
    "id": "emile/click-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -820,6 +832,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.059,
+    "cut": 0.015,
     "tags": [
      "click"
     ]
@@ -835,8 +848,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 705,
-     "sha256": "09c300d19235b0da334db4f00bac012543a3c2d81bc538084346f66c67428bc6"
+     "bytes": 723,
+     "sha256": "f64a0dd0b73959a6758b425834b2e2f4daf56ba5b16bd93e04b60dc0e93f988e"
     },
     {
      "path": "sound.wav",
@@ -847,7 +860,7 @@
   },
   {
    "id": "emile/click-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -863,6 +876,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.315,
+    "cut": 0.075,
     "tags": [
      "click"
     ]
@@ -878,8 +892,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 718,
-     "sha256": "ce8c2099f8a4aeee8e4d2ed9dcf11c7950c68edb79a5668d1c1f35d7eea6bb8a"
+     "bytes": 736,
+     "sha256": "59c479ac6b45c44a413b7aec99a556a63474414847e8adcba5742b394d10846c"
     },
     {
      "path": "sound.wav",
@@ -890,7 +904,7 @@
   },
   {
    "id": "emile/click-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -906,6 +920,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.012,
+    "cut": 0.005,
     "tags": [
      "click"
     ]
@@ -921,8 +936,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 678,
-     "sha256": "03bdc5d2bdc81560ed5a9e28155295346eb60a3eeb6adac87ba8a2e53bf26ec3"
+     "bytes": 696,
+     "sha256": "9ec17693a27707ff6ac9337e43778c598c0a81bbe4a4e272bb7ce61fbd57d877"
     },
     {
      "path": "sound.wav",
@@ -933,7 +948,7 @@
   },
   {
    "id": "emile/click-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -949,6 +964,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.056,
+    "cut": 0.015,
     "tags": [
      "click"
     ]
@@ -964,8 +980,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 679,
-     "sha256": "190bae718ac879cbb749daa43cb2c44bc5bedc8205f0acca48351c59c161a5a9"
+     "bytes": 697,
+     "sha256": "fb08d5eea6f1b27b3ebd9317dc3df86d485626e9bcc337f67ce3de6404c7fc75"
     },
     {
      "path": "sound.wav",
@@ -1475,7 +1491,7 @@
   },
   {
    "id": "emile/drop-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1491,264 +1507,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.132,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Interface Sounds",
-     "url": "https://opengameart.org/content/interface-sounds",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 680,
-     "sha256": "036fbfe6cb4b060b222b147e5f18aef6c7487bc4986db7f5aadfd97f8cadbc08"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 25438,
-     "sha256": "a7320d87faec9bec1592c245dcf20dcee81a23041222cc269d9f61a7c7b0e9a6"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-02",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 2",
-    "zh-CN": "落下 2"
-   },
-   "description": {
-    "en": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
-    "zh-CN": "短促的明亮的落下音（0.26 秒），来自 Kenney · Interface Sounds（minimize_001.ogg）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.258,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Interface Sounds",
-     "url": "https://opengameart.org/content/interface-sounds",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 704,
-     "sha256": "6a706c42731809f66d855a994d73d1facc52f8c5fa66ca1dc694c4c6ae892b3d"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 49690,
-     "sha256": "a2ec98b0016187c5af42fab20312e141c3eeb202b7bfa0dd3301eb58dbf597ca"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-03",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 3",
-    "zh-CN": "落下 3"
-   },
-   "description": {
-    "en": "A falling tone (0.42 s), from Kenney · Digital Audio (phaserDown1.mp3).",
-    "zh-CN": "落下音（0.42 秒），来自 Kenney · Digital Audio（phaserDown1.mp3）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.418,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Digital Audio",
-     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 695,
-     "sha256": "8aff8a8925504fe31302dd73985058a819f38249076183779033fb061221a96c"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 80340,
-     "sha256": "77c7f5f0f064cca399349d6ffb5943fb168ad85f880fd33c95ab5600b7cbb069"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-04",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 4",
-    "zh-CN": "落下 4"
-   },
-   "description": {
-    "en": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
-    "zh-CN": "明亮的落下音（0.45 秒），来自 Kenney · Digital Audio（highDown.mp3）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.453,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Digital Audio",
-     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 705,
-     "sha256": "54f41b06a602af7390d7ab03f7c5955ceb28aeec2f8040e491ea3311107b64ea"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 87032,
-     "sha256": "f51e7a8df008b896bb4025b03e22909c60890f86da7725f1d5411e2b37b144a9"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-05",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 5",
-    "zh-CN": "落下 5"
-   },
-   "description": {
-    "en": "A falling tone (0.73 s), from Kenney · Digital Audio (lowDown.mp3).",
-    "zh-CN": "落下音（0.73 秒），来自 Kenney · Digital Audio（lowDown.mp3）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.731,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Digital Audio",
-     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 687,
-     "sha256": "ecb4107fbb76d7a32877c3d270e7c8d2fe88f56692e6146110fd43d0b339e630"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 140530,
-     "sha256": "ddb969f2b56f3fc6e53d257d035a4fd8130a9579b8ad581351cad5d26de62cef"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-06",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 6",
-    "zh-CN": "落下 6"
-   },
-   "description": {
-    "en": "A falling tone (1.28 s), from Kenney · Digital Audio (zapThreeToneDown.mp3).",
-    "zh-CN": "落下音（1.28 秒），来自 Kenney · Digital Audio（zapThreeToneDown.mp3）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 1.277,
-    "tags": [
-     "drop"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Digital Audio",
-     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 705,
-     "sha256": "7bd070263fc1699e1aab84eb270ee52230a9a80168a7294966edae33ee7ae92d"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 245308,
-     "sha256": "25e41305ac0e4210d4d4589cafc0f32ef1f334c31b7772a8c16e4f5ba9141325"
-    }
-   ]
-  },
-  {
-   "id": "emile/drop-07",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Drop 7",
-    "zh-CN": "落下 7"
-   },
-   "description": {
-    "en": "A short bright falling tone (0.15 s), from Kenney · Interface Sounds (close_001.ogg).",
-    "zh-CN": "短促的明亮的落下音（0.15 秒），来自 Kenney · Interface Sounds（close_001.ogg）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.148,
+    "cut": 0.005,
     "tags": [
      "drop"
     ]
@@ -1765,33 +1524,34 @@
     {
      "path": "pack.json",
      "bytes": 698,
-     "sha256": "ce8db3835c3002f4af5e86d3228f618e09ad8fe6cbf89ef96786be8ff6b8a585"
+     "sha256": "503d0a9669e91a8702c8a771f4f554c1870db433679f153b5cb0c6b422b86fe3"
     },
     {
      "path": "sound.wav",
-     "bytes": 28454,
-     "sha256": "5f14859c0ac6d6b1ac382fdee49e27ed35b74f974048ac4b04342bc9c32ad87d"
+     "bytes": 25438,
+     "sha256": "a7320d87faec9bec1592c245dcf20dcee81a23041222cc269d9f61a7c7b0e9a6"
     }
    ]
   },
   {
-   "id": "emile/drop-08",
-   "version": "1.0.0",
+   "id": "emile/drop-02",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
-    "en": "Drop 8",
-    "zh-CN": "落下 8"
+    "en": "Drop 2",
+    "zh-CN": "落下 2"
    },
    "description": {
-    "en": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
-    "zh-CN": "短促的低沉的落下音（0.19 秒），来自 Kenney · Interface Sounds（drop_002.ogg）。"
+    "en": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
+    "zh-CN": "短促的明亮的落下音（0.26 秒），来自 Kenney · Interface Sounds（minimize_001.ogg）。"
    },
    "params": [],
    "preview": null,
    "sound": {
     "file": "sound.wav",
-    "seconds": 0.188,
+    "seconds": 0.258,
+    "cut": 0.005,
     "tags": [
      "drop"
     ]
@@ -1807,8 +1567,272 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 694,
-     "sha256": "cfdeaab41b7e102d1e84982409d43e3824e49c79123da8a53af852135476ba52"
+     "bytes": 722,
+     "sha256": "04a8e5d53e9d91f2962a920f7830e9c9760d97d73f94b1b8446f095a3b6438a8"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 49690,
+     "sha256": "a2ec98b0016187c5af42fab20312e141c3eeb202b7bfa0dd3301eb58dbf597ca"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-03",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 3",
+    "zh-CN": "落下 3"
+   },
+   "description": {
+    "en": "A falling tone (0.42 s), from Kenney · Digital Audio (phaserDown1.mp3).",
+    "zh-CN": "落下音（0.42 秒），来自 Kenney · Digital Audio（phaserDown1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.418,
+    "cut": 0.165,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 713,
+     "sha256": "bace6dfb7c884262ff23e56d59b10326cef692d0f34f58c8fbd8426ae09a4e52"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 80340,
+     "sha256": "77c7f5f0f064cca399349d6ffb5943fb168ad85f880fd33c95ab5600b7cbb069"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-04",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 4",
+    "zh-CN": "落下 4"
+   },
+   "description": {
+    "en": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
+    "zh-CN": "明亮的落下音（0.45 秒），来自 Kenney · Digital Audio（highDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.453,
+    "cut": 0.155,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 723,
+     "sha256": "9b3530fa6376538248a37efbd4656be163bb981dd7f7c42917f928eea4c55b3a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 87032,
+     "sha256": "f51e7a8df008b896bb4025b03e22909c60890f86da7725f1d5411e2b37b144a9"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-05",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 5",
+    "zh-CN": "落下 5"
+   },
+   "description": {
+    "en": "A falling tone (0.73 s), from Kenney · Digital Audio (lowDown.mp3).",
+    "zh-CN": "落下音（0.73 秒），来自 Kenney · Digital Audio（lowDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.731,
+    "cut": 0.395,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 705,
+     "sha256": "e459a29f3b593f3c35eb418e185ce9cb3d9f22e21821a69d9c0ec120a468dfc1"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 140530,
+     "sha256": "ddb969f2b56f3fc6e53d257d035a4fd8130a9579b8ad581351cad5d26de62cef"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-06",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 6",
+    "zh-CN": "落下 6"
+   },
+   "description": {
+    "en": "A falling tone (1.28 s), from Kenney · Digital Audio (zapThreeToneDown.mp3).",
+    "zh-CN": "落下音（1.28 秒），来自 Kenney · Digital Audio（zapThreeToneDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.277,
+    "cut": 0.165,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 723,
+     "sha256": "570d597eaddd69e4f385363847cfce8a2d3a06a50d0c935f79a5b8044554c6e6"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 245308,
+     "sha256": "25e41305ac0e4210d4d4589cafc0f32ef1f334c31b7772a8c16e4f5ba9141325"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-07",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 7",
+    "zh-CN": "落下 7"
+   },
+   "description": {
+    "en": "A short bright falling tone (0.15 s), from Kenney · Interface Sounds (close_001.ogg).",
+    "zh-CN": "短促的明亮的落下音（0.15 秒），来自 Kenney · Interface Sounds（close_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.148,
+    "cut": 0.005,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 716,
+     "sha256": "0316525982fc1ee6f64189e36c5c06eb78d71386e0b2aec51234473ef9bb4a49"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 28454,
+     "sha256": "5f14859c0ac6d6b1ac382fdee49e27ed35b74f974048ac4b04342bc9c32ad87d"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-08",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 8",
+    "zh-CN": "落下 8"
+   },
+   "description": {
+    "en": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
+    "zh-CN": "短促的低沉的落下音（0.19 秒），来自 Kenney · Interface Sounds（drop_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.188,
+    "cut": 0.005,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 712,
+     "sha256": "9f59b8294fcd5f4b0e4885fbba881b7e403e65e2db1f011b40cbbcd2796cb2d0"
     },
     {
      "path": "sound.wav",
@@ -2535,7 +2559,7 @@
   },
   {
    "id": "emile/impact-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2551,6 +2575,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.729,
+    "cut": 0.015,
     "tags": [
      "impact"
     ]
@@ -2566,8 +2591,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 753,
-     "sha256": "c2a5f121b21e17cbf590c7dc43bd97f9d2d70bb989394a920afd15c11b6f31dc"
+     "bytes": 771,
+     "sha256": "1b67c6aefb0cf22afc2a1fdb650b9b12e0aa761c8438570b1b620833dee5b4b3"
     },
     {
      "path": "sound.wav",
@@ -2578,7 +2603,7 @@
   },
   {
    "id": "emile/impact-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2594,6 +2619,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.635,
+    "cut": 0.005,
     "tags": [
      "impact"
     ]
@@ -2609,8 +2635,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 698,
-     "sha256": "918cbd103120a1668ef20fad3ff4d533c229f87423fa51e665c88d70ae10b582"
+     "bytes": 716,
+     "sha256": "c19835a72aba24a0cc218d46d06d0537a9f9f0935dfd17dcc230a3965c746bad"
     },
     {
      "path": "sound.wav",
@@ -2621,7 +2647,7 @@
   },
   {
    "id": "emile/impact-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2637,6 +2663,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.238,
+    "cut": 0.005,
     "tags": [
      "impact"
     ]
@@ -2652,8 +2679,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 759,
-     "sha256": "1294446fdc7605cbd8110ad2a0479f6e7d7525131326e28a4561e6668c7f8c44"
+     "bytes": 777,
+     "sha256": "671a2f0834939ce3b63c78581d52a2bc4dbfb58baa032905b680becc5feb6a68"
     },
     {
      "path": "sound.wav",
@@ -2664,7 +2691,7 @@
   },
   {
    "id": "emile/impact-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2680,6 +2707,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.248,
+    "cut": 0.025,
     "tags": [
      "impact"
     ]
@@ -2695,8 +2723,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 761,
-     "sha256": "b781b694cfe97f77e4d4dd2168cdbd3abf36de657c812a24f3863314559629ca"
+     "bytes": 779,
+     "sha256": "9c78d03df21243ff05033230ece3156c9403bd428dbca0a27a668f0fabf3418d"
     },
     {
      "path": "sound.wav",
@@ -2707,7 +2735,7 @@
   },
   {
    "id": "emile/impact-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2723,6 +2751,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.777,
+    "cut": 0.005,
     "tags": [
      "impact"
     ]
@@ -2738,8 +2767,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 672,
-     "sha256": "94bb9c973e79fece7def329576fe50ff77bcfc933e5de3b90f19c037a1821180"
+     "bytes": 690,
+     "sha256": "cd950cf24d3f1ce2e24354d0d7fce35ec84f3e85bde613d70105a1a520d8fc6d"
     },
     {
      "path": "sound.wav",
@@ -2750,7 +2779,7 @@
   },
   {
    "id": "emile/impact-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2766,6 +2795,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.129,
+    "cut": 0.005,
     "tags": [
      "impact"
     ]
@@ -2781,8 +2811,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 762,
-     "sha256": "7dc51552f8c88a1efdd948bc91a050c3dcae98d1f763a667233126089090ebb3"
+     "bytes": 780,
+     "sha256": "d899787972e92ad070765ab7e1385668e9754239e72648d52d87ae1a36ba0f97"
     },
     {
      "path": "sound.wav",
@@ -2793,7 +2823,7 @@
   },
   {
    "id": "emile/impact-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2809,6 +2839,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.797,
+    "cut": 0.105,
     "tags": [
      "impact"
     ]
@@ -2824,8 +2855,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 736,
-     "sha256": "d02477575c5043ddea3bfda0ed5a04e3bcb071949f64085c13d6e06f6c545e95"
+     "bytes": 754,
+     "sha256": "cc12c67ee25a6f94827bf54bb73f0fbe40403db35bde1bf3e1f178ff543ecf18"
     },
     {
      "path": "sound.wav",
@@ -2836,7 +2867,7 @@
   },
   {
    "id": "emile/impact-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2852,6 +2883,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.688,
+    "cut": 0.005,
     "tags": [
      "impact"
     ]
@@ -2867,8 +2899,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 698,
-     "sha256": "452ec1ef34cefaae721c3b605bf2380ccf57d155a4eee8efbb5f2418ccd88efc"
+     "bytes": 716,
+     "sha256": "9a92471a9ce00f76340048f643cc2be66be90145d2258445445bd1cce35650c0"
     },
     {
      "path": "sound.wav",
@@ -2879,7 +2911,7 @@
   },
   {
    "id": "emile/notify-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2895,6 +2927,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.29,
+    "cut": 0.005,
     "tags": [
      "notify"
     ]
@@ -2910,8 +2943,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 728,
-     "sha256": "970b07a1447ac7fc10b13581b4543535a053031488547df1bf8d91bd80b695f4"
+     "bytes": 746,
+     "sha256": "d6c41d2b6a3069c2a6c67205073b6991361dc4dafcc4da090724b3e3e13f4294"
     },
     {
      "path": "sound.wav",
@@ -2922,7 +2955,7 @@
   },
   {
    "id": "emile/notify-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2938,6 +2971,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.491,
+    "cut": 0.165,
     "tags": [
      "notify"
     ]
@@ -2953,8 +2987,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 707,
-     "sha256": "641a9b8660a9965e20d92b8a86ec062675843d5f0a49eae2d7766624a8f96b71"
+     "bytes": 725,
+     "sha256": "9b6ebb955e4d0287b512e0a35b43793cfaed0f327f3c8f6cfda60f0bd085f7f2"
     },
     {
      "path": "sound.wav",
@@ -2965,7 +2999,7 @@
   },
   {
    "id": "emile/notify-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2981,49 +3015,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1.161,
-    "tags": [
-     "notify"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Digital Audio",
-     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 724,
-     "sha256": "e21aedb1fec6bff919d9390fff025c0d5e401341647ee51343bf1e95a1115962"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 223004,
-     "sha256": "f2a040377247b23376d5354495e3148983d2abc5f00c18ffabd2f1e7e4a8a50c"
-    }
-   ]
-  },
-  {
-   "id": "emile/notify-04",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Notify 4",
-    "zh-CN": "提示 4"
-   },
-   "description": {
-    "en": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
-    "zh-CN": "较长的明亮的提示音，往上走（1.67 秒），来自 Kenney · Digital Audio（threeTone1.mp3）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 1.672,
+    "cut": 0.075,
     "tags": [
      "notify"
     ]
@@ -3040,7 +3032,51 @@
     {
      "path": "pack.json",
      "bytes": 742,
-     "sha256": "59ef4f2fb7eba920b5a0d6f3bbee0ffcc808b844cc25eb7440608aebd644b65a"
+     "sha256": "da8a94e2efac41a0f7c9b96640d1c610b8aae73bcf024f96aeb8d20cae33679e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 223004,
+     "sha256": "f2a040377247b23376d5354495e3148983d2abc5f00c18ffabd2f1e7e4a8a50c"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-04",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 4",
+    "zh-CN": "提示 4"
+   },
+   "description": {
+    "en": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
+    "zh-CN": "较长的明亮的提示音，往上走（1.67 秒），来自 Kenney · Digital Audio（threeTone1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.672,
+    "cut": 0.145,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 760,
+     "sha256": "c12605b08981cd9eb4de7a3cebc30baa76623b300a83d4ed6087f6c3008c4de5"
     },
     {
      "path": "sound.wav",
@@ -3051,7 +3087,7 @@
   },
   {
    "id": "emile/notify-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3067,6 +3103,51 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.162,
+    "cut": 0.005,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 736,
+     "sha256": "cef1c13678ec371107f63f77e3ca556d06c9096bf7cf4de02b5db8edfc370666"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 31118,
+     "sha256": "2a34e99563354693c41e5f5d649c6ef615286cca85241bb7e71b8dcdbb83d421"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-06",
+   "version": "1.1.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 6",
+    "zh-CN": "提示 6"
+   },
+   "description": {
+    "en": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
+    "zh-CN": "提示音，往上走（0.54 秒），来自 Kenney · Interface Sounds（confirmation_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.539,
+    "cut": 0.005,
     "tags": [
      "notify"
     ]
@@ -3083,50 +3164,7 @@
     {
      "path": "pack.json",
      "bytes": 718,
-     "sha256": "20957b26051708345ba684f83b8f5f791ee2fa697d9682d9e13260fcf14a645a"
-    },
-    {
-     "path": "sound.wav",
-     "bytes": 31118,
-     "sha256": "2a34e99563354693c41e5f5d649c6ef615286cca85241bb7e71b8dcdbb83d421"
-    }
-   ]
-  },
-  {
-   "id": "emile/notify-06",
-   "version": "1.0.0",
-   "kind": "sound",
-   "category": null,
-   "title": {
-    "en": "Notify 6",
-    "zh-CN": "提示 6"
-   },
-   "description": {
-    "en": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
-    "zh-CN": "提示音，往上走（0.54 秒），来自 Kenney · Interface Sounds（confirmation_002.ogg）。"
-   },
-   "params": [],
-   "preview": null,
-   "sound": {
-    "file": "sound.wav",
-    "seconds": 0.539,
-    "tags": [
-     "notify"
-    ]
-   },
-   "sources": [
-    {
-     "name": "Kenney, Interface Sounds",
-     "url": "https://opengameart.org/content/interface-sounds",
-     "licence": "CC0-1.0"
-    }
-   ],
-   "licence": "CC0-1.0",
-   "files": [
-    {
-     "path": "pack.json",
-     "bytes": 700,
-     "sha256": "9994cb2304d837ae832b59b3ecc0c3d1b51017b3641ca5f61f486c64d43a6892"
+     "sha256": "6a26bc526c86024ea82973ade2bb519591365cbfc0076c6df5cf5966bbf9d4c0"
     },
     {
      "path": "sound.wav",
@@ -3137,7 +3175,7 @@
   },
   {
    "id": "emile/notify-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3153,6 +3191,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.333,
+    "cut": 0.055,
     "tags": [
      "notify"
     ]
@@ -3168,8 +3207,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 701,
-     "sha256": "ec10750b0c17a1f092f944b5e2dee09a9e76029fe9ec819f311c4d3b4464002c"
+     "bytes": 719,
+     "sha256": "5c7ca74fcf2757ac2b8b73c5a4342ee7885abbf862ec90c8074fe19014325fee"
     },
     {
      "path": "sound.wav",
@@ -3180,7 +3219,7 @@
   },
   {
    "id": "emile/notify-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3196,6 +3235,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1.498,
+    "cut": 0.135,
     "tags": [
      "notify"
     ]
@@ -3211,8 +3251,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 724,
-     "sha256": "eb47216299972e5bb54f8e8d527d08d03aa7b3d147bd66496d4c428392aea39f"
+     "bytes": 742,
+     "sha256": "e9e4723a6ddbe49f69d2ad7174bfea9930c1a93f396899150ebe8fdc1d95a7df"
     },
     {
      "path": "sound.wav",
@@ -3487,7 +3527,7 @@
   },
   {
    "id": "emile/pop-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3503,6 +3543,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.258,
+    "cut": 0.255,
     "tags": [
      "pop"
     ]
@@ -3518,8 +3559,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 712,
-     "sha256": "41d44fc23fb0536f2986b3fb10a44fc3c8edd3ea9f9f262f49b7b907a6d08423"
+     "bytes": 730,
+     "sha256": "4c2a83c67190d46e0737dc551cba8594de208222903877fe84749f3438de7c68"
     },
     {
      "path": "sound.wav",
@@ -3530,7 +3571,7 @@
   },
   {
    "id": "emile/pop-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3546,6 +3587,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.148,
+    "cut": 0.145,
     "tags": [
      "pop"
     ]
@@ -3561,8 +3603,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 684,
-     "sha256": "280b7baaeb5cd5d750ca126011a78f2d82f458379cabeb76aa018b126277c393"
+     "bytes": 702,
+     "sha256": "bebc64da3525e6c189a6cc339b6dd664463fc1dd5612879185fa4c14a85f759a"
     },
     {
      "path": "sound.wav",
@@ -3573,7 +3615,7 @@
   },
   {
    "id": "emile/pop-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3589,6 +3631,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.1,
+    "cut": 0.005,
     "tags": [
      "pop"
     ]
@@ -3604,8 +3647,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 705,
-     "sha256": "4202fea68ab16b07753fa726dd5e2ddf98119d3ed174677f333132f2a3ad617c"
+     "bytes": 723,
+     "sha256": "12576bd0a9f817774efb5e16c8f2f38ab0b784188fd32eea002600660b2b8ded"
     },
     {
      "path": "sound.wav",
@@ -3616,7 +3659,7 @@
   },
   {
    "id": "emile/pop-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3632,6 +3675,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.12,
+    "cut": 0.005,
     "tags": [
      "pop"
     ]
@@ -3647,8 +3691,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 701,
-     "sha256": "ee29f325af866dd70f454a7e27f795c28c88c35a6474db79a263cba6de1acdf9"
+     "bytes": 719,
+     "sha256": "91a0c5dc2df3840728e1025bb6c0bdf0f348e553364ad338559c47e7c393dc9d"
     },
     {
      "path": "sound.wav",
@@ -3659,7 +3703,7 @@
   },
   {
    "id": "emile/pop-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3675,6 +3719,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.276,
+    "cut": 0.005,
     "tags": [
      "pop"
     ]
@@ -3690,8 +3735,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 670,
-     "sha256": "6345a57e20245368e9c2466edc7da0d626b36abaa30d5cee9fa540206915ae15"
+     "bytes": 688,
+     "sha256": "1d45c9920fb938a18a55f06711aed9bdc7295738b71095d6ca572c4351741128"
     },
     {
      "path": "sound.wav",
@@ -3702,7 +3747,7 @@
   },
   {
    "id": "emile/pop-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3718,6 +3763,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.258,
+    "cut": 0.255,
     "tags": [
      "pop"
     ]
@@ -3733,8 +3779,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 696,
-     "sha256": "580dd3d67546fb35a0da3098f3df24d91cefbe30bf2f6378242874c3980fd159"
+     "bytes": 714,
+     "sha256": "28260ee634060b4a1308a4f68632a90f50bc8e0bfbfe065ddc7422439c04c099"
     },
     {
      "path": "sound.wav",
@@ -3745,7 +3791,7 @@
   },
   {
    "id": "emile/pop-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3761,6 +3807,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.314,
+    "cut": 0.314,
     "tags": [
      "pop"
     ]
@@ -3776,8 +3823,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 704,
-     "sha256": "8ba02913e5e7be3dc0c38ba579ec1ca3f1f24d1ec691a53f57d12f09d47f9bde"
+     "bytes": 722,
+     "sha256": "dec1023a665126ae7951bf3db66edc24d0c30f8988f8659049359f137cd23ab2"
     },
     {
      "path": "sound.wav",
@@ -3788,7 +3835,7 @@
   },
   {
    "id": "emile/pop-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3804,6 +3851,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.162,
+    "cut": 0.005,
     "tags": [
      "pop"
     ]
@@ -3819,8 +3867,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 691,
-     "sha256": "99d1c38d591690491bd51ca1e5f353379e96a3b7d3140e3244930c76c6cba025"
+     "bytes": 709,
+     "sha256": "b2cffe634c5d1a7fc5a6a577326efe3210dcf8b11469e5b535f916e5d1613b74"
     },
     {
      "path": "sound.wav",
@@ -3876,7 +3924,7 @@
   },
   {
    "id": "emile/rise-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3892,6 +3940,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1.126,
+    "cut": 0.055,
     "tags": [
      "rise"
     ]
@@ -3907,8 +3956,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 704,
-     "sha256": "1ea152d6d2d08a9117d5bed02921cd6d705caab88cd4d385ef1e86db19e1bf2a"
+     "bytes": 722,
+     "sha256": "98cb4a9c9835b455d0ccb0227f962589b050357da01599a2a7b2424a0e9249b2"
     },
     {
      "path": "sound.wav",
@@ -3919,7 +3968,7 @@
   },
   {
    "id": "emile/rise-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3935,6 +3984,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.43,
+    "cut": 0.335,
     "tags": [
      "rise"
     ]
@@ -3950,8 +4000,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 689,
-     "sha256": "cd7b29fbb6ae5f75122c9f5f0d09fd5f33c5e45c4ed804308edfe1787c24b2f8"
+     "bytes": 707,
+     "sha256": "8a391cf19c9824f84290f0c28a40b01a848a224bf14aa102c730077f31dd80c3"
     },
     {
      "path": "sound.wav",
@@ -3962,7 +4012,7 @@
   },
   {
    "id": "emile/rise-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3978,6 +4028,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1.138,
+    "cut": 0.075,
     "tags": [
      "rise"
     ]
@@ -3993,8 +4044,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 700,
-     "sha256": "40b96860b532a723a44918a052cc8b47d9607a59e3b34297aa760984b3728c9e"
+     "bytes": 718,
+     "sha256": "6f0707007126f38c3eb0fa0615781e908d8b04ca6f723e6cadd1742e56391aae"
     },
     {
      "path": "sound.wav",
@@ -4005,7 +4056,7 @@
   },
   {
    "id": "emile/rise-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4021,6 +4072,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.476,
+    "cut": 0.145,
     "tags": [
      "rise"
     ]
@@ -4036,8 +4088,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 700,
-     "sha256": "c885867004d35efad839822dd61a65a0e2ddedae7aa42db2b8771f420d9cb328"
+     "bytes": 718,
+     "sha256": "037e75bf4626a2e4cbc605daf4b4c66b44242d6b36d7fcfe8b4477ed66a2b9e4"
     },
     {
      "path": "sound.wav",
@@ -4048,7 +4100,7 @@
   },
   {
    "id": "emile/rise-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4064,6 +4116,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.581,
+    "cut": 0.385,
     "tags": [
      "rise"
     ]
@@ -4079,8 +4132,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 706,
-     "sha256": "3901d496ae078301fd2e3f045424d74f9bd8836fdc387ed8e48859e209896481"
+     "bytes": 724,
+     "sha256": "cc3fedc0ffa0b97e864b5c5e91ac5aaf128329a46bcadfbf4e2ac32c78cb4626"
     },
     {
      "path": "sound.wav",
@@ -4091,7 +4144,7 @@
   },
   {
    "id": "emile/rise-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4107,6 +4160,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.36,
+    "cut": 0.145,
     "tags": [
      "rise"
     ]
@@ -4122,8 +4176,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 704,
-     "sha256": "4ee7b6875a0e239229a80234dcb63a7bcad6656875eb2c3fc678a36f4244621e"
+     "bytes": 722,
+     "sha256": "1df5307dbcb41ab8cbf8d99de3f7a9bb8108b9707ef09b032bcb9acac37feb86"
     },
     {
      "path": "sound.wav",
@@ -4134,7 +4188,7 @@
   },
   {
    "id": "emile/rise-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4150,6 +4204,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.604,
+    "cut": 0.065,
     "tags": [
      "rise"
     ]
@@ -4165,8 +4220,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 706,
-     "sha256": "6d8a7932f90195f38ffb46cfacdfd1d652c53d26542bfd0dcd8510c224ccdfe9"
+     "bytes": 724,
+     "sha256": "52549f3e7bd7b76acd4f7c89f7f2d83dd40d28d339d9546babecc6eca72ffd19"
     },
     {
      "path": "sound.wav",
@@ -4177,7 +4232,7 @@
   },
   {
    "id": "emile/rise-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4193,6 +4248,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.453,
+    "cut": 0.255,
     "tags": [
      "rise"
     ]
@@ -4208,13 +4264,365 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 690,
-     "sha256": "dec0da91faa12169c4095ac04e975e8188299578b6c8787ad098e980d5fe942d"
+     "bytes": 708,
+     "sha256": "3c6f11486397974f531454b93f6d3e60d7b0c1beac6eededa35a3aa689960f14"
     },
     {
      "path": "sound.wav",
      "bytes": 87024,
      "sha256": "26555c9a0ff1d59d8ef7f9b921ca5862cfdee538fe59eafc3cf40dfde3d979cd"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 1",
+    "zh-CN": "上升 1"
+   },
+   "description": {
+    "en": "A short bright riser, noise opening upward over a thin climbing tone (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+    "zh-CN": "短而亮的上升：噪声往上打开，下面一层细的音往上爬（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 1,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 839,
+     "sha256": "dee4059d9d6f3f7571c1063cb2918b8a46267d3601dac546f141d6664937518b"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192044,
+     "sha256": "359cfaac7dc22daf63fec08b845922dd4078fae4dc0b574781a59869a50a2d6b"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 2",
+    "zh-CN": "上升 2"
+   },
+   "description": {
+    "en": "A riser of noise and a climbing synth chord, an octave and a half (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "噪声加一组往上爬一个半八度的合成器和弦（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 821,
+     "sha256": "7da19abf7a810f9bfeab53e93fbf5759f6d7400a19dae829b437ec4231572f5e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "16e67d573f690481f3a92322004968aba31b5deb00b91d300eff0c345e6912d2"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 3",
+    "zh-CN": "上升 3"
+   },
+   "description": {
+    "en": "A riser of noise alone, opening from dark to bright (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "只有噪声的上升，从暗打开到亮（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 792,
+     "sha256": "cfbaad5fdb926174c74ef9b8c03415011511bcd9d57486eb1e9b981cfb2fc6ea"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "abe7ec647d58e9752280a07ecee976bc3d7b46fb61341fe41327e3cc41bc85bb"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 4",
+    "zh-CN": "上升 4"
+   },
+   "description": {
+    "en": "A long riser with a strong climbing synth chord, two octaves (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的上升，合成器和弦往上爬两个八度，音调感强（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 3,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 828,
+     "sha256": "be932bc5f5e188fc1cc640ac481067e28027aeca88d8a9b39b2def74239b3aff"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 576044,
+     "sha256": "b879063c0c438ac15d1351bfd443183b27b4c05d7ed4ab700e642f9a7b117f7a"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 5",
+    "zh-CN": "上升 5"
+   },
+   "description": {
+    "en": "A long, slow riser from very low, noise and a deep chord climbing two octaves (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+    "zh-CN": "很长很慢的上升，从很低处起，噪声与低沉的和弦往上爬两个八度（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 4,
+    "cut": 4,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 863,
+     "sha256": "107fd410c330f340df939b641965d44dc0b251ef66656aa773c601a4c3641155"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 768044,
+     "sha256": "314fd85240891111dc79b2a48cf4208aecb94e91a94311db68bf342ee95d2a4c"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 6",
+    "zh-CN": "上升 6"
+   },
+   "description": {
+    "en": "A long riser carried by its chord more than its noise, one octave (4.00 s; the cut at its end, 4.000 s). Synthesised by Émile.",
+    "zh-CN": "很长的上升，主要是和弦（一个八度），噪声在后（4.00 秒；切点在结尾，4.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 4,
+    "cut": 4,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 830,
+     "sha256": "45831a35f7833aa4ba84eb7520e33db6afc60c61b4f9813ebbff0d747e79c1ff"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 768044,
+     "sha256": "c789eb488bc97ba3efa65cc0bc60ca38f42b3694f1fbbb3e0ee74c2f10d09f90"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 7",
+    "zh-CN": "上升 7"
+   },
+   "description": {
+    "en": "A long, high, airy riser, thin noise and a high tone climbing far (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "较长、偏高偏亮的上升，细的噪声与一个高音爬得很远（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 3,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 836,
+     "sha256": "12cacdc6a1cbba08cac99b80e9e4352ad2cf9313f946290a525148b7c3c4c291"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 576044,
+     "sha256": "70e8815ec88157146320a818086e777fda0ff5fd1191bbcce0ac11a177122559"
+    }
+   ]
+  },
+  {
+   "id": "emile/riser-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Riser 8",
+    "zh-CN": "上升 8"
+   },
+   "description": {
+    "en": "A short riser led by a low chord, one octave (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "短的上升，以低和弦为主，一个八度（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 1.5,
+    "tags": [
+     "riser"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 795,
+     "sha256": "400ce6f726bc6a7e3d7687c1f8890cb06783332b0c7f0aef640c2948066ae515"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 288044,
+     "sha256": "23068f06b9e2a1cfccd6611670f05178ab3523cdc9578bb7df016605d27500cf"
     }
    ]
   },
@@ -4443,6 +4851,1062 @@
    ]
   },
   {
+   "id": "emile/sub-drop-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 1",
+    "zh-CN": "低音下落 1"
+   },
+   "description": {
+    "en": "A sub drop falling from 120 to 40 Hz with a click on its front (1.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 120 Hz 落到 40 Hz，前面一下咔嗒（1.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 828,
+     "sha256": "93b92d1d3a6cf774d181239e4fe17359e454c5b6fd721d5f062dad1bd7f2e81f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192044,
+     "sha256": "afe7de89f26cccf815b1765aa298b76f0d57482a06a6be7f2a447965f2ab74f3"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 2",
+    "zh-CN": "低音下落 2"
+   },
+   "description": {
+    "en": "A sub drop falling from 100 to 32 Hz (1.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 100 Hz 落到 32 Hz（1.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 783,
+     "sha256": "f50f038ea7c4891abd141964dffa9591907b4868a2a282a7917c2630e829fcc2"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 288044,
+     "sha256": "6d2be455a2c2d4f84ed776c6215b213e09fb5196235d699e10f6031fa6b4f1d8"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 3",
+    "zh-CN": "低音下落 3"
+   },
+   "description": {
+    "en": "A long sub drop from 90 to 28 Hz with a firm click on its front (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低音从 90 Hz 落到 28 Hz，前面一下清楚的咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 846,
+     "sha256": "8e1913d0eb6a6130b744e0a3e1b0455d1cf9ea2a5f271f0a0ef9afc69e574d65"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "e462129edf78f225add09e2d974bb025d9659c4d4030c274f87453befaa87f67"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 4",
+    "zh-CN": "低音下落 4"
+   },
+   "description": {
+    "en": "A very long, gritty sub drop from 80 to 25 Hz (3.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "很长、带颗粒的低音，从 80 Hz 落到 25 Hz（3.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 813,
+     "sha256": "ed1552212809a76cb12c4d5d4ee28bc170ed31f07ec551fd30fb03d0c8897fa1"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 576044,
+     "sha256": "4ddd5e345003875aa1581695b128584cb8a9f73ff12276c39448159c24dfe261"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 5",
+    "zh-CN": "低音下落 5"
+   },
+   "description": {
+    "en": "A short, punchy drop from 160 to 50 Hz with a sharp click (0.60 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "短促有力的下落，从 160 Hz 到 50 Hz，前面一下脆的咔嗒（0.60 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.6,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 846,
+     "sha256": "c6043b08ce3154c825506d01c32011ce868d3ecbe6d9c6e5cc3d8fab357a02c5"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 115244,
+     "sha256": "fa9b90f9aef5e7885687e09c482f9c742b7d7814eab7f41e2c97595aaa6b1235"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 6",
+    "zh-CN": "低音下落 6"
+   },
+   "description": {
+    "en": "A smooth sub drop from 140 to 35 Hz, no click (2.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "平滑的低音下落，从 140 Hz 到 35 Hz，没有咔嗒（2.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 820,
+     "sha256": "46d4b41a0f2f95b1566dc33801190ac633a122c26ba26a70b4c60aa0336f9c38"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "daf5e62a37c8ac71308f0c59b22d70e76c8a755470c0e0c11bb394b972810191"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 7",
+    "zh-CN": "低音下落 7"
+   },
+   "description": {
+    "en": "A heavily driven low drop from 70 to 30 Hz (1.20 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "失真重的低音下落，从 70 Hz 到 30 Hz（1.20 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.2,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 806,
+     "sha256": "11167b047f38c20ffbd33e94a3d625ee88e57535478a1bcf91088a23c86a6b8f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 230444,
+     "sha256": "0c7bfb257bf8fb0781d7fa3fdec2d287c326d9f18949b2c3d1abb46cc2bac888"
+    }
+   ]
+  },
+  {
+   "id": "emile/sub-drop-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sub drop 8",
+    "zh-CN": "低音下落 8"
+   },
+   "description": {
+    "en": "A long, driven sub drop from 110 to 30 Hz with a click (2.50 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "较长、带失真的低音，从 110 Hz 落到 30 Hz，前面一下咔嗒（2.50 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2.5,
+    "cut": 0,
+    "tags": [
+     "sub-drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 846,
+     "sha256": "1e4ed82d0a8d4682c39081fb71808088a4817176da4be7592c1752a738bb50de"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 480044,
+     "sha256": "3eb09f81e9adb45af66514892a919a5b354c845ebc0a129bf05d3826b2313177"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 1",
+    "zh-CN": "长扫过 1"
+   },
+   "description": {
+    "en": "A short airy whoosh passing by (0.80 s; the cut at its peak, 0.475 s). Synthesised by Émile.",
+    "zh-CN": "短的、带气声的扫过（0.80 秒；切点在峰值，0.475 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.8,
+    "cut": 0.475,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 766,
+     "sha256": "91284d3b695c09c283132547861b029205500263305b5828178fb351a30eb37d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 153644,
+     "sha256": "f1e4e3d41f126f6b563194e0e9abd1c209b989c6d91e22ebd84c61e63041fc7d"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 2",
+    "zh-CN": "长扫过 2"
+   },
+   "description": {
+    "en": "A whoosh passing by, mid-weight (1.00 s; the cut at its peak, 0.545 s). Synthesised by Émile.",
+    "zh-CN": "中等分量的扫过（1.00 秒；切点在峰值，0.545 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 0.545,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 759,
+     "sha256": "2854a81a82ecca4297d86db7a2a30c2f7ca08cf27163f36f4baf9397f3c4678a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192044,
+     "sha256": "afc299e4715d0823caa284195e4f33655bfd3651d4a614d751201dc0fddd64c2"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 3",
+    "zh-CN": "长扫过 3"
+   },
+   "description": {
+    "en": "A narrow, tonal whoosh passing by (1.20 s; the cut at its peak, 0.725 s). Synthesised by Émile.",
+    "zh-CN": "窄带、有点音调感的扫过（1.20 秒；切点在峰值，0.725 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.2,
+    "cut": 0.725,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 775,
+     "sha256": "5f8546a495c08819e3888d4bae41496b9717df6a79cfd73ae12198ac6089b20f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 230444,
+     "sha256": "a86e473c14cb065a4d3fc255d91621346e7d4b61580c57d5b6bf5e7774a4780a"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 4",
+    "zh-CN": "长扫过 4"
+   },
+   "description": {
+    "en": "A long, low, broad whoosh (1.50 s; the cut at its peak, 0.985 s). Synthesised by Émile.",
+    "zh-CN": "较长、低沉、宽的扫过（1.50 秒；切点在峰值，0.985 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 0.985,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 764,
+     "sha256": "b90c4fbee9cdff2aac2af11315989606d16bc34ce5c568b9fa3753d78082be93"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 288044,
+     "sha256": "663a4bd4e024ce0eb618ba70ef1f0eb56fd5714f7d7c03b0aa716965d442a7f5"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 5",
+    "zh-CN": "长扫过 5"
+   },
+   "description": {
+    "en": "A long slow whoosh with a late peak and a long tail (2.00 s; the cut at its peak, 1.395 s). Synthesised by Émile.",
+    "zh-CN": "很长很慢的扫过，峰值靠后，拖尾长（2.00 秒；切点在峰值，1.395 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 1.395,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 806,
+     "sha256": "1fbee717bee9a768db3c1489647c3fccb4e89e99b106d7a847784bd7564dadee"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "15b0a519369e57b8ef3ced07276986612ab6e5e8938ccb2efda755ef87580e34"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 6",
+    "zh-CN": "长扫过 6"
+   },
+   "description": {
+    "en": "A fast, bright, high whoosh (1.00 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+    "zh-CN": "快、亮、偏高的扫过（1.00 秒；切点在峰值，0.495 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 0.495,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 761,
+     "sha256": "6d3b318086f12a9d4b79019febf6dae2a33665cda280fbf63130e5b97345112a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192044,
+     "sha256": "b4cdc675a8f54d35289bd4b9be5b55b40e87a353c4ca6208d2a7df17f193c072"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 7",
+    "zh-CN": "长扫过 7"
+   },
+   "description": {
+    "en": "A whoosh with a rough flutter in it, like air through a gap (1.20 s; the cut at its peak, 0.715 s). Synthesised by Émile.",
+    "zh-CN": "带粗糙颤动的扫过，像风穿过缝隙（1.20 秒；切点在峰值，0.715 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.2,
+    "cut": 0.715,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 813,
+     "sha256": "f4b1ce914b05b3e7e7983e3107d317bd5513ab1d8c95f8753160d03cd32c18e0"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 230444,
+     "sha256": "beb109e0ec1894afa9a53233544bb328ba969c1c99694a99ebabc4f248d7270b"
+    }
+   ]
+  },
+  {
+   "id": "emile/sweep-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Sweep 8",
+    "zh-CN": "长扫过 8"
+   },
+   "description": {
+    "en": "A very short, bright, narrow whoosh: a flick (0.70 s; the cut at its peak, 0.335 s). Synthesised by Émile.",
+    "zh-CN": "很短、亮、窄的扫过：一甩（0.70 秒；切点在峰值，0.335 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.7,
+    "cut": 0.335,
+    "tags": [
+     "sweep"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 789,
+     "sha256": "c44b9dd31a26a349922c67afd284f8a2d6f6cae032dda4531d7c889fe3664d81"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 134444,
+     "sha256": "b29349db78be5596d95693dc21c32a6a8f05be83c8680aa31bd04dd0f228e725"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 1",
+    "zh-CN": "吸入 1"
+   },
+   "description": {
+    "en": "A short reversed swell of noise, drawn into the cut (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+    "zh-CN": "短的反向噪声，被吸进切点（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 1,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 786,
+     "sha256": "ba3223762b49779c2abeaba814b1ccc4aea4b7bba5f5be59958efde3adf2deca"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192044,
+     "sha256": "b62aec2693d295eceade17f47a2a9e3535d919649c79391193b6472b2bdee9fd"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 2",
+    "zh-CN": "吸入 2"
+   },
+   "description": {
+    "en": "A reversed swell of noise from a large hall (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "大厅里一下噪声的混响倒放（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 778,
+     "sha256": "d59d9c12e967791e16c5f6e1f65496f6027fb5371a8c4a02616247f88382bd4f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "7ed86bc248f6b3d9dcbe3eb66c211057a4d9c088362d3e2025a7b3f30575ca5d"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 3",
+    "zh-CN": "吸入 3"
+   },
+   "description": {
+    "en": "A reversed swell of a struck chord: tonal, drawn in (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一下敲出的和弦倒放：有音调，被吸进去（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 804,
+     "sha256": "605addc8f16831651a1f90054266b4eebb7f34751f470a44ac1b2c7154e3d956"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "625f380ae14984cbffe582bc6526391db5ed46c655e6f4f9e83bb3851f303f35"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 4",
+    "zh-CN": "吸入 4"
+   },
+   "description": {
+    "en": "A long reversed swell of a low struck chord (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "较长的低和弦倒放（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 3,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 766,
+     "sha256": "d0baa9453738f153168fcdfbb379c4a1c9b3b66161923929d071270c357dc852"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 576044,
+     "sha256": "c74ef958ca7716169675eeb291d4c540fda231869e3aaec6bcbd5dd057815aee"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 5",
+    "zh-CN": "吸入 5"
+   },
+   "description": {
+    "en": "A reversed swell of a low thump: dark and heavy (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一下闷响的倒放：暗而重（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 779,
+     "sha256": "227aef3f9334c8133730b5a426692774c07bb499dae34175d7a843881c88cb64"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 384044,
+     "sha256": "ae7745c9858c6da7c762c93a8436add2bbd7d9e26ccf7f6eca0325efcfef4882"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 6",
+    "zh-CN": "吸入 6"
+   },
+   "description": {
+    "en": "A long, dark reversed swell of noise from a very large hall (3.00 s; the cut at its end, 3.000 s). Synthesised by Émile.",
+    "zh-CN": "很大的空间里噪声的长混响倒放，偏暗（3.00 秒；切点在结尾，3.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 3,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 809,
+     "sha256": "5d78126e3b26e7fdd9c3f81ab2272dff51ae216c219583841166e89a1eb7b59b"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 576044,
+     "sha256": "066ee2c82702d5fc52f2cd82ac30663127ff1926270752072dbafb34d7174ebf"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 7",
+    "zh-CN": "吸入 7"
+   },
+   "description": {
+    "en": "A short, bright reversed swell of a high struck chord (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "短而亮的高和弦倒放（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 1.5,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 783,
+     "sha256": "c8ec0a3ecac3d51a0fff5dcac414f4a5a4d62b71c68bf2cd019cf69736d381af"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 288044,
+     "sha256": "66627b672028071dea07dec53a78e2c3780bcb827f7ad3a0553677f6a8a826e9"
+    }
+   ]
+  },
+  {
+   "id": "emile/swell-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Swell 8",
+    "zh-CN": "吸入 8"
+   },
+   "description": {
+    "en": "A long reversed swell of a deep thump (2.50 s; the cut at its end, 2.500 s). Synthesised by Émile.",
+    "zh-CN": "较长的低沉闷响倒放（2.50 秒；切点在结尾，2.500 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 2.5,
+    "cut": 2.5,
+    "tags": [
+     "swell"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 767,
+     "sha256": "f428c7812bbea352364b6a5fa51fd99dcb25f3779b00188efd5268a1c897fb0e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 480044,
+     "sha256": "6d009d3e80fbcab4bd464af62dc409aa61b28f3aba9748917450e00de1a14489"
+    }
+   ]
+  },
+  {
    "id": "emile/vhs",
    "version": "1.0.0",
    "kind": "filter",
@@ -4600,7 +6064,7 @@
   },
   {
    "id": "emile/whoosh-01",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4616,6 +6080,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1,
+    "cut": 0.905,
     "tags": [
      "whoosh"
     ]
@@ -4631,8 +6096,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 680,
-     "sha256": "c71d6820528dd17469cbff5859e95053599932a5be4c056eebcd0da092df7dba"
+     "bytes": 698,
+     "sha256": "d73d544f6aae09ff873e85a3c297597fdf35b4a6bf9df4ec8b1acc984cbe3f68"
     },
     {
      "path": "sound.wav",
@@ -4643,7 +6108,7 @@
   },
   {
    "id": "emile/whoosh-02",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4659,6 +6124,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.954,
+    "cut": 0.155,
     "tags": [
      "whoosh"
     ]
@@ -4674,8 +6140,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 698,
-     "sha256": "2e330c39c47f8581bf7acf73dcf41f6cdf01b1e6081c8400014260eb1d85e5de"
+     "bytes": 716,
+     "sha256": "fa5df7ee751a539c2ee3095dcc4d4232d86be3db982ab6ac3b2dcadff2da8169"
     },
     {
      "path": "sound.wav",
@@ -4686,7 +6152,7 @@
   },
   {
    "id": "emile/whoosh-03",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4702,6 +6168,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.406,
+    "cut": 0.115,
     "tags": [
      "whoosh"
     ]
@@ -4717,8 +6184,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 713,
-     "sha256": "3707839bca55b0547c47da3801d3b3fac33b0732e8f76efbe64b1501363a4a8f"
+     "bytes": 731,
+     "sha256": "eb4b416b99b8f2b79892bd19ea2667fdb48f538634e4b3fe21993e3031d36fd1"
     },
     {
      "path": "sound.wav",
@@ -4729,7 +6196,7 @@
   },
   {
    "id": "emile/whoosh-04",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4745,6 +6212,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.139,
+    "cut": 0.015,
     "tags": [
      "whoosh"
     ]
@@ -4760,8 +6228,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 701,
-     "sha256": "40dfb42deefdc6895042fabd4f25bdafdf398c6fa04845e2be01cfdb27d2c0a9"
+     "bytes": 719,
+     "sha256": "eb59479a308b1e96080a4666e2a335a9cb2c18f0a469e5d2ad44a0a96e32ff8a"
     },
     {
      "path": "sound.wav",
@@ -4772,7 +6240,7 @@
   },
   {
    "id": "emile/whoosh-05",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4788,6 +6256,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 1,
+    "cut": 0.205,
     "tags": [
      "whoosh"
     ]
@@ -4803,8 +6272,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 678,
-     "sha256": "a8c4c7e5388e05f08d1e6063ecf0704ad6fadd536fbcfa7889f04e4204518fd3"
+     "bytes": 696,
+     "sha256": "8ddabdb1f2803f497a8a7ce6a103f87698b865e9bc854b1f947b7754554d3b30"
     },
     {
      "path": "sound.wav",
@@ -4815,7 +6284,7 @@
   },
   {
    "id": "emile/whoosh-06",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4831,6 +6300,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.953,
+    "cut": 0.155,
     "tags": [
      "whoosh"
     ]
@@ -4846,8 +6316,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 698,
-     "sha256": "c63d27f8764c50cef9264ce096f9476057e54a2f5d19f44154711844fad215e9"
+     "bytes": 716,
+     "sha256": "200c3728659e3fa9f116f3edfc9690ef764dfdefc139f6c34755c668da1d6a3e"
     },
     {
      "path": "sound.wav",
@@ -4858,7 +6328,7 @@
   },
   {
    "id": "emile/whoosh-07",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4874,6 +6344,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.337,
+    "cut": 0.045,
     "tags": [
      "whoosh"
     ]
@@ -4889,8 +6360,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 741,
-     "sha256": "d6d6d6c195c63b69e0d2a77e6ba7241fd71818ed531e97396c02a2ee4fc31c2e"
+     "bytes": 759,
+     "sha256": "41e213cb706e2c1a5757d3a4b4aa57a7dc0b31c8bc247d66331888b120a0291f"
     },
     {
      "path": "sound.wav",
@@ -4901,7 +6372,7 @@
   },
   {
    "id": "emile/whoosh-08",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4917,6 +6388,7 @@
    "sound": {
     "file": "sound.wav",
     "seconds": 0.139,
+    "cut": 0.055,
     "tags": [
      "whoosh"
     ]
@@ -4932,8 +6404,8 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 701,
-     "sha256": "6eb0cc793a730efec9124e329a9872668352206ab7d93e3da1fc4da08d88929e"
+     "bytes": 719,
+     "sha256": "49630946d607b6e42d7b49c2e411ab0db04cea9d3b7f6cb678738327825fa36a"
     },
     {
      "path": "sound.wav",
@@ -5079,6 +6551,134 @@
      "path": "SKILL.md",
      "bytes": 8815,
      "sha256": "403735512eb3575b6afff02ca6ceb9862d34e27a8e5a73cc7664bc5dbb27b2f5"
+    }
+   ]
+  },
+  {
+   "name": "sound-ambience-crossfade",
+   "title": "Ambience crossfade: never a hole",
+   "description": "Crossing two places' sound beds over a dissolve or a soft cut so the film never drops into silence: lengths, curves, and filling a gap with a bed. Read when a dissolve joins two shots with sound, or a cut leaves a hole in the sound.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "79a52af355688c45130faf1ddb934a7f53eecd07c4efee212fcf20b733caa63f",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2222,
+     "sha256": "d3d31fce6bbe245d158d0554382ec44f16960703f4682e5b8e15bbb121ca6fd2"
+    }
+   ]
+  },
+  {
+   "name": "sound-j-cut",
+   "title": "J-cut: hear it before you see it",
+   "description": "A J-cut, the next shot's sound heard before its picture (audio lead, pre-lap): what it is for, how far ahead, and how to do it on Émile's timeline and with ffmpeg. Read when a cut goes into a new place that has a sound of its own.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "cc5771739788a131d380e1ab358caf35ed9bc09cf43ae3a5e8cfb1193c68f9f0",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2938,
+     "sha256": "4074b0d56d7f35dea074ddc018926daa0b040234f16156e46bbfb092c4de7e81"
+    }
+   ]
+  },
+  {
+   "name": "sound-l-cut",
+   "title": "L-cut: let it ring on",
+   "description": "An L-cut, a shot's sound carried on into the next picture (audio tail, post-lap): what it is for, how long, and how to do it on Émile's timeline and with ffmpeg. Read when a moment's sound should linger past its cut.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "bf695a5ccc017df43a61415733f6371e2915a6453adff677af1bae79c4acf5d2",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2073,
+     "sha256": "a5e599096e5605376b12dc0cceb061a696279a5f48d286984f961a4d564b6cfb"
+    }
+   ]
+  },
+  {
+   "name": "sound-match-cut",
+   "title": "Sound match cut: one sound becomes another",
+   "description": "A sound match cut, one sound turning into another across a cut (a helicopter's blades into a ceiling fan, a keyboard's tap into a raindrop) so two shots are joined by what we hear. When it works, how to find one, and how to time it. Read when two shots share a motion, a rhythm or a shape.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "27f26d97e738803ea94abc5a026ae9876b3b6693bab1313a63a0e232a1eecedf",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2212,
+     "sha256": "e62f74c735671594cdcc0c0c23c85325aecda457ba3ca5300551b0c12db69cbe"
+    }
+   ]
+  },
+  {
+   "name": "sound-music-handoff",
+   "title": "Music handoff: change on the downbeat, end on a hit",
+   "description": "Changing or ending the film's music at a cut: on a downbeat, from one section or track to the next, stopping dead for effect, and ending on a hit instead of a fade. Read when the music has to change at a scene change, and for every film's end.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "5afeddf82331f006c1e319152e3607114e1e7799709d51b33b03d5b80dd94543",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2825,
+     "sha256": "811f544364181a10c27b7b2e49272cee3043ecc4a5963b4521b6c46406eac5f4"
+    }
+   ]
+  },
+  {
+   "name": "sound-riser-hit",
+   "title": "Riser into a hit: build, breathe, land",
+   "description": "The turn of a film made to land: a riser or a swell building into the cut, a breath of near-silence just before it, then a hit and a sub-drop on it with the music re-entering. Timings, sounds, levels, and how to do it. Read for the reveal, the product's first appearance, the title, the drop.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "79f69cc0f75cfbc9d2ff15df2047891bb3bf1a6efffb0477357f1687d24f40bc",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 3178,
+     "sha256": "c6146f96d17da4a8dd12625aaf9ec0fa71cce08719406d1ba63252b3cd243e20"
+    }
+   ]
+  },
+  {
+   "name": "sound-transitions",
+   "title": "Sound across a cut",
+   "description": "How a film's sound carries it across a cut or a transition, and which of the seven ways suits each one (J-cut, L-cut, ambience crossfade, whoosh, riser into a hit, sound match cut, music handoff). Read before laying any sound on a cut, and when the person asks for transitions \"with sound\", \"more cinematic\" or \"like an ad\".",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "551f970c1fe1f3ec4481793a3bfc2a4fdbd9203d06df7a1a83ac5efe0be89dde",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 3697,
+     "sha256": "af096df58b87ebf9274969bba0b0df1c02a614e177c2f5af7384814046bfff4d"
+    }
+   ]
+  },
+  {
+   "name": "sound-whoosh",
+   "title": "Whoosh: the sound of the move",
+   "description": "A whoosh on a moving transition (push, wipe, zoom, whip pan, something flying across the frame): which length, where its peak goes, how loud, and when to leave it out. Read before laying a whoosh or a sweep.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "d98306ca89495b8f5a21e4cf396dd1f2e2b4d70e03991f7234782fce32483fbd",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 2138,
+     "sha256": "164ec90d2fdd7e902d830ff3e137e539ca4deb39b3ea8c51cce6c63d10a9a8b5"
     }
    ]
   },

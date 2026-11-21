@@ -139,11 +139,12 @@ export function generateSkills(root, packDirs, contract, controls) {
 }
 
 // skills/emile-sounds from the sound packs (emile/<name>/, kind: sound)
-const TAGS = ['click', 'pop', 'whoosh', 'rise', 'drop', 'impact', 'notify', 'ambience']
+const TAGS = ['click', 'pop', 'whoosh', 'rise', 'drop', 'impact', 'notify', 'ambience', 'riser', 'swell', 'sub-drop', 'sweep']
 const TAG_LINE = {
   click: 'a tap, a button pressed', pop: 'something appearing: a card, a badge', whoosh: 'a move across the frame, a transition',
   rise: 'building into a reveal', drop: 'something landing or going away', impact: 'a hit on a cut, a title landing',
-  notify: 'a message, a success, an error', ambience: 'a bed under a scene'
+  notify: 'a message, a success, an error', ambience: 'a bed under a scene',
+  riser: 'building for seconds into a cut, loudest at its end', swell: 'a reversed reverb drawn into a cut', 'sub-drop': 'a low fall under a hit, from the cut on', sweep: 'a long whoosh whose peak is the cut'
 }
 export function generateSoundSkill(root, soundDirs) {
   const out = new Map()
@@ -154,13 +155,13 @@ export function generateSoundSkill(root, soundDirs) {
   const tables = TAGS.map(tag => {
     const list = sounds.filter(s => s.pack.sound.tags.includes(tag))
     if (!list.length) return ''
-    return [`## ${tag[0].toUpperCase()}${tag.slice(1)}: ${TAG_LINE[tag]}`, '', '| Sound | Seconds | How it sounds |', '|---|---|---|',
-      ...list.map(s => `| \`sounds/${s.name}.wav\` | ${s.pack.sound.seconds.toFixed(2)} | ${cell(s.pack.description.en.replace(/, from .*$/, '.'))} |`), ''].join('\n')
+    return [`## ${tag[0].toUpperCase()}${tag.slice(1)}: ${TAG_LINE[tag]}`, '', '| Sound | Seconds | Cut at | How it sounds |', '|---|---|---|---|',
+      ...list.map(s => `| \`sounds/${s.name}.wav\` | ${s.pack.sound.seconds.toFixed(2)} | ${s.pack.sound.cut.toFixed(3)} | ${cell(s.pack.description.en.replace(/, from .*$/, '.'))} |`), ''].join('\n')
   }).filter(Boolean).join('\n')
   const template = fs.readFileSync(path.join(root, 'scripts', 'skills', 'emile-sounds', 'SKILL.md'), 'utf8')
   out.set(`${S}/SKILL.md`, Buffer.from(template.replace('{{generated}}', md).replace('{{sounds}}', tables.trimEnd())))
   out.set(`${S}/sounds.json`, Buffer.from(JSON.stringify(sounds.map(s => ({
-    name: s.name, file: `sounds/${s.name}.wav`, tag: s.pack.sound.tags[0], seconds: s.pack.sound.seconds,
+    name: s.name, file: `sounds/${s.name}.wav`, tag: s.pack.sound.tags[0], seconds: s.pack.sound.seconds, cut: s.pack.sound.cut,
     description: s.pack.description.en, source: s.pack.sources[0], licence: s.pack.licence
   })), null, 1) + '\n'))
   for (const s of sounds) out.set(`${S}/sounds/${s.name}.wav`, fs.readFileSync(path.join(s.dir, s.pack.sound.file)))

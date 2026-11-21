@@ -1,7 +1,7 @@
 {
   "id": "emile/pop-08",
   "kind": "sound",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": {
     "en": "Pop 8",
     "zh-CN": "弹出 8"
@@ -14,6 +14,7 @@
   "sound": {
     "file": "sound.wav",
     "seconds": 0.162,
+    "cut": 0.005,
     "tags": [
       "pop"
     ]

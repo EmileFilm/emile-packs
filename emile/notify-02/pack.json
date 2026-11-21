@@ -1,7 +1,7 @@
 {
   "id": "emile/notify-02",
   "kind": "sound",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": {
     "en": "Notify 2",
     "zh-CN": "提示 2"
@@ -14,6 +14,7 @@
   "sound": {
     "file": "sound.wav",
     "seconds": 0.491,
+    "cut": 0.165,
     "tags": [
       "notify"
     ]

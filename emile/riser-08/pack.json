@@ -1,0 +1,31 @@
+{
+  "id": "emile/riser-08",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Riser 8",
+    "zh-CN": "上升 8"
+  },
+  "description": {
+    "en": "A short riser led by a low chord, one octave (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "短的上升，以低和弦为主，一个八度（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 1.5,
+    "tags": [
+      "riser"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

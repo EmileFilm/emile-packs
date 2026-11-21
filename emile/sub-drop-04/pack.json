@@ -1,0 +1,31 @@
+{
+  "id": "emile/sub-drop-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sub drop 4",
+    "zh-CN": "低音下落 4"
+  },
+  "description": {
+    "en": "A very long, gritty sub drop from 80 to 25 Hz (3.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "很长、带颗粒的低音，从 80 Hz 落到 25 Hz（3.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 3,
+    "cut": 0,
+    "tags": [
+      "sub-drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

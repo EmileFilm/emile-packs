@@ -1,0 +1,31 @@
+{
+  "id": "emile/swell-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Swell 2",
+    "zh-CN": "吸入 2"
+  },
+  "description": {
+    "en": "A reversed swell of noise from a large hall (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "大厅里一下噪声的混响倒放（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+      "swell"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "emile/sweep-06",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sweep 6",
+    "zh-CN": "长扫过 6"
+  },
+  "description": {
+    "en": "A fast, bright, high whoosh (1.00 s; the cut at its peak, 0.495 s). Synthesised by Émile.",
+    "zh-CN": "快、亮、偏高的扫过（1.00 秒；切点在峰值，0.495 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 0.495,
+    "tags": [
+      "sweep"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

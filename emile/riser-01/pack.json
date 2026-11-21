@@ -1,0 +1,31 @@
+{
+  "id": "emile/riser-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Riser 1",
+    "zh-CN": "上升 1"
+  },
+  "description": {
+    "en": "A short bright riser, noise opening upward over a thin climbing tone (1.00 s; the cut at its end, 1.000 s). Synthesised by Émile.",
+    "zh-CN": "短而亮的上升：噪声往上打开，下面一层细的音往上爬（1.00 秒；切点在结尾，1.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 1,
+    "tags": [
+      "riser"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "emile/sub-drop-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sub drop 1",
+    "zh-CN": "低音下落 1"
+  },
+  "description": {
+    "en": "A sub drop falling from 120 to 40 Hz with a click on its front (1.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "低音从 120 Hz 落到 40 Hz，前面一下咔嗒（1.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "cut": 0,
+    "tags": [
+      "sub-drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

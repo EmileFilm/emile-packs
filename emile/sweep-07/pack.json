@@ -1,0 +1,31 @@
+{
+  "id": "emile/sweep-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Sweep 7",
+    "zh-CN": "长扫过 7"
+  },
+  "description": {
+    "en": "A whoosh with a rough flutter in it, like air through a gap (1.20 s; the cut at its peak, 0.715 s). Synthesised by Émile.",
+    "zh-CN": "带粗糙颤动的扫过，像风穿过缝隙（1.20 秒；切点在峰值，0.715 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.2,
+    "cut": 0.715,
+    "tags": [
+      "sweep"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,7 +1,7 @@
 {
   "id": "emile/drop-07",
   "kind": "sound",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": {
     "en": "Drop 7",
     "zh-CN": "落下 7"
@@ -14,6 +14,7 @@
   "sound": {
     "file": "sound.wav",
     "seconds": 0.148,
+    "cut": 0.005,
     "tags": [
       "drop"
     ]

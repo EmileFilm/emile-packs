@@ -1,0 +1,31 @@
+{
+  "id": "emile/swell-03",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Swell 3",
+    "zh-CN": "吸入 3"
+  },
+  "description": {
+    "en": "A reversed swell of a struck chord: tonal, drawn in (2.00 s; the cut at its end, 2.000 s). Synthesised by Émile.",
+    "zh-CN": "一下敲出的和弦倒放：有音调，被吸进去（2.00 秒；切点在结尾，2.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 2,
+    "cut": 2,
+    "tags": [
+      "swell"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

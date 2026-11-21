@@ -1,0 +1,31 @@
+{
+  "id": "emile/swell-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Swell 7",
+    "zh-CN": "吸入 7"
+  },
+  "description": {
+    "en": "A short, bright reversed swell of a high struck chord (1.50 s; the cut at its end, 1.500 s). Synthesised by Émile.",
+    "zh-CN": "短而亮的高和弦倒放（1.50 秒；切点在结尾，1.500 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.5,
+    "cut": 1.5,
+    "tags": [
+      "swell"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}
