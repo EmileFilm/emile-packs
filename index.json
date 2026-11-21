@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.4",
- "published": "2026-11-21T12:16:47.538Z",
+ "tag": "v1.2.5",
+ "published": "2026-11-21T12:54:18.657Z",
  "contract": 4,
  "packs": [
   {
@@ -7487,13 +7487,13 @@
    "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), mark them on the timeline with a suggested recipe, then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "e41f11acd2bf3793aa83a9256f4fd5638c5de93f76f8a2b7b0c6a70219c3a403",
+   "digest": "41879c33a8b48c322301957f7088d060590a1a69223eaefea6bf3405bf22e0d8",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 9434,
-     "sha256": "bb382109b1d66ad487b58bb38caf0f5813629b5fd8cb402b621da87dfe82f74e"
+     "bytes": 9729,
+     "sha256": "570ac19d2caaa25b8edc2c64ad91fed53311057569c16a01c213f0b83cd24942"
     }
    ]
   },
