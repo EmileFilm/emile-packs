@@ -41,7 +41,7 @@ import path from 'node:path'
 import vm from 'node:vm'
 import { parseArgs } from 'node:util'
 import { pathToFileURL } from 'node:url'
-import { generateSkills, GENERATED } from './skills.mjs'
+import { FOR_OTHERS, generateSkills, generateSoundSkill, GENERATED } from './skills.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const FORMAT = 1
@@ -84,6 +84,8 @@ if (!packDirs.length) fail('no packs (<publisher>/<name>/pack.json)')
 // the Skill's runner wraps and what skills/emile-shaders carries
 const kindOf = dir => JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8')).kind
 const shaderDirs = packDirs.filter(dir => ['filter', 'transition'].includes(kindOf(dir)))
+// The sounds: what skills/emile-sounds carries
+const soundDirs = packDirs.filter(dir => kindOf(dir) === 'sound')
 
 // 1. check
 const engine = path.resolve(values.engine ?? process.env.EMILE_ENGINE ?? path.join(ROOT, '..', 'Emile', 'engine'))
@@ -122,7 +124,7 @@ const { scanSkill } = await import(pathToFileURL(checker).href)
 // The rules a parameter's control is made by are the engine's (Studio's
 // filter panel draws from the same file): written out as a classic script
 const controls = fs.readFileSync(path.join(engine, 'core', 'compose', 'controls.js'), 'utf8')
-const generated = generateSkills(ROOT, shaderDirs, contract, controls)
+const generated = new Map([...generateSkills(ROOT, shaderDirs, contract, controls), ...generateSoundSkill(ROOT, soundDirs)])
 const stale = []
 for (const skill of GENERATED) {
   const dir = path.join(ROOT, 'skills', skill)
@@ -195,7 +197,7 @@ const packs = packDirs.map(dir => {
 // the front matter's description; digest: the SHA-256 of its files' list
 const skillsDir = path.join(ROOT, 'skills')
 const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileTypes: true }) : [])
-  .filter(e => e.isDirectory() && e.name !== 'emile-shaders' && fs.existsSync(path.join(skillsDir, e.name, 'SKILL.md')))
+  .filter(e => e.isDirectory() && !FOR_OTHERS.includes(e.name) && fs.existsSync(path.join(skillsDir, e.name, 'SKILL.md')))
   .map(e => {
     const dir = path.join(skillsDir, e.name)
     const text = fs.readFileSync(path.join(dir, 'SKILL.md'), 'utf8')

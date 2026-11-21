@@ -11,6 +11,10 @@
 //   skills/choosing-filters/  an official reference Skill for Émile: the
 //                             filters' guides drawn into one page to
 //                             choose from (scripts/skills/choosing-filters/)
+//   skills/emile-sounds/      the sound effects for other people's agents:
+//                             every sound pack's sound.wav as it is, a
+//                             list for a program (sounds.json) and
+//                             SKILL.md (scripts/skills/emile-sounds/)
 //
 // A template's {{generated}} becomes the note that the file is generated;
 // a .js or .html file gets it as its first comment. The packs' own files
@@ -20,7 +24,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-export const GENERATED = ['emile-shaders', 'choosing-filters']
+export const GENERATED = ['emile-shaders', 'choosing-filters', 'emile-sounds']
+// The Skills for other people's agents, not Émile's (not in the index)
+export const FOR_OTHERS = ['emile-shaders', 'emile-sounds']
 
 const ORDER = ['print', 'texture', 'distort', 'color', 'glow', 'film']
 const GROUP = { print: 'Print', texture: 'Texture', distort: 'Distort', color: 'Color', glow: 'Glow', film: 'Film' }
@@ -129,5 +135,34 @@ export function generateSkills(root, packDirs, contract, controls) {
   }
   const words = filters.map(p => `- \`${p.pack.id}\`: ${wordsOf(p.guide)}`).join('\n')
   put(`${C}/SKILL.md`, fill(template('choosing-filters', 'SKILL.md'), { generated: cmd, table: table.join('\n').trim(), words }))
+  return out
+}
+
+// skills/emile-sounds from the sound packs (emile/<name>/, kind: sound)
+const TAGS = ['click', 'pop', 'whoosh', 'rise', 'drop', 'impact', 'notify', 'ambience']
+const TAG_LINE = {
+  click: 'a tap, a button pressed', pop: 'something appearing: a card, a badge', whoosh: 'a move across the frame, a transition',
+  rise: 'building into a reveal', drop: 'something landing or going away', impact: 'a hit on a cut, a title landing',
+  notify: 'a message, a success, an error', ambience: 'a bed under a scene'
+}
+export function generateSoundSkill(root, soundDirs) {
+  const out = new Map()
+  const S = 'skills/emile-sounds'
+  const sounds = soundDirs.map(dir => ({ dir, name: path.basename(dir), pack: JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8')) }))
+    .sort((a, b) => a.name.localeCompare(b.name))
+  const md = `<!-- ${note('the sound packs (emile/<name>/) and scripts/skills/emile-sounds/')} The files under sounds/ are the packs' own sound.wav, byte for byte. -->`
+  const tables = TAGS.map(tag => {
+    const list = sounds.filter(s => s.pack.sound.tags.includes(tag))
+    if (!list.length) return ''
+    return [`## ${tag[0].toUpperCase()}${tag.slice(1)}: ${TAG_LINE[tag]}`, '', '| Sound | Seconds | How it sounds |', '|---|---|---|',
+      ...list.map(s => `| \`sounds/${s.name}.wav\` | ${s.pack.sound.seconds.toFixed(2)} | ${cell(s.pack.description.en.replace(/, from .*$/, '.'))} |`), ''].join('\n')
+  }).filter(Boolean).join('\n')
+  const template = fs.readFileSync(path.join(root, 'scripts', 'skills', 'emile-sounds', 'SKILL.md'), 'utf8')
+  out.set(`${S}/SKILL.md`, Buffer.from(template.replace('{{generated}}', md).replace('{{sounds}}', tables.trimEnd())))
+  out.set(`${S}/sounds.json`, Buffer.from(JSON.stringify(sounds.map(s => ({
+    name: s.name, file: `sounds/${s.name}.wav`, tag: s.pack.sound.tags[0], seconds: s.pack.sound.seconds,
+    description: s.pack.description.en, source: s.pack.sources[0], licence: s.pack.licence
+  })), null, 1) + '\n'))
+  for (const s of sounds) out.set(`${S}/sounds/${s.name}.wav`, fs.readFileSync(path.join(s.dir, s.pack.sound.file)))
   return out
 }

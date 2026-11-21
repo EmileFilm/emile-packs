@@ -1,7 +1,7 @@
 <h1 align="center">Émile packs</h1>
 
 <p align="center">
-  <b>Fifteen filters, four transitions, nine instruments and sixty-four sounds, free and open, each with a guide an AI reads before it uses one.</b><br>
+  <b>The free, open parts films are made of — shaders, sounds, instruments — each with a guide an AI reads before it uses one.</b><br>
   For <a href="https://emilefilm.com">Émile</a>, the video editor built for AI — and for any coding agent that makes video.
 </p>
 
@@ -15,15 +15,33 @@
 </p>
 
 <p align="center">
-  <a href="#the-filters">Filters</a> ·
+  <a href="#shaders">Shaders</a> ·
+  <a href="#sounds">Sounds</a> ·
+  <a href="#instruments">Instruments</a> ·
+  <a href="#reference-skills">Reference Skills</a> ·
   <a href="#use-them">Use them</a> ·
   <a href="#reading-a-skillmd">Reading a SKILL.md</a> ·
   <a href="#for-pack-authors">For pack authors</a>
 </p>
 
+## What's here
+
+One kind of part per section; more kinds will come, each a section of its own.
+
+| Kind | What | For your own agent | In Émile |
+|---|---|---|---|
+| [Shaders](#shaders) | 15 filters and 4 transitions, GLSL with a WebGL2 runner | [`skills/emile-shaders`](skills/emile-shaders/SKILL.md) | a filter clip over the tracks under it, a transition between two clips |
+| [Sounds](#sounds) | 64 sound effects, 8 for each kind of moment, CC0 WAV | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
+| [Instruments](#instruments) | 9 sampled instruments (SFZ over CC0 samples) | — (they need an SFZ player; the samples are a release asset) | the film's music, written as a score and played on them |
+| [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, choosing filters, motion, subtitle styles | `skills/<name>` | read by Émile's AI with the task they belong to |
+
+Everything is listed in a signed `index.json`; Émile downloads a part the first time a film uses it and checks every file against the index.
+
+## Shaders
+
 <img src="docs/gallery-portrait.jpg" width="100%" alt="One portrait through all fifteen filters at their defaults">
 
-## What it does
+### What it does
 
 Tell Émile's AI how a moment should feel, and it lays the right filter over it: it picks the pack by what each one brings, reads that pack's guide, and sets it the way the guide says. You never need a filter's name or a parameter.
 
@@ -34,7 +52,7 @@ Tell Émile's AI how a moment should feel, and it lays the right filter over it:
 | "Some tape feel, please." | No span named, so the AI asks where, recommending the opening seconds, and says why: tape over a whole product demo blurs its interface. |
 | "Turn the whole film navy and cream." | `emile/duotone` with those two colours as hex, over the whole film because it was asked for. |
 
-### Seconds, not minutes
+#### Seconds, not minutes
 
 Most filters are an accent: a few seconds on the moment that calls for them — a headline held as a print, a hit on the beat, a memory on tape — between clean shots. Held for a whole film they tire the eye, and over an interface, numbers or body text they hide what the picture is there to say:
 
@@ -42,30 +60,15 @@ Most filters are an accent: a few seconds on the moment that calls for them — 
 
 Every guide says how long its filter holds up, and Émile's AI keeps to it unless you ask for more. The exceptions are finishes light enough to read as a surface: a little grain, paper under an illustrated film, a faint lens fringe.
 
-### By kind of film
+#### By kind of film
 
 A filter that lifts a music video can ruin a product demo. [`skills/choosing-filters`](skills/choosing-filters/SKILL.md) sorts all fifteen across 29 kinds of film, from product launches, software demos and customer stories to vlogs, music videos, AI short dramas and sports highlights: which may run long, which only for a moment, which to avoid. Each kind was checked by drawing two photographs of it under every filter. In Émile it is an official reference Skill you can bring into a chat; any agent can read it.
 
-## Instruments and sounds
-
-A film's music in Émile is either written as a score and played on these instruments, or generated; [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film and how to write a score that follows the cuts. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset (`assets`), not in the repository, and each has a phrase played on it (`preview.m4a`).
-
-| Instrument | | From |
-|---|---|---|
-| `emile/piano` | A Kawai grand, close and warm | VCSL |
-| `emile/strings`, `emile/strings-spiccato` | A string section: long notes, and short bounced ones | VSCO 2 CE |
-| `emile/contrabass-pizz` | A double bass, plucked | VSCO 2 CE |
-| `emile/harp`, `emile/vibraphone`, `emile/glockenspiel` | Plucked and struck: arpeggios, figures, sparkle | VCSL |
-| `emile/drums` | An acoustic kit: kick, snare, hi-hats, crash | Virtuosity Drums |
-| `emile/cinematic-perc` | A bass drum, a timpani, cymbal swells: weight on a cut | VCSL |
-
-The sounds are sound effects to lay at a moment, eight for each of `click`, `pop`, `whoosh`, `rise`, `drop`, `impact`, `notify` and `ambience` (`emile/click-01` … `emile/ambience-08`), chosen by ear from Kenney's CC0 audio packs and rubberduck's CC0 hits ([`scripts/sounds.json`](scripts/sounds.json); [`scripts/sounds.mjs`](scripts/sounds.mjs) makes them, each levelled to a −1 dBFS peak). All CC0: no credit needed, though each pack names its source.
-
-## The filters
+### The filters
 
 Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect) and two to four parameters of its own. Shown at their defaults.
 
-### Print — ink on paper
+#### Print — ink on paper
 
 <table>
 <tr>
@@ -75,7 +78,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Texture — a surface, not an effect
+#### Texture — a surface, not an effect
 
 <table>
 <tr>
@@ -85,7 +88,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Distort — glass, not glitch
+#### Distort — glass, not glitch
 
 <table>
 <tr>
@@ -94,7 +97,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Color — fewer inks, more intent
+#### Color — fewer inks, more intent
 
 <table>
 <tr>
@@ -103,7 +106,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Glow — light from the picture itself
+#### Glow — light from the picture itself
 
 <table>
 <tr>
@@ -112,7 +115,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 </tr>
 </table>
 
-### Film — the medium the picture passes through
+#### Film — the medium the picture passes through
 
 <table>
 <tr>
@@ -131,11 +134,47 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 | `emile/wipe` | A clean, designed change, like turning a page sideways. |
 | `emile/zoom` | Flying in: going deeper, into the next idea. |
 
+## Sounds
+
+Sixty-four short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS, with a `pack.json` saying how long it is, how it sounds and where it comes from.
+
+| Tag | For |
+|---|---|
+| `click` | a tap, a button pressed |
+| `pop` | something appearing: a card, a badge |
+| `whoosh` | a move across the frame, a transition |
+| `rise` | building into a reveal |
+| `drop` | something landing or going away |
+| `impact` | a hit on a cut, a title landing |
+| `notify` | a message, a success, an error |
+| `ambience` | a bed under a scene |
+
+Chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital Audio, Sci-fi Sounds) and rubberduck's CC0 breaking, falling and hit sounds; [`scripts/sounds.json`](scripts/sounds.json) lists the choice and [`scripts/sounds.mjs`](scripts/sounds.mjs) makes the packs from the original files. In Émile the AI picks one by its tag and description and lays it as an effect clip; [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) gives the same sounds to any agent, with the rules for using them and how to mix one into a video with ffmpeg.
+
+## Instruments
+
+A film's music in Émile is either written as a score and played on these instruments, or generated; [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film and how to write a score that follows the cuts. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository, and each has a phrase played on it (`preview.m4a`).
+
+| Instrument | | From |
+|---|---|---|
+| `emile/piano` | A Kawai grand, close and warm | VCSL |
+| `emile/strings`, `emile/strings-spiccato` | A string section: long notes, and short bounced ones | VSCO 2 CE |
+| `emile/contrabass-pizz` | A double bass, plucked | VSCO 2 CE |
+| `emile/harp`, `emile/vibraphone`, `emile/glockenspiel` | Plucked and struck: arpeggios, figures, sparkle | VCSL |
+| `emile/drums` | An acoustic kit: kick, snare, hi-hats, crash | Virtuosity Drums |
+| `emile/cinematic-perc` | A bass drum, a timpani, cymbal swells: weight on a cut | VCSL |
+
+Any SFZ player plays them (Émile uses [sfizz](https://github.com/sfztools/sfizz)): unpack an instrument's samples asset into its folder, beside its `instrument.sfz`.
+
+## Reference Skills
+
+Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`scoring`](skills/scoring/SKILL.md) (a film's music), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
+
 ## Use them
 
 ### In Émile
 
-Nothing to install. Say what you want in the chat, or type `#` and a filter's name; the first time a film uses a pack Émile downloads it from here, checks every file against the signed index, and keeps it for offline use. A filter is a clip on the timeline: it changes every track under it for as long as it lasts.
+Nothing to install. Say what you want in the chat, or type `#` and a filter's name; the first time a film uses a pack Émile downloads it from here, checks every file against the signed index, and keeps it for offline use. A filter is a clip on the timeline: it changes every track under it for as long as it lasts. Ask for music and the AI writes a score for the film and plays it on the instruments; a sound is an effect clip at the moment it is heard.
 
 ### With your own agent
 
@@ -148,7 +187,9 @@ cp -R emile-packs/skills/emile-shaders .claude/skills/
 
 Then ask for the look ("put a halftone on the video in this page"): the agent finds the Skill, reads the filter's guide and wires the shader into your page. For any other agent, put the folder wherever it reads Skills from.
 
-Without installing: hand your agent this repository's link, or clone it next to your project and point the agent at `skills/emile-shaders/SKILL.md`.
+The sounds the same way: `cp -R emile-packs/skills/emile-sounds .claude/skills/`, then ask for them ("add a click when the button is pressed at 3.2 s"). The agent picks one by its tag and how it sounds, and mixes it in with ffmpeg as the Skill shows.
+
+Without installing: hand your agent this repository's link, or clone it next to your project and point the agent at `skills/emile-shaders/SKILL.md` or `skills/emile-sounds/SKILL.md`.
 
 ### In your own code
 
@@ -175,6 +216,8 @@ For example, from `emile/displace`:
 An agent that reads this before it places a filter picks the right one, sets it well, keeps it short, and tells you when your picture is one it fails on.
 
 ## For pack authors
+
+An instrument or a sound is not written by hand: `scripts/instruments.mjs` and `scripts/sounds.mjs` make them from CC0 sources pinned in the scripts, and the build publishes an instrument's samples as its asset. What follows is for a shader pack.
 
 <details>
 <summary><b>A pack</b>: the folder, <code>pack.json</code> and the shader contract</summary>
@@ -255,4 +298,4 @@ The check compiles every shader with WebGL2 in Chrome and in the Mac's WebKit, s
 
 ## Licence
 
-MIT (see `LICENSE`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Studio Urbano](https://www.pexels.com/@studio-urbano-922916462/) on [Pexels](https://www.pexels.com/photo/portrait-of-brunette-woman-in-a-forest-20001072/), under the Pexels License; the other pictures are drawn by `scripts/pictures.js`. Each filter's `preview.mp4` and `preview.jpg` are drawn over a Pexels clip under the Pexels License, [by cottonbro studio](https://www.pexels.com/video/6263195/) (`scripts/footage.json`).
+The shaders, guides and scripts: MIT (see `LICENSE`). The sounds and the instruments' samples: CC0, as their sources released them (each pack's `sources`). Every shader, name and parameter here is written for Émile; none copies another product's code, presets or examples. The portrait in the previews is by [Studio Urbano](https://www.pexels.com/@studio-urbano-922916462/) on [Pexels](https://www.pexels.com/photo/portrait-of-brunette-woman-in-a-forest-20001072/), under the Pexels License; the other pictures are drawn by `scripts/pictures.js`. Each filter's `preview.mp4` and `preview.jpg` are drawn over a Pexels clip under the Pexels License, [by cottonbro studio](https://www.pexels.com/video/6263195/) (`scripts/footage.json`).

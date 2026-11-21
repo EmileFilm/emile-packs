@@ -1,0 +1,834 @@
+[
+ {
+  "name": "ambience-01",
+  "file": "sounds/ambience-01.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-02",
+  "file": "sounds/ambience-02.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-03",
+  "file": "sounds/ambience-03.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long bright steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-04",
+  "file": "sounds/ambience-04.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-05",
+  "file": "sounds/ambience-05.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-06",
+  "file": "sounds/ambience-06.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-07",
+  "file": "sounds/ambience-07.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "ambience-08",
+  "file": "sounds/ambience-08.wav",
+  "tag": "ambience",
+  "seconds": 5,
+  "description": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-01",
+  "file": "sounds/click-01.wav",
+  "tag": "click",
+  "seconds": 0.097,
+  "description": "A short click, falling (0.10 s), from Kenney · Interface Sounds (click_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-02",
+  "file": "sounds/click-02.wav",
+  "tag": "click",
+  "seconds": 0.094,
+  "description": "A short bright click, rising (0.09 s), from Kenney · UI Audio (click1.wav).",
+  "source": {
+   "name": "Kenney, UI Audio",
+   "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-03",
+  "file": "sounds/click-03.wav",
+  "tag": "click",
+  "seconds": 0.045,
+  "description": "A short bright click (0.04 s), from Kenney · Interface Sounds (tick_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-04",
+  "file": "sounds/click-04.wav",
+  "tag": "click",
+  "seconds": 0.04,
+  "description": "A short click (0.04 s), from Kenney · Interface Sounds (select_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-05",
+  "file": "sounds/click-05.wav",
+  "tag": "click",
+  "seconds": 0.059,
+  "description": "A short bright click (0.06 s), from Kenney · UI Audio (mouseclick1.wav).",
+  "source": {
+   "name": "Kenney, UI Audio",
+   "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-06",
+  "file": "sounds/click-06.wav",
+  "tag": "click",
+  "seconds": 0.315,
+  "description": "A short bright click, falling (0.32 s), from Kenney · UI Audio (switch1.wav).",
+  "source": {
+   "name": "Kenney, UI Audio",
+   "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-07",
+  "file": "sounds/click-07.wav",
+  "tag": "click",
+  "seconds": 0.012,
+  "description": "A short click (0.01 s), from Kenney · Interface Sounds (click_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "click-08",
+  "file": "sounds/click-08.wav",
+  "tag": "click",
+  "seconds": 0.056,
+  "description": "A short click (0.06 s), from Kenney · UI Audio (click2.wav).",
+  "source": {
+   "name": "Kenney, UI Audio",
+   "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-01",
+  "file": "sounds/drop-01.wav",
+  "tag": "drop",
+  "seconds": 0.132,
+  "description": "A short falling tone (0.13 s), from Kenney · Interface Sounds (drop_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-02",
+  "file": "sounds/drop-02.wav",
+  "tag": "drop",
+  "seconds": 0.258,
+  "description": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-03",
+  "file": "sounds/drop-03.wav",
+  "tag": "drop",
+  "seconds": 0.418,
+  "description": "A falling tone (0.42 s), from Kenney · Digital Audio (phaserDown1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-04",
+  "file": "sounds/drop-04.wav",
+  "tag": "drop",
+  "seconds": 0.453,
+  "description": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-05",
+  "file": "sounds/drop-05.wav",
+  "tag": "drop",
+  "seconds": 0.731,
+  "description": "A falling tone (0.73 s), from Kenney · Digital Audio (lowDown.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-06",
+  "file": "sounds/drop-06.wav",
+  "tag": "drop",
+  "seconds": 1.277,
+  "description": "A falling tone (1.28 s), from Kenney · Digital Audio (zapThreeToneDown.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-07",
+  "file": "sounds/drop-07.wav",
+  "tag": "drop",
+  "seconds": 0.148,
+  "description": "A short bright falling tone (0.15 s), from Kenney · Interface Sounds (close_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "drop-08",
+  "file": "sounds/drop-08.wav",
+  "tag": "drop",
+  "seconds": 0.188,
+  "description": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-01",
+  "file": "sounds/impact-01.wav",
+  "tag": "impact",
+  "seconds": 0.729,
+  "description": "A bright hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
+  "source": {
+   "name": "rubberduck, Breaking, falling & hit",
+   "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-02",
+  "file": "sounds/impact-02.wav",
+  "tag": "impact",
+  "seconds": 0.635,
+  "description": "A dark hit, rising (0.64 s), from Kenney · Sci-fi Sounds (impactMetal_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-03",
+  "file": "sounds/impact-03.wav",
+  "tag": "impact",
+  "seconds": 0.238,
+  "description": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
+  "source": {
+   "name": "rubberduck, Breaking, falling & hit",
+   "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-04",
+  "file": "sounds/impact-04.wav",
+  "tag": "impact",
+  "seconds": 0.248,
+  "description": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
+  "source": {
+   "name": "rubberduck, Breaking, falling & hit",
+   "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-05",
+  "file": "sounds/impact-05.wav",
+  "tag": "impact",
+  "seconds": 0.777,
+  "description": "A hit (0.78 s), from Kenney · Sci-fi Sounds (explosionCrunch_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-06",
+  "file": "sounds/impact-06.wav",
+  "tag": "impact",
+  "seconds": 0.129,
+  "description": "A short hit, falling (0.13 s), from rubberduck · Breaking, falling & hit (bfh1_rock_hit_01.ogg).",
+  "source": {
+   "name": "rubberduck, Breaking, falling & hit",
+   "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-07",
+  "file": "sounds/impact-07.wav",
+  "tag": "impact",
+  "seconds": 0.797,
+  "description": "A hit, rising (0.80 s), from rubberduck · Breaking, falling & hit (bfh1_hit_02.ogg).",
+  "source": {
+   "name": "rubberduck, Breaking, falling & hit",
+   "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "impact-08",
+  "file": "sounds/impact-08.wav",
+  "tag": "impact",
+  "seconds": 0.688,
+  "description": "A dark hit, rising (0.69 s), from Kenney · Sci-fi Sounds (impactMetal_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-01",
+  "file": "sounds/notify-01.wav",
+  "tag": "notify",
+  "seconds": 0.29,
+  "description": "A short dark chime, rising (0.29 s), from Kenney · Interface Sounds (confirmation_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-02",
+  "file": "sounds/notify-02.wav",
+  "tag": "notify",
+  "seconds": 0.491,
+  "description": "A dark chime, falling (0.49 s), from Kenney · Interface Sounds (question_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-03",
+  "file": "sounds/notify-03.wav",
+  "tag": "notify",
+  "seconds": 1.161,
+  "description": "A bright chime, rising (1.16 s), from Kenney · Digital Audio (twoTone1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-04",
+  "file": "sounds/notify-04.wav",
+  "tag": "notify",
+  "seconds": 1.672,
+  "description": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-05",
+  "file": "sounds/notify-05.wav",
+  "tag": "notify",
+  "seconds": 0.162,
+  "description": "A short bright chime, falling (0.16 s), from Kenney · Interface Sounds (error_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-06",
+  "file": "sounds/notify-06.wav",
+  "tag": "notify",
+  "seconds": 0.539,
+  "description": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-07",
+  "file": "sounds/notify-07.wav",
+  "tag": "notify",
+  "seconds": 0.333,
+  "description": "A short dark chime (0.33 s), from Kenney · Interface Sounds (question_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "notify-08",
+  "file": "sounds/notify-08.wav",
+  "tag": "notify",
+  "seconds": 1.498,
+  "description": "A bright chime, rising (1.50 s), from Kenney · Digital Audio (twoTone2.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-01",
+  "file": "sounds/pop-01.wav",
+  "tag": "pop",
+  "seconds": 0.258,
+  "description": "A short bright pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-02",
+  "file": "sounds/pop-02.wav",
+  "tag": "pop",
+  "seconds": 0.148,
+  "description": "A short bright pop (0.15 s), from Kenney · Interface Sounds (open_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-03",
+  "file": "sounds/pop-03.wav",
+  "tag": "pop",
+  "seconds": 0.1,
+  "description": "A short bright pop, falling (0.10 s), from Kenney · Interface Sounds (pluck_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-04",
+  "file": "sounds/pop-04.wav",
+  "tag": "pop",
+  "seconds": 0.12,
+  "description": "A short dark pop, rising (0.12 s), from Kenney · Interface Sounds (bong_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-05",
+  "file": "sounds/pop-05.wav",
+  "tag": "pop",
+  "seconds": 0.276,
+  "description": "A short pop (0.28 s), from Kenney · Interface Sounds (glass_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-06",
+  "file": "sounds/pop-06.wav",
+  "tag": "pop",
+  "seconds": 0.258,
+  "description": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-07",
+  "file": "sounds/pop-07.wav",
+  "tag": "pop",
+  "seconds": 0.314,
+  "description": "A short bright pop, rising (0.31 s), from Kenney · Interface Sounds (open_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "pop-08",
+  "file": "sounds/pop-08.wav",
+  "tag": "pop",
+  "seconds": 0.162,
+  "description": "A short pop, falling (0.16 s), from Kenney · Interface Sounds (pluck_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-01",
+  "file": "sounds/rise-01.wav",
+  "tag": "rise",
+  "seconds": 1.126,
+  "description": "A bright rising tone (1.13 s), from Kenney · Digital Audio (powerUp1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-02",
+  "file": "sounds/rise-02.wav",
+  "tag": "rise",
+  "seconds": 0.43,
+  "description": "A rising tone (0.43 s), from Kenney · Digital Audio (phaserUp1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-03",
+  "file": "sounds/rise-03.wav",
+  "tag": "rise",
+  "seconds": 1.138,
+  "description": "A rising tone (1.14 s), from Kenney · Digital Audio (zapThreeToneUp.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-04",
+  "file": "sounds/rise-04.wav",
+  "tag": "rise",
+  "seconds": 0.476,
+  "description": "A bright rising tone (0.48 s), from Kenney · Digital Audio (highUp.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-05",
+  "file": "sounds/rise-05.wav",
+  "tag": "rise",
+  "seconds": 0.581,
+  "description": "A bright rising tone (0.58 s), from Kenney · Digital Audio (powerUp10.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-06",
+  "file": "sounds/rise-06.wav",
+  "tag": "rise",
+  "seconds": 0.36,
+  "description": "A short rising tone (0.36 s), from Kenney · Digital Audio (phaserUp2.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-07",
+  "file": "sounds/rise-07.wav",
+  "tag": "rise",
+  "seconds": 0.604,
+  "description": "A bright rising tone (0.60 s), from Kenney · Digital Audio (powerUp11.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "rise-08",
+  "file": "sounds/rise-08.wav",
+  "tag": "rise",
+  "seconds": 0.453,
+  "description": "A rising tone (0.45 s), from Kenney · Digital Audio (phaserUp3.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-01",
+  "file": "sounds/whoosh-01.wav",
+  "tag": "whoosh",
+  "seconds": 1,
+  "description": "A bright swish (1.00 s), from Kenney · Interface Sounds (scroll_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-02",
+  "file": "sounds/whoosh-02.wav",
+  "tag": "whoosh",
+  "seconds": 0.954,
+  "description": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_000.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-03",
+  "file": "sounds/whoosh-03.wav",
+  "tag": "whoosh",
+  "seconds": 0.406,
+  "description": "A swish, falling (0.41 s), from Kenney · Digital Audio (phaseJump1.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-04",
+  "file": "sounds/whoosh-04.wav",
+  "tag": "whoosh",
+  "seconds": 0.139,
+  "description": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_001.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-05",
+  "file": "sounds/whoosh-05.wav",
+  "tag": "whoosh",
+  "seconds": 1,
+  "description": "A dark swish (1.00 s), from Kenney · Interface Sounds (scroll_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-06",
+  "file": "sounds/whoosh-06.wav",
+  "tag": "whoosh",
+  "seconds": 0.953,
+  "description": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_001.ogg).",
+  "source": {
+   "name": "Kenney, Sci-fi Sounds",
+   "url": "https://opengameart.org/content/sci-fi-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-07",
+  "file": "sounds/whoosh-07.wav",
+  "tag": "whoosh",
+  "seconds": 0.337,
+  "description": "A short dark swish, rising (0.34 s), from Kenney · Digital Audio (phaseJump2.mp3).",
+  "source": {
+   "name": "Kenney, Digital Audio",
+   "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "whoosh-08",
+  "file": "sounds/whoosh-08.wav",
+  "tag": "whoosh",
+  "seconds": 0.139,
+  "description": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_002.ogg).",
+  "source": {
+   "name": "Kenney, Interface Sounds",
+   "url": "https://opengameart.org/content/interface-sounds",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ }
+]
