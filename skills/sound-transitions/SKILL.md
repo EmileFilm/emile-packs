@@ -1,6 +1,6 @@
 ---
 name: sound-transitions
-description: How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be "better", "more cinematic" or "like an ad".
+description: How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), mark them on the timeline with a suggested recipe, then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be "better", "more cinematic" or "like an ad".
 kind: tool
 ---
 
@@ -23,9 +23,16 @@ Never lay music or sound on a film whose picture isn't cut. Then look at it: `vi
 
 Measure the moments, don't guess: a body touching the water is one frame. A sound a few frames off the picture feels wrong even when nobody can say why.
 
-## 2. The moves the picture asks for
+## 2. Who lays the moves
 
-Go down this list with your sound map. Each line the picture has, do; each it doesn't, skip. The Skill named on each line has the detail.
+- **A film of shots** (footage or generated video): you lay the base (item 1 below: the beds, and the music by section when asked for music), then **mark the moments** with `mark_moments`: each moment of your sound map that a move belongs on, measured to the frame, with what happens and how it feels and the recipe you suggest (`muffle-release`, `turn`, `strong-end`, `carry-in`, `carry-out`, `match`). `strong-end` goes on the last thing that happens (the last landing, the logo), with 1.5 s or more of film after it, never on the film's last frame; `carry-in` and `carry-out` only where the beds change place (the `ambience-*` clips in `read_timeline` say each one's place). A suggestion that can't be laid is refused with why: fix it and mark again. Then stop and tell the person in a line or two which moments you marked and what you suggest: they see the moments on the timeline, move the ones you got wrong, and lay the recipes themselves. Lay a recipe yourself (`apply_recipe`) only when they ask.
+- **A film made only of code clips**: you know every moment from your own plan (each clip's `moments`), so you do it all: mark the moments and lay the recipes with `apply_recipe`, and the rest of the list by hand.
+
+A recipe is the move below laid at once at a moment's exact frame, each sound its own clip: `muffle-release` is item 3, `turn` item 2's rise and hits (the second music still asked for with `from_seconds`), `strong-end` item 4, `carry-in` and `carry-out` item 5, `match` item 6.
+
+## 3. The moves the picture asks for
+
+Go down this list with your sound map. Each line the picture has, do (or, on a film of shots, mark); each it doesn't, skip. The Skill named on each line has the detail.
 
 1. **The base, for a film of shots** (footage or generated video: every film that isn't only code): its places. Look at every shot on picture track 1 (`view_frames`, a sheet of the film, then closer where a shot isn't clear) and name the place it shows, from the places `list_sounds` gives beds for (room, building, city-night, street-day, wind, rain, water, sea, car), or `none` for a studio product shot, a close-up, a graphic or a title. Then one `lay_beds` with all of them: the engine joins shots of one place, crosses the beds at a change and leaves a video's own sound alone. When unsure between two places, the quieter one (room over building, wind over street-day); when unsure whether there is a place at all, `none`. A film made only of code clips has no places: skip this.
 2. **Its feeling changes at a turn** (calm to exciting, the jump, the reveal): **two musics**, one per section. `generate_music` (or `write_score`) for part 1 with `from_seconds` 0 and `to_seconds` the turn, and again for part 2 from the turn to the end moment; a `riser-*` ending on the turn, a `boom-*` and a `sub-drop-*` on it (`sound-music-sections`).
