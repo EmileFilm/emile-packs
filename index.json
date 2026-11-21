@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.3",
- "published": "2026-11-21T11:16:06.336Z",
+ "tag": "v1.2.4",
+ "published": "2026-11-21T12:16:47.538Z",
  "contract": 4,
  "packs": [
   {
@@ -7391,13 +7391,13 @@
    "description": "How to give a film its music in Émile: when to write a score on the instrument packs and when to generate music from a prompt, how to choose a tempo the cuts land on, how to shape the music to the film's sections, voice it so it sounds good, leave room for a voice-over, and the mistakes that make film music sound cheap. Read it before write_score or generate_music.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "db626acf96d6973d5088483ddf90965162fabd0b3078aad3156c6c9392de40a2",
+   "digest": "38596f20753bdd07a6397d98c9affcd4f9b618056732ef27ea4fafebb8d8ad22",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 9152,
-     "sha256": "3413b1a13babb3bd182f7e381f752b24456fc5ca633c7b3807ae376617e08f8c"
+     "bytes": 9873,
+     "sha256": "b03bc9e63766d10dbca027df0da89fd835327e067635c34e6a79682b4ea76fad"
     }
    ]
   },
@@ -7455,13 +7455,13 @@
    "description": "More than one music in a film, one for each of its sections, handed over where the picture's feeling changes: the first music rising (a riser), a hit and an impact on the change, the next music starting with them. Where the change goes, how the two overlap, which sounds, and how in Émile. Read when a film's feeling changes partway (calm to exciting, problem to solution, story to call to action).",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "dfea78505d619225d3599073c3def0ff9ec2757fbcd18c475ba024575c6a808b",
+   "digest": "b61526e2004e94e0bbc3116739983e7af3c5f96175904c27ef2446ac384d3b92",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 2966,
-     "sha256": "9b5c8639fe6b673764de8b66fa7b986a1a73e1daff80afadbdb29e2598fe1320"
+     "bytes": 3235,
+     "sha256": "c43c13333c62b0c9ce25e79c12ca3f07d27419ffdb7dadaae52a8bcc46a5b9f8"
     }
    ]
   },
@@ -7487,13 +7487,13 @@
    "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), mark them on the timeline with a suggested recipe, then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "2edc6bf4842c2f8022d1866b4bd312c52a3b2e7970295ab92d319e4476bab736",
+   "digest": "e41f11acd2bf3793aa83a9256f4fd5638c5de93f76f8a2b7b0c6a70219c3a403",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 7082,
-     "sha256": "c879b17a2650a976282a4fe54ac383d9531f6e9860f993241bb283c12f3a8166"
+     "bytes": 9434,
+     "sha256": "bb382109b1d66ad487b58bb38caf0f5813629b5fd8cb402b621da87dfe82f74e"
     }
    ]
   },
