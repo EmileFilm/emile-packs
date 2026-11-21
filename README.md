@@ -153,7 +153,7 @@ Chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital
 
 ## Instruments
 
-A film's music in Émile is either written as a score and played on these instruments, or generated; [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film and how to write a score that follows the cuts. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository, and each has a phrase played on it (`preview.m4a`).
+A film's music in Émile is made one of two ways, both on the Mac: written as a score and played on these instruments (calm, cinematic, warm: the chords change and the hits land on the cuts), or generated from a style prompt with Google's [Magenta RealTime 2](https://github.com/magenta/magenta-realtime) for what the instruments can't play (electronic, pop, funk, hip-hop, rock). [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film, how to write a score that follows the cuts, and how to write a prompt: the genres that come out full and the two that come out empty (techno, deep house), each tried with two seeds and heard. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository, and each has a phrase played on it (`preview.m4a`).
 
 | Instrument | | From |
 |---|---|---|
@@ -168,13 +168,13 @@ Any SFZ player plays them (Émile uses [sfizz](https://github.com/sfztools/sfizz
 
 ## Reference Skills
 
-Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`scoring`](skills/scoring/SKILL.md) (a film's music), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
+Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`scoring`](skills/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
 
 ## Use them
 
 ### In Émile
 
-Nothing to install. Say what you want in the chat, or type `#` and a filter's name; the first time a film uses a pack Émile downloads it from here, checks every file against the signed index, and keeps it for offline use. A filter is a clip on the timeline: it changes every track under it for as long as it lasts. Ask for music and the AI writes a score for the film and plays it on the instruments; a sound is an effect clip at the moment it is heard.
+Nothing to install. Say what you want in the chat, or type `#` and a filter's name; the first time a film uses a pack Émile downloads it from here, checks every file against the signed index, and keeps it for offline use. A filter is a clip on the timeline: it changes every track under it for as long as it lasts. Ask for music and the AI either writes a score for the film and plays it on the instruments, or generates a track in the style you name (its model, about 1 GB, is downloaded once you agree); a sound is an effect clip at the moment it is heard.
 
 ### With your own agent
 
