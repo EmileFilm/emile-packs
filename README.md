@@ -1,7 +1,7 @@
 <h1 align="center">Émile packs</h1>
 
 <p align="center">
-  <b>Fifteen filters and four transitions, free and open, each with a guide an AI reads before it uses one.</b><br>
+  <b>Fifteen filters, four transitions, nine instruments and sixty-four sounds, free and open, each with a guide an AI reads before it uses one.</b><br>
   For <a href="https://emilefilm.com">Émile</a>, the video editor built for AI — and for any coding agent that makes video.
 </p>
 
@@ -9,6 +9,8 @@
   <img src="https://img.shields.io/badge/licence-MIT-blue" alt="MIT licence">
   <img src="https://img.shields.io/badge/filters-15-orange" alt="15 filters">
   <img src="https://img.shields.io/badge/transitions-4-orange" alt="4 transitions">
+  <img src="https://img.shields.io/badge/instruments-9-orange" alt="9 instruments">
+  <img src="https://img.shields.io/badge/sounds-64-orange" alt="64 sounds">
   <img src="https://img.shields.io/badge/WebGL2-Chrome%20%26%20WebKit-informational" alt="WebGL2 in Chrome and WebKit">
 </p>
 
@@ -43,6 +45,21 @@ Every guide says how long its filter holds up, and Émile's AI keeps to it unles
 ### By kind of film
 
 A filter that lifts a music video can ruin a product demo. [`skills/choosing-filters`](skills/choosing-filters/SKILL.md) sorts all fifteen across 29 kinds of film, from product launches, software demos and customer stories to vlogs, music videos, AI short dramas and sports highlights: which may run long, which only for a moment, which to avoid. Each kind was checked by drawing two photographs of it under every filter. In Émile it is an official reference Skill you can bring into a chat; any agent can read it.
+
+## Instruments and sounds
+
+A film's music in Émile is either written as a score and played on these instruments, or generated; [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film and how to write a score that follows the cuts. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset (`assets`), not in the repository, and each has a phrase played on it (`preview.m4a`).
+
+| Instrument | | From |
+|---|---|---|
+| `emile/piano` | A Kawai grand, close and warm | VCSL |
+| `emile/strings`, `emile/strings-spiccato` | A string section: long notes, and short bounced ones | VSCO 2 CE |
+| `emile/contrabass-pizz` | A double bass, plucked | VSCO 2 CE |
+| `emile/harp`, `emile/vibraphone`, `emile/glockenspiel` | Plucked and struck: arpeggios, figures, sparkle | VCSL |
+| `emile/drums` | An acoustic kit: kick, snare, hi-hats, crash | Virtuosity Drums |
+| `emile/cinematic-perc` | A bass drum, a timpani, cymbal swells: weight on a cut | VCSL |
+
+The sounds are sound effects to lay at a moment, eight for each of `click`, `pop`, `whoosh`, `rise`, `drop`, `impact`, `notify` and `ambience` (`emile/click-01` … `emile/ambience-08`), chosen by ear from Kenney's CC0 audio packs and rubberduck's CC0 hits ([`scripts/sounds.json`](scripts/sounds.json); [`scripts/sounds.mjs`](scripts/sounds.mjs) makes them, each levelled to a −1 dBFS peak). All CC0: no credit needed, though each pack names its source.
 
 ## The filters
 

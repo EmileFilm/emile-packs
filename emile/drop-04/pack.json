@@ -1,0 +1,30 @@
+{
+  "id": "emile/drop-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Drop 4",
+    "zh-CN": "落下 4"
+  },
+  "description": {
+    "en": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
+    "zh-CN": "明亮的落下音（0.45 秒），来自 Kenney · Digital Audio（highDown.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.453,
+    "tags": [
+      "drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

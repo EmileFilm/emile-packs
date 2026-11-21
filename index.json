@@ -1,9 +1,353 @@
 {
  "format": 1,
  "tag": "v1.1.0",
- "published": "2026-11-21T07:29:05.474Z",
+ "published": "2026-11-21T07:46:33.486Z",
  "contract": 4,
  "packs": [
+  {
+   "id": "emile/ambience-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 1",
+    "zh-CN": "环境 1"
+   },
+   "description": {
+    "en": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_000.ogg).",
+    "zh-CN": "较长的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（computerNoise_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 697,
+     "sha256": "5480ecdfee1b6b07444cb704f36a6f6497d74f90453791363e6cd9fdb70c4ccc"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "99e8e1015cf7b55b99578849dd84ad5e17603e4f8d1f0897b482bf3439bd611e"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 2",
+    "zh-CN": "环境 2"
+   },
+   "description": {
+    "en": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_000.ogg).",
+    "zh-CN": "较长的低沉的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（spaceEngineLow_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 713,
+     "sha256": "302ccfc29c8fe3c796f672cca1e231ce5581bbc32a24125cccc91e42f9daa5f6"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "b954410b066e66e67bdfd9aaabfa87791e3b9437a06e181048e7b09551bccab3"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 3",
+    "zh-CN": "环境 3"
+   },
+   "description": {
+    "en": "A long bright steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_000.ogg).",
+    "zh-CN": "较长的明亮的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（engineCircular_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 715,
+     "sha256": "321c0a5dd981e813f3e8e74cba3172976fcd03e436a845ae3f3cef88fca33987"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "bd391e83a4782aba743647f1d7684e1eb3897916013da4ca84d83ecdd35d3dfa"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 4",
+    "zh-CN": "环境 4"
+   },
+   "description": {
+    "en": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_000.ogg).",
+    "zh-CN": "较长的低沉的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（spaceEngine_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 707,
+     "sha256": "244fb77ddc068be7972dd84ec977cfd7dde7c8805783f4198f76392804620a8a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "11622fc6f131cb35e9459db74eab8c527c60fc6691a898fcc23e62dd28c00250"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 5",
+    "zh-CN": "环境 5"
+   },
+   "description": {
+    "en": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (computerNoise_001.ogg).",
+    "zh-CN": "较长的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（computerNoise_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 697,
+     "sha256": "7f051d8420219830267a3c7598bd809b87d78489f0a1d621865b04192b7d362a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "964b4eb210a9341ecf13bec073ecfd7184fa630238a764dddcf37a4dfb02585f"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 6",
+    "zh-CN": "环境 6"
+   },
+   "description": {
+    "en": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_001.ogg).",
+    "zh-CN": "较长的低沉的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（spaceEngineLow_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 713,
+     "sha256": "2d4e2820b44eb0096ddb6bcd512bbc0423af4ff74d49f8bd869ab7b4fa23c119"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "03eadf97ab54f4236bdffb2fa1d002c0c2256e890852c6cc128cd9403e18c7da"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 7",
+    "zh-CN": "环境 7"
+   },
+   "description": {
+    "en": "A long steady bed (5.00 s), from Kenney · Sci-fi Sounds (engineCircular_001.ogg).",
+    "zh-CN": "较长的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（engineCircular_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 699,
+     "sha256": "a9dabf079ff580373c0e8a696bf9cd7d95b4d80566f0f94532b12cb4d35ef5c3"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "d1d9e1dd2f7ef0b53e78f74625a92ab753a458b5bb6b0b0ebc33961676cf3ac8"
+    }
+   ]
+  },
+  {
+   "id": "emile/ambience-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Ambience 8",
+    "zh-CN": "环境 8"
+   },
+   "description": {
+    "en": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngine_001.ogg).",
+    "zh-CN": "较长的低沉的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（spaceEngine_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 707,
+     "sha256": "bde7becc07343139dc3857a6c80c8cd07d192f6e2e3b93d2bdeec9c95a60b824"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 960078,
+     "sha256": "7bb906890d02063ddfb736dc6194ea6f8a61150927527f65c1ad399bebdca0d8"
+    }
+   ]
+  },
   {
    "id": "emile/bloom",
    "version": "2.0.0",
@@ -283,6 +627,350 @@
      "asset": "emile-cinematic-perc-1.0.0-samples.zip",
      "bytes": 1425209,
      "sha256": "5397943938e270cf224a707f3c00b5647be1e1bae8bfcd159853d8e39d96620f"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 1",
+    "zh-CN": "点击 1"
+   },
+   "description": {
+    "en": "A short click, falling (0.10 s), from Kenney · Interface Sounds (click_001.ogg).",
+    "zh-CN": "短促的点击声，往下走（0.10 秒），来自 Kenney · Interface Sounds（click_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.097,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 699,
+     "sha256": "78e59bb01b6e1a3a7865eed605270a29dc5e2d8bc0d1d2fee9307e4410782fb9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 18726,
+     "sha256": "d83f2e02a62aafbdc6882ed217b55500739cd917a12c890725d9ab945b1fc86b"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 2",
+    "zh-CN": "点击 2"
+   },
+   "description": {
+    "en": "A short bright click, rising (0.09 s), from Kenney · UI Audio (click1.wav).",
+    "zh-CN": "短促的明亮的点击声，往上走（0.09 秒），来自 Kenney · UI Audio（click1.wav）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.094,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, UI Audio",
+     "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 715,
+     "sha256": "4ef7bf123410185fd9c91a87d3503d205becb7819bdcb1042953d7a225938197"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 18094,
+     "sha256": "9156680605ac74b4e66abc1020ed10c8a18cb03babe643c8138aba50dfb3a64c"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 3",
+    "zh-CN": "点击 3"
+   },
+   "description": {
+    "en": "A short bright click (0.04 s), from Kenney · Interface Sounds (tick_001.ogg).",
+    "zh-CN": "短促的明亮的点击声（0.04 秒），来自 Kenney · Interface Sounds（tick_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.045,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 692,
+     "sha256": "32cfc70a95584c39c4d632af1ecaa2416654d6167cc94420eb1d4cb11d24e43e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 8718,
+     "sha256": "bf68d6a58addc476d5ed81be3d238fdb0e76bb27201d75d42b7b9082a9c2559d"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 4",
+    "zh-CN": "点击 4"
+   },
+   "description": {
+    "en": "A short click (0.04 s), from Kenney · Interface Sounds (select_001.ogg).",
+    "zh-CN": "短促的点击声（0.04 秒），来自 Kenney · Interface Sounds（select_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.04,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 679,
+     "sha256": "7aa7322deae19a9e4a14d326d12b1d044c418c914ac50218db2d763b59067071"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 7834,
+     "sha256": "7971738150ea8a68a496f454b6b6b4de0a1f18391b568777513bd65cc2725ffb"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 5",
+    "zh-CN": "点击 5"
+   },
+   "description": {
+    "en": "A short bright click (0.06 s), from Kenney · UI Audio (mouseclick1.wav).",
+    "zh-CN": "短促的明亮的点击声（0.06 秒），来自 Kenney · UI Audio（mouseclick1.wav）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.059,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, UI Audio",
+     "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 705,
+     "sha256": "09c300d19235b0da334db4f00bac012543a3c2d81bc538084346f66c67428bc6"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 11478,
+     "sha256": "9f8094da8912480adf5fa8b25f9b4376c7137576019eed774017f88c8e79817a"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 6",
+    "zh-CN": "点击 6"
+   },
+   "description": {
+    "en": "A short bright click, falling (0.32 s), from Kenney · UI Audio (switch1.wav).",
+    "zh-CN": "短促的明亮的点击声，往下走（0.32 秒），来自 Kenney · UI Audio（switch1.wav）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.315,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, UI Audio",
+     "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 718,
+     "sha256": "ce8c2099f8a4aeee8e4d2ed9dcf11c7950c68edb79a5668d1c1f35d7eea6bb8a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 60502,
+     "sha256": "65d3f367b6f78aadb1b3e932a68058f03ca59eea2b5c8d050f9c4a202289c17f"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 7",
+    "zh-CN": "点击 7"
+   },
+   "description": {
+    "en": "A short click (0.01 s), from Kenney · Interface Sounds (click_002.ogg).",
+    "zh-CN": "短促的点击声（0.01 秒），来自 Kenney · Interface Sounds（click_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.012,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 678,
+     "sha256": "03bdc5d2bdc81560ed5a9e28155295346eb60a3eeb6adac87ba8a2e53bf26ec3"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 2310,
+     "sha256": "95e6c8ad01805ebb771905c48cf5490475331ba869fdf5b324f778dab2b7619f"
+    }
+   ]
+  },
+  {
+   "id": "emile/click-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Click 8",
+    "zh-CN": "点击 8"
+   },
+   "description": {
+    "en": "A short click (0.06 s), from Kenney · UI Audio (click2.wav).",
+    "zh-CN": "短促的点击声（0.06 秒），来自 Kenney · UI Audio（click2.wav）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.056,
+    "tags": [
+     "click"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, UI Audio",
+     "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 679,
+     "sha256": "190bae718ac879cbb749daa43cb2c44bc5bedc8205f0acca48351c59c161a5a9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 10782,
+     "sha256": "c86d6a30c4bc1a7a8d4df2f98ab48580d876fab49285a396a26c09dc6b1796dd"
     }
    ]
   },
@@ -782,6 +1470,350 @@
      "path": "shader.glsl",
      "bytes": 1625,
      "sha256": "caa961d5aef6b7b0bb9fcd20e7e8dd2af9a702a9b3b528763b02a7a951a9e2f8"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 1",
+    "zh-CN": "落下 1"
+   },
+   "description": {
+    "en": "A short falling tone (0.13 s), from Kenney · Interface Sounds (drop_001.ogg).",
+    "zh-CN": "短促的落下音（0.13 秒），来自 Kenney · Interface Sounds（drop_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.132,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 680,
+     "sha256": "036fbfe6cb4b060b222b147e5f18aef6c7487bc4986db7f5aadfd97f8cadbc08"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 25438,
+     "sha256": "a7320d87faec9bec1592c245dcf20dcee81a23041222cc269d9f61a7c7b0e9a6"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 2",
+    "zh-CN": "落下 2"
+   },
+   "description": {
+    "en": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
+    "zh-CN": "短促的明亮的落下音（0.26 秒），来自 Kenney · Interface Sounds（minimize_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.258,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 704,
+     "sha256": "6a706c42731809f66d855a994d73d1facc52f8c5fa66ca1dc694c4c6ae892b3d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 49690,
+     "sha256": "a2ec98b0016187c5af42fab20312e141c3eeb202b7bfa0dd3301eb58dbf597ca"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 3",
+    "zh-CN": "落下 3"
+   },
+   "description": {
+    "en": "A falling tone (0.42 s), from Kenney · Digital Audio (phaserDown1.mp3).",
+    "zh-CN": "落下音（0.42 秒），来自 Kenney · Digital Audio（phaserDown1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.418,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 695,
+     "sha256": "8aff8a8925504fe31302dd73985058a819f38249076183779033fb061221a96c"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 80340,
+     "sha256": "77c7f5f0f064cca399349d6ffb5943fb168ad85f880fd33c95ab5600b7cbb069"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 4",
+    "zh-CN": "落下 4"
+   },
+   "description": {
+    "en": "A bright falling tone (0.45 s), from Kenney · Digital Audio (highDown.mp3).",
+    "zh-CN": "明亮的落下音（0.45 秒），来自 Kenney · Digital Audio（highDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.453,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 705,
+     "sha256": "54f41b06a602af7390d7ab03f7c5955ceb28aeec2f8040e491ea3311107b64ea"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 87032,
+     "sha256": "f51e7a8df008b896bb4025b03e22909c60890f86da7725f1d5411e2b37b144a9"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 5",
+    "zh-CN": "落下 5"
+   },
+   "description": {
+    "en": "A falling tone (0.73 s), from Kenney · Digital Audio (lowDown.mp3).",
+    "zh-CN": "落下音（0.73 秒），来自 Kenney · Digital Audio（lowDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.731,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 687,
+     "sha256": "ecb4107fbb76d7a32877c3d270e7c8d2fe88f56692e6146110fd43d0b339e630"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 140530,
+     "sha256": "ddb969f2b56f3fc6e53d257d035a4fd8130a9579b8ad581351cad5d26de62cef"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 6",
+    "zh-CN": "落下 6"
+   },
+   "description": {
+    "en": "A falling tone (1.28 s), from Kenney · Digital Audio (zapThreeToneDown.mp3).",
+    "zh-CN": "落下音（1.28 秒），来自 Kenney · Digital Audio（zapThreeToneDown.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.277,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 705,
+     "sha256": "7bd070263fc1699e1aab84eb270ee52230a9a80168a7294966edae33ee7ae92d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 245308,
+     "sha256": "25e41305ac0e4210d4d4589cafc0f32ef1f334c31b7772a8c16e4f5ba9141325"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 7",
+    "zh-CN": "落下 7"
+   },
+   "description": {
+    "en": "A short bright falling tone (0.15 s), from Kenney · Interface Sounds (close_001.ogg).",
+    "zh-CN": "短促的明亮的落下音（0.15 秒），来自 Kenney · Interface Sounds（close_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.148,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 698,
+     "sha256": "ce8db3835c3002f4af5e86d3228f618e09ad8fe6cbf89ef96786be8ff6b8a585"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 28454,
+     "sha256": "5f14859c0ac6d6b1ac382fdee49e27ed35b74f974048ac4b04342bc9c32ad87d"
+    }
+   ]
+  },
+  {
+   "id": "emile/drop-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Drop 8",
+    "zh-CN": "落下 8"
+   },
+   "description": {
+    "en": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
+    "zh-CN": "短促的低沉的落下音（0.19 秒），来自 Kenney · Interface Sounds（drop_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.188,
+    "tags": [
+     "drop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 694,
+     "sha256": "cfdeaab41b7e102d1e84982409d43e3824e49c79123da8a53af852135476ba52"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 36210,
+     "sha256": "321bd3039fe249cced14381dc744a5d39f6189050b58887d731161775b5868ed"
     }
    ]
   },
@@ -1502,6 +2534,694 @@
    ]
   },
   {
+   "id": "emile/impact-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 1",
+    "zh-CN": "撞击 1"
+   },
+   "description": {
+    "en": "A bright hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
+    "zh-CN": "明亮的撞击声，往下走（0.73 秒），来自 rubberduck · Breaking, falling & hit（bfh1_hit_01.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.729,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "rubberduck, Breaking, falling & hit",
+     "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 753,
+     "sha256": "c2a5f121b21e17cbf590c7dc43bd97f9d2d70bb989394a920afd15c11b6f31dc"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 140098,
+     "sha256": "54180c987d6e4f29fb39994e90832d90e286d11848f8acb5b58d19a63d4709b7"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 2",
+    "zh-CN": "撞击 2"
+   },
+   "description": {
+    "en": "A dark hit, rising (0.64 s), from Kenney · Sci-fi Sounds (impactMetal_000.ogg).",
+    "zh-CN": "低沉的撞击声，往上走（0.64 秒），来自 Kenney · Sci-fi Sounds（impactMetal_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.635,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 698,
+     "sha256": "918cbd103120a1668ef20fad3ff4d533c229f87423fa51e665c88d70ae10b582"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 121982,
+     "sha256": "6b91f89ab4da11ca0b4f68f9aa8985a6f70e70eff46c6867cf4842580190c70b"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 3",
+    "zh-CN": "撞击 3"
+   },
+   "description": {
+    "en": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
+    "zh-CN": "短促的明亮的撞击声（0.24 秒），来自 rubberduck · Breaking, falling & hit（bfh1_metal_hit_01.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.238,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "rubberduck, Breaking, falling & hit",
+     "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 759,
+     "sha256": "1294446fdc7605cbd8110ad2a0479f6e7d7525131326e28a4561e6668c7f8c44"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 45758,
+     "sha256": "3981d57f3e2c68de3036a2094c1121b546684b78382fc42c79ac5e429546fdbc"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 4",
+    "zh-CN": "撞击 4"
+   },
+   "description": {
+    "en": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
+    "zh-CN": "短促的撞击声，往上走（0.25 秒），来自 rubberduck · Breaking, falling & hit（bfh1_wood_hit_01.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.248,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "rubberduck, Breaking, falling & hit",
+     "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 761,
+     "sha256": "b781b694cfe97f77e4d4dd2168cdbd3abf36de657c812a24f3863314559629ca"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 47626,
+     "sha256": "225054016dfe179be6231c05dd81ba381d390fe19e4982156561e9f0e7020d3d"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 5",
+    "zh-CN": "撞击 5"
+   },
+   "description": {
+    "en": "A hit (0.78 s), from Kenney · Sci-fi Sounds (explosionCrunch_000.ogg).",
+    "zh-CN": "撞击声（0.78 秒），来自 Kenney · Sci-fi Sounds（explosionCrunch_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.777,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 672,
+     "sha256": "94bb9c973e79fece7def329576fe50ff77bcfc933e5de3b90f19c037a1821180"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 149354,
+     "sha256": "ee385770bd0451c7fcdf04401fd51f694d0f0a27e988e758831ff3361564db5d"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 6",
+    "zh-CN": "撞击 6"
+   },
+   "description": {
+    "en": "A short hit, falling (0.13 s), from rubberduck · Breaking, falling & hit (bfh1_rock_hit_01.ogg).",
+    "zh-CN": "短促的撞击声，往下走（0.13 秒），来自 rubberduck · Breaking, falling & hit（bfh1_rock_hit_01.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.129,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "rubberduck, Breaking, falling & hit",
+     "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 762,
+     "sha256": "7dc51552f8c88a1efdd948bc91a050c3dcae98d1f763a667233126089090ebb3"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 24910,
+     "sha256": "924d5cdc2db1d36a8cfe1e0a34dc145191c1ee351a4c09d34ad2289d358d2da6"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 7",
+    "zh-CN": "撞击 7"
+   },
+   "description": {
+    "en": "A hit, rising (0.80 s), from rubberduck · Breaking, falling & hit (bfh1_hit_02.ogg).",
+    "zh-CN": "撞击声，往上走（0.80 秒），来自 rubberduck · Breaking, falling & hit（bfh1_hit_02.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.797,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "rubberduck, Breaking, falling & hit",
+     "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 736,
+     "sha256": "d02477575c5043ddea3bfda0ed5a04e3bcb071949f64085c13d6e06f6c545e95"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 153186,
+     "sha256": "102dd430b702097d111617d4843404be224287ab6c13378a1ae427f3cae50523"
+    }
+   ]
+  },
+  {
+   "id": "emile/impact-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Impact 8",
+    "zh-CN": "撞击 8"
+   },
+   "description": {
+    "en": "A dark hit, rising (0.69 s), from Kenney · Sci-fi Sounds (impactMetal_001.ogg).",
+    "zh-CN": "低沉的撞击声，往上走（0.69 秒），来自 Kenney · Sci-fi Sounds（impactMetal_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.688,
+    "tags": [
+     "impact"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 698,
+     "sha256": "452ec1ef34cefaae721c3b605bf2380ccf57d155a4eee8efbb5f2418ccd88efc"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 132094,
+     "sha256": "c9de0eba7a4cb4f87ac9ba6fbec53e97987f35f2b99b790ec9c1359476bb4d7d"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 1",
+    "zh-CN": "提示 1"
+   },
+   "description": {
+    "en": "A short dark chime, rising (0.29 s), from Kenney · Interface Sounds (confirmation_001.ogg).",
+    "zh-CN": "短促的低沉的提示音，往上走（0.29 秒），来自 Kenney · Interface Sounds（confirmation_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.29,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 728,
+     "sha256": "970b07a1447ac7fc10b13581b4543535a053031488547df1bf8d91bd80b695f4"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 55730,
+     "sha256": "4f93a81f6c32c32fa019f281b9f1cbd7c6579eea3501368ab93813ecaf4d9623"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 2",
+    "zh-CN": "提示 2"
+   },
+   "description": {
+    "en": "A dark chime, falling (0.49 s), from Kenney · Interface Sounds (question_001.ogg).",
+    "zh-CN": "低沉的提示音，往下走（0.49 秒），来自 Kenney · Interface Sounds（question_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.491,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 707,
+     "sha256": "641a9b8660a9965e20d92b8a86ec062675843d5f0a49eae2d7766624a8f96b71"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 94290,
+     "sha256": "da2cc6ac6b1aab5501881cc222c99d9c5c018addcb26602dd81ac63d1664e3d6"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 3",
+    "zh-CN": "提示 3"
+   },
+   "description": {
+    "en": "A bright chime, rising (1.16 s), from Kenney · Digital Audio (twoTone1.mp3).",
+    "zh-CN": "明亮的提示音，往上走（1.16 秒），来自 Kenney · Digital Audio（twoTone1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.161,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 724,
+     "sha256": "e21aedb1fec6bff919d9390fff025c0d5e401341647ee51343bf1e95a1115962"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 223004,
+     "sha256": "f2a040377247b23376d5354495e3148983d2abc5f00c18ffabd2f1e7e4a8a50c"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 4",
+    "zh-CN": "提示 4"
+   },
+   "description": {
+    "en": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
+    "zh-CN": "较长的明亮的提示音，往上走（1.67 秒），来自 Kenney · Digital Audio（threeTone1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.672,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 742,
+     "sha256": "59ef4f2fb7eba920b5a0d6f3bbee0ffcc808b844cc25eb7440608aebd644b65a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 321092,
+     "sha256": "63336c6c2e686176e6557b92b1c875ba9f859e212d4f07ba575cb234750d1e4e"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 5",
+    "zh-CN": "提示 5"
+   },
+   "description": {
+    "en": "A short bright chime, falling (0.16 s), from Kenney · Interface Sounds (error_001.ogg).",
+    "zh-CN": "短促的明亮的提示音，往下走（0.16 秒），来自 Kenney · Interface Sounds（error_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.162,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 718,
+     "sha256": "20957b26051708345ba684f83b8f5f791ee2fa697d9682d9e13260fcf14a645a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 31118,
+     "sha256": "2a34e99563354693c41e5f5d649c6ef615286cca85241bb7e71b8dcdbb83d421"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 6",
+    "zh-CN": "提示 6"
+   },
+   "description": {
+    "en": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
+    "zh-CN": "提示音，往上走（0.54 秒），来自 Kenney · Interface Sounds（confirmation_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.539,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 700,
+     "sha256": "9994cb2304d837ae832b59b3ecc0c3d1b51017b3641ca5f61f486c64d43a6892"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 103570,
+     "sha256": "276a354994ff0db7fbee05937124505b6796ca066f146ad4d3ff3c050a3b1b18"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 7",
+    "zh-CN": "提示 7"
+   },
+   "description": {
+    "en": "A short dark chime (0.33 s), from Kenney · Interface Sounds (question_002.ogg).",
+    "zh-CN": "短促的低沉的提示音（0.33 秒），来自 Kenney · Interface Sounds（question_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.333,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 701,
+     "sha256": "ec10750b0c17a1f092f944b5e2dee09a9e76029fe9ec819f311c4d3b4464002c"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 63922,
+     "sha256": "c445544f4450d6dc21de7ef96d5b59825e9fccc11708b9fa72aeabb10d8ed015"
+    }
+   ]
+  },
+  {
+   "id": "emile/notify-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Notify 8",
+    "zh-CN": "提示 8"
+   },
+   "description": {
+    "en": "A bright chime, rising (1.50 s), from Kenney · Digital Audio (twoTone2.mp3).",
+    "zh-CN": "明亮的提示音，往上走（1.50 秒），来自 Kenney · Digital Audio（twoTone2.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.498,
+    "tags": [
+     "notify"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 724,
+     "sha256": "eb47216299972e5bb54f8e8d527d08d03aa7b3d147bd66496d4c428392aea39f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 287650,
+     "sha256": "94135167308160ab8609d35a7a08d9450a48f674cf5f44fcf59fe499ec217b22"
+    }
+   ]
+  },
+  {
    "id": "emile/palette",
    "version": "1.0.0",
    "kind": "filter",
@@ -1766,6 +3486,350 @@
    ]
   },
   {
+   "id": "emile/pop-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 1",
+    "zh-CN": "弹出 1"
+   },
+   "description": {
+    "en": "A short bright pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_001.ogg).",
+    "zh-CN": "短促的明亮的弹出声，往上走（0.26 秒），来自 Kenney · Interface Sounds（maximize_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.258,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 712,
+     "sha256": "41d44fc23fb0536f2986b3fb10a44fc3c8edd3ea9f9f262f49b7b907a6d08423"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 49690,
+     "sha256": "d2691072401115d1ece892526a10bfc6d01506de3339a795f434524e4b223e37"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 2",
+    "zh-CN": "弹出 2"
+   },
+   "description": {
+    "en": "A short bright pop (0.15 s), from Kenney · Interface Sounds (open_001.ogg).",
+    "zh-CN": "短促的明亮的弹出声（0.15 秒），来自 Kenney · Interface Sounds（open_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.148,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 684,
+     "sha256": "280b7baaeb5cd5d750ca126011a78f2d82f458379cabeb76aa018b126277c393"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 28454,
+     "sha256": "c3a2317f318e910c97a8c1c09666c21c5f557be35129623f8a48956cd2e22ae5"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 3",
+    "zh-CN": "弹出 3"
+   },
+   "description": {
+    "en": "A short bright pop, falling (0.10 s), from Kenney · Interface Sounds (pluck_001.ogg).",
+    "zh-CN": "短促的明亮的弹出声，往下走（0.10 秒），来自 Kenney · Interface Sounds（pluck_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.1,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 705,
+     "sha256": "4202fea68ab16b07753fa726dd5e2ddf98119d3ed174677f333132f2a3ad617c"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 19190,
+     "sha256": "8e2e0ce3aa6cc727c7ede2f095beab9f4d1923e754699f59abdb827e4bb2ef1f"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 4",
+    "zh-CN": "弹出 4"
+   },
+   "description": {
+    "en": "A short dark pop, rising (0.12 s), from Kenney · Interface Sounds (bong_001.ogg).",
+    "zh-CN": "短促的低沉的弹出声，往上走（0.12 秒），来自 Kenney · Interface Sounds（bong_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.12,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 701,
+     "sha256": "ee29f325af866dd70f454a7e27f795c28c88c35a6474db79a263cba6de1acdf9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 23106,
+     "sha256": "124af81977d260878bf20c758588d3065722c468a01e09b7e0c63d7ac8322fd8"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 5",
+    "zh-CN": "弹出 5"
+   },
+   "description": {
+    "en": "A short pop (0.28 s), from Kenney · Interface Sounds (glass_001.ogg).",
+    "zh-CN": "短促的弹出声（0.28 秒），来自 Kenney · Interface Sounds（glass_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.276,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 670,
+     "sha256": "6345a57e20245368e9c2466edc7da0d626b36abaa30d5cee9fa540206915ae15"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 52982,
+     "sha256": "fed8cc9c4a029b269f2775671c95bdf3cbb2fc0a1eb523baa93335e124484532"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 6",
+    "zh-CN": "弹出 6"
+   },
+   "description": {
+    "en": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
+    "zh-CN": "短促的弹出声，往上走（0.26 秒），来自 Kenney · Interface Sounds（maximize_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.258,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 696,
+     "sha256": "580dd3d67546fb35a0da3098f3df24d91cefbe30bf2f6378242874c3980fd159"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 49670,
+     "sha256": "d71c94e0c66aa290c2cca51ce35e94cd87e2099037a0df94b4c50ff1088980d2"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 7",
+    "zh-CN": "弹出 7"
+   },
+   "description": {
+    "en": "A short bright pop, rising (0.31 s), from Kenney · Interface Sounds (open_002.ogg).",
+    "zh-CN": "短促的明亮的弹出声，往上走（0.31 秒），来自 Kenney · Interface Sounds（open_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.314,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 704,
+     "sha256": "8ba02913e5e7be3dc0c38ba579ec1ca3f1f24d1ec691a53f57d12f09d47f9bde"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 60326,
+     "sha256": "3261010c01089060216f7cdbb30741a74017b6f28f1230276c7db17e2fe9714f"
+    }
+   ]
+  },
+  {
+   "id": "emile/pop-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Pop 8",
+    "zh-CN": "弹出 8"
+   },
+   "description": {
+    "en": "A short pop, falling (0.16 s), from Kenney · Interface Sounds (pluck_002.ogg).",
+    "zh-CN": "短促的弹出声，往下走（0.16 秒），来自 Kenney · Interface Sounds（pluck_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.162,
+    "tags": [
+     "pop"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 691,
+     "sha256": "99d1c38d591690491bd51ca1e5f353379e96a3b7d3140e3244930c76c6cba025"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 31118,
+     "sha256": "a4233d306aeccdd0f75828ef22633fa5710ff42f751da3116c9ca31144e0342c"
+    }
+   ]
+  },
+  {
    "id": "emile/push",
    "version": "1.0.0",
    "kind": "transition",
@@ -1807,6 +3871,350 @@
      "path": "shader.glsl",
      "bytes": 269,
      "sha256": "b7fb4f74013f5d1015f9f445d761b7585b44e0cecff591a020e491c3ac6d4a7e"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 1",
+    "zh-CN": "上升 1"
+   },
+   "description": {
+    "en": "A bright rising tone (1.13 s), from Kenney · Digital Audio (powerUp1.mp3).",
+    "zh-CN": "明亮的上升音（1.13 秒），来自 Kenney · Digital Audio（powerUp1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.126,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 704,
+     "sha256": "1ea152d6d2d08a9117d5bed02921cd6d705caab88cd4d385ef1e86db19e1bf2a"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 216334,
+     "sha256": "d7f4c8111ff918d7f83ce435c7442c7190652384d2fda21f7151e8ba1483b864"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 2",
+    "zh-CN": "上升 2"
+   },
+   "description": {
+    "en": "A rising tone (0.43 s), from Kenney · Digital Audio (phaserUp1.mp3).",
+    "zh-CN": "上升音（0.43 秒），来自 Kenney · Digital Audio（phaserUp1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.43,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 689,
+     "sha256": "cd7b29fbb6ae5f75122c9f5f0d09fd5f33c5e45c4ed804308edfe1787c24b2f8"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 82568,
+     "sha256": "b118764503d3d06fa840fddda10f894a5263e094d58f8bc19aa2d56e26a2d367"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 3",
+    "zh-CN": "上升 3"
+   },
+   "description": {
+    "en": "A rising tone (1.14 s), from Kenney · Digital Audio (zapThreeToneUp.mp3).",
+    "zh-CN": "上升音（1.14 秒），来自 Kenney · Digital Audio（zapThreeToneUp.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1.138,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 700,
+     "sha256": "40b96860b532a723a44918a052cc8b47d9607a59e3b34297aa760984b3728c9e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 218558,
+     "sha256": "604e806f3d0bd43e4e0c8a7653541d01b22676dd26f8708665c3a53be58cf809"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 4",
+    "zh-CN": "上升 4"
+   },
+   "description": {
+    "en": "A bright rising tone (0.48 s), from Kenney · Digital Audio (highUp.mp3).",
+    "zh-CN": "明亮的上升音（0.48 秒），来自 Kenney · Digital Audio（highUp.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.476,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 700,
+     "sha256": "c885867004d35efad839822dd61a65a0e2ddedae7aa42db2b8771f420d9cb328"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 91490,
+     "sha256": "dfd180cf3813e251eaa47e429c3a1ce05967063be8d154595d5a9332331a3fc9"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 5",
+    "zh-CN": "上升 5"
+   },
+   "description": {
+    "en": "A bright rising tone (0.58 s), from Kenney · Digital Audio (powerUp10.mp3).",
+    "zh-CN": "明亮的上升音（0.58 秒），来自 Kenney · Digital Audio（powerUp10.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.581,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 706,
+     "sha256": "3901d496ae078301fd2e3f045424d74f9bd8836fdc387ed8e48859e209896481"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 111564,
+     "sha256": "f03105232297c7b80ad58b549868f64cdd52de602fdcf60445765951544554d7"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 6",
+    "zh-CN": "上升 6"
+   },
+   "description": {
+    "en": "A short rising tone (0.36 s), from Kenney · Digital Audio (phaserUp2.mp3).",
+    "zh-CN": "短促的上升音（0.36 秒），来自 Kenney · Digital Audio（phaserUp2.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.36,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 704,
+     "sha256": "4ee7b6875a0e239229a80234dcb63a7bcad6656875eb2c3fc678a36f4244621e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 69192,
+     "sha256": "0171ed1f4450ab0db75f671a7b70b2c10296031048eacc74cf795e1845c5262d"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 7",
+    "zh-CN": "上升 7"
+   },
+   "description": {
+    "en": "A bright rising tone (0.60 s), from Kenney · Digital Audio (powerUp11.mp3).",
+    "zh-CN": "明亮的上升音（0.60 秒），来自 Kenney · Digital Audio（powerUp11.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.604,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 706,
+     "sha256": "6d8a7932f90195f38ffb46cfacdfd1d652c53d26542bfd0dcd8510c224ccdfe9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 116024,
+     "sha256": "d7286e135e323e3d446f92b821862375ffae5bf955ab405f0c30d4a080c5a20e"
+    }
+   ]
+  },
+  {
+   "id": "emile/rise-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Rise 8",
+    "zh-CN": "上升 8"
+   },
+   "description": {
+    "en": "A rising tone (0.45 s), from Kenney · Digital Audio (phaserUp3.mp3).",
+    "zh-CN": "上升音（0.45 秒），来自 Kenney · Digital Audio（phaserUp3.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.453,
+    "tags": [
+     "rise"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 690,
+     "sha256": "dec0da91faa12169c4095ac04e975e8188299578b6c8787ad098e980d5fe942d"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 87024,
+     "sha256": "26555c9a0ff1d59d8ef7f9b921ca5862cfdee538fe59eafc3cf40dfde3d979cd"
     }
    ]
   },
@@ -2187,6 +4595,350 @@
      "asset": "emile-vibraphone-1.0.0-samples.zip",
      "bytes": 7481634,
      "sha256": "6711c2452887ecc03f4afa0c6436cfc205401510603629de3c8d1998a6711412"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-01",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 1",
+    "zh-CN": "扫过 1"
+   },
+   "description": {
+    "en": "A bright swish (1.00 s), from Kenney · Interface Sounds (scroll_001.ogg).",
+    "zh-CN": "明亮的扫过声（1.00 秒），来自 Kenney · Interface Sounds（scroll_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 680,
+     "sha256": "c71d6820528dd17469cbff5859e95053599932a5be4c056eebcd0da092df7dba"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192086,
+     "sha256": "d820a1d2ad819ac56c631a2616b44357f7d84747e89b3bad7294a6ebf928764a"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-02",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 2",
+    "zh-CN": "扫过 2"
+   },
+   "description": {
+    "en": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_000.ogg).",
+    "zh-CN": "低沉的扫过声，往上走（0.95 秒），来自 Kenney · Sci-fi Sounds（forceField_000.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.954,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 698,
+     "sha256": "2e330c39c47f8581bf7acf73dcf41f6cdf01b1e6081c8400014260eb1d85e5de"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 183250,
+     "sha256": "fa0e3c90d536f4580e97eaaf7f9f388f2fafbb4c231b601537133be51d5eb7de"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-03",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 3",
+    "zh-CN": "扫过 3"
+   },
+   "description": {
+    "en": "A swish, falling (0.41 s), from Kenney · Digital Audio (phaseJump1.mp3).",
+    "zh-CN": "扫过声，往下走（0.41 秒），来自 Kenney · Digital Audio（phaseJump1.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.406,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 713,
+     "sha256": "3707839bca55b0547c47da3801d3b3fac33b0732e8f76efbe64b1501363a4a8f"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 78112,
+     "sha256": "893c0147fb449b03c839d53f0e9a9a483457a0f09d1b8d0786478297436475ba"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-04",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 4",
+    "zh-CN": "扫过 4"
+   },
+   "description": {
+    "en": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_001.ogg).",
+    "zh-CN": "短促的明亮的扫过声（0.14 秒），来自 Kenney · Interface Sounds（scratch_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.139,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 701,
+     "sha256": "40dfb42deefdc6895042fabd4f25bdafdf398c6fa04845e2be01cfdb27d2c0a9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 26830,
+     "sha256": "d06b97ae111b20740838599bf7d5694b96a44315000408ca6f44046004101b0b"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-05",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 5",
+    "zh-CN": "扫过 5"
+   },
+   "description": {
+    "en": "A dark swish (1.00 s), from Kenney · Interface Sounds (scroll_002.ogg).",
+    "zh-CN": "低沉的扫过声（1.00 秒），来自 Kenney · Interface Sounds（scroll_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 678,
+     "sha256": "a8c4c7e5388e05f08d1e6063ecf0704ad6fadd536fbcfa7889f04e4204518fd3"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 192086,
+     "sha256": "32e74a493ab3fe28aa15cbced1106546b98283adeb7f2dd37823be2b3a092095"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-06",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 6",
+    "zh-CN": "扫过 6"
+   },
+   "description": {
+    "en": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_001.ogg).",
+    "zh-CN": "低沉的扫过声，往上走（0.95 秒），来自 Kenney · Sci-fi Sounds（forceField_001.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.953,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Sci-fi Sounds",
+     "url": "https://opengameart.org/content/sci-fi-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 698,
+     "sha256": "c63d27f8764c50cef9264ce096f9476057e54a2f5d19f44154711844fad215e9"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 183138,
+     "sha256": "4f8a5be37454e8a04823833d6ebaf8d0a89b47a5a092434ec1cd6094e02f01c0"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-07",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 7",
+    "zh-CN": "扫过 7"
+   },
+   "description": {
+    "en": "A short dark swish, rising (0.34 s), from Kenney · Digital Audio (phaseJump2.mp3).",
+    "zh-CN": "短促的低沉的扫过声，往上走（0.34 秒），来自 Kenney · Digital Audio（phaseJump2.mp3）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.337,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Digital Audio",
+     "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 741,
+     "sha256": "d6d6d6c195c63b69e0d2a77e6ba7241fd71818ed531e97396c02a2ee4fc31c2e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 64740,
+     "sha256": "88834b20f56391b0f09a990eb3aecce846769180833f0825824d5b2ce8c13fde"
+    }
+   ]
+  },
+  {
+   "id": "emile/whoosh-08",
+   "version": "1.0.0",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Whoosh 8",
+    "zh-CN": "扫过 8"
+   },
+   "description": {
+    "en": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_002.ogg).",
+    "zh-CN": "短促的明亮的扫过声（0.14 秒），来自 Kenney · Interface Sounds（scratch_002.ogg）。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 0.139,
+    "tags": [
+     "whoosh"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Kenney, Interface Sounds",
+     "url": "https://opengameart.org/content/interface-sounds",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 701,
+     "sha256": "6eb0cc793a730efec9124e329a9872668352206ab7d93e3da1fc4da08d88929e"
+    },
+    {
+     "path": "sound.wav",
+     "bytes": 26830,
+     "sha256": "995a48674b2a890ffb5be7c61d10c82df308a7704130b7d05e8cc2a8dc29a08e"
     }
    ]
   },

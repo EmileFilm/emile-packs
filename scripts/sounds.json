@@ -1,0 +1,517 @@
+{
+ "chosen": "2026-11-21, the first eight of each tag after listening (Emile docs/TODO 配乐与效果音)",
+ "sounds": [
+  {
+   "name": "click-01",
+   "tag": "click",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "click_001.ogg"
+  },
+  {
+   "name": "click-02",
+   "tag": "click",
+   "from": "Kenney · UI Audio",
+   "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "zip": "https://opengameart.org/sites/default/files/UI_SFX_Set.zip",
+   "file": "click1.wav"
+  },
+  {
+   "name": "click-03",
+   "tag": "click",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "tick_001.ogg"
+  },
+  {
+   "name": "click-04",
+   "tag": "click",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "select_001.ogg"
+  },
+  {
+   "name": "click-05",
+   "tag": "click",
+   "from": "Kenney · UI Audio",
+   "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "zip": "https://opengameart.org/sites/default/files/UI_SFX_Set.zip",
+   "file": "mouseclick1.wav"
+  },
+  {
+   "name": "click-06",
+   "tag": "click",
+   "from": "Kenney · UI Audio",
+   "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "zip": "https://opengameart.org/sites/default/files/UI_SFX_Set.zip",
+   "file": "switch1.wav"
+  },
+  {
+   "name": "click-07",
+   "tag": "click",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "click_002.ogg"
+  },
+  {
+   "name": "click-08",
+   "tag": "click",
+   "from": "Kenney · UI Audio",
+   "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+   "zip": "https://opengameart.org/sites/default/files/UI_SFX_Set.zip",
+   "file": "click2.wav"
+  },
+  {
+   "name": "pop-01",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "maximize_001.ogg"
+  },
+  {
+   "name": "pop-02",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "open_001.ogg"
+  },
+  {
+   "name": "pop-03",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "pluck_001.ogg"
+  },
+  {
+   "name": "pop-04",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "bong_001.ogg"
+  },
+  {
+   "name": "pop-05",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "glass_001.ogg"
+  },
+  {
+   "name": "pop-06",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "maximize_002.ogg"
+  },
+  {
+   "name": "pop-07",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "open_002.ogg"
+  },
+  {
+   "name": "pop-08",
+   "tag": "pop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "pluck_002.ogg"
+  },
+  {
+   "name": "whoosh-01",
+   "tag": "whoosh",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "scroll_001.ogg"
+  },
+  {
+   "name": "whoosh-02",
+   "tag": "whoosh",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "forceField_000.ogg"
+  },
+  {
+   "name": "whoosh-03",
+   "tag": "whoosh",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaseJump1.mp3"
+  },
+  {
+   "name": "whoosh-04",
+   "tag": "whoosh",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "scratch_001.ogg"
+  },
+  {
+   "name": "whoosh-05",
+   "tag": "whoosh",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "scroll_002.ogg"
+  },
+  {
+   "name": "whoosh-06",
+   "tag": "whoosh",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "forceField_001.ogg"
+  },
+  {
+   "name": "whoosh-07",
+   "tag": "whoosh",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaseJump2.mp3"
+  },
+  {
+   "name": "whoosh-08",
+   "tag": "whoosh",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "scratch_002.ogg"
+  },
+  {
+   "name": "rise-01",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "powerUp1.mp3"
+  },
+  {
+   "name": "rise-02",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaserUp1.mp3"
+  },
+  {
+   "name": "rise-03",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "zapThreeToneUp.mp3"
+  },
+  {
+   "name": "rise-04",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "highUp.mp3"
+  },
+  {
+   "name": "rise-05",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "powerUp10.mp3"
+  },
+  {
+   "name": "rise-06",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaserUp2.mp3"
+  },
+  {
+   "name": "rise-07",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "powerUp11.mp3"
+  },
+  {
+   "name": "rise-08",
+   "tag": "rise",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaserUp3.mp3"
+  },
+  {
+   "name": "drop-01",
+   "tag": "drop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "drop_001.ogg"
+  },
+  {
+   "name": "drop-02",
+   "tag": "drop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "minimize_001.ogg"
+  },
+  {
+   "name": "drop-03",
+   "tag": "drop",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "phaserDown1.mp3"
+  },
+  {
+   "name": "drop-04",
+   "tag": "drop",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "highDown.mp3"
+  },
+  {
+   "name": "drop-05",
+   "tag": "drop",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "lowDown.mp3"
+  },
+  {
+   "name": "drop-06",
+   "tag": "drop",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "zapThreeToneDown.mp3"
+  },
+  {
+   "name": "drop-07",
+   "tag": "drop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "close_001.ogg"
+  },
+  {
+   "name": "drop-08",
+   "tag": "drop",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "drop_002.ogg"
+  },
+  {
+   "name": "impact-01",
+   "tag": "impact",
+   "from": "rubberduck · Breaking, falling & hit",
+   "page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "zip": "https://opengameart.org/sites/default/files/sfx_breaking_and_falling.zip",
+   "file": "bfh1_hit_01.ogg"
+  },
+  {
+   "name": "impact-02",
+   "tag": "impact",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "impactMetal_000.ogg"
+  },
+  {
+   "name": "impact-03",
+   "tag": "impact",
+   "from": "rubberduck · Breaking, falling & hit",
+   "page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "zip": "https://opengameart.org/sites/default/files/sfx_breaking_and_falling.zip",
+   "file": "bfh1_metal_hit_01.ogg"
+  },
+  {
+   "name": "impact-04",
+   "tag": "impact",
+   "from": "rubberduck · Breaking, falling & hit",
+   "page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "zip": "https://opengameart.org/sites/default/files/sfx_breaking_and_falling.zip",
+   "file": "bfh1_wood_hit_01.ogg"
+  },
+  {
+   "name": "impact-05",
+   "tag": "impact",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "explosionCrunch_000.ogg"
+  },
+  {
+   "name": "impact-06",
+   "tag": "impact",
+   "from": "rubberduck · Breaking, falling & hit",
+   "page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "zip": "https://opengameart.org/sites/default/files/sfx_breaking_and_falling.zip",
+   "file": "bfh1_rock_hit_01.ogg"
+  },
+  {
+   "name": "impact-07",
+   "tag": "impact",
+   "from": "rubberduck · Breaking, falling & hit",
+   "page": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+   "zip": "https://opengameart.org/sites/default/files/sfx_breaking_and_falling.zip",
+   "file": "bfh1_hit_02.ogg"
+  },
+  {
+   "name": "impact-08",
+   "tag": "impact",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "impactMetal_001.ogg"
+  },
+  {
+   "name": "notify-01",
+   "tag": "notify",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "confirmation_001.ogg"
+  },
+  {
+   "name": "notify-02",
+   "tag": "notify",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "question_001.ogg"
+  },
+  {
+   "name": "notify-03",
+   "tag": "notify",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "twoTone1.mp3"
+  },
+  {
+   "name": "notify-04",
+   "tag": "notify",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "threeTone1.mp3"
+  },
+  {
+   "name": "notify-05",
+   "tag": "notify",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "error_001.ogg"
+  },
+  {
+   "name": "notify-06",
+   "tag": "notify",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "confirmation_002.ogg"
+  },
+  {
+   "name": "notify-07",
+   "tag": "notify",
+   "from": "Kenney · Interface Sounds",
+   "page": "https://opengameart.org/content/interface-sounds",
+   "zip": "https://opengameart.org/sites/default/files/kenney_interfaceSounds.zip",
+   "file": "question_002.ogg"
+  },
+  {
+   "name": "notify-08",
+   "tag": "notify",
+   "from": "Kenney · Digital Audio",
+   "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+   "zip": "https://opengameart.org/sites/default/files/Digital_SFX_Set.zip",
+   "file": "twoTone2.mp3"
+  },
+  {
+   "name": "ambience-01",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "computerNoise_000.ogg"
+  },
+  {
+   "name": "ambience-02",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "spaceEngineLow_000.ogg"
+  },
+  {
+   "name": "ambience-03",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "engineCircular_000.ogg"
+  },
+  {
+   "name": "ambience-04",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "spaceEngine_000.ogg"
+  },
+  {
+   "name": "ambience-05",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "computerNoise_001.ogg"
+  },
+  {
+   "name": "ambience-06",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "spaceEngineLow_001.ogg"
+  },
+  {
+   "name": "ambience-07",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "engineCircular_001.ogg"
+  },
+  {
+   "name": "ambience-08",
+   "tag": "ambience",
+   "from": "Kenney · Sci-fi Sounds",
+   "page": "https://opengameart.org/content/sci-fi-sounds",
+   "zip": "https://opengameart.org/sites/default/files/sci-fi_sounds.zip",
+   "file": "spaceEngine_001.ogg"
+  }
+ ]
+}

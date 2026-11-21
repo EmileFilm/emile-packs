@@ -1,0 +1,30 @@
+{
+  "id": "emile/pop-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pop 2",
+    "zh-CN": "弹出 2"
+  },
+  "description": {
+    "en": "A short bright pop (0.15 s), from Kenney · Interface Sounds (open_001.ogg).",
+    "zh-CN": "短促的明亮的弹出声（0.15 秒），来自 Kenney · Interface Sounds（open_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.148,
+    "tags": [
+      "pop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

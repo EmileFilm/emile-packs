@@ -1,0 +1,30 @@
+{
+  "id": "emile/impact-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Impact 7",
+    "zh-CN": "撞击 7"
+  },
+  "description": {
+    "en": "A hit, rising (0.80 s), from rubberduck · Breaking, falling & hit (bfh1_hit_02.ogg).",
+    "zh-CN": "撞击声，往上走（0.80 秒），来自 rubberduck · Breaking, falling & hit（bfh1_hit_02.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.797,
+    "tags": [
+      "impact"
+    ]
+  },
+  "sources": [
+    {
+      "name": "rubberduck, Breaking, falling & hit",
+      "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "emile/pop-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pop 4",
+    "zh-CN": "弹出 4"
+  },
+  "description": {
+    "en": "A short dark pop, rising (0.12 s), from Kenney · Interface Sounds (bong_001.ogg).",
+    "zh-CN": "短促的低沉的弹出声，往上走（0.12 秒），来自 Kenney · Interface Sounds（bong_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.12,
+    "tags": [
+      "pop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "emile/notify-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Notify 7",
+    "zh-CN": "提示 7"
+  },
+  "description": {
+    "en": "A short dark chime (0.33 s), from Kenney · Interface Sounds (question_002.ogg).",
+    "zh-CN": "短促的低沉的提示音（0.33 秒），来自 Kenney · Interface Sounds（question_002.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.333,
+    "tags": [
+      "notify"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

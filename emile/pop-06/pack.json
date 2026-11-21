@@ -1,0 +1,30 @@
+{
+  "id": "emile/pop-06",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pop 6",
+    "zh-CN": "弹出 6"
+  },
+  "description": {
+    "en": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
+    "zh-CN": "短促的弹出声，往上走（0.26 秒），来自 Kenney · Interface Sounds（maximize_002.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.258,
+    "tags": [
+      "pop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

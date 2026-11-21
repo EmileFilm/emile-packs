@@ -1,0 +1,30 @@
+{
+  "id": "emile/impact-05",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Impact 5",
+    "zh-CN": "撞击 5"
+  },
+  "description": {
+    "en": "A hit (0.78 s), from Kenney · Sci-fi Sounds (explosionCrunch_000.ogg).",
+    "zh-CN": "撞击声（0.78 秒），来自 Kenney · Sci-fi Sounds（explosionCrunch_000.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.777,
+    "tags": [
+      "impact"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Sci-fi Sounds",
+      "url": "https://opengameart.org/content/sci-fi-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

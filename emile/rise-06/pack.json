@@ -1,0 +1,30 @@
+{
+  "id": "emile/rise-06",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Rise 6",
+    "zh-CN": "上升 6"
+  },
+  "description": {
+    "en": "A short rising tone (0.36 s), from Kenney · Digital Audio (phaserUp2.mp3).",
+    "zh-CN": "短促的上升音（0.36 秒），来自 Kenney · Digital Audio（phaserUp2.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.36,
+    "tags": [
+      "rise"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

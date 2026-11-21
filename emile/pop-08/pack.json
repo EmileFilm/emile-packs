@@ -1,0 +1,30 @@
+{
+  "id": "emile/pop-08",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pop 8",
+    "zh-CN": "弹出 8"
+  },
+  "description": {
+    "en": "A short pop, falling (0.16 s), from Kenney · Interface Sounds (pluck_002.ogg).",
+    "zh-CN": "短促的弹出声，往下走（0.16 秒），来自 Kenney · Interface Sounds（pluck_002.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.162,
+    "tags": [
+      "pop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

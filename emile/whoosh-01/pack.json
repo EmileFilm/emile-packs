@@ -1,0 +1,30 @@
+{
+  "id": "emile/whoosh-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Whoosh 1",
+    "zh-CN": "扫过 1"
+  },
+  "description": {
+    "en": "A bright swish (1.00 s), from Kenney · Interface Sounds (scroll_001.ogg).",
+    "zh-CN": "明亮的扫过声（1.00 秒），来自 Kenney · Interface Sounds（scroll_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1,
+    "tags": [
+      "whoosh"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

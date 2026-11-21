@@ -1,0 +1,30 @@
+{
+  "id": "emile/rise-03",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Rise 3",
+    "zh-CN": "上升 3"
+  },
+  "description": {
+    "en": "A rising tone (1.14 s), from Kenney · Digital Audio (zapThreeToneUp.mp3).",
+    "zh-CN": "上升音（1.14 秒），来自 Kenney · Digital Audio（zapThreeToneUp.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.138,
+    "tags": [
+      "rise"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

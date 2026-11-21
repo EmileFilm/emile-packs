@@ -1,0 +1,30 @@
+{
+  "id": "emile/ambience-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Ambience 2",
+    "zh-CN": "环境 2"
+  },
+  "description": {
+    "en": "A long dark steady bed (5.00 s), from Kenney · Sci-fi Sounds (spaceEngineLow_000.ogg).",
+    "zh-CN": "较长的低沉的持续的底噪（5.00 秒），来自 Kenney · Sci-fi Sounds（spaceEngineLow_000.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 5,
+    "tags": [
+      "ambience"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Sci-fi Sounds",
+      "url": "https://opengameart.org/content/sci-fi-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

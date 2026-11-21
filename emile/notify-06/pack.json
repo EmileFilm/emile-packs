@@ -1,0 +1,30 @@
+{
+  "id": "emile/notify-06",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Notify 6",
+    "zh-CN": "提示 6"
+  },
+  "description": {
+    "en": "A chime, rising (0.54 s), from Kenney · Interface Sounds (confirmation_002.ogg).",
+    "zh-CN": "提示音，往上走（0.54 秒），来自 Kenney · Interface Sounds（confirmation_002.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.539,
+    "tags": [
+      "notify"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

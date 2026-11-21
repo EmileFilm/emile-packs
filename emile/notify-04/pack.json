@@ -1,0 +1,30 @@
+{
+  "id": "emile/notify-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Notify 4",
+    "zh-CN": "提示 4"
+  },
+  "description": {
+    "en": "A long bright chime, rising (1.67 s), from Kenney · Digital Audio (threeTone1.mp3).",
+    "zh-CN": "较长的明亮的提示音，往上走（1.67 秒），来自 Kenney · Digital Audio（threeTone1.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 1.672,
+    "tags": [
+      "notify"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

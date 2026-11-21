@@ -1,0 +1,30 @@
+{
+  "id": "emile/notify-05",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Notify 5",
+    "zh-CN": "提示 5"
+  },
+  "description": {
+    "en": "A short bright chime, falling (0.16 s), from Kenney · Interface Sounds (error_001.ogg).",
+    "zh-CN": "短促的明亮的提示音，往下走（0.16 秒），来自 Kenney · Interface Sounds（error_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.162,
+    "tags": [
+      "notify"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "emile/whoosh-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Whoosh 7",
+    "zh-CN": "扫过 7"
+  },
+  "description": {
+    "en": "A short dark swish, rising (0.34 s), from Kenney · Digital Audio (phaseJump2.mp3).",
+    "zh-CN": "短促的低沉的扫过声，往上走（0.34 秒），来自 Kenney · Digital Audio（phaseJump2.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.337,
+    "tags": [
+      "whoosh"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

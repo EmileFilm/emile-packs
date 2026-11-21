@@ -1,0 +1,30 @@
+{
+  "id": "emile/whoosh-03",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Whoosh 3",
+    "zh-CN": "扫过 3"
+  },
+  "description": {
+    "en": "A swish, falling (0.41 s), from Kenney · Digital Audio (phaseJump1.mp3).",
+    "zh-CN": "扫过声，往下走（0.41 秒），来自 Kenney · Digital Audio（phaseJump1.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.406,
+    "tags": [
+      "whoosh"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

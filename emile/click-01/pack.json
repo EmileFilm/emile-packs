@@ -1,0 +1,30 @@
+{
+  "id": "emile/click-01",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Click 1",
+    "zh-CN": "点击 1"
+  },
+  "description": {
+    "en": "A short click, falling (0.10 s), from Kenney · Interface Sounds (click_001.ogg).",
+    "zh-CN": "短促的点击声，往下走（0.10 秒），来自 Kenney · Interface Sounds（click_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.097,
+    "tags": [
+      "click"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "emile/impact-08",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Impact 8",
+    "zh-CN": "撞击 8"
+  },
+  "description": {
+    "en": "A dark hit, rising (0.69 s), from Kenney · Sci-fi Sounds (impactMetal_001.ogg).",
+    "zh-CN": "低沉的撞击声，往上走（0.69 秒），来自 Kenney · Sci-fi Sounds（impactMetal_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.688,
+    "tags": [
+      "impact"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Sci-fi Sounds",
+      "url": "https://opengameart.org/content/sci-fi-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

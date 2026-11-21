@@ -1,0 +1,30 @@
+{
+  "id": "emile/drop-08",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Drop 8",
+    "zh-CN": "落下 8"
+  },
+  "description": {
+    "en": "A short dark falling tone (0.19 s), from Kenney · Interface Sounds (drop_002.ogg).",
+    "zh-CN": "短促的低沉的落下音（0.19 秒），来自 Kenney · Interface Sounds（drop_002.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.188,
+    "tags": [
+      "drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

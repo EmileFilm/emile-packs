@@ -1,0 +1,30 @@
+{
+  "id": "emile/rise-07",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Rise 7",
+    "zh-CN": "上升 7"
+  },
+  "description": {
+    "en": "A bright rising tone (0.60 s), from Kenney · Digital Audio (powerUp11.mp3).",
+    "zh-CN": "明亮的上升音（0.60 秒），来自 Kenney · Digital Audio（powerUp11.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.604,
+    "tags": [
+      "rise"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "emile/whoosh-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Whoosh 4",
+    "zh-CN": "扫过 4"
+  },
+  "description": {
+    "en": "A short bright swish (0.14 s), from Kenney · Interface Sounds (scratch_001.ogg).",
+    "zh-CN": "短促的明亮的扫过声（0.14 秒），来自 Kenney · Interface Sounds（scratch_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.139,
+    "tags": [
+      "whoosh"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

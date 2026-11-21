@@ -1,0 +1,30 @@
+{
+  "id": "emile/rise-04",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Rise 4",
+    "zh-CN": "上升 4"
+  },
+  "description": {
+    "en": "A bright rising tone (0.48 s), from Kenney · Digital Audio (highUp.mp3).",
+    "zh-CN": "明亮的上升音（0.48 秒），来自 Kenney · Digital Audio（highUp.mp3）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.476,
+    "tags": [
+      "rise"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Digital Audio",
+      "url": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

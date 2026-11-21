@@ -1,0 +1,30 @@
+{
+  "id": "emile/click-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Click 2",
+    "zh-CN": "点击 2"
+  },
+  "description": {
+    "en": "A short bright click, rising (0.09 s), from Kenney · UI Audio (click1.wav).",
+    "zh-CN": "短促的明亮的点击声，往上走（0.09 秒），来自 Kenney · UI Audio（click1.wav）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.094,
+    "tags": [
+      "click"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, UI Audio",
+      "url": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

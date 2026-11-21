@@ -1,0 +1,30 @@
+{
+  "id": "emile/drop-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Drop 2",
+    "zh-CN": "落下 2"
+  },
+  "description": {
+    "en": "A short bright falling tone (0.26 s), from Kenney · Interface Sounds (minimize_001.ogg).",
+    "zh-CN": "短促的明亮的落下音（0.26 秒），来自 Kenney · Interface Sounds（minimize_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.258,
+    "tags": [
+      "drop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

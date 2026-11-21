@@ -1,0 +1,30 @@
+{
+  "id": "emile/pop-05",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pop 5",
+    "zh-CN": "弹出 5"
+  },
+  "description": {
+    "en": "A short pop (0.28 s), from Kenney · Interface Sounds (glass_001.ogg).",
+    "zh-CN": "短促的弹出声（0.28 秒），来自 Kenney · Interface Sounds（glass_001.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.276,
+    "tags": [
+      "pop"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Interface Sounds",
+      "url": "https://opengameart.org/content/interface-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

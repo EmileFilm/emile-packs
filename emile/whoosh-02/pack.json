@@ -1,0 +1,30 @@
+{
+  "id": "emile/whoosh-02",
+  "kind": "sound",
+  "version": "1.0.0",
+  "title": {
+    "en": "Whoosh 2",
+    "zh-CN": "扫过 2"
+  },
+  "description": {
+    "en": "A dark swish, rising (0.95 s), from Kenney · Sci-fi Sounds (forceField_000.ogg).",
+    "zh-CN": "低沉的扫过声，往上走（0.95 秒），来自 Kenney · Sci-fi Sounds（forceField_000.ogg）。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 0.954,
+    "tags": [
+      "whoosh"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Kenney, Sci-fi Sounds",
+      "url": "https://opengameart.org/content/sci-fi-sounds",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}
