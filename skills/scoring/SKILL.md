@@ -44,6 +44,8 @@ The genre matters most: some come out full whatever the seed, two come out empty
 
 ## Tempo: let the cuts choose it
 
+**A film with a tempo already** (`read_timeline` says "Tempo 120 BPM"): that is the tempo. Its picture was cut and animated on that beat from 0 s, so don't search for another: write the score at it, or generate with `bpm` 0 (the film's is used). Every cut and every arrival is then on a beat or a half beat, and the accents go on them.
+
 The film's cuts are given to `score()` in seconds. Choose the tempo so that most cuts fall on a beat (or on the "and" between two):
 
 ```js

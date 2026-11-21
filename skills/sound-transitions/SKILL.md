@@ -55,6 +55,10 @@ A 20–60 s film has one or two sections, one turn, one end. Every other cut get
 
 The music is at −16 LUFS, and every catalogue sound is levelled for it by loudness: at gain 1 a riser, sweep, sub-drop or interface sound sits just under the music, a hit (`boom-*`, `impact`) level with it, a bed well under it. Leave them at 1; 0.6–0.8 under a voice; 1.2–1.4 only for the one biggest moment. A sound that jumps out of the mix is the cheap version.
 
+## Sounds that fight the music
+
+A sound with a pitch of its own (`notify-*`, a chime, a bell, a rising tone) is a note, and over music in another key it is a wrong note: the melody and the effect fight. Over **generated** music (its key isn't known) lay only sounds without a pitch: `click-*`, `pop-*`, `whoosh-*`, `sweep-*`, `impact-*`, `boom-*`, `sub-drop-*`, and a `riser-*` only into the turn. A pitched sound is for a film with no music there, or over a score you wrote, in its key. Under a busy music keep the small sounds at 0.4–0.6 and fewer; and when the film is full of small happenings, ask the music for room: no lead melody in the prompt ("pads, bass, drums", not "lead synth, arpeggios").
+
 ## Each sound its own clip
 
 Music 1, music 2, the riser, the hits, the impact, each bed: every one its own clip, on its own sound track, as an editor lays them, so the person can move, trim or turn down any one of them. Never a mix of several made into one file.
