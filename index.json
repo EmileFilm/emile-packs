@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.2",
- "published": "2026-11-21T10:39:02.865Z",
+ "tag": "v1.2.3",
+ "published": "2026-11-21T11:16:06.336Z",
  "contract": 4,
  "packs": [
   {
@@ -7484,16 +7484,16 @@
   {
    "name": "sound-transitions",
    "title": "Sound follows the picture",
-   "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
+   "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), mark them on the timeline with a suggested recipe, then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "40742ac9d0413e7d06883a2c7996af7a3bfc450dff729dfdc3de95ca5af4a2d7",
+   "digest": "2edc6bf4842c2f8022d1866b4bd312c52a3b2e7970295ab92d319e4476bab736",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 5474,
-     "sha256": "463a2e911cdcf3b1fe91d9caed3ce76c8c247ba5c9247854e55ecf456467db63"
+     "bytes": 7082,
+     "sha256": "c879b17a2650a976282a4fe54ac383d9531f6e9860f993241bb283c12f3a8166"
     }
    ]
   },
