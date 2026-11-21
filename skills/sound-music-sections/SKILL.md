@@ -10,7 +10,7 @@ One music under a whole film flattens it. Editors give each section its own: a p
 
 ## Where
 
-The change goes on the picture's turn, found to the frame (the landing, the reveal, the logo), never on an ordinary cut. Two sections, at most three, in a short film.
+The change goes on the picture's turn, found to the frame (the landing, the reveal, the logo), never on an ordinary cut. Two sections, at most three, in a short film. **A section shorter than 8 seconds gets no music of its own**: a few seconds of one music before another is heard as an intro that goes nowhere. Then one music carries the whole film, and the turn is made by a riser, a hit and, where it suits, a muffle released on it.
 
 ## The parts of a hand-over
 

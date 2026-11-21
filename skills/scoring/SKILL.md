@@ -59,6 +59,8 @@ function tempoFor(cuts) {
 }
 ```
 
+In a film of code clips the things that land (`read_motions`: a stamp, a number stopping, a label turning) are as much the picture's rhythm as its cuts: put them in the tempo search beside the cuts, and give the important ones an accent at their exact landing time. The score is the music; the small sounds of things arriving are still laid with `place_sound` (`sound-transitions`).
+
 A cut that still falls between beats gets its own accent at its exact time (an `at` in beats need not be a whole number): the music bends to the picture, the picture never waits for the music.
 
 ## Shape: the film's sections, not loops
