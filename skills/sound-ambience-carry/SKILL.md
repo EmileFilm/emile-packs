@@ -19,7 +19,7 @@ Every place has a sound: water, a street, a room's air. Cut it dead with the pic
 
 ## The beds
 
-Footage often has no sound: give it one that matches the picture, quietly. `bed-08` water (a waterfall, a river, a pool), `bed-04`/`bed-05` a city at night, `bed-01`/`bed-02` a quiet room, `bed-03` inside a building, `bed-06` wind outdoors, `bed-07` rain. Each is 10 s: for a longer place lay another overlapping by 0.5 s, both faded over 0.5 s where they meet. The `ambience-*` sounds are machines and engines: only for a sci-fi or technical picture.
+Footage often has no sound: give it one that matches the picture, quietly. Each bed says its place (`list_sounds`: room, building, city-night, street-day, wind, rain, water, sea, car). `lay_beds` lays them for a whole film at once from the place of each shot: it joins shots of one place, lays as many takes as a long stretch needs, crosses beds over 0.5 s where the place changes, and leaves a video's own sound alone. The `ambience-*` sounds are machines and engines: only for a sci-fi or technical picture, laid by hand.
 
 ## Under music
 
@@ -27,7 +27,7 @@ A place's sound at its own level vanishes under music. Where the carry should be
 
 ## In Émile
 
-- A bed: `place_sound` it on the moment it starts (a bed's cut is 0), `trim` it to where it ends, `timeline_edit` `sound` with `fade_in` and `fade_out` 0.5.
+- Beds for the whole film: `lay_beds` with each shot's place. One bed by hand: `place_sound` it on the moment it starts (a bed's cut is 0), `trim` it to where it ends, `timeline_edit` `sound` with `fade_in` and `fade_out` 0.5.
 - A J-cut with a bed: lay the next place's bed from the cut minus the lead, fading in over the lead; fade the current one out over the same time.
 - A J-cut or L-cut of a video's own sound takes it off the clip (`detach_sound`): **ask the person first**. Then `move` the sound clip (it then plays that much ahead of or behind its picture all along: right for a place's sound, wrong for words or a sound tied to something seen) and set its fades.
 

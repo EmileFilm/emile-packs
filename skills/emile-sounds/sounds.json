@@ -224,6 +224,48 @@
   "licence": "CC0-1.0"
  },
  {
+  "name": "bed-09",
+  "file": "sounds/bed-09.wav",
+  "tag": "ambience",
+  "seconds": 16,
+  "cut": 0,
+  "description": "The sea from the shore: waves building, breaking and draining back (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "bed-10",
+  "file": "sounds/bed-10.wav",
+  "tag": "ambience",
+  "seconds": 16,
+  "cut": 0,
+  "description": "Inside a moving car: engine and road rumble, tyre roar (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
+  "name": "bed-11",
+  "file": "sounds/bed-11.wav",
+  "tag": "ambience",
+  "seconds": 16,
+  "cut": 0,
+  "description": "A street by day: steady traffic, cars passing near and far (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+  "source": {
+   "name": "Émile, synthesised by scripts/transitions.mjs",
+   "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+   "licence": "CC0-1.0"
+  },
+  "licence": "CC0-1.0"
+ },
+ {
   "name": "boom-01",
   "file": "sounds/boom-01.wav",
   "tag": "impact",

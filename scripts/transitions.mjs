@@ -268,6 +268,37 @@ function bed({ seconds = 10, kind, seed }) {
     const gust = slow(0.13, 0.7, seed + 4)
     const base = (s) => env(unit(biquad(pink(len, seed + s), 'band', i => 380 + 420 * (0.5 + 0.5 * Math.sin(TAU * 0.09 * i / SR + s)), 0.9)), (t, i) => gust[i])
     l = base(0); rr = base(7)
+  } else if (kind === 'sea') {
+    // waves: each a swell of washing noise that builds, breaks and drains
+    // back, 6–9 s apart, under a constant low surf
+    const base = (s) => sum(scale(unit(biquad(brown(len, seed + s), 'low', 400)), 0.4), scale(unit(biquad(pink(len, seed + s + 11), 'band', 900, 0.4)), 0.35))
+    l = base(0); rr = base(3)
+    let at = n(0.3 + 0.5 * Math.abs(r()))
+    while (at < len) {
+      const d = n(5.5 + 2 * Math.abs(r())), side = r() * 0.4
+      const wave = env(unit(biquad(pink(d, seed + at), 'band', i => 500 + 1800 * Math.pow(Math.sin(Math.PI * i / d), 2), 0.5)),
+        t => (t < 0.35 ? Math.pow(t / 0.35, 2) : Math.exp(-(t - 0.35) * 4)))
+      const [wl, wr] = pan(wave, side)
+      for (let i = 0; i < d && at + i < len; i++) { l[at + i] += wl[i]; rr[at + i] += wr[i] }
+      at += n(4 + 2.5 * Math.abs(r()))
+    }
+  } else if (kind === 'car') {
+    // inside a moving car: engine and road rumble, tyre roar, a little wind
+    const base = (s) => sum(unit(biquad(brown(len, seed + s), 'low', 140)), scale(unit(biquad(pink(len, seed + s + 1), 'band', 450, 0.8)), 0.45), scale(unit(biquad(pink(len, seed + s + 2), 'band', 2200, 0.7)), 0.08))
+    const sway = osc(len, 0.11, 'sine', 0.3).map(v => 1 + 0.12 * v)
+    l = env(base(0), (t, i) => sway[i]); rr = env(base(7), (t, i) => sway[i])
+  } else if (kind === 'street') {
+    // a street by day: a steady traffic wash, cars passing often, near and far
+    const wash = (s) => sum(unit(biquad(brown(len, seed + s), 'low', 300)), scale(unit(biquad(pink(len, seed + s + 5), 'band', 1200, 0.5)), 0.25))
+    l = wash(0); rr = wash(9)
+    let at = 0
+    while (at < len) {
+      const d = n(2 + 2.5 * Math.abs(r())), dir = r() > 0 ? 1 : -1, near = 0.4 + 0.8 * Math.abs(r())
+      const car = env(unit(biquad(pink(d, seed + 60 + at), 'band', i => glide(900, 500, i / d), 0.6)), t => Math.pow(Math.sin(Math.PI * t), 2.5))
+      const [cl, cr] = pan(scale(car, near), i => dir * (2 * i / d - 1) * 0.85)
+      for (let i = 0; i < d && at + i < len; i++) { l[at + i] += cl[i]; rr[at + i] += cr[i] }
+      at += n(0.8 + 2.2 * Math.abs(r()))
+    }
   } else if (kind === 'water') {
     // falling water: a broad roar with weight under it, and a bubbling
     // texture of many small bright splashes
@@ -387,11 +418,16 @@ const SOUNDS = [
   ['bed-05', () => bed({ kind: 'city', seed: 55 }), 0, 'A city at night, another take', '夜晚的城市，另一段'],
   ['bed-06', () => bed({ kind: 'wind', seed: 56 }), 0, 'Wind outside, in slow gusts', '外面的风，一阵一阵'],
   ['bed-07', () => bed({ kind: 'rain', seed: 57 }), 0, 'Steady rain', '持续的雨'],
-  ['bed-08', () => bed({ kind: 'water', seed: 58 }), 0, 'A waterfall or a river close by: a broad roar of falling water', '近处的瀑布或河流：落水的宽厚轰声']
+  ['bed-08', () => bed({ kind: 'water', seed: 58 }), 0, 'A waterfall or a river close by: a broad roar of falling water', '近处的瀑布或河流：落水的宽厚轰声'],
+  ['bed-09', () => bed({ seconds: 16, kind: 'sea', seed: 59 }), 0, 'The sea from the shore: waves building, breaking and draining back', '海边：浪涌起、拍下、退回'],
+  ['bed-10', () => bed({ seconds: 16, kind: 'car', seed: 60 }), 0, 'Inside a moving car: engine and road rumble, tyre roar', '行驶中的车里：发动机与路面的低鸣、轮胎声'],
+  ['bed-11', () => bed({ seconds: 16, kind: 'street', seed: 61 }), 0, 'A street by day: steady traffic, cars passing near and far', '白天的街道：持续的车流，远近有车开过']
 ]
 const TAG = { riser: 'riser', swell: 'swell', boom: 'impact', 'sub-drop': 'sub-drop', sweep: 'sweep', bed: 'ambience' }
 const WHERE = { riser: ['its end', '结尾'], swell: ['its end', '结尾'], boom: ['its attack', '起音'], 'sub-drop': ['its start', '开头'], sweep: ['its peak', '峰值'], bed: ['its start', '开头'] }
 const NOUN = { riser: ['Riser', '上升'], swell: ['Swell', '吸入'], boom: ['Boom', '重击'], 'sub-drop': ['Sub drop', '低音下落'], sweep: ['Sweep', '掠过'], bed: ['Bed', '环境'] }
+// The place each bed sounds like (sound.place: what the engine lays it under)
+const PLACE = {'bed-01': 'room', 'bed-02': 'room', 'bed-03': 'building', 'bed-04': 'city-night', 'bed-05': 'city-night', 'bed-06': 'wind', 'bed-07': 'rain', 'bed-08': 'water', 'bed-09': 'sea', 'bed-10': 'car', 'bed-11': 'street-day'}
 const kindOf = name => name.replace(/-\d\d$/, '')
 
 // Its cut in seconds: the end, 0, or the middle of the loudest 10 ms
@@ -428,11 +464,11 @@ function writePack(name) {
   fs.mkdirSync(dir, { recursive: true })
   wav(path.join(dir, 'sound.wav'), channels)
   const pack = {
-    id: `emile/${name}`, kind: 'sound', version: '1.0.1',
+    id: `emile/${name}`, kind: 'sound', version: kind === 'bed' ? '1.0.2' : '1.0.1',
     title: { en: `${NOUN[kind][0]} ${nn}`, 'zh-CN': `${NOUN[kind][1]} ${nn}` },
     description: { en: `${en} (${seconds.toFixed(2)} s; the cut at ${WHERE[kind][0]}, ${cut.toFixed(3)} s). Synthesised by Émile.`, 'zh-CN': `${zh}（${seconds.toFixed(2)} 秒；切点在${WHERE[kind][1]}，${cut.toFixed(3)} 秒）。Émile 合成。` },
     params: [],
-    sound: { file: 'sound.wav', seconds, cut, tags: [TAG[kind]] },
+    sound: { file: 'sound.wav', seconds, cut, ...(PLACE[name] ? { place: PLACE[name] } : {}), tags: [TAG[kind]] },
     sources: [{ name: 'Émile, synthesised by scripts/transitions.mjs', url: 'https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs', licence: 'CC0-1.0' }],
     licence: 'CC0-1.0', publisher: 'emile'
   }

@@ -1,0 +1,32 @@
+{
+  "id": "emile/bed-09",
+  "kind": "sound",
+  "version": "1.0.2",
+  "title": {
+    "en": "Bed 9",
+    "zh-CN": "环境 9"
+  },
+  "description": {
+    "en": "The sea from the shore: waves building, breaking and draining back (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "海边：浪涌起、拍下、退回（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "sea",
+    "tags": [
+      "ambience"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

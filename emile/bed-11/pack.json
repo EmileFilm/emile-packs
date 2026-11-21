@@ -1,0 +1,32 @@
+{
+  "id": "emile/bed-11",
+  "kind": "sound",
+  "version": "1.0.2",
+  "title": {
+    "en": "Bed 11",
+    "zh-CN": "环境 11"
+  },
+  "description": {
+    "en": "A street by day: steady traffic, cars passing near and far (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "白天的街道：持续的车流，远近有车开过（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "street-day",
+    "tags": [
+      "ambience"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

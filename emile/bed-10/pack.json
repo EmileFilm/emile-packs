@@ -1,0 +1,32 @@
+{
+  "id": "emile/bed-10",
+  "kind": "sound",
+  "version": "1.0.2",
+  "title": {
+    "en": "Bed 10",
+    "zh-CN": "环境 10"
+  },
+  "description": {
+    "en": "Inside a moving car: engine and road rumble, tyre roar (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "行驶中的车里：发动机与路面的低鸣、轮胎声（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+  },
+  "params": [],
+  "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "car",
+    "tags": [
+      "ambience"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Émile, synthesised by scripts/transitions.mjs",
+      "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

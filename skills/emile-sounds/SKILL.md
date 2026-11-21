@@ -132,6 +132,9 @@ A hundred and twelve sound effects from Émile, a video editor, all CC0 (free fo
 | `sounds/bed-06.wav` | 10.00 | 0.000 | Wind outside, in slow gusts (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
 | `sounds/bed-07.wav` | 10.00 | 0.000 | Steady rain (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
 | `sounds/bed-08.wav` | 10.00 | 0.000 | A waterfall or a river close by: a broad roar of falling water (10.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
+| `sounds/bed-09.wav` | 16.00 | 0.000 | The sea from the shore: waves building, breaking and draining back (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
+| `sounds/bed-10.wav` | 16.00 | 0.000 | Inside a moving car: engine and road rumble, tyre roar (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
+| `sounds/bed-11.wav` | 16.00 | 0.000 | A street by day: steady traffic, cars passing near and far (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile. |
 
 ## Riser: building for seconds into a cut, loudest at its end
 

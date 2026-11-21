@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.1",
- "published": "2026-11-21T09:56:21.391Z",
+ "tag": "v1.2.2",
+ "published": "2026-11-21T10:39:02.865Z",
  "contract": 4,
  "packs": [
   {
@@ -358,7 +358,7 @@
   },
   {
    "id": "emile/bed-01",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -375,6 +375,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "room",
     "tags": [
      "ambience"
     ]
@@ -390,19 +391,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 840,
-     "sha256": "bd420c1de756a245696c2ecda079644c59c2403731f61d12c69c337857d58304"
+     "bytes": 861,
+     "sha256": "677af65d638fb317b564feefa55d02f9f72d6ac7c1c301dec4a2f78fa433fe2a"
     },
     {
-     "asset": "emile-bed-01-1.0.1-sound.zip",
+     "asset": "emile-bed-01-1.0.2-sound.zip",
      "bytes": 1683150,
-     "sha256": "39d6a5a5e5a6d57ab86cb2b93a23adf1bf2761271348d83e1bda9bbb97ae1968"
+     "sha256": "7ab8a406e51965aa8d65c4c971b139e327d5c8c9c2f0350d9ea1ed25593d1bcc"
     }
    ]
   },
   {
    "id": "emile/bed-02",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -419,6 +420,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "room",
     "tags": [
      "ambience"
     ]
@@ -434,19 +436,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 756,
-     "sha256": "ff969b13c55745e65e5b4cf44df18376a8c30fc6391b95219e7258aedf266634"
+     "bytes": 777,
+     "sha256": "126601e4f82e5a9192a2a86b7eca520bb7a819029e4313a6d7bbade3ed7c6b51"
     },
     {
-     "asset": "emile-bed-02-1.0.1-sound.zip",
+     "asset": "emile-bed-02-1.0.2-sound.zip",
      "bytes": 1682431,
-     "sha256": "832326f99c90b5486448f4cfe29375d38e8d3a71b1e1d6695edb5eb7738a0cd6"
+     "sha256": "29987c102c275cf5a5ff7a38ffbbd9d4625b8afb8e6a79ef7a088a7bf3caa602"
     }
    ]
   },
   {
    "id": "emile/bed-03",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -463,6 +465,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "building",
     "tags": [
      "ambience"
     ]
@@ -478,19 +481,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 793,
-     "sha256": "042baf71924e8051df6cc2a13588a80fd1eb5c6f964217ac2cfe7c66c1da4b8a"
+     "bytes": 818,
+     "sha256": "bc270056653dc820b92fcc5d32a0924eb9bbcbb4c2f0f1041388996d9a329078"
     },
     {
-     "asset": "emile-bed-03-1.0.1-sound.zip",
+     "asset": "emile-bed-03-1.0.2-sound.zip",
      "bytes": 1646468,
-     "sha256": "5b0bdc482e70fc721d380d8fad246ec63e6b2a2acdc00a56ed96679d8bf00712"
+     "sha256": "6eda4e1221c08c5c55583964effcb6f0e75adfa1a073605089bc036d587eec77"
     }
    ]
   },
   {
    "id": "emile/bed-04",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -507,6 +510,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "city-night",
     "tags": [
      "ambience"
     ]
@@ -522,19 +526,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 833,
-     "sha256": "bccafd627e688c32320e000720e1ddb1b8242eff453e9fe4966e2c3b319f89b0"
+     "bytes": 860,
+     "sha256": "e6811d66bdfc3dbe396d72d7d9c7251b787e57c1a183bbfbd28dd9bc3c18b9a1"
     },
     {
-     "asset": "emile-bed-04-1.0.1-sound.zip",
+     "asset": "emile-bed-04-1.0.2-sound.zip",
      "bytes": 1687080,
-     "sha256": "aeb3bdc3c93e2d06854afac800141c99d6483cf66b296b9e84ed5a6341301f3f"
+     "sha256": "43ea7f6236ac0025081055c7abbba126af07316189cf94b882ed9e2459cf8dc3"
     }
    ]
   },
   {
    "id": "emile/bed-05",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -551,6 +555,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "city-night",
     "tags": [
      "ambience"
     ]
@@ -566,19 +571,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 759,
-     "sha256": "d0cf0126012c11deed56219bcb18e11f30192d425b28514bd8e98dfadf852570"
+     "bytes": 786,
+     "sha256": "2fe5949bf02b2c1fde0cd49209ee88ab7aeef021778447d55de94a574b214e6c"
     },
     {
-     "asset": "emile-bed-05-1.0.1-sound.zip",
+     "asset": "emile-bed-05-1.0.2-sound.zip",
      "bytes": 1687442,
-     "sha256": "5cff4ee791ceb0392cd91c6b0fb80b2a5ccba8c190ed822bfc360e86e45a5988"
+     "sha256": "d6c9d3de28ae8aafb81dc831c60402afeb54256473a45861f34aca102ce49b5a"
     }
    ]
   },
   {
    "id": "emile/bed-06",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -595,6 +600,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "wind",
     "tags": [
      "ambience"
     ]
@@ -610,19 +616,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 757,
-     "sha256": "7408c2ee7c1848ff4c8cef43bef0cbfea24f3ee56d5181cd851df6b39a9aba8a"
+     "bytes": 778,
+     "sha256": "99756c580548345928c286e1f76c608dbe21684705cd498696027195199e134e"
     },
     {
-     "asset": "emile-bed-06-1.0.1-sound.zip",
+     "asset": "emile-bed-06-1.0.2-sound.zip",
      "bytes": 1583324,
-     "sha256": "934a5a2243f069ab4e384165304ed077329f29b463712687fbdd52144e58e27e"
+     "sha256": "88eb9653b5768c3ebbc2b30a72b94d569946b011451f61401791580e840f4238"
     }
    ]
   },
   {
    "id": "emile/bed-07",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -639,6 +645,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "rain",
     "tags": [
      "ambience"
     ]
@@ -654,19 +661,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 726,
-     "sha256": "ff8bc1e5d182d929c5f7321c2db215b1284a10100f80fac73fce2cfafd5ecc54"
+     "bytes": 747,
+     "sha256": "7d62bc83ff5473fabe5ba2daf5294cb279bed2f3ab8030a9933585075965e17f"
     },
     {
-     "asset": "emile-bed-07-1.0.1-sound.zip",
+     "asset": "emile-bed-07-1.0.2-sound.zip",
      "bytes": 1567462,
-     "sha256": "1e910e94574824545f74248c05873a8ea257cd1338177203fd19186c26f9a437"
+     "sha256": "318886f4bc5b0b39f81a2f21cbb9efde7143725dd1a3965e1ed8da7ba8f81f31"
     }
    ]
   },
   {
    "id": "emile/bed-08",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "kind": "sound",
    "category": null,
    "title": {
@@ -683,6 +690,7 @@
     "file": "sound.wav",
     "seconds": 10,
     "cut": 0,
+    "place": "water",
     "tags": [
      "ambience"
     ]
@@ -698,13 +706,148 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 813,
-     "sha256": "3dbc1554dccc7907e40d3f09fea0ebd3164e952ec1f6f553f527c9078f887891"
+     "bytes": 835,
+     "sha256": "6bf2ab5c0929b20f4e7077b2835f68aa99dd31a0d8ccaaed0a79c99f29590297"
     },
     {
-     "asset": "emile-bed-08-1.0.1-sound.zip",
+     "asset": "emile-bed-08-1.0.2-sound.zip",
      "bytes": 1612988,
-     "sha256": "335c0e422a058eda75e39871eb11c79364b60753a8c3691a1781774aebd170c7"
+     "sha256": "ecd915f85bb203d93b72992adc26da510f326839c5557907677c1261feaf4bbb"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-09",
+   "version": "1.0.2",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 9",
+    "zh-CN": "环境 9"
+   },
+   "description": {
+    "en": "The sea from the shore: waves building, breaking and draining back (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "海边：浪涌起、拍下、退回（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "sea",
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 825,
+     "sha256": "530844ef47416d67ba0ab995f5501e074c1eed6b422507d3f204c3e74e703f70"
+    },
+    {
+     "asset": "emile-bed-09-1.0.2-sound.zip",
+     "bytes": 2568957,
+     "sha256": "d8d28117eb14885e763decc7394020bb6990d7e0aa71d887bdb927307f384962"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-10",
+   "version": "1.0.2",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 10",
+    "zh-CN": "环境 10"
+   },
+   "description": {
+    "en": "Inside a moving car: engine and road rumble, tyre roar (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "行驶中的车里：发动机与路面的低鸣、轮胎声（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "car",
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 839,
+     "sha256": "cbf51e866513a68fbf429c2f1b59aff9faef86684a39e6a4e9b738a63417e895"
+    },
+    {
+     "asset": "emile-bed-10-1.0.2-sound.zip",
+     "bytes": 2681377,
+     "sha256": "29beed302675539dcd8114363dce317957b0bef5a9ebcc44aba03bea8ab743fd"
+    }
+   ]
+  },
+  {
+   "id": "emile/bed-11",
+   "version": "1.0.2",
+   "kind": "sound",
+   "category": null,
+   "title": {
+    "en": "Bed 11",
+    "zh-CN": "环境 11"
+   },
+   "description": {
+    "en": "A street by day: steady traffic, cars passing near and far (16.00 s; the cut at its start, 0.000 s). Synthesised by Émile.",
+    "zh-CN": "白天的街道：持续的车流，远近有车开过（16.00 秒；切点在开头，0.000 秒）。Émile 合成。"
+   },
+   "params": [],
+   "preview": null,
+   "sound": {
+    "file": "sound.wav",
+    "seconds": 16,
+    "cut": 0,
+    "place": "street-day",
+    "tags": [
+     "ambience"
+    ]
+   },
+   "sources": [
+    {
+     "name": "Émile, synthesised by scripts/transitions.mjs",
+     "url": "https://github.com/EmileFilm/emile-packs/blob/main/scripts/transitions.mjs",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "pack.json",
+     "bytes": 844,
+     "sha256": "aeac90d009128c7b3148673af8057b744694d724f25bdb1df07f825ea62e3c53"
+    },
+    {
+     "asset": "emile-bed-11-1.0.2-sound.zip",
+     "bytes": 2662344,
+     "sha256": "bbe6796a539c0840e2966907fe2f4fb78a8d8380f2cfc20cceaa4cec708295c1"
     }
    ]
   },
@@ -7264,13 +7407,13 @@
    "description": "A place's sound carried across a cut: run on into the next shot (an L-cut) or coming in before it (a J-cut), and a bed under shots that have no sound of their own so the film never drops into silence. Which way, how long, and how in Émile and with ffmpeg. Read for every cut between places, and when footage has no sound.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "6ab1302d1ae8d5ac7c67054c755e77a060b28a7614208e5c0599480c50f1396f",
+   "digest": "bdffa332ff21ffba39069b76dca81d9a7d634cc9fb9b00125d3ec58cb4b53d1b",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 2938,
-     "sha256": "0919590d8ffcbea47804715c4019d3c89cd7fddee2a9f343d084a4f587b19e96"
+     "bytes": 3080,
+     "sha256": "1d5b791579621e511e357eab90f0b7fdd35a19ce52feadce5ba11b9f27502099"
     }
    ]
   },
@@ -7344,13 +7487,13 @@
    "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "313290ed8eff973a3d5609da30f3c526b2d75db192f25c8f46fd225a3d9220ed",
+   "digest": "40742ac9d0413e7d06883a2c7996af7a3bfc450dff729dfdc3de95ca5af4a2d7",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 4897,
-     "sha256": "0f7954be9e42bca46ca356abdd965bb1952b0ad294cad2674f3bccdee8b76c98"
+     "bytes": 5474,
+     "sha256": "463a2e911cdcf3b1fe91d9caed3ce76c8c247ba5c9247854e55ecf456467db63"
     }
    ]
   },
