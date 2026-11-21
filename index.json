@@ -1,7 +1,7 @@
 {
  "format": 1,
  "tag": "v1.1.0",
- "published": "2026-11-21T07:14:22.047Z",
+ "published": "2026-11-21T07:29:05.474Z",
  "contract": 4,
  "packs": [
   {
@@ -2311,6 +2311,22 @@
      "path": "SKILL.md",
      "bytes": 6498,
      "sha256": "97dfc2581397798bf7827431a1d97ebc08e6f9f578438d51ce47280536d77f12"
+    }
+   ]
+  },
+  {
+   "name": "scoring",
+   "title": "Scoring a film",
+   "description": "How to give a film its music in Émile: when to write a score on the instrument packs and when to generate music from a prompt, how to choose a tempo the cuts land on, how to shape the music to the film's sections, voice it so it sounds good, leave room for a voice-over, and the mistakes that make film music sound cheap. Read it before write_score or generate_music.",
+   "kind": "tool",
+   "licence": "MIT",
+   "digest": "bf0e172e4f87b16628316efbbb463df593e0624158a5ae0443c7bc58968f599b",
+   "preview": null,
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 6693,
+     "sha256": "d9884fdde338e9ab61c29734e6734fe1f86a7760465424cf14ccbde20ad8e76d"
     }
    ]
   },
