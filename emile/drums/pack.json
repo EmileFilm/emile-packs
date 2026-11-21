@@ -1,0 +1,40 @@
+{
+  "id": "emile/drums",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Drum kit",
+    "zh-CN": "架子鼓"
+  },
+  "description": {
+    "en": "An acoustic drum kit: kick, snare, hi-hats and a crash.",
+    "zh-CN": "一套原声架子鼓：底鼓、军鼓、踩镲与吊镲。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      36,
+      49
+    ],
+    "gain": 2.7,
+    "reverb": 0.1,
+    "family": "drums",
+    "keys": {
+      "36": "kick",
+      "38": "snare",
+      "42": "closed hi-hat",
+      "46": "open hi-hat",
+      "49": "crash"
+    }
+  },
+  "sources": [
+    {
+      "name": "Virtuosity Drums, by Versilian Studios and Karoryfer Samples",
+      "url": "https://github.com/sfzinstruments/virtuosity_drums/tree/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

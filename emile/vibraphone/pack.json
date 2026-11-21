@@ -1,0 +1,33 @@
+{
+  "id": "emile/vibraphone",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Vibraphone",
+    "zh-CN": "颤音琴"
+  },
+  "description": {
+    "en": "A vibraphone: soft metal bars, clean and modern.",
+    "zh-CN": "颤音琴：柔和的金属音条，干净、现代。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      53,
+      88
+    ],
+    "gain": -2.6,
+    "reverb": 0.35,
+    "family": "mallets"
+  },
+  "sources": [
+    {
+      "name": "Versilian Community Sample Library (VCSL)",
+      "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

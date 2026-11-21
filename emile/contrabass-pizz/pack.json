@@ -1,0 +1,33 @@
+{
+  "id": "emile/contrabass-pizz",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Double bass, plucked",
+    "zh-CN": "低音提琴拨弦"
+  },
+  "description": {
+    "en": "A double bass plucked: round low notes that walk under the music.",
+    "zh-CN": "拨弦的低音提琴：圆厚的低音，在音乐底下走。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      28,
+      59
+    ],
+    "gain": 8.7,
+    "reverb": 0.15,
+    "family": "bass"
+  },
+  "sources": [
+    {
+      "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+      "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

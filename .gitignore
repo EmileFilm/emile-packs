@@ -3,3 +3,8 @@
 *.key
 node_modules/
 .DS_Store
+
+# An instrument's samples and the archives made of them: published as release assets, not committed
+emile/*/samples/
+assets/
+.instruments-work/

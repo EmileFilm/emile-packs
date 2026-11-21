@@ -1,0 +1,8 @@
+// Drum kit: made by scripts/instruments.mjs from Virtuosity Drums, by Versilian Studios and Karoryfer Samples
+<control> default_path=samples/
+<global> ampeg_release=0.5 loop_mode=one_shot
+<region> sample=mid_kick_snoff_vl3_rr1.flac key=36
+<region> sample=mid_snare_center_vl24.flac key=38
+<region> sample=mid_hh_closed_vl3_rr1.flac key=42
+<region> sample=mid_hh_open_vl3_rr1.flac key=46
+<region> sample=mid_crash_crash_vl2_rr1.flac key=49

@@ -1,0 +1,7 @@
+// Cinematic percussion: made by scripts/instruments.mjs from Versilian Community Sample Library (VCSL)
+<control> default_path=samples/
+<global> ampeg_release=0.5 loop_mode=one_shot
+<region> sample=bassdrum_hit_ff.flac key=35
+<region> sample=timpani1_hit_v4_rr1_sum.flac key=36
+<region> sample=suscymb1_cresc_2s.flac key=55
+<region> sample=suscymb1_bow_13.flac key=57

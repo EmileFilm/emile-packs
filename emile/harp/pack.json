@@ -1,0 +1,33 @@
+{
+  "id": "emile/harp",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Concert harp",
+    "zh-CN": "竖琴"
+  },
+  "description": {
+    "en": "A concert harp: bright plucked notes that ring and shimmer.",
+    "zh-CN": "音乐会竖琴：明亮的拨弦，余音闪闪发光。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      28,
+      101
+    ],
+    "gain": 2.7,
+    "reverb": 0.4,
+    "family": "plucked"
+  },
+  "sources": [
+    {
+      "name": "Versilian Community Sample Library (VCSL)",
+      "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

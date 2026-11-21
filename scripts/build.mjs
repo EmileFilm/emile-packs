@@ -34,6 +34,7 @@
 // The engine (the Émile repository's engine/) does the checking: --engine
 // or EMILE_ENGINE, else ../Emile/engine beside this repository.
 
+import { execFileSync } from 'node:child_process'
 import crypto from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -73,12 +74,16 @@ if (values['public-key']) {
 
 // Every pack folder: <publisher>/<name>/pack.json
 const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
-  .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs'].includes(e.name))
+  .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs', 'assets'].includes(e.name))
   .flatMap(pub => fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })
     .filter(e => e.isDirectory() && fs.existsSync(path.join(ROOT, pub.name, e.name, 'pack.json')))
     .map(e => path.join(ROOT, pub.name, e.name)))
   .sort()
 if (!packDirs.length) fail('no packs (<publisher>/<name>/pack.json)')
+// The packs with a shader (filters and transitions): what is compiled, what
+// the Skill's runner wraps and what skills/emile-shaders carries
+const kindOf = dir => JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8')).kind
+const shaderDirs = packDirs.filter(dir => ['filter', 'transition'].includes(kindOf(dir)))
 
 // 1. check
 const engine = path.resolve(values.engine ?? process.env.EMILE_ENGINE ?? path.join(ROOT, '..', 'Emile', 'engine'))
@@ -100,7 +105,7 @@ if (bad) fail(`${bad} pack${bad > 1 ? 's' : ''} with problems`)
 const contract = await import(pathToFileURL(path.join(engine, 'core', 'compose', 'contract.js')).href)
 const runner = {}
 vm.runInNewContext(fs.readFileSync(path.join(ROOT, 'scripts', 'skills', 'emile-shaders', 'emile-shaders.js'), 'utf8'), runner)
-const wrapped = packDirs.map(dir => {
+const wrapped = shaderDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
   const glsl = fs.readFileSync(path.join(dir, pack.backends.glsl), 'utf8')
   const ids = (pack.passes ?? []).map(p => p.id)
@@ -110,14 +115,14 @@ const wrapped = packDirs.map(dir => {
   return same ? null : pack.id
 }).filter(Boolean)
 if (wrapped.length) fail(`emile-shaders.js wraps ${wrapped.join(', ')} differently from the engine's compose/contract.js: make its fragmentSource and paramValues the same`)
-console.log(`✓ emile-shaders.js wraps the shaders of all ${packDirs.length} packs, passes too, as the compositor does`)
+console.log(`✓ emile-shaders.js wraps the shaders of all ${shaderDirs.length} packs with one, passes too, as the compositor does`)
 
 // 2. generate
 const { scanSkill } = await import(pathToFileURL(checker).href)
 // The rules a parameter's control is made by are the engine's (Studio's
 // filter panel draws from the same file): written out as a classic script
 const controls = fs.readFileSync(path.join(engine, 'core', 'compose', 'controls.js'), 'utf8')
-const generated = generateSkills(ROOT, packDirs, contract, controls)
+const generated = generateSkills(ROOT, shaderDirs, contract, controls)
 const stale = []
 for (const skill of GENERATED) {
   const dir = path.join(ROOT, 'skills', skill)
@@ -151,17 +156,37 @@ console.log(stale.length ? `skills/${GENERATED.join(', skills/')}: ${stale.lengt
 // 3. hash
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
 const fileEntry = (dir, f) => ({ path: path.relative(dir, f).split(path.sep).join('/'), bytes: fs.statSync(f).size, sha256: sha256(f) })
-// An entry's preview: both files, or none (a card in Émile then stays words)
+// An entry's preview: both files, or none (a card in Émile then stays
+// words); an instrument's is its phrase (preview.m4a); a sound is its own
 const previewOf = dir => {
+  const audio = path.join(dir, PREVIEW.audio)
+  if (fs.existsSync(audio)) return { audio: fileEntry(dir, audio) }
   const [video, still] = [PREVIEW.video, PREVIEW.still].map(f => path.join(dir, f))
   return fs.existsSync(video) && fs.existsSync(still) ? { video: fileEntry(dir, video), still: fileEntry(dir, still) } : null
 }
+// An instrument's samples as its asset (Émile's pack-index.mjs packSource):
+// assets/<publisher>-<name>-<version>-samples.zip, made once and kept, so
+// a published version's asset never changes; uploaded to the release
+// `assets` (scripts/assets.mjs)
+const assetsDir = path.join(ROOT, 'assets')
+function assetOf(dir, pack) {
+  const name = `${pack.id.replace('/', '-')}-${pack.version}-samples.zip`
+  const file = path.join(assetsDir, name)
+  if (!fs.existsSync(file)) {
+    fs.mkdirSync(assetsDir, { recursive: true })
+    execFileSync('ditto', ['-c', '-k', '--keepParent', path.join(dir, 'samples'), file])
+  }
+  return { asset: name, bytes: fs.statSync(file).size, sha256: sha256(file) }
+}
 const packs = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
+  const files = packFiles(dir).map(f => fileEntry(dir, f))
+  if (pack.kind === 'instrument') files.push(assetOf(dir, pack))
   return {
     id: pack.id, version: pack.version, kind: pack.kind, category: pack.category ?? null,
     title: pack.title, description: pack.description, params: pack.params, preview: previewOf(dir),
-    licence: pack.licence, files: packFiles(dir).map(f => fileEntry(dir, f))
+    ...(pack.instrument ? { instrument: pack.instrument } : {}), ...(pack.sound ? { sound: pack.sound } : {}), ...(pack.sources ? { sources: pack.sources } : {}),
+    licence: pack.licence, files
   }
 }).sort((a, b) => a.id.localeCompare(b.id))
 
@@ -191,8 +216,10 @@ const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileT
   })
   .sort((a, b) => a.name.localeCompare(b.name))
 
-// Whatever changes the picture has its preview
-const unseen = [...packs.filter(p => !p.preview).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `skills/${s.name} (kind: look)`)]
+// Whatever changes the picture has its preview; an instrument its phrase
+const unheard = packs.filter(p => p.kind === 'instrument' && !p.preview?.audio).map(p => p.id)
+if (unheard.length) fail(`these instruments have no preview.m4a: ${unheard.join(', ')} (node scripts/instruments.mjs)`)
+const unseen = [...packs.filter(p => !p.preview && ['filter', 'transition', 'look'].includes(p.kind)).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `skills/${s.name} (kind: look)`)]
 if (unseen.length) fail(`these change the picture but have no preview.mp4 and preview.jpg: ${unseen.join(', ')} (node scripts/previews.mjs; a Skill's preview is looked at before it goes in)`)
 
 // 4. index: a version once published keeps its files

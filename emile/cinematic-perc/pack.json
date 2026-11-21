@@ -1,0 +1,39 @@
+{
+  "id": "emile/cinematic-perc",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Cinematic percussion",
+    "zh-CN": "电影打击乐"
+  },
+  "description": {
+    "en": "A big bass drum, a timpani hit and cymbal swells: weight on the cuts.",
+    "zh-CN": "大鼓、定音鼓与吊镲渐强：给切点加分量。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      35,
+      57
+    ],
+    "gain": -1.5,
+    "reverb": 0.4,
+    "family": "percussion",
+    "keys": {
+      "35": "bass drum",
+      "36": "timpani",
+      "55": "cymbal swell (2 s)",
+      "57": "bowed cymbal"
+    }
+  },
+  "sources": [
+    {
+      "name": "Versilian Community Sample Library (VCSL)",
+      "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

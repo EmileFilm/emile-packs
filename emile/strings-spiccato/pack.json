@@ -1,0 +1,33 @@
+{
+  "id": "emile/strings-spiccato",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Strings, short",
+    "zh-CN": "弦乐跳弓"
+  },
+  "description": {
+    "en": "Violins and cellos bouncing short notes: a pulse that drives forward.",
+    "zh-CN": "小提琴与大提琴的短促跳弓：往前推的律动。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      36,
+      86
+    ],
+    "gain": -0.5,
+    "reverb": 0.3,
+    "family": "strings"
+  },
+  "sources": [
+    {
+      "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+      "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

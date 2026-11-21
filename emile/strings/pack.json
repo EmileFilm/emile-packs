@@ -1,0 +1,33 @@
+{
+  "id": "emile/strings",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "String section",
+    "zh-CN": "弦乐组"
+  },
+  "description": {
+    "en": "Violins, violas and cellos holding long notes, soft and swelling.",
+    "zh-CN": "小提琴、中提琴、大提琴拉长音，柔和、会慢慢涨起来。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      36,
+      86
+    ],
+    "gain": -5.4,
+    "reverb": 0.45,
+    "family": "strings"
+  },
+  "sources": [
+    {
+      "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+      "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

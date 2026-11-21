@@ -1,0 +1,26 @@
+// Strings, short: made by scripts/instruments.mjs from Versilian Studios Chamber Orchestra 2, Community Edition
+<control> default_path=samples/
+<global> ampeg_release=0.15
+<region> sample=spic_c1_v1_rr1.flac pitch_keycenter=36 lokey=0 hikey=38 lovel=1 hivel=127
+<region> sample=spic_e1_v1_rr1.flac pitch_keycenter=40 lokey=39 hikey=41 lovel=1 hivel=127
+<region> sample=spic_g1_v1_rr1.flac pitch_keycenter=43 lokey=42 hikey=45 lovel=1 hivel=127
+<region> sample=spic_b1_v1_rr1.flac pitch_keycenter=47 lokey=46 hikey=48 lovel=1 hivel=127
+<region> sample=spic_d2_v1_rr1.flac pitch_keycenter=50 lokey=49 hikey=51 lovel=1 hivel=127
+<region> sample=spic_f2_v1_rr1.flac pitch_keycenter=53 lokey=52 hikey=54 lovel=1 hivel=127
+<region> sample=vlnens_spic_g2_v1_rr1.flac pitch_keycenter=55 lokey=55 hikey=56 lovel=1 hivel=127
+<region> sample=vlnens_spic_a2_v1_rr1.flac pitch_keycenter=57 lokey=57 hikey=58 lovel=1 hivel=127
+<region> sample=vlnens_spic_b2_v1_rr1.flac pitch_keycenter=59 lokey=59 hikey=59 lovel=1 hivel=127
+<region> sample=spic_c3_v1_rr1.flac pitch_keycenter=60 lokey=60 hikey=61 lovel=1 hivel=127
+<region> sample=vlnens_spic_d3_v1_rr1.flac pitch_keycenter=62 lokey=62 hikey=63 lovel=1 hivel=127
+<region> sample=spic_e3_v1_rr1.flac pitch_keycenter=64 lokey=64 hikey=65 lovel=1 hivel=127
+<region> sample=vlnens_spic_fs3_v1_rr1.flac pitch_keycenter=66 lokey=66 hikey=66 lovel=1 hivel=127
+<region> sample=spic_g3_v1_rr1.flac pitch_keycenter=67 lokey=67 hikey=68 lovel=1 hivel=127
+<region> sample=vlnens_spic_a3_v1_rr1.flac pitch_keycenter=69 lokey=69 hikey=70 lovel=1 hivel=127
+<region> sample=spic_b3_v1_rr1.flac pitch_keycenter=71 lokey=71 hikey=71 lovel=1 hivel=127
+<region> sample=vlnens_spic_c4_v1_rr1.flac pitch_keycenter=72 lokey=72 hikey=73 lovel=1 hivel=127
+<region> sample=spic_d4_v1_rr1.flac pitch_keycenter=74 lokey=74 hikey=75 lovel=1 hivel=127
+<region> sample=vlnens_spic_e4_v1_rr1.flac pitch_keycenter=76 lokey=76 hikey=76 lovel=1 hivel=127
+<region> sample=spic_f4_v1_rr1.flac pitch_keycenter=77 lokey=77 hikey=78 lovel=1 hivel=127
+<region> sample=vlnens_spic_g4_v1_rr1.flac pitch_keycenter=79 lokey=79 hikey=81 lovel=1 hivel=127
+<region> sample=vlnens_spic_b4_v1_rr1.flac pitch_keycenter=83 lokey=82 hikey=84 lovel=1 hivel=127
+<region> sample=vlnens_spic_d5_v1_rr1.flac pitch_keycenter=86 lokey=85 hikey=127 lovel=1 hivel=127

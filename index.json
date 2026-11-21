@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.0.5",
- "published": "2026-11-20T04:02:02.091Z",
+ "tag": "v1.1.0",
+ "published": "2026-11-21T07:14:22.047Z",
  "contract": 4,
  "packs": [
   {
@@ -219,6 +219,74 @@
    ]
   },
   {
+   "id": "emile/cinematic-perc",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Cinematic percussion",
+    "zh-CN": "电影打击乐"
+   },
+   "description": {
+    "en": "A big bass drum, a timpani hit and cymbal swells: weight on the cuts.",
+    "zh-CN": "大鼓、定音鼓与吊镲渐强：给切点加分量。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 296781,
+     "sha256": "f04c0a20c20e07e3ec82dd7b7ee7b9b3c365bb5b239f9b066f167c0e82c4ac88"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     35,
+     57
+    ],
+    "gain": -1.5,
+    "reverb": 0.4,
+    "family": "percussion",
+    "keys": {
+     "35": "bass drum",
+     "36": "timpani",
+     "55": "cymbal swell (2 s)",
+     "57": "bowed cymbal"
+    }
+   },
+   "sources": [
+    {
+     "name": "Versilian Community Sample Library (VCSL)",
+     "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 574,
+     "sha256": "8face13f78eb86233a4f3cccab4d13f63727c719269af6652b70c31ab963f700"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 368,
+     "sha256": "a96259cd73486d0dbe594e1a4269bd0def18b66adf34cc5f6ee3f66cf2da8840"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 908,
+     "sha256": "ffd42cb6dfefca74cb3ef28306ab4aee57cb2a37555c322cfc11a6e3935956cd"
+    },
+    {
+     "asset": "emile-cinematic-perc-1.0.0-samples.zip",
+     "bytes": 1425209,
+     "sha256": "5397943938e270cf224a707f3c00b5647be1e1bae8bfcd159853d8e39d96620f"
+    }
+   ]
+  },
+  {
    "id": "emile/cmyk",
    "version": "1.0.0",
    "kind": "filter",
@@ -306,6 +374,68 @@
      "path": "shader.glsl",
      "bytes": 2448,
      "sha256": "cdb3c1015e6e4aeb185ba9c202b02257e2266d0536f398fdc0027b9b8e533595"
+    }
+   ]
+  },
+  {
+   "id": "emile/contrabass-pizz",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Double bass, plucked",
+    "zh-CN": "低音提琴拨弦"
+   },
+   "description": {
+    "en": "A double bass plucked: round low notes that walk under the music.",
+    "zh-CN": "拨弦的低音提琴：圆厚的低音，在音乐底下走。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 218934,
+     "sha256": "ca339df7a2df4590d6e7dbe770c396b64e516e00ff8745e54a2036d6a79e529f"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     28,
+     59
+    ],
+    "gain": 8.7,
+    "reverb": 0.15,
+    "family": "bass"
+   },
+   "sources": [
+    {
+     "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+     "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 514,
+     "sha256": "57ec261edd99ca7c7ce9babb24cfbceabed1735991adf140fb2c684a4f8ca76c"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 2158,
+     "sha256": "5af4ad1c9f402c6cc0acc2b9665821a2b5331d7b2a746106f16b81b42d7b4d3a"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 798,
+     "sha256": "8d3e8eeddaea5045a16859992cc89cb1064b4da040befd58aa89e4c53f98f3e7"
+    },
+    {
+     "asset": "emile-contrabass-pizz-1.0.0-samples.zip",
+     "bytes": 2822703,
+     "sha256": "2d932cfd737357e631d0c6fa6edbdcb85763c09e88fc0d41eac8173cc3eaa593"
     }
    ]
   },
@@ -656,6 +786,75 @@
    ]
   },
   {
+   "id": "emile/drums",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Drum kit",
+    "zh-CN": "架子鼓"
+   },
+   "description": {
+    "en": "An acoustic drum kit: kick, snare, hi-hats and a crash.",
+    "zh-CN": "一套原声架子鼓：底鼓、军鼓、踩镲与吊镲。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 247817,
+     "sha256": "291533a9e1f294875db8c0cf3bad877c097ed2cb5f2918df6981d3b74db912ea"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     36,
+     49
+    ],
+    "gain": 2.7,
+    "reverb": 0.1,
+    "family": "drums",
+    "keys": {
+     "36": "kick",
+     "38": "snare",
+     "42": "closed hi-hat",
+     "46": "open hi-hat",
+     "49": "crash"
+    }
+   },
+   "sources": [
+    {
+     "name": "Virtuosity Drums, by Versilian Studios and Karoryfer Samples",
+     "url": "https://github.com/sfzinstruments/virtuosity_drums/tree/9f04cf9a734527edfbb0a4eee1f674e45bbf71bc",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 534,
+     "sha256": "7eaaa24ac1c00187fc7fe076f20be3b5bb7d5dd1ba5a1a20871f70e14f6d3ad9"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 440,
+     "sha256": "fa8dfed30960b8f0241713fc5d0d74e471bee690b6074120ea34fd567f3ddf91"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 909,
+     "sha256": "67e2310078010f02c17de42b1117fd17dd7d1450d4b47ec9fde3c9635526232b"
+    },
+    {
+     "asset": "emile-drums-1.0.0-samples.zip",
+     "bytes": 949845,
+     "sha256": "638aec5be356623d6325c90e53d57b1c70c9bccd36ab2d59550a801903f58f9a"
+    }
+   ]
+  },
+  {
    "id": "emile/duotone",
    "version": "1.0.0",
    "kind": "filter",
@@ -1000,6 +1199,68 @@
    ]
   },
   {
+   "id": "emile/glockenspiel",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Glockenspiel",
+    "zh-CN": "钟琴"
+   },
+   "description": {
+    "en": "A glockenspiel: tiny bright bells that sparkle on top.",
+    "zh-CN": "钟琴：小小的、明亮的铃声，在最上面闪光。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 224531,
+     "sha256": "ea38df07022135e7824359e44cb0d822e8809498899260589976d1281b456018"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     79,
+     108
+    ],
+    "gain": -1.6,
+    "reverb": 0.35,
+    "family": "mallets"
+   },
+   "sources": [
+    {
+     "name": "Versilian Community Sample Library (VCSL)",
+     "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 407,
+     "sha256": "d87ea0d84f89273ef15cc134ef4a68dba62eb7c5533c676b0a87df4113eeb63d"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 718,
+     "sha256": "14b4fbc7e1421dd7ea224dd797fb98640dac894024bf1fc3e5148dcdbf74b980"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 746,
+     "sha256": "87a0d514fcec2a7551624ad368783938c67e03b0e434d291339e64eaaa97cefb"
+    },
+    {
+     "asset": "emile-glockenspiel-1.0.0-samples.zip",
+     "bytes": 1335415,
+     "sha256": "21b1f53b45b5ad9b863c2007c44ad98b8dd856f13a081cc8d4b85af6f5d243d2"
+    }
+   ]
+  },
+  {
    "id": "emile/grain",
    "version": "1.0.0",
    "kind": "filter",
@@ -1175,6 +1436,68 @@
      "path": "shader.glsl",
      "bytes": 2626,
      "sha256": "cb6fa71eb9e73ae417669725d5e3ce06d79e36a0b1c9a1967af70564af6d0123"
+    }
+   ]
+  },
+  {
+   "id": "emile/harp",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Concert harp",
+    "zh-CN": "竖琴"
+   },
+   "description": {
+    "en": "A concert harp: bright plucked notes that ring and shimmer.",
+    "zh-CN": "音乐会竖琴：明亮的拨弦，余音闪闪发光。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 241378,
+     "sha256": "55a3af6a40ba83ee8cc77ff0da34dd189ad03ace4e9b1f53780750deeab5ad45"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     28,
+     101
+    ],
+    "gain": 2.7,
+    "reverb": 0.4,
+    "family": "plucked"
+   },
+   "sources": [
+    {
+     "name": "Versilian Community Sample Library (VCSL)",
+     "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 451,
+     "sha256": "d159200e179f0726e37d40c5dfa8f5f523a0ef665329596504d41e139f17bddf"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 3737,
+     "sha256": "03d2be8060892c64d9a13b5d8ee8eb636f39f885928896aaadcbe01a8e4d8391"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 738,
+     "sha256": "6671119546e9d733e30cc88352943e7c374202ad44f2024a774c05db934b814d"
+    },
+    {
+     "asset": "emile-harp-1.0.0-samples.zip",
+     "bytes": 8475442,
+     "sha256": "7df3025f82fcad6b4bde342473967fee553bb9c2f51e403a31ee98e382b8ecb1"
     }
    ]
   },
@@ -1381,6 +1704,68 @@
    ]
   },
   {
+   "id": "emile/piano",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Grand piano",
+    "zh-CN": "三角钢琴"
+   },
+   "description": {
+    "en": "A Kawai grand, close and warm: soft notes stay round, hard ones ring.",
+    "zh-CN": "一台 Kawai 三角钢琴，近而暖：轻的音圆润，重的音明亮。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 232216,
+     "sha256": "fa12103ec24a5a274b453182593b37666f3c07308e0fb25aff827aa3ad578111"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     22,
+     108
+    ],
+    "gain": 16.6,
+    "reverb": 0.25,
+    "family": "keys"
+   },
+   "sources": [
+    {
+     "name": "Versilian Community Sample Library (VCSL)",
+     "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 616,
+     "sha256": "aa202e290f1ac67ee96e7296b2111a899645388a5edc1ed93740dba8558ce8c3"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 7696,
+     "sha256": "66a9d72b683ed2fa91a5633ccc8d4426e6718c609f4d0f63b29850975b378fcb"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 772,
+     "sha256": "6872611bf8b004bcfea200006a1830e2370cdef5ee4e0be20633e226115ea636"
+    },
+    {
+     "asset": "emile-piano-1.0.0-samples.zip",
+     "bytes": 18066733,
+     "sha256": "1b1e3c8c9a88148746116e24b44a51bf16f8cb38cd9c0e891fcb312b520642ec"
+    }
+   ]
+  },
+  {
    "id": "emile/push",
    "version": "1.0.0",
    "kind": "transition",
@@ -1526,6 +1911,130 @@
    ]
   },
   {
+   "id": "emile/strings",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "String section",
+    "zh-CN": "弦乐组"
+   },
+   "description": {
+    "en": "Violins, violas and cellos holding long notes, soft and swelling.",
+    "zh-CN": "小提琴、中提琴、大提琴拉长音，柔和、会慢慢涨起来。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 229159,
+     "sha256": "dc28f25bbbe87d5167d59daedf4f30b762a1c6c117a432a2ba3d1c5a617f1ff6"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     36,
+     86
+    ],
+    "gain": -5.4,
+    "reverb": 0.45,
+    "family": "strings"
+   },
+   "sources": [
+    {
+     "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+     "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 611,
+     "sha256": "36e16a35247cfddabe8fa5d61bac685e02e0ae3e2e0dd8160bc117866bde83dd"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 2648,
+     "sha256": "873b0250914833408ccf7df0ccecf3a3074f0d67e4ba676d9ea80def2dd3f7d1"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 791,
+     "sha256": "7c48e4d298cb23156eb4a81945b77c69a6caa6320b2e5c065c896ab036182c4b"
+    },
+    {
+     "asset": "emile-strings-1.0.0-samples.zip",
+     "bytes": 29367781,
+     "sha256": "19a4a029163040350850704a9257c20e1c7441ed2589e4322f618a231f206d84"
+    }
+   ]
+  },
+  {
+   "id": "emile/strings-spiccato",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Strings, short",
+    "zh-CN": "弦乐跳弓"
+   },
+   "description": {
+    "en": "Violins and cellos bouncing short notes: a pulse that drives forward.",
+    "zh-CN": "小提琴与大提琴的短促跳弓：往前推的律动。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 217757,
+     "sha256": "f5d875633bdde693d85ec7b473c22136b7ed9c840f32a81b7b9cfa04c2402832"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     36,
+     86
+    ],
+    "gain": -0.5,
+    "reverb": 0.3,
+    "family": "strings"
+   },
+   "sources": [
+    {
+     "name": "Versilian Studios Chamber Orchestra 2, Community Edition",
+     "url": "https://github.com/sgossner/VSCO-2-CE/tree/440300901dfe9275fd84e0b7763af1f8443ae62e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 467,
+     "sha256": "3304df09ec6108da129f991af1f8752c393d39ecc7b99858cf5e23cf069f2519"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 2344,
+     "sha256": "68bee31f27e1e40a9e7d95e60b19722a1493ebbaeebe7473e5b643d34e0d7a20"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 791,
+     "sha256": "58ff38487d359968e3ebdd8fec1b66cde59ef9c844041c433266850b21ed806b"
+    },
+    {
+     "asset": "emile-strings-spiccato-1.0.0-samples.zip",
+     "bytes": 1628275,
+     "sha256": "80405ec853edfacec49ce8b6f4b9cb9490a10baddb587995d6c93667e78df720"
+    }
+   ]
+  },
+  {
    "id": "emile/vhs",
    "version": "1.0.0",
    "kind": "filter",
@@ -1616,6 +2125,68 @@
      "path": "shader.glsl",
      "bytes": 3699,
      "sha256": "ab12a7deafb9fba7ca7d1782440512b0768a2e3e562a9018d2a625606e8f6952"
+    }
+   ]
+  },
+  {
+   "id": "emile/vibraphone",
+   "version": "1.0.0",
+   "kind": "instrument",
+   "category": null,
+   "title": {
+    "en": "Vibraphone",
+    "zh-CN": "颤音琴"
+   },
+   "description": {
+    "en": "A vibraphone: soft metal bars, clean and modern.",
+    "zh-CN": "颤音琴：柔和的金属音条，干净、现代。"
+   },
+   "params": [],
+   "preview": {
+    "audio": {
+     "path": "preview.m4a",
+     "bytes": 242562,
+     "sha256": "c4dae9a7f3a772018f4347be910e5350f74e3c064d692ba1ba5ecdd015ece8c2"
+    }
+   },
+   "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+     53,
+     88
+    ],
+    "gain": -2.6,
+    "reverb": 0.35,
+    "family": "mallets"
+   },
+   "sources": [
+    {
+     "name": "Versilian Community Sample Library (VCSL)",
+     "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+     "licence": "CC0-1.0"
+    }
+   ],
+   "licence": "CC0-1.0",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 484,
+     "sha256": "d6a3ffd5ec1c131c4fa57cd583d70c38f983b23511ce4b0dcba4591b48cdc7d4"
+    },
+    {
+     "path": "instrument.sfz",
+     "bytes": 2397,
+     "sha256": "47fdba26b3c5feeda494585f502d89a1a9ccaa2d158eb551e11c7fa5b8089ee9"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 732,
+     "sha256": "4371d97a4408d0324a8a5f56174b2598d0d92d7cf0a32d1750e9b17ac2faf038"
+    },
+    {
+     "asset": "emile-vibraphone-1.0.0-samples.zip",
+     "bytes": 7481634,
+     "sha256": "6711c2452887ecc03f4afa0c6436cfc205401510603629de3c8d1998a6711412"
     }
    ]
   },

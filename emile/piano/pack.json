@@ -1,0 +1,33 @@
+{
+  "id": "emile/piano",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Grand piano",
+    "zh-CN": "三角钢琴"
+  },
+  "description": {
+    "en": "A Kawai grand, close and warm: soft notes stay round, hard ones ring.",
+    "zh-CN": "一台 Kawai 三角钢琴，近而暖：轻的音圆润，重的音明亮。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      22,
+      108
+    ],
+    "gain": 16.6,
+    "reverb": 0.25,
+    "family": "keys"
+  },
+  "sources": [
+    {
+      "name": "Versilian Community Sample Library (VCSL)",
+      "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}

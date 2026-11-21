@@ -1,0 +1,43 @@
+// Concert harp: made by scripts/instruments.mjs from Versilian Community Sample Library (VCSL)
+<control> default_path=samples/
+<global> ampeg_release=1
+<region> sample=ksharp_b1_mf1.flac pitch_keycenter=35 lokey=0 hikey=36 lovel=1 hivel=90
+<region> sample=ksharp_d2_mf1.flac pitch_keycenter=38 lokey=37 hikey=39 lovel=1 hivel=90
+<region> sample=ksharp_f2_mf1.flac pitch_keycenter=41 lokey=40 hikey=43 lovel=1 hivel=90
+<region> sample=ksharp_a2_mf1.flac pitch_keycenter=45 lokey=44 hikey=48 lovel=1 hivel=90
+<region> sample=ksharp_e3_mf1.flac pitch_keycenter=52 lokey=49 hikey=53 lovel=1 hivel=90
+<region> sample=ksharp_g3_mf1.flac pitch_keycenter=55 lokey=54 hikey=57 lovel=1 hivel=90
+<region> sample=ksharp_b3_mf1.flac pitch_keycenter=59 lokey=58 hikey=60 lovel=1 hivel=90
+<region> sample=ksharp_d4_mf1.flac pitch_keycenter=62 lokey=61 hikey=63 lovel=1 hivel=90
+<region> sample=ksharp_f4_mf1.flac pitch_keycenter=65 lokey=64 hikey=67 lovel=1 hivel=90
+<region> sample=ksharp_a4_mf1.flac pitch_keycenter=69 lokey=68 hikey=70 lovel=1 hivel=90
+<region> sample=ksharp_c5_mf1.flac pitch_keycenter=72 lokey=71 hikey=74 lovel=1 hivel=90
+<region> sample=ksharp_e5_mf1.flac pitch_keycenter=76 lokey=75 hikey=77 lovel=1 hivel=90
+<region> sample=ksharp_g5_mf1.flac pitch_keycenter=79 lokey=78 hikey=81 lovel=1 hivel=90
+<region> sample=ksharp_b5_mf1.flac pitch_keycenter=83 lokey=82 hikey=84 lovel=1 hivel=90
+<region> sample=ksharp_d6_mf1.flac pitch_keycenter=86 lokey=85 hikey=87 lovel=1 hivel=90
+<region> sample=ksharp_f6_mf1.flac pitch_keycenter=89 lokey=88 hikey=91 lovel=1 hivel=90
+<region> sample=ksharp_a6_mf1.flac pitch_keycenter=93 lokey=92 hikey=94 lovel=1 hivel=90
+<region> sample=ksharp_b6_mf1.flac pitch_keycenter=95 lokey=95 hikey=127 lovel=1 hivel=90
+<region> sample=ksharp_e1_f1.flac pitch_keycenter=28 lokey=0 hikey=29 lovel=91 hivel=127
+<region> sample=ksharp_g1_f1.flac pitch_keycenter=31 lokey=30 hikey=33 lovel=91 hivel=127
+<region> sample=ksharp_b1_f1.flac pitch_keycenter=35 lokey=34 hikey=36 lovel=91 hivel=127
+<region> sample=ksharp_d2_f1.flac pitch_keycenter=38 lokey=37 hikey=39 lovel=91 hivel=127
+<region> sample=ksharp_f2_f1.flac pitch_keycenter=41 lokey=40 hikey=43 lovel=91 hivel=127
+<region> sample=ksharp_a2_f1.flac pitch_keycenter=45 lokey=44 hikey=48 lovel=91 hivel=127
+<region> sample=ksharp_e3_f1.flac pitch_keycenter=52 lokey=49 hikey=53 lovel=91 hivel=127
+<region> sample=ksharp_g3_f1.flac pitch_keycenter=55 lokey=54 hikey=57 lovel=91 hivel=127
+<region> sample=ksharp_b3_f1.flac pitch_keycenter=59 lokey=58 hikey=60 lovel=91 hivel=127
+<region> sample=ksharp_d4_f1.flac pitch_keycenter=62 lokey=61 hikey=63 lovel=91 hivel=127
+<region> sample=ksharp_f4_f1.flac pitch_keycenter=65 lokey=64 hikey=67 lovel=91 hivel=127
+<region> sample=ksharp_a4_f1.flac pitch_keycenter=69 lokey=68 hikey=70 lovel=91 hivel=127
+<region> sample=ksharp_c5_f1.flac pitch_keycenter=72 lokey=71 hikey=74 lovel=91 hivel=127
+<region> sample=ksharp_e5_f1.flac pitch_keycenter=76 lokey=75 hikey=77 lovel=91 hivel=127
+<region> sample=ksharp_g5_f1.flac pitch_keycenter=79 lokey=78 hikey=81 lovel=91 hivel=127
+<region> sample=ksharp_b5_f1.flac pitch_keycenter=83 lokey=82 hikey=84 lovel=91 hivel=127
+<region> sample=ksharp_d6_f1.flac pitch_keycenter=86 lokey=85 hikey=87 lovel=91 hivel=127
+<region> sample=ksharp_f6_f1.flac pitch_keycenter=89 lokey=88 hikey=91 lovel=91 hivel=127
+<region> sample=ksharp_a6_f1.flac pitch_keycenter=93 lokey=92 hikey=94 lovel=91 hivel=127
+<region> sample=ksharp_b6_f1.flac pitch_keycenter=95 lokey=95 hikey=96 lovel=91 hivel=127
+<region> sample=ksharp_d7_f1.flac pitch_keycenter=98 lokey=97 hikey=99 lovel=91 hivel=127
+<region> sample=ksharp_f7_f1.flac pitch_keycenter=101 lokey=100 hikey=127 lovel=91 hivel=127

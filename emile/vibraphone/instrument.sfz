@@ -1,0 +1,25 @@
+// Vibraphone: made by scripts/instruments.mjs from Versilian Community Sample Library (VCSL)
+<control> default_path=samples/
+<global> ampeg_release=1.2
+<region> sample=vibes_soft_f2_v2_rr1_main.flac pitch_keycenter=53 lokey=0 hikey=55 lovel=1 hivel=90
+<region> sample=vibes_soft_a2_v2_rr1_main.flac pitch_keycenter=57 lokey=56 hikey=58 lovel=1 hivel=90
+<region> sample=vibes_soft_c3_v2_rr1_main.flac pitch_keycenter=60 lokey=59 hikey=62 lovel=1 hivel=90
+<region> sample=vibes_soft_e3_v2_rr1_main.flac pitch_keycenter=64 lokey=63 hikey=65 lovel=1 hivel=90
+<region> sample=vibes_soft_g3_v2_rr1_main.flac pitch_keycenter=67 lokey=66 hikey=69 lovel=1 hivel=90
+<region> sample=vibes_soft_b3_v2_rr1_main.flac pitch_keycenter=71 lokey=70 hikey=72 lovel=1 hivel=90
+<region> sample=vibes_soft_d4_v2_rr1_main.flac pitch_keycenter=74 lokey=73 hikey=75 lovel=1 hivel=90
+<region> sample=vibes_soft_f4_v2_rr1_main.flac pitch_keycenter=77 lokey=76 hikey=79 lovel=1 hivel=90
+<region> sample=vibes_soft_a4_v2_rr1_main.flac pitch_keycenter=81 lokey=80 hikey=82 lovel=1 hivel=90
+<region> sample=vibes_soft_c5_v2_rr1_main.flac pitch_keycenter=84 lokey=83 hikey=86 lovel=1 hivel=90
+<region> sample=vibes_soft_e5_v2_rr1_main.flac pitch_keycenter=88 lokey=87 hikey=127 lovel=1 hivel=90
+<region> sample=vibes_hard_f2_v3_rr1_main.flac pitch_keycenter=53 lokey=0 hikey=55 lovel=91 hivel=127
+<region> sample=vibes_hard_a2_v3_rr1_main.flac pitch_keycenter=57 lokey=56 hikey=58 lovel=91 hivel=127
+<region> sample=vibes_hard_c3_v3_rr1_main.flac pitch_keycenter=60 lokey=59 hikey=62 lovel=91 hivel=127
+<region> sample=vibes_hard_e3_v3_rr1_main.flac pitch_keycenter=64 lokey=63 hikey=65 lovel=91 hivel=127
+<region> sample=vibes_hard_g3_v3_rr1_main.flac pitch_keycenter=67 lokey=66 hikey=69 lovel=91 hivel=127
+<region> sample=vibes_hard_b3_v3_rr1_main.flac pitch_keycenter=71 lokey=70 hikey=72 lovel=91 hivel=127
+<region> sample=vibes_hard_d4_v3_rr1_main.flac pitch_keycenter=74 lokey=73 hikey=75 lovel=91 hivel=127
+<region> sample=vibes_hard_f4_v3_rr1_main.flac pitch_keycenter=77 lokey=76 hikey=79 lovel=91 hivel=127
+<region> sample=vibes_hard_a4_v3_rr1_main.flac pitch_keycenter=81 lokey=80 hikey=82 lovel=91 hivel=127
+<region> sample=vibes_hard_c5_v3_rr1_main.flac pitch_keycenter=84 lokey=83 hikey=86 lovel=91 hivel=127
+<region> sample=vibes_hard_e5_v3_rr1_main.flac pitch_keycenter=88 lokey=87 hikey=127 lovel=91 hivel=127

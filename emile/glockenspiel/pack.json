@@ -1,0 +1,33 @@
+{
+  "id": "emile/glockenspiel",
+  "kind": "instrument",
+  "version": "1.0.0",
+  "title": {
+    "en": "Glockenspiel",
+    "zh-CN": "钟琴"
+  },
+  "description": {
+    "en": "A glockenspiel: tiny bright bells that sparkle on top.",
+    "zh-CN": "钟琴：小小的、明亮的铃声，在最上面闪光。"
+  },
+  "params": [],
+  "instrument": {
+    "sfz": "instrument.sfz",
+    "range": [
+      79,
+      108
+    ],
+    "gain": -1.6,
+    "reverb": 0.35,
+    "family": "mallets"
+  },
+  "sources": [
+    {
+      "name": "Versilian Community Sample Library (VCSL)",
+      "url": "https://github.com/sgossner/VCSL/tree/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e",
+      "licence": "CC0-1.0"
+    }
+  ],
+  "licence": "CC0-1.0",
+  "publisher": "emile"
+}
