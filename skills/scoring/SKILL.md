@@ -11,7 +11,33 @@ A film for a product or a company is short, and its music carries half its feeli
 ## Which way
 
 - **Write a score** (`write_score`) when the film's style suits the instruments there are (`list_instruments`: piano, strings, a plucked bass, harp, mallets, an acoustic kit, cinematic percussion) — calm, elegant, cinematic, warm, thoughtful, premium. It is the better way whenever the music should **follow the cuts**: chords change on them, hits land on them, a section breathes over a pause. It costs nothing and is the same every time it is played.
-- **Generate** (`generate_music`) when the style needs sounds the instruments don't have — electronic, synth-pop, hip-hop, lo-fi, rock, a band — or the person names such a style. Its tempo holds, but its sections don't follow the cuts; lay cuts on its beats afterwards instead. Write the prompt as genre, two or three instruments and a mood in English ("minimal techno, warm analog bass, soft claps, focused"). Leave the seed at -1 so the prompt decides; offer another seed only when the person wants another version.
+- **Generate** (`generate_music`) when the style needs sounds the instruments don't have — electronic, synth-pop, hip-hop, lo-fi, rock, a band — or the person names such a style. Its tempo holds, but its sections don't follow the cuts; lay cuts on its beats afterwards instead. Leave the seed at -1 so the prompt decides; offer another seed only when the person wants another version.
+
+### Writing the prompt
+
+The model plays what the prompt names, and little else. A prompt that names only drums and a bass gets a kick and clicks with nothing in the middle, which sounds cheap however well it is mixed.
+
+- In English: genre, then three or four instruments, then one mood word.
+- **Always name something that holds chords** (pads, Rhodes chords, strings, a synth lead or arpeggio) besides the drums and bass: that fills the middle and makes it sound produced.
+- Give each instrument a quality ("lush analog synth pads", "punchy drums", "crisp hi-hats", "arpeggiated bass").
+- Never "minimal", "sparse", "stripped-back", "simple", "lo-fi beat": the model takes them literally and leaves the track empty. For calm music, ask for soft instruments instead ("soft piano, warm pads, gentle").
+
+The genre matters most: some come out full whatever the seed, two come out empty whatever instruments are named (heard and measured, two seeds each):
+
+| Sounds good | Prompt that worked |
+|---|---|
+| cinematic | cinematic, epic strings, brass, big percussion, piano, triumphant |
+| indie pop | indie pop, jangly electric guitars, bass guitar, live drums, warm synth pads, cheerful |
+| corporate pop | corporate pop, bright acoustic guitar, piano chords, claps, light drums, inspiring |
+| tech launch | upbeat modern electronic, bright synth arpeggios, punchy kick, driving bassline, optimistic |
+| synthwave | synthwave, lush analog synth pads, punchy drums, arpeggiated bass, confident |
+| funk | funk, slap bass, wah electric guitar, brass stabs, tight drums, groovy |
+| lo-fi | lo-fi hip-hop, mellow rhodes chords, soft vinyl drums, warm bass, relaxed |
+| future bass | future bass, wide supersaw chords, vocal chops, punchy drums, sub bass, euphoric |
+| trap | trap, dark synth pads, booming 808 bass, rolling hi-hats, snappy snare, confident |
+| house, rock, ambient, electro pop, hip-hop, drum and bass | the same shape: genre, three or four instruments with a quality each, a mood |
+
+**Avoid techno and deep house**: they come out as a kick and clicks with nothing in the middle, even with pads named. When the person asks for one, use the nearest full genre (techno → tech launch or synthwave; deep house → house) and say so in your reply.
 - **The person's own music** always wins: if they gave a track, use it and don't make another.
 
 ## Tempo: let the cuts choose it
