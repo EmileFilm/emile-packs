@@ -53,7 +53,7 @@ A 20–60 s film has one or two sections, one turn, one end. Every other cut get
 
 ## Levels
 
-The music is at −16 LUFS, and every catalogue sound is levelled for it by loudness: at gain 1 a riser, sweep, sub-drop or interface sound sits just under the music, a hit (`boom-*`, `impact`) level with it, a bed well under it. Leave them at 1; 0.6–0.8 under a voice; 1.2–1.4 only for the one biggest moment. A sound that jumps out of the mix is the cheap version.
+The music is at −16 LUFS, and every catalogue sound is levelled for it by loudness. In a film that has both music and the sounds of things happening, the engine mixes the music 4 dB under them on its own (the happenings lead, the music carries) and brings the whole film back to its loudness: don't turn the music down yourself. The levels below are the sounds among themselves: at gain 1 a riser, sweep, sub-drop or interface sound sits just under the music, a hit (`boom-*`, `impact`) level with it, a bed well under it. Leave them at 1; 0.6–0.8 under a voice; 1.2–1.4 only for the one biggest moment. A sound that jumps out of the mix is the cheap version.
 
 ## Sounds that fight the music
 
