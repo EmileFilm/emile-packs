@@ -7,9 +7,9 @@ description: A hundred and twelve CC0 sound effects as WAV files (clicks, pops, 
 
 # Émile sounds
 
-A hundred and twelve sound effects from Émile, a video editor, all CC0 (free for any use, no credit needed), by the kind of moment they are for. Each is `sounds/<name>.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS. `sounds.json` lists them for a program: name, tag, seconds, cut, how it sounds, source.
+A hundred and twelve sound effects from Émile, a video editor, all CC0 (free for any use, no credit needed), by the kind of moment they are for. Each is `sounds/<name>.wav`, 48 kHz 16-bit stereo, levelled by loudness so that at its own level it sits right under music at −16 LUFS (a hit level with it, a bed well under it), its peak never above −1 dBFS. `sounds.json` lists them for a program: name, tag, seconds, cut, how it sounds, source.
 
-**Cut at** is the moment in the file that belongs on the picture's moment: a click's or a hit's attack, a whoosh's or a sweep's peak, a riser's and a swell's end, a sub-drop's start. To lay a sound on a moment `T`, start it at `T − cut`. The transition sounds and beds (`riser-*`, `swell-*`, `boom-*`, `sub-drop-*`, `sweep-*`, `bed-*`) are synthesised by Émile and levelled by loudness (at their own level they sit right under music at −16 LUFS); the rest were chosen from CC0 packs and peak at −1 dBFS (bring them down 8–14 dB under music). How to give a film its sound from its picture (a muffle released on the jump, a music for each section, a strong last sound) is in the `sound-transitions` Skill and the five beside it in this repository.
+**Cut at** is the moment in the file that belongs on the picture's moment: a click's or a hit's attack, a whoosh's or a sweep's peak, a riser's and a swell's end, a sub-drop's start. To lay a sound on a moment `T`, start it at `T − cut`. The transition sounds and beds (`riser-*`, `swell-*`, `boom-*`, `sub-drop-*`, `sweep-*`, `bed-*`) are synthesised by Émile; the rest were chosen from CC0 packs. How to give a film its sound from its picture (a muffle released on the jump, a music for each section, a strong last sound) is in the `sound-transitions` Skill and the five beside it in this repository.
 
 ## Click: a tap, a button pressed
 
@@ -33,7 +33,7 @@ A hundred and twelve sound effects from Émile, a video editor, all CC0 (free fo
 | `sounds/pop-03.wav` | 0.10 | 0.005 | A short bright pop, falling (0.10 s). |
 | `sounds/pop-04.wav` | 0.12 | 0.005 | A short dark pop, rising (0.12 s). |
 | `sounds/pop-05.wav` | 0.28 | 0.005 | A short pop (0.28 s). |
-| `sounds/pop-06.wav` | 0.26 | 0.255 | A short pop, rising (0.26 s). |
+| `sounds/pop-06.wav` | 0.26 | 0.255 | A short bright pop, rising (0.26 s). |
 | `sounds/pop-07.wav` | 0.31 | 0.314 | A short bright pop, rising (0.31 s). |
 | `sounds/pop-08.wav` | 0.16 | 0.005 | A short pop, falling (0.16 s). |
 
@@ -88,10 +88,10 @@ A hundred and twelve sound effects from Émile, a video editor, all CC0 (free fo
 | `sounds/boom-06.wav` | 6.00 | 0.000 | A hit in a huge space, a very long tail (6.00 s; the cut at its attack, 0.000 s). Synthesised by Émile. |
 | `sounds/boom-07.wav` | 2.22 | 0.000 | A light, crisp hit for a fast film (2.22 s; the cut at its attack, 0.000 s). Synthesised by Émile. |
 | `sounds/boom-08.wav` | 4.30 | 0.000 | A medium cinematic hit (4.30 s; the cut at its attack, 0.000 s). Synthesised by Émile. |
-| `sounds/impact-01.wav` | 0.73 | 0.015 | A bright hit, falling (0.73 s). |
+| `sounds/impact-01.wav` | 0.73 | 0.015 | A hit, falling (0.73 s). |
 | `sounds/impact-02.wav` | 0.64 | 0.005 | A dark hit, rising (0.64 s). |
-| `sounds/impact-03.wav` | 0.24 | 0.005 | A short bright hit (0.24 s). |
-| `sounds/impact-04.wav` | 0.25 | 0.025 | A short hit, rising (0.25 s). |
+| `sounds/impact-03.wav` | 0.24 | 0.005 | A short bright hit, falling (0.24 s). |
+| `sounds/impact-04.wav` | 0.25 | 0.025 | A short hit (0.25 s). |
 | `sounds/impact-05.wav` | 0.78 | 0.005 | A hit (0.78 s). |
 | `sounds/impact-06.wav` | 0.13 | 0.005 | A short hit, falling (0.13 s). |
 | `sounds/impact-07.wav` | 0.80 | 0.105 | A hit, rising (0.80 s). |
@@ -187,16 +187,16 @@ A hundred and twelve sound effects from Émile, a video editor, all CC0 (free fo
 
 - **A sound follows something seen.** Lay it on the frame where the thing happens (the finger lands, the card is fully in, the title stops), not before. Every sound you add should be something you could point at on screen.
 - **Fewer is better.** One sound per event, a few per ten seconds at most; a sound on every cut or every word is the cheap version. Interface sounds (`click`, `pop`, `notify`) belong to interface moments, `whoosh` to movement across the frame, `impact` to the one or two hits that matter, `riser` or `swell` into a reveal (it ends on the reveal), with `impact` and `sub-drop` on it.
-- **Under the rest.** Mix effects about 10–16 dB below the voice, and below the music's peaks; an `ambience` bed lower still, faded in and out over half a second.
+- **Under the rest.** At their own level they sit under music at −16 LUFS; under a voice bring them down 4–6 dB. Fade a bed in and out over half a second.
 - **Same kind, same sound.** Use one click for every tap in a film, one pop for every card: varying them reads as noise.
 
 ## Laying one with ffmpeg
 
-A click (cut at 0.005 s) on a tap at 3.2 s into a video, so it starts at 3.195 s, 12 dB down, mixed with the video's own audio:
+A click (cut at 0.005 s) on a tap at 3.2 s into a video, so it starts at 3.195 s, at its own level, mixed with the video's own audio:
 
 ```sh
 ffmpeg -i film.mp4 -i sounds/click-03.wav -filter_complex \
-  "[1:a]adelay=3195|3195,volume=-12dB[s];[0:a][s]amix=inputs=2:normalize=0:duration=first[a]" \
+  "[1:a]adelay=3195|3195[s];[0:a][s]amix=inputs=2:normalize=0:duration=first[a]" \
   -map 0:v -map "[a]" -c:v copy out.mp4
 ```
 

@@ -38,7 +38,11 @@ A 20–60 s film has one or two sections, one turn, one end. Every other cut get
 
 ## Levels
 
-The music is at −16 LUFS. The transition sounds (riser, swell, sweep, sub-drop, boom, bed) are levelled for it: leave them at gain 1 (0.6–0.8 under a voice). The older interface sounds (`click`, `pop`, `whoosh`, `rise`, `drop`, `impact`, `notify`, `ambience-*`) peak at −1 dBFS: give them 0.2–0.4. A sound that jumps out of the mix is the cheap version.
+The music is at −16 LUFS, and every catalogue sound is levelled for it by loudness: at gain 1 a riser, sweep, sub-drop or interface sound sits just under the music, a hit (`boom-*`, `impact`) level with it, a bed well under it. Leave them at 1; 0.6–0.8 under a voice; 1.2–1.4 only for the one biggest moment. A sound that jumps out of the mix is the cheap version.
+
+## Each sound its own clip
+
+Music 1, music 2, the riser, the hits, the impact, each bed: every one its own clip, on its own sound track, as an editor lays them, so the person can move, trim or turn down any one of them. Never a mix of several made into one file.
 
 ## Placing by the moment
 

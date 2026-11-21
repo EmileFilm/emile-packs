@@ -136,7 +136,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 ## Sounds
 
-A hundred and twelve short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, its peak at −1 dBFS, with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
+A hundred and twelve short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, levelled by loudness so it sits right under music at −16 LUFS as it is (a hit level with it, a bed well under it), with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
 
 | Tag | For |
 |---|---|
@@ -155,7 +155,7 @@ A hundred and twelve short sound effects to lay where something happens on scree
 | `sweep` | a pass-by, left to right, whose peak is the moment |
 | `ambience` (`bed-*`) | a room, a building, a city at night, wind, rain, water: for footage without sound |
 
-The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital Audio, Sci-fi Sounds) and rubberduck's CC0 breaking, falling and hit sounds; [`scripts/sounds.json`](scripts/sounds.json) lists the choice and [`scripts/sounds.mjs`](scripts/sounds.mjs) makes the packs from the original files. The transition sounds and the beds (`riser`, `swell`, `boom`, `sub-drop`, `sweep`, `bed`) are synthesised by [`scripts/transitions.mjs`](scripts/transitions.mjs), layered as a sound designer would (a Shepard tone, a reversed cymbal, a falling low thump in a hall, a pass-by moving left to right), the same every time, so each one's cut is exact, and levelled by loudness so at gain 1 they sit right under music at −16 LUFS. In Émile the AI picks one by its tag and description and lays it as an effect clip; [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) gives the same sounds to any agent, with the rules for using them and how to mix one into a video with ffmpeg.
+The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interface Sounds, UI Audio, Digital Audio, Sci-fi Sounds) and rubberduck's CC0 breaking, falling and hit sounds; [`scripts/sounds.json`](scripts/sounds.json) lists the choice and [`scripts/sounds.mjs`](scripts/sounds.mjs) makes the packs from the original files. The transition sounds and the beds (`riser`, `swell`, `boom`, `sub-drop`, `sweep`, `bed`) are synthesised by [`scripts/transitions.mjs`](scripts/transitions.mjs), layered as a sound designer would (a Shepard tone, a reversed cymbal, a falling low thump in a hall, a pass-by moving left to right), the same every time, so each one's cut is exact. In Émile the AI picks one by its tag and description and lays it as an effect clip; [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) gives the same sounds to any agent, with the rules for using them and how to mix one into a video with ffmpeg.
 
 ## Instruments
 

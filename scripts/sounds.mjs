@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Makes the sound packs (emile/<tag>-<nn>/, kind: sound; Émile's docs/TECH.md
 // §12.1 乐器与音效) from the sounds chosen in scripts/sounds.json: each
-// original fetched from its CC0 pack, levelled to a -1 dBFS peak, written
+// original fetched from its CC0 pack, levelled by loudness (LEVEL: its loudest
+// 400 ms, or a bed's whole, so at gain 1 it sits right with music at -16
+// LUFS; its peak never above -1 dBFS), written
 // as sound.wav (48 kHz, 16-bit stereo), and pack.json with its tag, length,
 // source and a line from what it measures (how long, how bright, whether
 // it rises or falls), since that is what the AI chooses by; and its cut,
@@ -53,7 +55,17 @@ const find = (dir, name) => {
   return null
 }
 
-const stderr = (file, filter) => spawnSync(FFMPEG, ['-hide_banner', '-nostats', '-i', file, '-af', filter, '-f', 'null', '-'], { encoding: 'utf8' }).stderr
+// The loudness each kind is brought to: its loudest 400 ms (momentary),
+// a bed's whole (integrated), LUFS
+const LEVEL = { click: -22, pop: -22, notify: -20, whoosh: -20, rise: -20, drop: -20, impact: -16, ambience: -30 }
+// What a meter reads of a file: its loudest 400 ms, its whole, its true peak
+function meter(file) {
+  const out = spawnSync(FFMPEG, ['-hide_banner', '-nostats', '-i', file, '-af', 'apad=pad_dur=0.5,ebur128=peak=true', '-f', 'null', '-'], { encoding: 'utf8' }).stderr
+  const ms = [...out.matchAll(/ M:\s*(-?[\d.]+)/g)].map(m => Number(m[1])).filter(Number.isFinite)
+  const summary = out.split('Summary:').at(-1)
+  return { momentary: Math.max(...ms), whole: Number(/I:\s+(-?[\d.]+) LUFS/.exec(summary)[1]), peak: Number(/Peak:\s+(-?[\d.]+) dBFS/.exec(summary)[1]) }
+}
+
 const seconds = file => Number(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', file], { encoding: 'utf8' }).trim())
 // Its brightness over time: the spectral centroid of each frame (Hz)
 function centroids(file) {
@@ -85,8 +97,13 @@ for (const s of sounds) {
   const dir = path.join(ROOT, 'emile', s.name)
   fs.mkdirSync(dir, { recursive: true })
   const wav = path.join(dir, 'sound.wav')
-  const peak = Number(/max_volume: (-?[\d.]+) dB/.exec(stderr(original, 'volumedetect'))[1])
-  execFileSync(FFMPEG, ['-v', 'error', '-y', '-i', original, '-af', `volume=${(-1 - peak).toFixed(2)}dB`, '-ar', '48000', '-ac', '2', '-sample_fmt', 's16', wav])
+  const raw = path.join(WORK, `${s.name}.raw.wav`)
+  execFileSync(FFMPEG, ['-v', 'error', '-y', '-i', original, '-ar', '48000', '-ac', '2', '-c:a', 'pcm_f32le', raw])
+  const m = meter(raw)
+  const now = s.tag === 'ambience' ? m.whole : m.momentary
+  const gain = Math.min(LEVEL[s.tag] - now, -1 - m.peak)
+  execFileSync(FFMPEG, ['-v', 'error', '-y', '-i', raw, '-af', `volume=${gain.toFixed(2)}dB`, '-sample_fmt', 's16', wav])
+  fs.rmSync(raw)
   const secs = Math.round(seconds(wav) * 1000) / 1000
   const c = centroids(wav)
   const mean = c.reduce((a, b) => a + b, 0) / Math.max(1, c.length)
@@ -103,7 +120,7 @@ for (const s of sounds) {
   const zh = `${length[1]}${tone[1] ? `${tone[1]}的` : ''}${nounZh}${move[1]}（${secs.toFixed(2)} 秒），来自 ${s.from}（${s.file}）。`
   const n = Number(s.name.split('-').pop())
   const pack = {
-    id: `emile/${s.name}`, kind: 'sound', version: '1.1.0',
+    id: `emile/${s.name}`, kind: 'sound', version: '1.2.0',
     title: { en: `${TITLE[s.tag][0]} ${n}`, 'zh-CN': `${TITLE[s.tag][1]} ${n}` }, description: { en, 'zh-CN': zh }, params: [],
     sound: { file: 'sound.wav', seconds: secs, cut: s.tag === 'ambience' ? 0 : Math.min(secs, loudest(wav)), tags: [s.tag] },
     sources: [{ name: s.from.replace(' · ', ', '), url: s.page, licence: 'CC0-1.0' }],

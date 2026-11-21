@@ -1,14 +1,14 @@
 {
   "id": "emile/impact-04",
   "kind": "sound",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": {
     "en": "Impact 4",
     "zh-CN": "撞击 4"
   },
   "description": {
-    "en": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
-    "zh-CN": "短促的撞击声，往上走（0.25 秒），来自 rubberduck · Breaking, falling & hit（bfh1_wood_hit_01.ogg）。"
+    "en": "A short hit (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
+    "zh-CN": "短促的撞击声（0.25 秒），来自 rubberduck · Breaking, falling & hit（bfh1_wood_hit_01.ogg）。"
   },
   "params": [],
   "sound": {

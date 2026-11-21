@@ -1,14 +1,14 @@
 {
   "id": "emile/impact-03",
   "kind": "sound",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": {
     "en": "Impact 3",
     "zh-CN": "撞击 3"
   },
   "description": {
-    "en": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
-    "zh-CN": "短促的明亮的撞击声（0.24 秒），来自 rubberduck · Breaking, falling & hit（bfh1_metal_hit_01.ogg）。"
+    "en": "A short bright hit, falling (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
+    "zh-CN": "短促的明亮的撞击声，往下走（0.24 秒），来自 rubberduck · Breaking, falling & hit（bfh1_metal_hit_01.ogg）。"
   },
   "params": [],
   "sound": {

@@ -565,7 +565,7 @@
   "tag": "impact",
   "seconds": 0.729,
   "cut": 0.015,
-  "description": "A bright hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
+  "description": "A hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
    "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
@@ -593,7 +593,7 @@
   "tag": "impact",
   "seconds": 0.238,
   "cut": 0.005,
-  "description": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
+  "description": "A short bright hit, falling (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
    "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
@@ -607,7 +607,7 @@
   "tag": "impact",
   "seconds": 0.248,
   "cut": 0.025,
-  "description": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
+  "description": "A short hit (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
   "source": {
    "name": "rubberduck, Breaking, falling & hit",
    "url": "https://opengameart.org/content/75-cc0-breaking-falling-hit-sfx",
@@ -859,7 +859,7 @@
   "tag": "pop",
   "seconds": 0.258,
   "cut": 0.255,
-  "description": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
+  "description": "A short bright pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
   "source": {
    "name": "Kenney, Interface Sounds",
    "url": "https://opengameart.org/content/interface-sounds",

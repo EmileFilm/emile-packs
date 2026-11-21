@@ -1,12 +1,12 @@
 {
  "format": 1,
  "tag": "v1.2.0",
- "published": "2026-11-21T09:46:18.227Z",
+ "published": "2026-11-21T09:51:40.216Z",
  "contract": 4,
  "packs": [
   {
    "id": "emile/ambience-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -39,18 +39,18 @@
     {
      "path": "pack.json",
      "bytes": 711,
-     "sha256": "c843a75b154c512ab09cdffbc5d08a54fcb72fb76f40a3efb08166698fc57041"
+     "sha256": "cf749cf8913e6177bd15c0249baff5afa01a92f5b38e296cf3807ceeb48358c9"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "99e8e1015cf7b55b99578849dd84ad5e17603e4f8d1f0897b482bf3439bd611e"
+     "sha256": "f2ddb0a83392c726a89a3c0056d003f5e5098ba4a95018951c321891fc648491"
     }
    ]
   },
   {
    "id": "emile/ambience-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -83,18 +83,18 @@
     {
      "path": "pack.json",
      "bytes": 727,
-     "sha256": "f2f0753d61a9c6b9cd39218f081ce5f9e0486b7777c6a0df414a21e2cd2f6e69"
+     "sha256": "3d84f5a718965dcbca5e5d3be7644748044b4bbce698dfe564ab05c0e4ec9ff6"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "b954410b066e66e67bdfd9aaabfa87791e3b9437a06e181048e7b09551bccab3"
+     "sha256": "fe2ebad772a47d1e35c9b6a7992b420781a9135bb1e6741aa54d1b1ee3dde891"
     }
    ]
   },
   {
    "id": "emile/ambience-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -127,18 +127,18 @@
     {
      "path": "pack.json",
      "bytes": 729,
-     "sha256": "658b470e0c1b6e28bf6a2db4d18fad218f1eb55804e7a68c281a2e029f085504"
+     "sha256": "e8a3bea03296942ca9b9df73fca681368706dac4b8303d90aafedd6230fe0e2c"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "bd391e83a4782aba743647f1d7684e1eb3897916013da4ca84d83ecdd35d3dfa"
+     "sha256": "37bde6b406c1b6a0cd6fcdeff3140dec84b14ecc09f59bd0d82dcff7a3816cfa"
     }
    ]
   },
   {
    "id": "emile/ambience-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -171,18 +171,18 @@
     {
      "path": "pack.json",
      "bytes": 721,
-     "sha256": "3da6c2018161d461c8dde34bd9467fccc5187386f6aaa3016d67bfbf229f5483"
+     "sha256": "c3e9d55679813d73a26b001a9903f776054b910948457a7115c15539b272adea"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "11622fc6f131cb35e9459db74eab8c527c60fc6691a898fcc23e62dd28c00250"
+     "sha256": "2bf33acdfec61c21fb6c189f051a5b1f69e9b998ceedf8ea3b8d97e1fdcbed55"
     }
    ]
   },
   {
    "id": "emile/ambience-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -215,18 +215,18 @@
     {
      "path": "pack.json",
      "bytes": 711,
-     "sha256": "c88d6af7687141364787cfb1bdf4d4cf712db7d56774624f4d6866808f964cb5"
+     "sha256": "428da26913b55e0ed99015a0036002d0943c1f96494300651ee641a4bbf5cc02"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "964b4eb210a9341ecf13bec073ecfd7184fa630238a764dddcf37a4dfb02585f"
+     "sha256": "85fee1eb4f02a531078bb11e97e675241a4801ec854e21e1d9b8005be00febba"
     }
    ]
   },
   {
    "id": "emile/ambience-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -259,18 +259,18 @@
     {
      "path": "pack.json",
      "bytes": 727,
-     "sha256": "b465c3e8e0803cc61472fdf9e9574f84da56471a53ba2af69f67c9df0547f019"
+     "sha256": "2d679ac6dd21201bf6956a8641545a4fdbd780c187f242a268892382a9763c41"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "03eadf97ab54f4236bdffb2fa1d002c0c2256e890852c6cc128cd9403e18c7da"
+     "sha256": "301600523e13d7ab87f9b8f06d06b68206244e0c6495928d5454d7df9b775079"
     }
    ]
   },
   {
    "id": "emile/ambience-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -303,18 +303,18 @@
     {
      "path": "pack.json",
      "bytes": 713,
-     "sha256": "a56b9d9888570a30072547be3791c3d4eeb3816d35f4c8ff4f6dec982d9cd534"
+     "sha256": "51e7336a8ef811ef3b92c20aac735aa2727af4a4681fa45ca0542df7ff735ddb"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "d1d9e1dd2f7ef0b53e78f74625a92ab753a458b5bb6b0b0ebc33961676cf3ac8"
+     "sha256": "c94ada7421c0570c0aeb880c81635561486205393e68e5c0b754ac2e67369e88"
     }
    ]
   },
   {
    "id": "emile/ambience-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -347,12 +347,12 @@
     {
      "path": "pack.json",
      "bytes": 721,
-     "sha256": "dbc0dfae0bd5cdf3e285ff291b1840200b6f6f98801d6608c62da02227603d0b"
+     "sha256": "3a47f36be82534be4a53182baa2db907e5f672f5e348359ea4a2bac9125ab8ad"
     },
     {
      "path": "sound.wav",
      "bytes": 960078,
-     "sha256": "7bb906890d02063ddfb736dc6194ea6f8a61150927527f65c1ad399bebdca0d8"
+     "sha256": "d0c2d61845013ff08dd2c62ec8a6d98b756e8408c24d60a8ed3817f134f7daa1"
     }
    ]
   },
@@ -1344,7 +1344,7 @@
   },
   {
    "id": "emile/click-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1377,18 +1377,18 @@
     {
      "path": "pack.json",
      "bytes": 717,
-     "sha256": "2ccc7419ff4f9e912710112bcb235ccc6948bcf42960892f55b88d596eaa3d6c"
+     "sha256": "a332c7d3aa19d1bb3f7535e4e0b00a37fcb94a5b27187f503af7a704a55d7990"
     },
     {
      "path": "sound.wav",
      "bytes": 18726,
-     "sha256": "d83f2e02a62aafbdc6882ed217b55500739cd917a12c890725d9ab945b1fc86b"
+     "sha256": "8242ee6ef13d79a45eb109d6b343716ce79fbe57e86ed0789a6d5374fd868fc3"
     }
    ]
   },
   {
    "id": "emile/click-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1421,18 +1421,18 @@
     {
      "path": "pack.json",
      "bytes": 733,
-     "sha256": "2f6f4d9172fbd2b444d2b262b345d3612198ffc7d0e4ce14f1c20a7032ee0aef"
+     "sha256": "2073d16fb39c7679e7bf4132a0859037c8a3493779e7a001a32293360e661153"
     },
     {
      "path": "sound.wav",
      "bytes": 18094,
-     "sha256": "9156680605ac74b4e66abc1020ed10c8a18cb03babe643c8138aba50dfb3a64c"
+     "sha256": "e6ea0c4472fc35adedfb67ee53e68918be9066a695b2fc811379e093b4c7771a"
     }
    ]
   },
   {
    "id": "emile/click-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1465,18 +1465,18 @@
     {
      "path": "pack.json",
      "bytes": 710,
-     "sha256": "dbc10ab62a9b835b253f6bea2824b952542505966bddb6b21eac6f38e497f9db"
+     "sha256": "c2c1a463cbc899c4f5c5c449545be72c83bebd746060468e455d9cbe4761d793"
     },
     {
      "path": "sound.wav",
      "bytes": 8718,
-     "sha256": "bf68d6a58addc476d5ed81be3d238fdb0e76bb27201d75d42b7b9082a9c2559d"
+     "sha256": "b27a1eac92acda6e03875575b3937f4a103ad124a5fc188cbff18f674c4e4f9d"
     }
    ]
   },
   {
    "id": "emile/click-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1509,18 +1509,18 @@
     {
      "path": "pack.json",
      "bytes": 697,
-     "sha256": "7cad0c196fcad2aa37c6c95caf817e263588bf6371a3b06b720c86b15d688ce4"
+     "sha256": "1b751a0c3042faea733d8e466645d9301f54282a29defd888497fef3490d514e"
     },
     {
      "path": "sound.wav",
      "bytes": 7834,
-     "sha256": "7971738150ea8a68a496f454b6b6b4de0a1f18391b568777513bd65cc2725ffb"
+     "sha256": "d2d7202e42a5163ba491b1c802cd77b0bdab12b9ab9b337e4f122bd7483aed0e"
     }
    ]
   },
   {
    "id": "emile/click-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1553,18 +1553,18 @@
     {
      "path": "pack.json",
      "bytes": 723,
-     "sha256": "f64a0dd0b73959a6758b425834b2e2f4daf56ba5b16bd93e04b60dc0e93f988e"
+     "sha256": "01e6a1c352094bb8e3ab3c447a028781bbf115378a7186987f7f4f73456850a3"
     },
     {
      "path": "sound.wav",
      "bytes": 11478,
-     "sha256": "9f8094da8912480adf5fa8b25f9b4376c7137576019eed774017f88c8e79817a"
+     "sha256": "15375c70bcdf0c736d3fbd84fa3c8f5e112179a71f838d07694be1db70926454"
     }
    ]
   },
   {
    "id": "emile/click-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1597,18 +1597,18 @@
     {
      "path": "pack.json",
      "bytes": 736,
-     "sha256": "59c479ac6b45c44a413b7aec99a556a63474414847e8adcba5742b394d10846c"
+     "sha256": "00132531fbe0aec90fca5412a10dc6178e2168fa90a2a71be4fbd4a2ab506aaa"
     },
     {
      "path": "sound.wav",
      "bytes": 60502,
-     "sha256": "65d3f367b6f78aadb1b3e932a68058f03ca59eea2b5c8d050f9c4a202289c17f"
+     "sha256": "26c503f2f0e2d26afa8a7a57ce9faaac304153438fc09fed12ea327b3ee7dea7"
     }
    ]
   },
   {
    "id": "emile/click-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1641,18 +1641,18 @@
     {
      "path": "pack.json",
      "bytes": 696,
-     "sha256": "9ec17693a27707ff6ac9337e43778c598c0a81bbe4a4e272bb7ce61fbd57d877"
+     "sha256": "c5151c6c5508e6dfa59966504f2bb78de90a781f92b7480869a4a609b4dd0a5b"
     },
     {
      "path": "sound.wav",
      "bytes": 2310,
-     "sha256": "95e6c8ad01805ebb771905c48cf5490475331ba869fdf5b324f778dab2b7619f"
+     "sha256": "b79b02ecac755e8a961e1344a7a08f344bf0488c5b8df075b88e2e2d8f831cb9"
     }
    ]
   },
   {
    "id": "emile/click-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -1685,12 +1685,12 @@
     {
      "path": "pack.json",
      "bytes": 697,
-     "sha256": "fb08d5eea6f1b27b3ebd9317dc3df86d485626e9bcc337f67ce3de6404c7fc75"
+     "sha256": "362539c408515b611264211122094da664677e8e9df8a15e78b6caf0f78d7e6d"
     },
     {
      "path": "sound.wav",
      "bytes": 10782,
-     "sha256": "c86d6a30c4bc1a7a8d4df2f98ab48580d876fab49285a396a26c09dc6b1796dd"
+     "sha256": "a6ee05366931865ca6ce579dcee36cea01c84f851aee48f5412622f18916b11d"
     }
    ]
   },
@@ -2195,7 +2195,7 @@
   },
   {
    "id": "emile/drop-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2228,18 +2228,18 @@
     {
      "path": "pack.json",
      "bytes": 698,
-     "sha256": "503d0a9669e91a8702c8a771f4f554c1870db433679f153b5cb0c6b422b86fe3"
+     "sha256": "b81180dc5aa273c328917ee85e26c39e23db8b5949099ac93ca3619682dd294e"
     },
     {
      "path": "sound.wav",
      "bytes": 25438,
-     "sha256": "a7320d87faec9bec1592c245dcf20dcee81a23041222cc269d9f61a7c7b0e9a6"
+     "sha256": "85b0f139e8f071cde833b0185813c1dcc953d85777f171d873babe06f5a0313c"
     }
    ]
   },
   {
    "id": "emile/drop-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2272,18 +2272,18 @@
     {
      "path": "pack.json",
      "bytes": 722,
-     "sha256": "04a8e5d53e9d91f2962a920f7830e9c9760d97d73f94b1b8446f095a3b6438a8"
+     "sha256": "c5dff984dd897f466967f14ddbfd29eea4e8e88309a53608fa5bf5dbdaadcd94"
     },
     {
      "path": "sound.wav",
      "bytes": 49690,
-     "sha256": "a2ec98b0016187c5af42fab20312e141c3eeb202b7bfa0dd3301eb58dbf597ca"
+     "sha256": "dd2cd4a9a8e5a10d7a5c660f41e5c82a7837e26bc4e17d7f08c4a660a4f41749"
     }
    ]
   },
   {
    "id": "emile/drop-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2316,18 +2316,18 @@
     {
      "path": "pack.json",
      "bytes": 713,
-     "sha256": "bace6dfb7c884262ff23e56d59b10326cef692d0f34f58c8fbd8426ae09a4e52"
+     "sha256": "f5c6e0d44119f2a71a028daf03673a3836640bba2961c4eccd0c4c231ab8d4e5"
     },
     {
      "path": "sound.wav",
      "bytes": 80340,
-     "sha256": "77c7f5f0f064cca399349d6ffb5943fb168ad85f880fd33c95ab5600b7cbb069"
+     "sha256": "ca566c0b84338bbb6edd19638fd959bd2663dae133744cadce29cd4b0dfb43af"
     }
    ]
   },
   {
    "id": "emile/drop-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2360,18 +2360,18 @@
     {
      "path": "pack.json",
      "bytes": 723,
-     "sha256": "9b3530fa6376538248a37efbd4656be163bb981dd7f7c42917f928eea4c55b3a"
+     "sha256": "072ba3b7afdcfe83c22ae7ec9bc4e67465939350c3c2301c4ca25bb2603814ba"
     },
     {
      "path": "sound.wav",
      "bytes": 87032,
-     "sha256": "f51e7a8df008b896bb4025b03e22909c60890f86da7725f1d5411e2b37b144a9"
+     "sha256": "aba5f744efe4dd4fa7ba03f805c3f1bfe6ff52d1ba083e9f9a7d5901064150e3"
     }
    ]
   },
   {
    "id": "emile/drop-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2404,18 +2404,18 @@
     {
      "path": "pack.json",
      "bytes": 705,
-     "sha256": "e459a29f3b593f3c35eb418e185ce9cb3d9f22e21821a69d9c0ec120a468dfc1"
+     "sha256": "39ce4d3d39e362e4f6a6cfa80c68e4664bab51303c055f02d85fd41d3f004fae"
     },
     {
      "path": "sound.wav",
      "bytes": 140530,
-     "sha256": "ddb969f2b56f3fc6e53d257d035a4fd8130a9579b8ad581351cad5d26de62cef"
+     "sha256": "9742b22434f47d6ea18b7f12ea1bf2cf8311149cc337307fc6d418aa7a2091b1"
     }
    ]
   },
   {
    "id": "emile/drop-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2448,18 +2448,18 @@
     {
      "path": "pack.json",
      "bytes": 723,
-     "sha256": "570d597eaddd69e4f385363847cfce8a2d3a06a50d0c935f79a5b8044554c6e6"
+     "sha256": "92303539af73980ca968dba46ee1854e4c641dab7c1e5ada16d2d3651613568d"
     },
     {
      "path": "sound.wav",
      "bytes": 245308,
-     "sha256": "25e41305ac0e4210d4d4589cafc0f32ef1f334c31b7772a8c16e4f5ba9141325"
+     "sha256": "219e4da80201c424477f30a7102f135f483237b8a65ba56cf4c506bb261cf392"
     }
    ]
   },
   {
    "id": "emile/drop-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2492,18 +2492,18 @@
     {
      "path": "pack.json",
      "bytes": 716,
-     "sha256": "0316525982fc1ee6f64189e36c5c06eb78d71386e0b2aec51234473ef9bb4a49"
+     "sha256": "a395c831b24320cf7e69af117d21022b7a8ff088883188e153984b4cdaaa9f21"
     },
     {
      "path": "sound.wav",
      "bytes": 28454,
-     "sha256": "5f14859c0ac6d6b1ac382fdee49e27ed35b74f974048ac4b04342bc9c32ad87d"
+     "sha256": "c580f1d13202744569c41a7fc29b9fe51b1e3e5306b4ce30fd6191d85d28bd5d"
     }
    ]
   },
   {
    "id": "emile/drop-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -2536,12 +2536,12 @@
     {
      "path": "pack.json",
      "bytes": 712,
-     "sha256": "9f59b8294fcd5f4b0e4885fbba881b7e403e65e2db1f011b40cbbcd2796cb2d0"
+     "sha256": "f06c6c53bd0ed958b53d949ee34d0a9d3aac0296d39fffab67a78f865851f21f"
     },
     {
      "path": "sound.wav",
      "bytes": 36210,
-     "sha256": "321bd3039fe249cced14381dc744a5d39f6189050b58887d731161775b5868ed"
+     "sha256": "bf5cafb77d9a00d92e83bfe4be3d0aa313f4b629fe4f474f59c84e5b52e419a0"
     }
    ]
   },
@@ -3263,7 +3263,7 @@
   },
   {
    "id": "emile/impact-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3271,8 +3271,8 @@
     "zh-CN": "撞击 1"
    },
    "description": {
-    "en": "A bright hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
-    "zh-CN": "明亮的撞击声，往下走（0.73 秒），来自 rubberduck · Breaking, falling & hit（bfh1_hit_01.ogg）。"
+    "en": "A hit, falling (0.73 s), from rubberduck · Breaking, falling & hit (bfh1_hit_01.ogg).",
+    "zh-CN": "撞击声，往下走（0.73 秒），来自 rubberduck · Breaking, falling & hit（bfh1_hit_01.ogg）。"
    },
    "params": [],
    "preview": null,
@@ -3295,19 +3295,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 771,
-     "sha256": "1b67c6aefb0cf22afc2a1fdb650b9b12e0aa761c8438570b1b620833dee5b4b3"
+     "bytes": 755,
+     "sha256": "66ab9af71edaee19fb911960d3a60aac651bab5eaa2b9d5434c097fa36587dba"
     },
     {
      "path": "sound.wav",
      "bytes": 140098,
-     "sha256": "54180c987d6e4f29fb39994e90832d90e286d11848f8acb5b58d19a63d4709b7"
+     "sha256": "2f432fa0981c1eb4d022998a5ca9c4cceccba7cdd6d22c1b87dc08fb7a573a92"
     }
    ]
   },
   {
    "id": "emile/impact-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3340,18 +3340,18 @@
     {
      "path": "pack.json",
      "bytes": 716,
-     "sha256": "c19835a72aba24a0cc218d46d06d0537a9f9f0935dfd17dcc230a3965c746bad"
+     "sha256": "b93e69268925189ca9c4f9017a539a79906c0966f56ac2804206defde354caf1"
     },
     {
      "path": "sound.wav",
      "bytes": 121982,
-     "sha256": "6b91f89ab4da11ca0b4f68f9aa8985a6f70e70eff46c6867cf4842580190c70b"
+     "sha256": "9faae9344fb231f184a22575e61b5eacf3f369c5d61ae434b674dc627ba504d1"
     }
    ]
   },
   {
    "id": "emile/impact-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3359,8 +3359,8 @@
     "zh-CN": "撞击 3"
    },
    "description": {
-    "en": "A short bright hit (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
-    "zh-CN": "短促的明亮的撞击声（0.24 秒），来自 rubberduck · Breaking, falling & hit（bfh1_metal_hit_01.ogg）。"
+    "en": "A short bright hit, falling (0.24 s), from rubberduck · Breaking, falling & hit (bfh1_metal_hit_01.ogg).",
+    "zh-CN": "短促的明亮的撞击声，往下走（0.24 秒），来自 rubberduck · Breaking, falling & hit（bfh1_metal_hit_01.ogg）。"
    },
    "params": [],
    "preview": null,
@@ -3383,19 +3383,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 777,
-     "sha256": "671a2f0834939ce3b63c78581d52a2bc4dbfb58baa032905b680becc5feb6a68"
+     "bytes": 798,
+     "sha256": "34a5b46749d81a603c05feaee536dc9227dc65f80ad18ce9bdd0e14311674424"
     },
     {
      "path": "sound.wav",
      "bytes": 45758,
-     "sha256": "3981d57f3e2c68de3036a2094c1121b546684b78382fc42c79ac5e429546fdbc"
+     "sha256": "51e4ec7865c06576a867228fae6f3f647470943a120efa490d85bb1682e2895b"
     }
    ]
   },
   {
    "id": "emile/impact-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3403,8 +3403,8 @@
     "zh-CN": "撞击 4"
    },
    "description": {
-    "en": "A short hit, rising (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
-    "zh-CN": "短促的撞击声，往上走（0.25 秒），来自 rubberduck · Breaking, falling & hit（bfh1_wood_hit_01.ogg）。"
+    "en": "A short hit (0.25 s), from rubberduck · Breaking, falling & hit (bfh1_wood_hit_01.ogg).",
+    "zh-CN": "短促的撞击声（0.25 秒），来自 rubberduck · Breaking, falling & hit（bfh1_wood_hit_01.ogg）。"
    },
    "params": [],
    "preview": null,
@@ -3427,19 +3427,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 779,
-     "sha256": "9c78d03df21243ff05033230ece3156c9403bd428dbca0a27a668f0fabf3418d"
+     "bytes": 759,
+     "sha256": "d416f2267c30330cf121c081454ef01bdfeb5c328133273abf866917a31b81f4"
     },
     {
      "path": "sound.wav",
      "bytes": 47626,
-     "sha256": "225054016dfe179be6231c05dd81ba381d390fe19e4982156561e9f0e7020d3d"
+     "sha256": "7ca1e99fbc4b52259728a97829fe14d4a81b88d6eee4290d0c798a745217db23"
     }
    ]
   },
   {
    "id": "emile/impact-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3472,18 +3472,18 @@
     {
      "path": "pack.json",
      "bytes": 690,
-     "sha256": "cd950cf24d3f1ce2e24354d0d7fce35ec84f3e85bde613d70105a1a520d8fc6d"
+     "sha256": "933aa9bc1665a8e4dce09dbe636f87702328c4c5337d6b031fb4ef468ccb262b"
     },
     {
      "path": "sound.wav",
      "bytes": 149354,
-     "sha256": "ee385770bd0451c7fcdf04401fd51f694d0f0a27e988e758831ff3361564db5d"
+     "sha256": "4b286b81574dc31727c663b5f23f09a79a94109d48f929be8c28ed2a4926042f"
     }
    ]
   },
   {
    "id": "emile/impact-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3516,18 +3516,18 @@
     {
      "path": "pack.json",
      "bytes": 780,
-     "sha256": "d899787972e92ad070765ab7e1385668e9754239e72648d52d87ae1a36ba0f97"
+     "sha256": "ed01b96b73ec68cea4249ddf9cc51cea2e4ed1cedb6dcc41c44dee3988979d7a"
     },
     {
      "path": "sound.wav",
      "bytes": 24910,
-     "sha256": "924d5cdc2db1d36a8cfe1e0a34dc145191c1ee351a4c09d34ad2289d358d2da6"
+     "sha256": "0e5ffdf85ed2f708980bcc4d669494f704a62aaba0cd0d177b4943701dad58df"
     }
    ]
   },
   {
    "id": "emile/impact-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3560,18 +3560,18 @@
     {
      "path": "pack.json",
      "bytes": 754,
-     "sha256": "cc12c67ee25a6f94827bf54bb73f0fbe40403db35bde1bf3e1f178ff543ecf18"
+     "sha256": "2dc1aba20bd1177787309242e82bc8722e454e96398bd52f355001c59baeeb5e"
     },
     {
      "path": "sound.wav",
      "bytes": 153186,
-     "sha256": "102dd430b702097d111617d4843404be224287ab6c13378a1ae427f3cae50523"
+     "sha256": "ca1f8e1d66bbbb7204d6488288ec074b668f0cb6e54fc913b598bdfa247e1c2e"
     }
    ]
   },
   {
    "id": "emile/impact-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3604,18 +3604,18 @@
     {
      "path": "pack.json",
      "bytes": 716,
-     "sha256": "9a92471a9ce00f76340048f643cc2be66be90145d2258445445bd1cce35650c0"
+     "sha256": "ede503095d090d519d22dfcb66fa21d5f45eba207f59874a7debb3595e27284b"
     },
     {
      "path": "sound.wav",
      "bytes": 132094,
-     "sha256": "c9de0eba7a4cb4f87ac9ba6fbec53e97987f35f2b99b790ec9c1359476bb4d7d"
+     "sha256": "2bd0bf97408d7a354e3b0c8bd5e37b0385ffc29490678b5c35e7a2b276286fae"
     }
    ]
   },
   {
    "id": "emile/notify-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3648,18 +3648,18 @@
     {
      "path": "pack.json",
      "bytes": 746,
-     "sha256": "d6c41d2b6a3069c2a6c67205073b6991361dc4dafcc4da090724b3e3e13f4294"
+     "sha256": "323497d2f5d5c436a09d39850cfd1a5de90598ea43fb3c26de0152ab8fb704fe"
     },
     {
      "path": "sound.wav",
      "bytes": 55730,
-     "sha256": "4f93a81f6c32c32fa019f281b9f1cbd7c6579eea3501368ab93813ecaf4d9623"
+     "sha256": "e6491042e1ffae1094114165586a7dc998ca33ba8c43773ea1580c51ec8a81a9"
     }
    ]
   },
   {
    "id": "emile/notify-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3692,18 +3692,18 @@
     {
      "path": "pack.json",
      "bytes": 725,
-     "sha256": "9b6ebb955e4d0287b512e0a35b43793cfaed0f327f3c8f6cfda60f0bd085f7f2"
+     "sha256": "bc04384155d2280722ca94419927d8cf931031c8eb0477654c69b5ad4b05d5f3"
     },
     {
      "path": "sound.wav",
      "bytes": 94290,
-     "sha256": "da2cc6ac6b1aab5501881cc222c99d9c5c018addcb26602dd81ac63d1664e3d6"
+     "sha256": "4340ae78037b41c4dc8f8a91ad12df8f97b1f420bbdf87a291182d6e7d35cb08"
     }
    ]
   },
   {
    "id": "emile/notify-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3736,18 +3736,18 @@
     {
      "path": "pack.json",
      "bytes": 742,
-     "sha256": "da8a94e2efac41a0f7c9b96640d1c610b8aae73bcf024f96aeb8d20cae33679e"
+     "sha256": "d266f6a3fbb001ea8d97a0a2c574755e9d949bddf8bfb81396579706356383e5"
     },
     {
      "path": "sound.wav",
      "bytes": 223004,
-     "sha256": "f2a040377247b23376d5354495e3148983d2abc5f00c18ffabd2f1e7e4a8a50c"
+     "sha256": "5f7b7a01ac53d399631dc73a46555482f9ea70c7f41ff0a8fc6625b4b4f85d82"
     }
    ]
   },
   {
    "id": "emile/notify-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3780,18 +3780,18 @@
     {
      "path": "pack.json",
      "bytes": 760,
-     "sha256": "c12605b08981cd9eb4de7a3cebc30baa76623b300a83d4ed6087f6c3008c4de5"
+     "sha256": "01e3cd26ba22671721ddf187383423008379b2c6efab35a661d3a5c96ad443c2"
     },
     {
      "path": "sound.wav",
      "bytes": 321092,
-     "sha256": "63336c6c2e686176e6557b92b1c875ba9f859e212d4f07ba575cb234750d1e4e"
+     "sha256": "734b52cc7de3db4c95996cf82a25267fb5695daec2a3eb82e53a25c4ff2a4923"
     }
    ]
   },
   {
    "id": "emile/notify-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3824,18 +3824,18 @@
     {
      "path": "pack.json",
      "bytes": 736,
-     "sha256": "cef1c13678ec371107f63f77e3ca556d06c9096bf7cf4de02b5db8edfc370666"
+     "sha256": "4d0abb8518c9c9fe7de61808df200d7c3502eed8416e1d821d623ce4c6ead6f1"
     },
     {
      "path": "sound.wav",
      "bytes": 31118,
-     "sha256": "2a34e99563354693c41e5f5d649c6ef615286cca85241bb7e71b8dcdbb83d421"
+     "sha256": "aafc0031aa7ff7d1bba74a8bbdf2f703a57dd4366bae3c9e7db2c3385e6d306c"
     }
    ]
   },
   {
    "id": "emile/notify-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3868,18 +3868,18 @@
     {
      "path": "pack.json",
      "bytes": 718,
-     "sha256": "6a26bc526c86024ea82973ade2bb519591365cbfc0076c6df5cf5966bbf9d4c0"
+     "sha256": "602096a1bff52a162ee7f91c129db4f938b0527950f41ec7944b9d146692e858"
     },
     {
      "path": "sound.wav",
      "bytes": 103570,
-     "sha256": "276a354994ff0db7fbee05937124505b6796ca066f146ad4d3ff3c050a3b1b18"
+     "sha256": "1f0a594519a1219114bd61554fe2a666fae025bde196e4ebde387df325dee370"
     }
    ]
   },
   {
    "id": "emile/notify-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3912,18 +3912,18 @@
     {
      "path": "pack.json",
      "bytes": 719,
-     "sha256": "5c7ca74fcf2757ac2b8b73c5a4342ee7885abbf862ec90c8074fe19014325fee"
+     "sha256": "a4b9d9c782329fc2871d22baf0f64aa78aa49500d0cd8f0383f4069f7de85bd5"
     },
     {
      "path": "sound.wav",
      "bytes": 63922,
-     "sha256": "c445544f4450d6dc21de7ef96d5b59825e9fccc11708b9fa72aeabb10d8ed015"
+     "sha256": "89b96eafa0c2adb7f325a7d41d0fd29e49d73c12f99c0b87ab8169f287c81291"
     }
    ]
   },
   {
    "id": "emile/notify-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -3956,12 +3956,12 @@
     {
      "path": "pack.json",
      "bytes": 742,
-     "sha256": "e9e4723a6ddbe49f69d2ad7174bfea9930c1a93f396899150ebe8fdc1d95a7df"
+     "sha256": "a6111ddc4310f081c607ee01bbc295573dff6cd11a4de722a8c00de90232881c"
     },
     {
      "path": "sound.wav",
      "bytes": 287650,
-     "sha256": "94135167308160ab8609d35a7a08d9450a48f674cf5f44fcf59fe499ec217b22"
+     "sha256": "8a3cdf1eefe69c7802e72753e7029c80a03f2eef2c7690d0d2173e24305a5e1f"
     }
    ]
   },
@@ -4231,7 +4231,7 @@
   },
   {
    "id": "emile/pop-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4264,18 +4264,18 @@
     {
      "path": "pack.json",
      "bytes": 730,
-     "sha256": "4c2a83c67190d46e0737dc551cba8594de208222903877fe84749f3438de7c68"
+     "sha256": "88545a961bea0b89407fa0290f63fd5b0208c36f3208703f4393969c5aba1dcc"
     },
     {
      "path": "sound.wav",
      "bytes": 49690,
-     "sha256": "d2691072401115d1ece892526a10bfc6d01506de3339a795f434524e4b223e37"
+     "sha256": "26417741b96240b9a1ae57100c8611fa7d6cb6f26e044f2e8bbb90b1b6254a24"
     }
    ]
   },
   {
    "id": "emile/pop-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4308,18 +4308,18 @@
     {
      "path": "pack.json",
      "bytes": 702,
-     "sha256": "bebc64da3525e6c189a6cc339b6dd664463fc1dd5612879185fa4c14a85f759a"
+     "sha256": "210afcf973dacce5a5fa50480c5cdc1acdaefb7ad8f2498dcfc5f50358581d2e"
     },
     {
      "path": "sound.wav",
      "bytes": 28454,
-     "sha256": "c3a2317f318e910c97a8c1c09666c21c5f557be35129623f8a48956cd2e22ae5"
+     "sha256": "6becaee9cab0eefda51191983ce33749ec5a550c2463c5b0b666ed953337f0a6"
     }
    ]
   },
   {
    "id": "emile/pop-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4352,18 +4352,18 @@
     {
      "path": "pack.json",
      "bytes": 723,
-     "sha256": "12576bd0a9f817774efb5e16c8f2f38ab0b784188fd32eea002600660b2b8ded"
+     "sha256": "75b492ee2285a2cc63e8a2f5cff1853fb2787c44e3ec8ddcd996fb445788a4c3"
     },
     {
      "path": "sound.wav",
      "bytes": 19190,
-     "sha256": "8e2e0ce3aa6cc727c7ede2f095beab9f4d1923e754699f59abdb827e4bb2ef1f"
+     "sha256": "ffccb3253d4614457ca6586ec84c83a97a5ae9dfb2fb9eb712c954021038cdde"
     }
    ]
   },
   {
    "id": "emile/pop-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4396,18 +4396,18 @@
     {
      "path": "pack.json",
      "bytes": 719,
-     "sha256": "91a0c5dc2df3840728e1025bb6c0bdf0f348e553364ad338559c47e7c393dc9d"
+     "sha256": "34fca0963f385f8c5255b03088d38f8ca5e25896027b57886b7b72cc737fcd71"
     },
     {
      "path": "sound.wav",
      "bytes": 23106,
-     "sha256": "124af81977d260878bf20c758588d3065722c468a01e09b7e0c63d7ac8322fd8"
+     "sha256": "14a207f98fc7c6961e8e6e622feb72f1918e4fd5302e18bc1894404c662042a7"
     }
    ]
   },
   {
    "id": "emile/pop-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4440,18 +4440,18 @@
     {
      "path": "pack.json",
      "bytes": 688,
-     "sha256": "1d45c9920fb938a18a55f06711aed9bdc7295738b71095d6ca572c4351741128"
+     "sha256": "486c43d700d383dbfd3dfbdbc5ac5e0fa980401078363f0e068b8aed9992a791"
     },
     {
      "path": "sound.wav",
      "bytes": 52982,
-     "sha256": "fed8cc9c4a029b269f2775671c95bdf3cbb2fc0a1eb523baa93335e124484532"
+     "sha256": "62922fa1a259a5a1de96c29214bc8ddb04c5507a84ceebcd46b11c2414b6a69f"
     }
    ]
   },
   {
    "id": "emile/pop-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4459,8 +4459,8 @@
     "zh-CN": "弹出 6"
    },
    "description": {
-    "en": "A short pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
-    "zh-CN": "短促的弹出声，往上走（0.26 秒），来自 Kenney · Interface Sounds（maximize_002.ogg）。"
+    "en": "A short bright pop, rising (0.26 s), from Kenney · Interface Sounds (maximize_002.ogg).",
+    "zh-CN": "短促的明亮的弹出声，往上走（0.26 秒），来自 Kenney · Interface Sounds（maximize_002.ogg）。"
    },
    "params": [],
    "preview": null,
@@ -4483,19 +4483,19 @@
    "files": [
     {
      "path": "pack.json",
-     "bytes": 714,
-     "sha256": "28260ee634060b4a1308a4f68632a90f50bc8e0bfbfe065ddc7422439c04c099"
+     "bytes": 730,
+     "sha256": "ffece51116b6ad1f0da043f18e4b7fe9ae7cf88bd8c7d80170d47f1da6fc5f0d"
     },
     {
      "path": "sound.wav",
      "bytes": 49670,
-     "sha256": "d71c94e0c66aa290c2cca51ce35e94cd87e2099037a0df94b4c50ff1088980d2"
+     "sha256": "d6447646da156f6c1cd44b3b00594406665916985952ff2ff886fbf98c145dd5"
     }
    ]
   },
   {
    "id": "emile/pop-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4528,18 +4528,18 @@
     {
      "path": "pack.json",
      "bytes": 722,
-     "sha256": "dec1023a665126ae7951bf3db66edc24d0c30f8988f8659049359f137cd23ab2"
+     "sha256": "7cf4434f22902892b395ba6d562e9056684bbf0c74048e04b996c503e863ae0c"
     },
     {
      "path": "sound.wav",
      "bytes": 60326,
-     "sha256": "3261010c01089060216f7cdbb30741a74017b6f28f1230276c7db17e2fe9714f"
+     "sha256": "0b367319cf451cb8440a789d13d371ae2709e5eba3dcde9769de067a2f12d558"
     }
    ]
   },
   {
    "id": "emile/pop-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4572,12 +4572,12 @@
     {
      "path": "pack.json",
      "bytes": 709,
-     "sha256": "b2cffe634c5d1a7fc5a6a577326efe3210dcf8b11469e5b535f916e5d1613b74"
+     "sha256": "8c7e6f5155bcc4f129d244a80fcdc4b165532bf583d006000bb4277a8fd4d112"
     },
     {
      "path": "sound.wav",
      "bytes": 31118,
-     "sha256": "a4233d306aeccdd0f75828ef22633fa5710ff42f751da3116c9ca31144e0342c"
+     "sha256": "54d7bff0c76a377a3a48bdeac934ee3abc7b342a0ac36f42396cbb93fdbf020c"
     }
    ]
   },
@@ -4628,7 +4628,7 @@
   },
   {
    "id": "emile/rise-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4661,18 +4661,18 @@
     {
      "path": "pack.json",
      "bytes": 722,
-     "sha256": "98cb4a9c9835b455d0ccb0227f962589b050357da01599a2a7b2424a0e9249b2"
+     "sha256": "79c54f7b27d285e917c042d7100a81edb22e32b62d6589c6076d85ab6b8d0758"
     },
     {
      "path": "sound.wav",
      "bytes": 216334,
-     "sha256": "d7f4c8111ff918d7f83ce435c7442c7190652384d2fda21f7151e8ba1483b864"
+     "sha256": "789b16d81b26c23896f7a0fb1b8138ca5897a3b2d3393bc20156bb5c610c27af"
     }
    ]
   },
   {
    "id": "emile/rise-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4705,18 +4705,18 @@
     {
      "path": "pack.json",
      "bytes": 707,
-     "sha256": "8a391cf19c9824f84290f0c28a40b01a848a224bf14aa102c730077f31dd80c3"
+     "sha256": "d0f3c7c9550ab391af2242634d9f17ed94e7ae6482c9e8ae1702b104aa00bf34"
     },
     {
      "path": "sound.wav",
      "bytes": 82568,
-     "sha256": "b118764503d3d06fa840fddda10f894a5263e094d58f8bc19aa2d56e26a2d367"
+     "sha256": "41e335a62367a690b48368a31778eb4f35c9e3e8ab86f3df278da665bf77cc88"
     }
    ]
   },
   {
    "id": "emile/rise-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4749,18 +4749,18 @@
     {
      "path": "pack.json",
      "bytes": 718,
-     "sha256": "6f0707007126f38c3eb0fa0615781e908d8b04ca6f723e6cadd1742e56391aae"
+     "sha256": "ee97c8533761add195c0162973e3545a7d7a91ee3f4d45b8a0187116aeb380be"
     },
     {
      "path": "sound.wav",
      "bytes": 218558,
-     "sha256": "604e806f3d0bd43e4e0c8a7653541d01b22676dd26f8708665c3a53be58cf809"
+     "sha256": "dd7cda8d2d970087df19c8db1ede60f9480d4811d8f0f1252e88dd72632340ef"
     }
    ]
   },
   {
    "id": "emile/rise-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4793,18 +4793,18 @@
     {
      "path": "pack.json",
      "bytes": 718,
-     "sha256": "037e75bf4626a2e4cbc605daf4b4c66b44242d6b36d7fcfe8b4477ed66a2b9e4"
+     "sha256": "eeff5e8c3642bf4d40ce05c033bb571951594325f7be006d4ed352efbfdd5b53"
     },
     {
      "path": "sound.wav",
      "bytes": 91490,
-     "sha256": "dfd180cf3813e251eaa47e429c3a1ce05967063be8d154595d5a9332331a3fc9"
+     "sha256": "53fbc6b74c0bec19430cc13231dfab875d2d410729dc1a1aee476c83c0df043d"
     }
    ]
   },
   {
    "id": "emile/rise-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4837,18 +4837,18 @@
     {
      "path": "pack.json",
      "bytes": 724,
-     "sha256": "cc3fedc0ffa0b97e864b5c5e91ac5aaf128329a46bcadfbf4e2ac32c78cb4626"
+     "sha256": "146204432592102cd3359adad641e73ef888ec8920e7b6032c2d2a43cec747ce"
     },
     {
      "path": "sound.wav",
      "bytes": 111564,
-     "sha256": "f03105232297c7b80ad58b549868f64cdd52de602fdcf60445765951544554d7"
+     "sha256": "bf5075d564d69e32d42058ca51349f944896664d0da36d54d7a9e28fcb177277"
     }
    ]
   },
   {
    "id": "emile/rise-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4881,18 +4881,18 @@
     {
      "path": "pack.json",
      "bytes": 722,
-     "sha256": "1df5307dbcb41ab8cbf8d99de3f7a9bb8108b9707ef09b032bcb9acac37feb86"
+     "sha256": "5261f6efb8125b661235715776e5d841ff2b5a9342139b50058eee36c1df489f"
     },
     {
      "path": "sound.wav",
      "bytes": 69192,
-     "sha256": "0171ed1f4450ab0db75f671a7b70b2c10296031048eacc74cf795e1845c5262d"
+     "sha256": "d9b8109ee22e5fd1fb7f417fe1d5826dff84a5efa6ca65492d1be5a53e23a325"
     }
    ]
   },
   {
    "id": "emile/rise-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4925,18 +4925,18 @@
     {
      "path": "pack.json",
      "bytes": 724,
-     "sha256": "52549f3e7bd7b76acd4f7c89f7f2d83dd40d28d339d9546babecc6eca72ffd19"
+     "sha256": "5dd2c1521a2fb16c22390ad33a36751c716207d7d8596698ffd5d447e318c9a9"
     },
     {
      "path": "sound.wav",
      "bytes": 116024,
-     "sha256": "d7286e135e323e3d446f92b821862375ffae5bf955ab405f0c30d4a080c5a20e"
+     "sha256": "fa6a50fd2e0cf783c5e5a2a5a598e214eed8df3850d2d037b4cf763334ffcfd5"
     }
    ]
   },
   {
    "id": "emile/rise-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -4969,12 +4969,12 @@
     {
      "path": "pack.json",
      "bytes": 708,
-     "sha256": "3c6f11486397974f531454b93f6d3e60d7b0c1beac6eededa35a3aa689960f14"
+     "sha256": "720f463beed56e03bb8f38598f4b7845d118644dd035df1bded9616f49a71761"
     },
     {
      "path": "sound.wav",
      "bytes": 87024,
-     "sha256": "26555c9a0ff1d59d8ef7f9b921ca5862cfdee538fe59eafc3cf40dfde3d979cd"
+     "sha256": "89dee21a94aa444329e6bf8d6ee8f0635b1bf6f2a245153d44598ac442c35434"
     }
    ]
   },
@@ -6768,7 +6768,7 @@
   },
   {
    "id": "emile/whoosh-01",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -6801,18 +6801,18 @@
     {
      "path": "pack.json",
      "bytes": 698,
-     "sha256": "d73d544f6aae09ff873e85a3c297597fdf35b4a6bf9df4ec8b1acc984cbe3f68"
+     "sha256": "294ecc1f756338cf43948daea171accfd3cb914ec1564cfec24f8eee52e1066f"
     },
     {
      "path": "sound.wav",
      "bytes": 192086,
-     "sha256": "d820a1d2ad819ac56c631a2616b44357f7d84747e89b3bad7294a6ebf928764a"
+     "sha256": "5cb67bc8e14966218c8b263d426b57e1ce922c2e5c8ddfbda3fcf58a11f8e19d"
     }
    ]
   },
   {
    "id": "emile/whoosh-02",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -6845,18 +6845,18 @@
     {
      "path": "pack.json",
      "bytes": 716,
-     "sha256": "fa5df7ee751a539c2ee3095dcc4d4232d86be3db982ab6ac3b2dcadff2da8169"
+     "sha256": "aa3d313fbd981c2ff31a275e185f4fe696cf81a5cf41adcaf48dc6bab5f4a1e4"
     },
     {
      "path": "sound.wav",
      "bytes": 183250,
-     "sha256": "fa0e3c90d536f4580e97eaaf7f9f388f2fafbb4c231b601537133be51d5eb7de"
+     "sha256": "07727187fde01fdbac415f7534dd119e296107939bace8ef19b9a22eba6dc9e5"
     }
    ]
   },
   {
    "id": "emile/whoosh-03",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -6889,18 +6889,18 @@
     {
      "path": "pack.json",
      "bytes": 731,
-     "sha256": "eb4b416b99b8f2b79892bd19ea2667fdb48f538634e4b3fe21993e3031d36fd1"
+     "sha256": "79262af1096d94d029d6dc82875df697f5d5cd871385862f9ef6bc259887a524"
     },
     {
      "path": "sound.wav",
      "bytes": 78112,
-     "sha256": "893c0147fb449b03c839d53f0e9a9a483457a0f09d1b8d0786478297436475ba"
+     "sha256": "baba40f196941198f956b310bf1f60e31b953f520ede10b8707850232dbc6140"
     }
    ]
   },
   {
    "id": "emile/whoosh-04",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -6933,18 +6933,18 @@
     {
      "path": "pack.json",
      "bytes": 719,
-     "sha256": "eb59479a308b1e96080a4666e2a335a9cb2c18f0a469e5d2ad44a0a96e32ff8a"
+     "sha256": "adbeb90c735243715aadef111f1eb0065b5b350725f0204e11cfe5b0bde1b9e5"
     },
     {
      "path": "sound.wav",
      "bytes": 26830,
-     "sha256": "d06b97ae111b20740838599bf7d5694b96a44315000408ca6f44046004101b0b"
+     "sha256": "2a4452909d37309c341b88061eb4ccbf6580ecff7ee7ffd7baf676a6ac2b576a"
     }
    ]
   },
   {
    "id": "emile/whoosh-05",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -6977,18 +6977,18 @@
     {
      "path": "pack.json",
      "bytes": 696,
-     "sha256": "8ddabdb1f2803f497a8a7ce6a103f87698b865e9bc854b1f947b7754554d3b30"
+     "sha256": "ccdb926361fd3793f0262cef8fc6588c47e0b16638c7dfa1dbaf98e66b25db57"
     },
     {
      "path": "sound.wav",
      "bytes": 192086,
-     "sha256": "32e74a493ab3fe28aa15cbced1106546b98283adeb7f2dd37823be2b3a092095"
+     "sha256": "2a4c9780e820c77886acdd1f9032358504adf082f93c2e4722867e268ed56646"
     }
    ]
   },
   {
    "id": "emile/whoosh-06",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -7021,18 +7021,18 @@
     {
      "path": "pack.json",
      "bytes": 716,
-     "sha256": "200c3728659e3fa9f116f3edfc9690ef764dfdefc139f6c34755c668da1d6a3e"
+     "sha256": "3b964a0be746d176f84d4f77315e0503db1eda8e2b01fdcd3d43023fea665c92"
     },
     {
      "path": "sound.wav",
      "bytes": 183138,
-     "sha256": "4f8a5be37454e8a04823833d6ebaf8d0a89b47a5a092434ec1cd6094e02f01c0"
+     "sha256": "c7176a4304e66ac1da7bf60cf2e602acb7fe985dc4370cd8c1eb7e6f01bbe84c"
     }
    ]
   },
   {
    "id": "emile/whoosh-07",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -7065,18 +7065,18 @@
     {
      "path": "pack.json",
      "bytes": 759,
-     "sha256": "41e213cb706e2c1a5757d3a4b4aa57a7dc0b31c8bc247d66331888b120a0291f"
+     "sha256": "23a13466ebecb0a4ad28f6ab0be24a2bdffafcb66a505b76c2da85c729ccf334"
     },
     {
      "path": "sound.wav",
      "bytes": 64740,
-     "sha256": "88834b20f56391b0f09a990eb3aecce846769180833f0825824d5b2ce8c13fde"
+     "sha256": "fad6b00017c7ec087b971afba14eb21295cd2d285a18840b9b0c9f063b86e8e9"
     }
    ]
   },
   {
    "id": "emile/whoosh-08",
-   "version": "1.1.0",
+   "version": "1.2.0",
    "kind": "sound",
    "category": null,
    "title": {
@@ -7109,12 +7109,12 @@
     {
      "path": "pack.json",
      "bytes": 719,
-     "sha256": "49630946d607b6e42d7b49c2e411ab0db04cea9d3b7f6cb678738327825fa36a"
+     "sha256": "0b9195e4b386e8fbb3711daee4d768739d274830d25bb84516487a0846093a90"
     },
     {
      "path": "sound.wav",
      "bytes": 26830,
-     "sha256": "995a48674b2a890ffb5be7c61d10c82df308a7704130b7d05e8cc2a8dc29a08e"
+     "sha256": "1dc0ad57a1be0eeb27eebb081bb5be8b2575fdfab634b0bc46698b993ec02954"
     }
    ]
   },
@@ -7344,13 +7344,13 @@
    "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "0ecc9ec08728b81a8b33c3556f9e1fca1a00359b1c867a812f122177fde5a66d",
+   "digest": "313290ed8eff973a3d5609da30f3c526b2d75db192f25c8f46fd225a3d9220ed",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 4624,
-     "sha256": "8629101b76ab44a73f6adbe6683dfd97ac3cf41b4692befd84c47053e5ab4ee6"
+     "bytes": 4897,
+     "sha256": "0f7954be9e42bca46ca356abdd965bb1952b0ad294cad2674f3bccdee8b76c98"
     }
    ]
   },
