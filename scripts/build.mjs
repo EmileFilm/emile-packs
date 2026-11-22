@@ -6,18 +6,18 @@
 //   node scripts/build.mjs --check          (check every pack and that the generated Skills are current, write nothing)
 //   node scripts/build.mjs --public-key --key <pem>   (the key's public half, for the engine)
 //
-// 1. check: each <publisher>/<name>/ folder with a pack.json goes through
+// 1. check: each <publisher>/<kind's folder>/<name>/ with a pack.json goes through
 //    the engine's pack check (pack.json, the shader contract, compiled with
 //    WebGL2 in Chrome and in WebKit); one problem stops the build. The
 //    Skill's runner (emile-shaders.js) must wrap every shader exactly as
 //    the engine's compositor does
 // 2. generate: skills/emile-shaders/ (the Skill other people's agents
 //    install: every pack's files as they are, the runner, the example page,
-//    the references) and skills/choosing-filters/ (an official reference
+//    the references) and guides/filters/choosing-filters/ (an official reference
 //    Skill for Émile), from the packs and the templates in scripts/skills/.
 //    --check fails when what is on disk differs from what would be written
 // 3. hash: each file of each pack and of each Skill for Émile (every
-//    skills/<name>/ but emile-shaders), its size and SHA-256; and its
+//    folder of guides/ with a SKILL.md), its size and SHA-256; and its
 //    preview (preview.mp4 and preview.jpg beside its files, drawn by
 //    scripts/previews.mjs, never here), listed apart from its files: a
 //    preview changes no version and no digest. Whatever changes the
@@ -41,7 +41,7 @@ import path from 'node:path'
 import vm from 'node:vm'
 import { parseArgs } from 'node:util'
 import { pathToFileURL } from 'node:url'
-import { FOR_OTHERS, generateSkills, generateSoundSkill, GENERATED } from './skills.mjs'
+import { generateSkills, generateSoundSkill, GENERATED, guideFolders, KIND_FOLDER, packFolders } from './skills.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const FORMAT = 1
@@ -72,14 +72,9 @@ if (values['public-key']) {
   process.exit(0)
 }
 
-// Every pack folder: <publisher>/<name>/pack.json
-const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
-  .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs', 'assets'].includes(e.name))
-  .flatMap(pub => fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })
-    .filter(e => e.isDirectory() && fs.existsSync(path.join(ROOT, pub.name, e.name, 'pack.json')))
-    .map(e => path.join(ROOT, pub.name, e.name)))
-  .sort()
-if (!packDirs.length) fail('no packs (<publisher>/<name>/pack.json)')
+// Every pack folder: <publisher>/<kind's folder>/<name>/pack.json (scripts/skills.mjs)
+const packDirs = packFolders(ROOT)
+if (!packDirs.length) fail('no packs (<publisher>/<filters|transitions|sounds|instruments>/<name>/pack.json)')
 // The packs with a shader (filters and transitions): what is compiled, what
 // the Skill's runner wraps and what skills/emile-shaders carries
 const kindOf = dir => JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8')).kind
@@ -127,8 +122,8 @@ const controls = fs.readFileSync(path.join(engine, 'core', 'compose', 'controls.
 const generated = new Map([...generateSkills(ROOT, shaderDirs, contract, controls), ...generateSoundSkill(ROOT, soundDirs)])
 const stale = []
 for (const skill of GENERATED) {
-  const dir = path.join(ROOT, 'skills', skill)
-  const want = new Map([...generated].filter(([rel]) => rel.startsWith(`skills/${skill}/`)))
+  const dir = path.join(ROOT, skill)
+  const want = new Map([...generated].filter(([rel]) => rel.startsWith(`${skill}/`)))
   const have = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => path.relative(ROOT, f).split(path.sep).join('/'))
   for (const rel of have) if (!want.has(rel)) stale.push(`${rel} is not generated any more`)
   for (const [rel, bytes] of want) {
@@ -139,13 +134,13 @@ for (const skill of GENERATED) {
 }
 if (values.check) {
   if (stale.length) fail(`the generated Skills are out of date (run the build to write them):\n    ${stale.join('\n    ')}`)
-  console.log(`✓ skills/${GENERATED.join(', skills/')} are current`)
+  console.log(`✓ ${GENERATED.join(', ')} are current`)
   process.exit(0)
 }
 if (!values.tag || !/^v\d+\.\d+\.\d+$/.test(values.tag)) fail('--tag vX.Y.Z: the release this index is published as (its files are served from that tag)')
 const key = privateKey()
 for (const skill of GENERATED) {
-  const dir = path.join(ROOT, 'skills', skill)
+  const dir = path.join(ROOT, skill)
   for (const f of walk(dir)) if (!isPreviewFile(path.relative(dir, f)) && !generated.has(path.relative(ROOT, f).split(path.sep).join('/'))) fs.rmSync(f)
 }
 for (const [rel, bytes] of generated) {
@@ -153,7 +148,7 @@ for (const [rel, bytes] of generated) {
   fs.mkdirSync(path.dirname(file), { recursive: true })
   if (!fs.existsSync(file) || !fs.readFileSync(file).equals(bytes)) fs.writeFileSync(file, bytes)
 }
-console.log(stale.length ? `skills/${GENERATED.join(', skills/')}: ${stale.length} file${stale.length > 1 ? 's' : ''} written` : `skills/${GENERATED.join(', skills/')}: current`)
+console.log(stale.length ? `${GENERATED.join(', ')}: ${stale.length} file${stale.length > 1 ? 's' : ''} written` : `${GENERATED.join(', ')}: current`)
 
 // 3. hash
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')
@@ -186,24 +181,28 @@ function assetOf(dir, pack) {
 }
 const packs = packDirs.map(dir => {
   const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
+  const folder = path.relative(ROOT, dir).split(path.sep).join('/')
+  if (folder !== `${pack.id.split('/')[0]}/${KIND_FOLDER[pack.kind]}/${pack.id.split('/')[1]}`) fail(`${folder}: a ${pack.kind} called ${pack.id} belongs in ${pack.id.split('/')[0]}/${KIND_FOLDER[pack.kind]}/${pack.id.split('/')[1]}/`)
   const files = packFiles(dir).map(f => fileEntry(dir, f))
   if (pack.kind === 'instrument' || pack.kind === 'sound') files.push(assetOf(dir, pack))
   return {
-    id: pack.id, version: pack.version, kind: pack.kind, category: pack.category ?? null,
+    id: pack.id, folder: `${folder}/`, version: pack.version, kind: pack.kind, category: pack.category ?? null,
     title: pack.title, description: pack.description, params: pack.params, preview: previewOf(dir),
     ...(pack.instrument ? { instrument: pack.instrument } : {}), ...(pack.sound ? { sound: pack.sound } : {}), ...(pack.sources ? { sources: pack.sources } : {}),
     licence: pack.licence, files
   }
 }).sort((a, b) => a.id.localeCompare(b.id))
 
-// The Skills for Émile: every skills/<name>/ with a SKILL.md but the one
-// for other people's agents. Its card from SKILL.md: the first heading,
+// The Skills for Émile: the guides (guides/, scripts/skills.mjs
+// guideFolders). Each entry says its folder in the repository, which is
+// where Émile downloads it from. Its card from SKILL.md: the first heading,
 // the front matter's description; digest: the SHA-256 of its files' list
-const skillsDir = path.join(ROOT, 'skills')
-const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileTypes: true }) : [])
-  .filter(e => e.isDirectory() && !FOR_OTHERS.includes(e.name) && fs.existsSync(path.join(skillsDir, e.name, 'SKILL.md')))
+const skillFolders = guideFolders(ROOT)
+const twice = skillFolders.map(e => e.name).filter((n, i, all) => all.indexOf(n) !== i)
+if (twice.length) fail(`two guides of one name: ${twice.join(', ')}`)
+const skills = skillFolders
   .map(e => {
-    const dir = path.join(skillsDir, e.name)
+    const dir = path.join(ROOT, e.folder)
     const text = fs.readFileSync(path.join(dir, 'SKILL.md'), 'utf8')
     for (const f of walk(dir).filter(f => f.endsWith('.md'))) {
       const problems = scanSkill(fs.readFileSync(f, 'utf8'))
@@ -213,19 +212,19 @@ const skills = (fs.existsSync(skillsDir) ? fs.readdirSync(skillsDir, { withFileT
     // look: it changes the picture (in Émile's 灵感, with its preview); tool: a function (the chat's Skill button)
     const kind = /^---\r?\n[\s\S]*?^kind:\s*(\w+)\s*$[\s\S]*?\r?\n---/m.exec(text)?.[1] === 'look' ? 'look' : 'tool'
     const title = /^#\s+(.+)$/m.exec(text.replace(/^---\r?\n[\s\S]*?\r?\n---/, ''))?.[1].trim()
-    if (!description || !title) fail(`skills/${e.name}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
+    if (!description || !title) fail(`${path.relative(ROOT, dir)}/SKILL.md needs a front matter description and a # heading (its card in Émile)`)
     const files = walk(dir).filter(f => !isPreviewFile(path.relative(dir, f))).map(f => fileEntry(dir, f))
     const digest = crypto.createHash('sha256').update(JSON.stringify(files)).digest('hex')
     // tags: words for the card's second line (a subtitle style's kind and how it shows the words)
     const tags = (/^---\r?\n[\s\S]*?^tags:\s*(.+)$[\s\S]*?\r?\n---/m.exec(text)?.[1] ?? '').split(',').map(x => x.trim()).filter(Boolean)
-    return { name: e.name, title, description, kind, ...(tags.length ? { tags } : {}), licence: 'MIT', digest, preview: previewOf(dir), files }
+    return { name: e.name, folder: `${e.folder}/`, title, description, kind, ...(tags.length ? { tags } : {}), licence: 'MIT', digest, preview: previewOf(dir), files }
   })
   .sort((a, b) => a.name.localeCompare(b.name))
 
 // Whatever changes the picture has its preview; an instrument its phrase
 const unheard = packs.filter(p => p.kind === 'instrument' && !p.preview?.audio).map(p => p.id)
 if (unheard.length) fail(`these instruments have no preview.m4a: ${unheard.join(', ')} (node scripts/instruments.mjs)`)
-const unseen = [...packs.filter(p => !p.preview && ['filter', 'transition', 'look'].includes(p.kind)).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `skills/${s.name} (kind: look)`)]
+const unseen = [...packs.filter(p => !p.preview && ['filter', 'transition', 'look'].includes(p.kind)).map(p => p.id), ...skills.filter(s => s.kind === 'look' && !s.preview).map(s => `${s.folder} (kind: look)`)]
 if (unseen.length) fail(`these change the picture but have no preview.mp4 and preview.jpg: ${unseen.join(', ')} (node scripts/previews.mjs; a Skill's preview is looked at before it goes in)`)
 
 // skills/emile-sounds as one download for other people's agents, its

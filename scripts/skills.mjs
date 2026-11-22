@@ -8,7 +8,7 @@
 //                             rules its controls are made by (the engine's
 //                             core/compose/controls.js) and the references (templates in
 //                             scripts/skills/emile-shaders/)
-//   skills/choosing-filters/  an official reference Skill for Émile: the
+//   guides/filters/choosing-filters/  an official reference Skill for Émile: the
 //                             filters' guides drawn into one page to
 //                             choose from (scripts/skills/choosing-filters/)
 //   skills/emile-sounds/      the sound effects for other people's agents:
@@ -24,9 +24,45 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-export const GENERATED = ['emile-shaders', 'choosing-filters', 'emile-sounds']
-// The Skills for other people's agents, not Émile's (not in the index)
-export const FOR_OTHERS = ['emile-shaders', 'emile-sounds']
+// The generated Skills' folders in the repository
+export const GENERATED = ['skills/emile-shaders', 'guides/filters/choosing-filters', 'skills/emile-sounds']
+// skills/ holds only what other people's agents install (each folder is
+// copied away whole). The guides Émile's own AI reads are in guides/, by
+// subject (guides/sound/sound-match-cut/, guides/motion/): every folder
+// there with a SKILL.md is one, whatever its depth; a name is one guide.
+// Each as { name, folder }, folder from the repository's root
+// A publisher's packs are in a folder for each kind: emile/filters/grain/,
+// emile/transitions/wipe/, emile/sounds/whoosh-02/, emile/instruments/piano/.
+// The pack's id stays <publisher>/<name> (emile/grain): the kind is where
+// it is kept, not part of its name
+export const KIND_FOLDER = { filter: 'filters', transition: 'transitions', sound: 'sounds', instrument: 'instruments' }
+// Every pack folder of the repository (absolute paths, sorted by id)
+export function packFolders(root) {
+  const apart = ['scripts', 'node_modules', 'skills', 'guides', 'docs', 'assets']
+  return fs.readdirSync(root, { withFileTypes: true })
+    .filter(e => e.isDirectory() && !e.name.startsWith('.') && !apart.includes(e.name))
+    .flatMap(pub => Object.values(KIND_FOLDER).flatMap(kind => {
+      const at = path.join(root, pub.name, kind)
+      return (fs.existsSync(at) ? fs.readdirSync(at, { withFileTypes: true }) : [])
+        .filter(e => e.isDirectory() && fs.existsSync(path.join(at, e.name, 'pack.json')))
+        .map(e => path.join(at, e.name))
+    }))
+    .sort((a, b) => path.basename(a).localeCompare(path.basename(b)))
+}
+
+export function guideFolders(root) {
+  const found = []
+  const look = rel => {
+    for (const e of fs.readdirSync(path.join(root, rel), { withFileTypes: true })) {
+      if (!e.isDirectory() || e.name.startsWith('.')) continue
+      const at = `${rel}/${e.name}`
+      if (fs.existsSync(path.join(root, at, 'SKILL.md'))) found.push({ name: e.name, folder: at })
+      else look(at)
+    }
+  }
+  if (fs.existsSync(path.join(root, 'guides'))) look('guides')
+  return found
+}
 
 const ORDER = ['print', 'texture', 'distort', 'color', 'glow', 'film']
 const GROUP = { print: 'Print', texture: 'Texture', distort: 'Distort', color: 'Color', glow: 'Glow', film: 'Film' }
@@ -73,7 +109,7 @@ export function generateSkills(root, packDirs, contract, controls) {
 
   // ---------------------------------------------------------------- emile-shaders
   const S = 'skills/emile-shaders'
-  const from = 'the packs (emile/<name>/) and scripts/skills/emile-shaders/'
+  const from = 'the packs (emile/filters/<name>/, emile/transitions/<name>/) and scripts/skills/emile-shaders/'
   const md = `<!-- ${note(from)} The files under filters/ and transitions/ are the packs' own, byte for byte. -->`
 
   const filterTable = ['| Group | Filter | What it brings | Folder |', '|---|---|---|---|',
@@ -120,8 +156,8 @@ export function generateSkills(root, packDirs, contract, controls) {
   }
 
   // ---------------------------------------------------------------- choosing-filters
-  const C = 'skills/choosing-filters'
-  const cmd = `<!-- ${note('the filters\' guides (emile/<name>/SKILL.md) and scripts/skills/choosing-filters/')} -->`
+  const C = 'guides/filters/choosing-filters'
+  const cmd = `<!-- ${note('the filters\' guides (emile/filters/<name>/SKILL.md) and scripts/skills/choosing-filters/')} -->`
   const table = []
   for (const g of ORDER) {
     const group = filters.filter(p => p.pack.category === g)
@@ -138,7 +174,7 @@ export function generateSkills(root, packDirs, contract, controls) {
   return out
 }
 
-// skills/emile-sounds from the sound packs (emile/<name>/, kind: sound)
+// skills/emile-sounds from the sound packs (emile/sounds/<name>/)
 const TAGS = ['click', 'pop', 'whoosh', 'rise', 'drop', 'impact', 'notify', 'ambience', 'riser', 'swell', 'sub-drop', 'sweep']
 const TAG_LINE = {
   click: 'a tap, a button pressed', pop: 'something appearing: a card, a badge', whoosh: 'a move across the frame, a transition',
@@ -151,7 +187,7 @@ export function generateSoundSkill(root, soundDirs) {
   const S = 'skills/emile-sounds'
   const sounds = soundDirs.map(dir => ({ dir, name: path.basename(dir), pack: JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8')) }))
     .sort((a, b) => a.name.localeCompare(b.name))
-  const md = `<!-- ${note('the sound packs (emile/<name>/) and scripts/skills/emile-sounds/')} The files under sounds/ are the packs' own sound.wav, byte for byte. -->`
+  const md = `<!-- ${note('the sound packs (emile/sounds/<name>/) and scripts/skills/emile-sounds/')} The files under sounds/ are the packs' own sound.wav, byte for byte. -->`
   const tables = TAGS.map(tag => {
     const list = sounds.filter(s => s.pack.sound.tags.includes(tag))
     if (!list.length) return ''

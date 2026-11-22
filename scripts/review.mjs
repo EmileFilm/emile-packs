@@ -47,6 +47,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import { packFolders } from './skills.mjs'
 import { parseArgs } from 'node:util'
 import { pathToFileURL } from 'node:url'
 
@@ -79,15 +80,11 @@ const { launchBrowser } = await import(pathToFileURL(path.join(engine, 'lib', 'c
 
 // Every filter pack of this repository, or the ones named
 const all = {}
-for (const pub of fs.readdirSync(ROOT, { withFileTypes: true }).filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'skills', 'docs'].includes(e.name))) {
-  for (const e of fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })) {
-    const file = path.join(ROOT, pub.name, e.name, 'pack.json')
-    if (!e.isDirectory() || !fs.existsSync(file)) continue
-    const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
-    if (pack.kind !== 'filter') continue
-    const read = f => fs.readFileSync(path.join(ROOT, pub.name, e.name, f), 'utf8')
-    all[pack.id] = { kind: pack.kind, category: pack.category, animated: !!pack.animated, params: pack.params, glsl: read(pack.backends.glsl), passes: (pack.passes ?? []).map(p => ({ id: p.id, scale: p.scale, glsl: read(p.glsl) })) }
-  }
+for (const dir of packFolders(ROOT)) {
+  const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
+  if (pack.kind !== 'filter') continue
+  const read = f => fs.readFileSync(path.join(dir, f), 'utf8')
+  all[pack.id] = { kind: pack.kind, category: pack.category, animated: !!pack.animated, params: pack.params, glsl: read(pack.backends.glsl), passes: (pack.passes ?? []).map(p => ({ id: p.id, scale: p.scale, glsl: read(p.glsl) })) }
 }
 const ORDER = ['print', 'texture', 'distort', 'color', 'glow', 'film']
 const ids = Object.keys(all)

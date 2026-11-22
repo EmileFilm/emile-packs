@@ -19,7 +19,7 @@
 // it (-16), a bed well under it (-30); peaks never above -1 dBFS. The same
 // code makes the same file every time (seeded noise), 48 kHz 16-bit stereo.
 //
-//   node scripts/transitions.mjs                  (every one, as packs: emile/<kind>-<nn>/)
+//   node scripts/transitions.mjs                  (every one, as packs: emile/sounds/<kind>-<nn>/)
 //   node scripts/transitions.mjs --out <folder>   (every one as a WAV, to listen)
 
 import fs from 'node:fs'
@@ -460,7 +460,7 @@ function wav(file, [l, r]) {
 function writePack(name) {
   const kind = kindOf(name), nn = Number(name.slice(-2))
   const { channels, cut, seconds, en, zh } = make(name)
-  const dir = path.join(ROOT, 'emile', name)
+  const dir = path.join(ROOT, 'emile', 'sounds', name)
   fs.mkdirSync(dir, { recursive: true })
   wav(path.join(dir, 'sound.wav'), channels)
   const pack = {

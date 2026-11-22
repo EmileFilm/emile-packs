@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Makes the sound packs (emile/<tag>-<nn>/, kind: sound; Émile's docs/TECH.md
+// Makes the sound packs (emile/sounds/<tag>-<nn>/; Émile's docs/TECH.md
 // §12.1 乐器与音效) from the sounds chosen in scripts/sounds.json: each
 // original fetched from its CC0 pack, levelled by loudness (LEVEL: its loudest
 // 400 ms, or a bed's whole, so at gain 1 it sits right with music at -16
@@ -94,7 +94,7 @@ for (const s of sounds) {
   if (only.size && !only.has(s.name)) continue
   const original = find(await source(s.zip), s.file)
   if (!original) throw new Error(`${s.name}: ${s.file} is not in ${s.zip}`)
-  const dir = path.join(ROOT, 'emile', s.name)
+  const dir = path.join(ROOT, 'emile', 'sounds', s.name)
   fs.mkdirSync(dir, { recursive: true })
   const wav = path.join(dir, 'sound.wav')
   const raw = path.join(WORK, `${s.name}.raw.wav`)

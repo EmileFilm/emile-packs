@@ -6,8 +6,8 @@ node_modules/
 
 # A pack's recording (an instrument's samples, a sound's WAV), the archives made of them, and the sounds of
 # skills/emile-sounds: published as release assets, never committed (jsDelivr serves a version only under 50 MB)
-emile/*/samples/
-emile/*/sound.wav
+emile/instruments/*/samples/
+emile/sounds/*/sound.wav
 skills/emile-sounds/sounds/
 assets/
 .instruments-work/

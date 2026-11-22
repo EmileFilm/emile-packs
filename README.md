@@ -33,7 +33,15 @@ One kind of part per section; more kinds will come, each a section of its own.
 | [Shaders](#shaders) | 15 filters and 4 transitions, GLSL with a WebGL2 runner | [`skills/emile-shaders`](skills/emile-shaders/SKILL.md) | a filter clip over the tracks under it, a transition between two clips |
 | [Sounds](#sounds) | 112 sound effects, 8 for each kind of moment, CC0 WAV, each marked with the moment it goes on | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
 | [Instruments](#instruments) | 9 sampled instruments (SFZ over CC0 samples) | — (they need an SFZ player; the samples are a release asset) | the film's music, written as a score and played on them |
-| [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, motion, subtitle styles | `skills/<name>` | read by Émile's AI with the task they belong to |
+| [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, motion, subtitle styles | [`guides/`](guides) | read by Émile's AI with the task they belong to |
+
+### Where things are
+
+| You want | Look in |
+|---|---|
+| Something to install in your own agent | [`skills/`](skills): each folder is a Skill, copied away whole (`emile-shaders`, `emile-sounds`) |
+| How Émile's AI chooses and uses the parts | [`guides/`](guides), by subject: [`filters/`](guides/filters), [`motion/`](guides/motion), [`music/`](guides/music), [`sound/`](guides/sound), [`subtitles/`](guides/subtitles), [`editing/`](guides/editing) |
+| The parts themselves | [`emile/`](emile), by kind: [`filters/`](emile/filters), [`transitions/`](emile/transitions), [`sounds/`](emile/sounds), [`instruments/`](emile/instruments) |
 
 Everything is listed in a signed `index.json`; Émile downloads a part the first time a film uses it and checks every file against the index.
 
@@ -62,7 +70,7 @@ Every guide says how long its filter holds up, and Émile's AI keeps to it unles
 
 #### By kind of film
 
-A filter that lifts a music video can ruin a product demo. [`skills/choosing-filters`](skills/choosing-filters/SKILL.md) sorts all fifteen across 29 kinds of film, from product launches, software demos and customer stories to vlogs, music videos, AI short dramas and sports highlights: which may run long, which only for a moment, which to avoid. Each kind was checked by drawing two photographs of it under every filter. In Émile it is an official reference Skill you can bring into a chat; any agent can read it.
+A filter that lifts a music video can ruin a product demo. [`guides/filters/choosing-filters`](guides/filters/choosing-filters/SKILL.md) sorts all fifteen across 29 kinds of film, from product launches, software demos and customer stories to vlogs, music videos, AI short dramas and sports highlights: which may run long, which only for a moment, which to avoid. Each kind was checked by drawing two photographs of it under every filter. In Émile it is an official reference Skill you can bring into a chat; any agent can read it.
 
 ### The filters
 
@@ -136,7 +144,7 @@ Each has `amount` (0 leaves the picture exactly as it is, 1 is the whole effect)
 
 ## Sounds
 
-A hundred and twelve short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, levelled by loudness so it sits right under music at −16 LUFS as it is (a hit level with it, a bed well under it), with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
+A hundred and twelve short sound effects to lay where something happens on screen, eight for each kind of moment, all CC0 (free for any use, no credit needed). Each is `emile/sounds/<tag>-<nn>/sound.wav`, 48 kHz 16-bit stereo, levelled by loudness so it sits right under music at −16 LUFS as it is (a hit level with it, a bed well under it), with a `pack.json` saying how long it is, how it sounds, where it comes from, and its **cut**: the second in the file that goes on the picture's moment (a hit's attack, a whoosh's peak, a riser's end). To lay one on a moment `T`, start it at `T − cut`.
 
 | Tag | For |
 |---|---|
@@ -159,7 +167,7 @@ The first eight kinds were chosen by ear from Kenney's CC0 audio packs (Interfac
 
 ## Instruments
 
-A film's music in Émile is made one of two ways, both on the Mac: written as a score and played on these instruments (calm, cinematic, warm: the chords change and the hits land on the cuts), or generated from a style prompt with Google's [Magenta RealTime 2](https://github.com/magenta/magenta-realtime) for what the instruments can't play (electronic, pop, funk, hip-hop, rock). [`skills/scoring`](skills/scoring/SKILL.md) says which suits a film, how to write a score that follows the cuts, and how to write a prompt: the genres that come out full and the two that come out empty (techno, deep house), each tried with two seeds and heard. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository (like every sound's WAV: the repository stays small enough for the CDN that serves it), and each has a phrase played on it (`preview.m4a`).
+A film's music in Émile is made one of two ways, both on the Mac: written as a score and played on these instruments (calm, cinematic, warm: the chords change and the hits land on the cuts), or generated from a style prompt with Google's [Magenta RealTime 2](https://github.com/magenta/magenta-realtime) for what the instruments can't play (electronic, pop, funk, hip-hop, rock). [`skills/scoring`](guides/music/scoring/SKILL.md) says which suits a film, how to write a score that follows the cuts, and how to write a prompt: the genres that come out full and the two that come out empty (techno, deep house), each tried with two seeds and heard. Every instrument is an SFZ over CC0 samples, made by [`scripts/instruments.mjs`](scripts/instruments.mjs) from libraries at pinned commits; its samples are published as a release asset ([`assets`](https://github.com/EmileFilm/emile-packs/releases/tag/assets)), not in the repository (like every sound's WAV: the repository stays small enough for the CDN that serves it), and each has a phrase played on it (`preview.m4a`).
 
 | Instrument | | From |
 |---|---|---|
@@ -174,7 +182,7 @@ Any SFZ player plays them (Émile uses [sfizz](https://github.com/sfztools/sfizz
 
 ## Reference Skills
 
-Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](skills/sound-transitions/SKILL.md) (a film's sound following its picture's feeling, as editors do it: look at the cut film first, find its sections and moments, then a checklist of the few moves the picture asks for) with one Skill for each move: [`sound-muffle-release`](skills/sound-muffle-release/SKILL.md) (muffled before the jump, opened on it), [`sound-ambience-carry`](skills/sound-ambience-carry/SKILL.md) (a place's sound carried across a cut), [`sound-music-sections`](skills/sound-music-sections/SKILL.md) (a music for each section, handed over with a riser and a hit), [`sound-strong-ending`](skills/sound-strong-ending/SKILL.md), [`sound-match-cut`](skills/sound-match-cut/SKILL.md); [`scoring`](skills/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](skills/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](skills/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`skills/subtitle-<style>/`, each with an example page).
+Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](guides/sound/sound-transitions/SKILL.md) (a film's sound following its picture's feeling, as editors do it: look at the cut film first, find its sections and moments, then a checklist of the few moves the picture asks for) with one Skill for each move: [`sound-muffle-release`](guides/sound/sound-muffle-release/SKILL.md) (muffled before the jump, opened on it), [`sound-ambience-carry`](guides/sound/sound-ambience-carry/SKILL.md) (a place's sound carried across a cut), [`sound-music-sections`](guides/sound/sound-music-sections/SKILL.md) (a music for each section, handed over with a riser and a hit), [`sound-strong-ending`](guides/sound/sound-strong-ending/SKILL.md), [`sound-match-cut`](guides/sound/sound-match-cut/SKILL.md); [`scoring`](guides/music/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](guides/filters/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](guides/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`guides/subtitles/subtitle-<style>/`, each with an example page).
 
 ## Use them
 
@@ -228,7 +236,7 @@ An instrument or a sound is not written by hand: `scripts/instruments.mjs` and `
 <details>
 <summary><b>A pack</b>: the folder, <code>pack.json</code> and the shader contract</summary>
 
-A folder `<publisher>/<name>/`:
+A folder `<publisher>/<kind>/<name>/`, the kind being `filters`, `transitions`, `sounds` or `instruments` (the pack's id stays `<publisher>/<name>`):
 
 - `pack.json`: `id` (`emile/grain`), `kind` (`filter`, `transition` or `look`), `version` (semver; a published version never changes), `title` and `description` (`en`, `zh-CN`; the description says the feeling, not the technique), `category` (filters: `print`, `texture`, `distort`, `color`, `glow`, `film`), `params` (`[{ id, type: float | int | bool | color | vec2 | choice, default, min, max, step, options, label }]`), `animated`, `backends` (`{ "glsl": "shader.glsl" }`), `passes` (a filter drawn in more than one pass, below), `licence`, `publisher`.
 - `shader.glsl`: GLSL ES 3.00 without a header. Colours in and out are premultiplied; `uv` runs 0–1 from the bottom left.
@@ -280,7 +288,7 @@ Beside each pack's files lie `preview.mp4` (4 seconds, silent, a loop, 854 × 48
 ```bash
 node scripts/previews.mjs --footage <a folder outside this repository>            # the packs without one (--footage only needed for a filter)
 node scripts/previews.mjs --footage <folder> halftone wipe                         # these again (--all: every one)
-node scripts/previews.mjs --skill <name> --footage <folder> --out <folder outside>   # a candidate for an official Skill with kind: look, made by Émile's agent: look at it, then copy it into skills/<name>/
+node scripts/previews.mjs --skill <name> --footage <folder> --out <folder outside>   # a candidate for an official Skill with kind: look, made by Émile's agent: look at it, then copy it into its folder in guides/
 ```
 
 </details>

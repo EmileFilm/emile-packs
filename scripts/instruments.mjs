@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Makes the instrument packs (emile/<name>/, kind: instrument; Émile's
+// Makes the instrument packs (emile/instruments/<name>/; Émile's
 // docs/TECH.md §12.1 乐器与音效) from CC0 sample libraries pinned below:
 // the chosen samples fetched, trimmed and levelled into samples/ as FLAC,
 // the SFZ that maps them, pack.json (its gain measured, its sources),
@@ -210,7 +210,7 @@ const names = positionals.length ? positionals : Object.keys(INSTRUMENTS)
 for (const name of names) {
   const d = INSTRUMENTS[name]
   if (!d) throw new Error(`no instrument ${name} (${Object.keys(INSTRUMENTS).join(', ')})`)
-  const dir = path.join(ROOT, 'emile', name)
+  const dir = path.join(ROOT, 'emile', 'instruments', name)
   const samples = path.join(dir, 'samples')
   fs.rmSync(samples, { recursive: true, force: true })
   fs.mkdirSync(samples, { recursive: true })

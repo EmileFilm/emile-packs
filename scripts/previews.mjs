@@ -18,10 +18,10 @@
 //       a candidate preview for an official Skill that changes the picture (kind: look): Émile's agent makes a
 //       short film over clip a with the Skill brought in, and its preview
 //       is encoded into --out. Nothing is written here: look at it, and
-//       copy preview.mp4 and preview.jpg into skills/<name>/ by hand
+//       copy preview.mp4 and preview.jpg into its folder in guides/ by hand
 //
 //   node scripts/previews.mjs --subtitle <name|all> [--engine <Emile/engine>]
-//       a subtitle style's preview (skills/subtitle-<name>/), drawn as Émile
+//       a subtitle style's preview (guides/subtitles/subtitle-<name>/), drawn as Émile
 //       makes it, no AI: the engine's subtitle command lays the style over
 //       black (type is previewed on black, as a transition between plain
 //       cards) with SUBTITLE_TEXT timed at a reading speed, the film is
@@ -37,6 +37,7 @@ import os from 'node:os'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import { pathToFileURL } from 'node:url'
+import { guideFolders, packFolders } from './skills.mjs'
 
 const ROOT = path.resolve(import.meta.dirname, '..')
 const { values, positionals } = parseArgs({
@@ -98,12 +99,7 @@ const SUBTITLE_STILL = 0.95
 const SUBTITLE_CROP = [0.25, 0.5, 0.5, 0.5]
 
 // Every pack folder of this repository
-const packDirs = fs.readdirSync(ROOT, { withFileTypes: true })
-  .filter(e => e.isDirectory() && !e.name.startsWith('.') && !['scripts', 'node_modules', 'skills', 'docs'].includes(e.name))
-  .flatMap(pub => fs.readdirSync(path.join(ROOT, pub.name), { withFileTypes: true })
-    .filter(e => e.isDirectory() && fs.existsSync(path.join(ROOT, pub.name, e.name, 'pack.json')))
-    .map(e => path.join(ROOT, pub.name, e.name)))
-  .sort()
+const packDirs = packFolders(ROOT)
 
 if (values.skill) await skillCandidate(values.skill)
 else if (values.subtitle) await subtitlePreviews(values.subtitle)
@@ -160,9 +156,10 @@ async function skillCandidate(name) {
   if (!values.out) fail('--out <folder>: where the candidate goes (outside this repository; you look at it, then copy it in)')
   const out = path.resolve(values.out)
   if (!path.relative(ROOT, out).startsWith('..')) fail('--out is inside this repository: a candidate is looked at before it goes in')
-  const skillDir = path.join(ROOT, 'skills', name)
-  if (!fs.existsSync(path.join(skillDir, 'SKILL.md')) || name === 'emile-shaders') fail(`no official Skill skills/${name}/`)
-  if (!/^---\r?\n[\s\S]*?^kind:\s*look\s*$[\s\S]*?\r?\n---/m.test(fs.readFileSync(path.join(skillDir, 'SKILL.md'), 'utf8'))) fail(`skills/${name} doesn't change the picture (its SKILL.md has no kind: look): a function Skill has no preview`)
+  const guide = guideFolders(ROOT).find(g => g.name === name)
+  if (!guide) fail(`no guide ${name} in guides/`)
+  const skillDir = path.join(ROOT, guide.folder)
+  if (!/^---\r?\n[\s\S]*?^kind:\s*look\s*$[\s\S]*?\r?\n---/m.test(fs.readFileSync(path.join(skillDir, 'SKILL.md'), 'utf8'))) fail(`${guide.folder} doesn't change the picture (its SKILL.md has no kind: look): a function Skill has no preview`)
   const emile = path.join(engine, 'emile', 'cli.mjs')
   const agent = path.join(engine, '..', 'agent', 'src', 'main.ts')
   const a = await clip('a')
@@ -189,7 +186,7 @@ async function skillCandidate(name) {
     const film = path.join(tmp, 'film.mp4')
     json(emile, ['export', project, '--to', film, '--aspect', '16:9'])
     const made = await encodePreview({ input: film, seconds: 4, still: 2, dir: out })
-    console.log(`candidate for skills/${name}/:\n  ${made.video.path} (${(made.video.bytes / 1024).toFixed(0)} KB)\n  ${made.still.path} (${(made.still.bytes / 1024).toFixed(0)} KB)\nthe film's timeline: ${path.join(project, 'emile.json')}`)
+    console.log(`candidate for ${guide.folder}/:\n  ${made.video.path} (${(made.video.bytes / 1024).toFixed(0)} KB)\n  ${made.still.path} (${(made.still.bytes / 1024).toFixed(0)} KB)\nthe film's timeline: ${path.join(project, 'emile.json')}`)
   } catch (e) {
     fail(`${e.message}\nthe project is left in ${project}`)
   }
@@ -197,9 +194,9 @@ async function skillCandidate(name) {
 
 async function subtitlePreviews(which) {
   const names = which === 'all'
-    ? fs.readdirSync(path.join(ROOT, 'skills')).filter(n => n.startsWith('subtitle-')).map(n => n.slice('subtitle-'.length)).sort()
+    ? fs.readdirSync(path.join(ROOT, 'guides', 'subtitles')).filter(n => n.startsWith('subtitle-')).map(n => n.slice('subtitle-'.length)).sort()
     : which.split(',').map(n => n.trim())
-  for (const n of names) if (!fs.existsSync(path.join(ROOT, 'skills', `subtitle-${n}`, 'SKILL.md'))) fail(`no subtitle style skills/subtitle-${n}/`)
+  for (const n of names) if (!fs.existsSync(path.join(ROOT, 'guides', 'subtitles', `subtitle-${n}`, 'SKILL.md'))) fail(`no subtitle style guides/subtitles/subtitle-${n}/`)
   const emile = path.join(engine, 'emile', 'cli.mjs')
   const { ROOTS } = await lib('lib/paths.mjs')
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'emile-subtitle-previews-'))
@@ -218,7 +215,7 @@ async function subtitlePreviews(which) {
     // The ground: four seconds of black
     execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'color=c=black:s=1920x1080:r=30:d=4', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', piece])
     for (const n of names) {
-      const skill = path.join(ROOT, 'skills', `subtitle-${n}`)
+      const skill = path.join(ROOT, 'guides', 'subtitles', `subtitle-${n}`)
       // A copy: a person's Skills are read as folders, a link is not one
       fs.cpSync(skill, path.join(home, 'skills', `subtitle-${n}`), { recursive: true, filter: f => !/preview\.(mp4|jpg)$/.test(f) })
       const project = path.join(tmp, n)
