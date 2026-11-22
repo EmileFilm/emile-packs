@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Makes the sound packs (emile/sounds/<tag>-<nn>/; Émile's docs/TECH.md
+// Makes the sound packs (emile/sounds/<tag>-<nn>/; Émile's docs/emile/TECH.md
 // §12.1 乐器与音效) from the sounds chosen in scripts/sounds.json: each
 // original fetched from its CC0 pack, levelled by loudness (LEVEL: its loudest
 // 400 ms, or a bed's whole, so at gain 1 it sits right with music at -16

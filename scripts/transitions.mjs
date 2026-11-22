@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Synthesises the transition sounds and the beds (Émile's docs/TECH.md
+// Synthesises the transition sounds and the beds (Émile's docs/emile/TECH.md
 // §12.1 乐器与音效), made the way a sound designer layers them, so the
 // moment each meets the cut is known exactly (its `cut`, seconds in):
 //

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Makes the instrument packs (emile/instruments/<name>/; Émile's
-// docs/TECH.md §12.1 乐器与音效) from CC0 sample libraries pinned below:
+// docs/emile/TECH.md §12.1 乐器与音效) from CC0 sample libraries pinned below:
 // the chosen samples fetched, trimmed and levelled into samples/ as FLAC,
 // the SFZ that maps them, pack.json (its gain measured, its sources),
 // SKILL.md, and preview.m4a, a phrase played on it.
