@@ -2,14 +2,15 @@
 // The previews in Émile's Inspirations: preview.mp4 (4 s, silent, a loop,
 // 854 × 480, H.264, a few hundred KB) and preview.jpg (a settled frame)
 // beside each pack, drawn by Émile's own compositor, so a preview looks as
-// the product draws it: a filter over the footage scripts/footage.json
-// records, a transition between two plain cards, A and B.
+// the product draws it: a filter over the clip scripts/footage.json
+// records for it (one per filter, the kind of picture it is for), a
+// transition between two plain cards, A and B.
 // The build (build.mjs) lists them in index.json apart from the pack's
 // files; it never draws them, so a second build changes nothing.
 //
 //   node scripts/previews.mjs [--footage <folder>] [name…] [--all] [--engine <Emile/engine>]
 //       the packs without a preview, or those named, or --all (a filter:
-//       wiped in from the left over the footage's clip a, held, wiped back;
+//       wiped in from the left over its own clip, held, wiped back;
 //       a transition: once from card A, a solid colour with a big A, into
 //       card B). The footage (needed for a filter) is read from <folder> (downloaded there first
 //       when it isn't, its SHA-256 checked); never put into this repository
@@ -71,6 +72,7 @@ const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file))
 async function clip(name) {
   if (!values.footage) fail('--footage <folder>: where the footage of scripts/footage.json is kept (outside this repository)')
   const c = FOOTAGE.clips[name]
+  if (!c) fail(`scripts/footage.json has no clip ${name}: a filter's preview is drawn over a clip of its own, recorded there under its name`)
   const file = path.join(path.resolve(values.footage), c.file)
   if (!fs.existsSync(file)) {
     console.log(`downloading ${c.page} into ${file}`)
@@ -109,7 +111,8 @@ async function packPreviews() {
   const all = {}
   for (const dir of packDirs) {
     const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
-    if (pack.kind === 'look') continue
+    // Only what the compositor draws: a sound and an instrument have no shader
+    if (pack.kind !== 'filter' && pack.kind !== 'transition') continue
     const read = f => fs.readFileSync(path.join(dir, f), 'utf8')
     all[pack.id] = { dir, kind: pack.kind, params: pack.params, glsl: read(pack.backends.glsl), passes: (pack.passes ?? []).map(p => ({ id: p.id, scale: p.scale, glsl: read(p.glsl) })) }
   }
@@ -122,18 +125,21 @@ async function packPreviews() {
   const { launchBrowser } = await lib('lib/chrome.mjs')
   const browser = await launchBrowser({ args: ['--allow-file-access-from-files'] })
   try {
-    // The footage only when a filter is drawn: a transition goes between cards
-    const a = ids.some(id => all[id].kind !== 'transition') ? await framesOf(await clip('a'), path.join(tmp, 'a')) : []
     const page = await browser.newPage({ width: 200, height: 200 })
     const compositor = pathToFileURL(path.join(engine, 'core', 'compose', 'compositor.js')).href
     await page.goto(`${pathToFileURL(path.join(ROOT, 'scripts', 'previews.html')).href}?compositor=${encodeURIComponent(compositor)}`)
     await page.evaluate(`new Promise(r => { const c = () => window.ready ? r() : setTimeout(c, 20); c() })`)
     const packs = Object.fromEntries(Object.entries(all).map(([id, p]) => [id, { id, kind: p.kind, params: p.params, glsl: p.glsl, passes: p.passes }]))
-    await page.evaluate(`Preview.setup(${JSON.stringify(packs)}, ${JSON.stringify(a)})`)
+    await page.evaluate(`Preview.setup(${JSON.stringify(packs)})`)
     const n = await page.evaluate('Preview.N')
     for (const id of ids) {
       const frames = path.join(tmp, 'out', id.replace('/', '_'))
       fs.mkdirSync(frames, { recursive: true })
+      // A filter's own clip (named as the filter); a transition goes between cards
+      if (all[id].kind !== 'transition') {
+        const name = id.split('/')[1]
+        await page.evaluate(`Preview.footage(${JSON.stringify(await framesOf(await clip(name), path.join(tmp, 'clips', name)))})`)
+      }
       for (let i = 0; i < n; i++) {
         const url = await page.evaluate(`Preview.frame(${JSON.stringify(id)}, ${i})`)
         fs.writeFileSync(path.join(frames, `${String(i).padStart(4, '0')}.jpg`), Buffer.from(url.split(',')[1], 'base64'))

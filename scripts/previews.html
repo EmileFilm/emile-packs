@@ -5,7 +5,7 @@
 // The page scripts/previews.mjs drives: each frame of a pack's preview
 // drawn by Émile's own compositor, as the product draws it.
 //
-// A filter, over the footage (scripts/footage.json): the footage as it is,
+// A filter, over its own clip (scripts/footage.json): the footage as it is,
 // wiped to the filter from the left, held, wiped back. A transition,
 // between two cards drawn here so its movement reads at a glance (a solid
 // colour each, a big A and a big B): card A, the transition once into
@@ -117,14 +117,18 @@ function transitionFrame(id, i) {
 
 window.Preview = {
   N,
-  // all: the packs by id ({ kind, params, glsl, passes }); a: the
-  // footage's frames, file URLs, N + LOOP at least (none when only
-  // transitions are drawn)
-  async setup(all, a) {
+  // all: the packs by id ({ kind, params, glsl, passes })
+  async setup(all) {
     packs = all
-    footage.a = await load(a)
     glCanvas = canvasOf(W, H)
     comp = createCompositor(glCanvas, { width: W, height: H, packs, fps: 24, onProblem: m => problems.push(m) })
+    return true
+  },
+  // The clip the next filter is drawn over: its frames, file URLs, N +
+  // LOOP at least
+  async footage(a) {
+    if (a.length < N + LOOP) throw new Error(`the clip has ${a.length} frames, ${N + LOOP} are needed`)
+    footage.a = await load(a)
     return true
   },
   // Frame i of a pack's preview, a JPEG data URL

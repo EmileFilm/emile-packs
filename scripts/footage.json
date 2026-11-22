@@ -1,5 +1,5 @@
 {
- "$comment": "The footage every filter's preview is drawn over (scripts/previews.mjs; a transition's goes between two plain cards drawn there, A and B). Pexels License: free to use and change, no credit asked; the clip itself is never put in this repository (it may not be passed on unchanged), only what is drawn over it. a: a man with a cup by sunlit blinds, a dark room and an orange lamp behind him. from and seconds: the piece of the clip that is used",
+ "$comment": "The footage the previews are drawn over (scripts/previews.mjs): each filter over a clip of its own, chosen for the kind of picture its guide says it is for (clips.<the filter's name>); a transition's goes between two plain cards drawn there, A and B. a: the clip a Skill's candidate preview is made over (a man with a cup by sunlit blinds, a dark room and an orange lamp behind him). Pexels License: free to use and change, no credit asked; a clip itself is never put in this repository (it may not be passed on unchanged), only what is drawn over it. what: the picture, in words. from and seconds: the piece of the clip that is used",
  "licence": "Pexels License (https://www.pexels.com/license/)",
  "clips": {
   "a": {
@@ -10,6 +10,156 @@
    "bytes": 50048847,
    "sha256": "eb8e8cd97d6e9c9095927275cb01a201f2b1c9eddc595a5d383fdf1ba57d9be2",
    "from": 16,
+   "seconds": 4.5
+  },
+  "bloom": {
+   "file": "pexels-9935090.mp4",
+   "what": "a street at night out of focus, people crossing under points of light",
+   "page": "https://www.pexels.com/video/bokeh-footage-of-city-lights-at-night-9935090/",
+   "download": "https://videos.pexels.com/video-files/9935090/9935090-hd_1280_720_30fps.mp4",
+   "bytes": 1777407,
+   "sha256": "18252307749321382e862cdbbcc687b32228a7d42f5dee60b8df72b6f848a86d",
+   "from": 5.5,
+   "seconds": 4.5
+  },
+  "edge-glow": {
+   "file": "pexels-35862371.mp4",
+   "what": "a dancer's silhouette by the sea against a violet sky after sunset",
+   "page": "https://www.pexels.com/video/sunset-silhouette-dance-by-the-ocean-35862371/",
+   "download": "https://videos.pexels.com/video-files/35862371/15208636_1280_720_30fps.mp4",
+   "bytes": 1757118,
+   "sha256": "30374995967f3243d9f114709893bd89b4324ffb4627de5e425d9667e8746da7",
+   "from": 3.4,
+   "seconds": 4.5
+  },
+  "cmyk": {
+   "file": "pexels-8328501.mp4",
+   "what": "a woman in a violet jacket on an orange studio ground",
+   "page": "https://www.pexels.com/video/beautiful-woman-wearing-a-violet-jacket-8328501/",
+   "download": "https://videos.pexels.com/video-files/8328501/8328501-hd_1280_720_25fps.mp4",
+   "bytes": 1838592,
+   "sha256": "1a6a741be585eab912cc2b30a585a7107df1d3a0ce250f4dcfbe61e8374feb52",
+   "from": 0.7,
+   "seconds": 4.5
+  },
+  "halftone": {
+   "file": "pexels-9604401.mp4",
+   "what": "a curly-haired young man in a pale hoodie on a light studio ground, turning his head",
+   "page": "https://www.pexels.com/video/close-up-video-of-a-man-wearing-hoodie-9604401/",
+   "download": "https://videos.pexels.com/video-files/9604401/9604401-hd_1366_720_25fps.mp4",
+   "bytes": 3246796,
+   "sha256": "c6aa96b8ed358d2bdac8a4d0f1f40e89c57ea03b2cbd59abdda5ddf00d10e1bb",
+   "from": 0.5,
+   "seconds": 4.5
+  },
+  "risograph": {
+   "file": "pexels-5873970.mp4",
+   "what": "pink roses along a pale blue ground: a picture of two hues",
+   "page": "https://www.pexels.com/video/video-of-pink-flowers-5873970/",
+   "download": "https://videos.pexels.com/video-files/5873970/5873970-hd_1366_720_30fps.mp4",
+   "bytes": 2097889,
+   "sha256": "f5f2d909aa4785c6540d975bbe3f47c927f98ab2d31bb31893d0b1206e0270a2",
+   "from": 2.7,
+   "seconds": 4.5
+  },
+  "dither": {
+   "file": "pexels-7534445.mp4",
+   "what": "a stone bust against a plain wall, the camera moving slowly",
+   "page": "https://www.pexels.com/video/a-concrete-sculpture-7534445/",
+   "download": "https://videos.pexels.com/video-files/7534445/7534445-hd_1280_720_24fps.mp4",
+   "bytes": 1881284,
+   "sha256": "f79fd718b7932c0232b6475739c64089abd4d5b85fe6018098b4837b1c9a6844",
+   "from": 0.3,
+   "seconds": 4.5
+  },
+  "grain": {
+   "file": "pexels-4733691.mp4",
+   "what": "a woman by a window in a dim room",
+   "page": "https://www.pexels.com/video/a-woman-with-curly-hair-looking-out-the-window-4733691/",
+   "download": "https://videos.pexels.com/video-files/4733691/4733691-hd_1280_720_50fps.mp4",
+   "bytes": 2215148,
+   "sha256": "9f3c5e01c1de80fb8752f99933cec559eb1fe183e7be67ac584f3f913a7a3e7c",
+   "from": 1.1,
+   "seconds": 4.5
+  },
+  "paper": {
+   "file": "pexels-20606442.mp4",
+   "what": "a watercolour being painted on a white sheet",
+   "page": "https://www.pexels.com/video/a-person-is-painting-with-watercolors-on-a-canvas-20606442/",
+   "download": "https://videos.pexels.com/video-files/20606442/20606442-hd_1280_720_24fps.mp4",
+   "bytes": 2058424,
+   "sha256": "8041b1c9aa18afa9749c6bd6e5b5d6de4657774d2d9095e2615d4466d0f5fae2",
+   "from": 6.1,
+   "seconds": 4.5
+  },
+  "displace": {
+   "file": "pexels-7315362.mp4",
+   "what": "a dancer between blue and magenta neon tubes",
+   "page": "https://www.pexels.com/video/a-man-and-a-woman-dancing-7315362/",
+   "download": "https://videos.pexels.com/video-files/7315362/7315362-hd_1280_720_25fps.mp4",
+   "bytes": 3417827,
+   "sha256": "1d683801175bbc009deb54f5cb294fba173c80427475ef96f8502207dd2c806b",
+   "from": 3.2,
+   "seconds": 4.5
+  },
+  "fluted-glass": {
+   "file": "pexels-7217095.mp4",
+   "what": "a woman in white walking her bicycle along a yellow wall",
+   "page": "https://www.pexels.com/video/a-woman-walking-her-bike-7217095/",
+   "download": "https://videos.pexels.com/video-files/7217095/7217095-hd_1280_720_25fps.mp4",
+   "bytes": 1848919,
+   "sha256": "6f75fd2901e1075cff9a782f6389b695c7f91c758d10652095e7101cb9ec1d30",
+   "from": 0.5,
+   "seconds": 4.5
+  },
+  "duotone": {
+   "file": "pexels-9464488.mp4",
+   "what": "a red-haired young man in a dark jacket, orange light on one side and blue on the other",
+   "page": "https://www.pexels.com/video/close-up-video-of-a-man-s-face-9464488/",
+   "download": "https://videos.pexels.com/video-files/9464488/9464488-hd_1366_720_25fps.mp4",
+   "bytes": 3793655,
+   "sha256": "8eb679a764aca5fcf401b6e35912249f96cbdac422ae03659ea7f3d03bfd6338",
+   "from": 3,
+   "seconds": 4.5
+  },
+  "palette": {
+   "file": "pexels-39123182.mp4",
+   "what": "a breaking wave with a surfer on it",
+   "page": "https://www.pexels.com/video/thrilling-ocean-waves-captured-with-surfers-39123182/",
+   "download": "https://videos.pexels.com/video-files/39123182/16648014_1280_720_24fps.mp4",
+   "bytes": 10436678,
+   "sha256": "737163590d9a7b24e2e94a762238ff20f6e4756a722862de926da55be6f48077",
+   "from": 3.9,
+   "seconds": 4.5
+  },
+  "chromatic-aberration": {
+   "file": "pexels-18662635.mp4",
+   "what": "a crowded street at night under neon signs",
+   "page": "https://www.pexels.com/video/a-group-of-people-walking-through-a-crowded-city-street-18662635/",
+   "download": "https://videos.pexels.com/video-files/18662635/18662635-hd_1280_720_60fps.mp4",
+   "bytes": 2330276,
+   "sha256": "d534c07dbd9d93f3f2abec2771a07582ddb56fd7af7934f8c2aadb1fca40629b",
+   "from": 0.4,
+   "seconds": 4.5
+  },
+  "crt": {
+   "file": "pexels-3842243.mp4",
+   "what": "a pinball table's lit playfield in an arcade",
+   "page": "https://www.pexels.com/video/tilt-shot-of-a-pinball-arcade-3842243/",
+   "download": "https://videos.pexels.com/video-files/3842243/3842243-hd_1280_720_60fps.mp4",
+   "bytes": 1950949,
+   "sha256": "8f99071c85090d3eff13cd069c4656b121e508ede6a910fd354a3f4ed383e2ee",
+   "from": 0.7,
+   "seconds": 4.5
+  },
+  "vhs": {
+   "file": "pexels-8576901.mp4",
+   "what": "a boy and a girl running on a beach",
+   "page": "https://www.pexels.com/video/boy-and-girl-running-at-the-beach-8576901/",
+   "download": "https://videos.pexels.com/video-files/8576901/8576901-hd_1280_720_60fps.mp4",
+   "bytes": 2372411,
+   "sha256": "1ce86ffc22070dd72b2a6fb60d9d959d291c00e3fd909bdc95bcd1b46e45fb20",
+   "from": 1.2,
    "seconds": 4.5
   }
  }

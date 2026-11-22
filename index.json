@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.6",
- "published": "2026-11-22T01:31:16.512Z",
+ "tag": "v1.2.7",
+ "published": "2026-11-22T05:54:26.232Z",
  "contract": 4,
  "packs": [
   {
@@ -937,13 +937,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 224275,
-     "sha256": "043061d4ec16d2f50cf6c4ff56291f4b11aa8d15a01dde023c70a80a5f5cd7fd"
+     "bytes": 128702,
+     "sha256": "f6aeeeb55c0f9386774b6c721a77e5d84c5f699fabecf08bc96e20a7848d7d3a"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 42525,
-     "sha256": "9a4bbd970b44b1e2e6dfbd854f67f3dc1177b92c0f9ecc7add5d55f3e293b939"
+     "bytes": 19481,
+     "sha256": "285134c24d7f56f875ec90dc4e9343c685768c2cd93507a78fcc37f97fd28dbc"
     }
    },
    "licence": "MIT",
@@ -1418,13 +1418,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 237589,
-     "sha256": "390319e71e694c35b77f969696ce0e4ac85644d7f7482c6a9b6b24277b42dc67"
+     "bytes": 535654,
+     "sha256": "40026a6574aa7e2cbad7cfcc6d50dee414a10bd616e4972d16218a84c74be390"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 43088,
-     "sha256": "2266579cb6c9dc5c434d9309003acffccaf8fc26d0cd0aab6ef1f6071f35b4f0"
+     "bytes": 78377,
+     "sha256": "71ba3626f718108146ab29d7fa1c8f43122fac797dded05978c4f595355020a2"
     }
    },
    "licence": "MIT",
@@ -1939,13 +1939,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 531758,
-     "sha256": "9dded30ee42034dd13365a97cc74a84b7ede64a9b759e5c0536b28a6e918310b"
+     "bytes": 545717,
+     "sha256": "35be5f7ab654f98b31f3ad63df751eaafc4bef7d437e999d1ce4ddde9905b36e"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 194516,
-     "sha256": "0e6babef283d2e32fed5b8207d312a2f5f5dcf140ecd40b5008647b96702082c"
+     "bytes": 229660,
+     "sha256": "4f55753798591b8f5fbf2bf2a412328b3371589607620114f4e2b2dd23379fa2"
     }
    },
    "licence": "MIT",
@@ -2097,13 +2097,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 391749,
-     "sha256": "2c8050e0afcae9e2cd1e5823d9cce22391c6f00730ac84d62326d4c869fa664e"
+     "bytes": 528742,
+     "sha256": "316bfb050dc6c6da018bc476423056e56755486a7699faaceb721e8988700c13"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 75833,
-     "sha256": "97223bbdeb66db11cd33f2c3fbd1f643d89527ccad9a5ad72e7dff8da807ecd1"
+     "bytes": 71834,
+     "sha256": "a72ee7c6de5a787370ff8eeecd401bfc3ecc8ec0df9de205470fff9ab17ab2e5"
     }
    },
    "licence": "MIT",
@@ -2204,13 +2204,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 363554,
-     "sha256": "c09e9e2e721c17bca3ad0ba814c9cc9832508fd5a814d7483fccdfb13a868b43"
+     "bytes": 537468,
+     "sha256": "270f0d0c0f2787d9f8e860f815a64e041976b10f241baa7bbc4b7a2b37b009a4"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 54486,
-     "sha256": "97a08551398edf1bc3a5b53b050da512ee20c626c3c87d58cad6590ced98c992"
+     "bytes": 51796,
+     "sha256": "e1247ef445b216096f341e31f75f178596341bfb2f3721ba784ad854789d9d1b"
     }
    },
    "licence": "MIT",
@@ -2352,13 +2352,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 521566,
-     "sha256": "1b6246f41b1b8e2d3decee188dda194dbfe79e43b30b724e4d962fe27737e3fd"
+     "bytes": 509910,
+     "sha256": "b88f2fe44526224c49afd7a1df3ad50481aca3ff0fffa18645e508468d75d0ac"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 211951,
-     "sha256": "6df5b36dd0c03f11ee78a09ba8b52bb351e9fd45bdad41978ecf657e1580730c"
+     "bytes": 207741,
+     "sha256": "d95737c20fb62fdbddaf0b3b61a65715e28041d1607ef315587f8fc7563f388d"
     }
    },
    "licence": "MIT",
@@ -2883,13 +2883,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 236690,
-     "sha256": "eb6c2d5dc80aeffd46700ba2f14185449f06b9ad0b9467f6131ee14843140300"
+     "bytes": 134204,
+     "sha256": "642954ddfb16a48256c520a05d93c74692e64a5a2d47d290a9503b2c399ccd43"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 37627,
-     "sha256": "2a30a9443addfbf810863a913d1c94321b988de9f9236ecb1c0bdf62e4c91c71"
+     "bytes": 11968,
+     "sha256": "2b248368ed50c67f85bf18e244acfe61798dd0fbae4b4ddb5c39182652d40ca7"
     }
    },
    "licence": "MIT",
@@ -2987,13 +2987,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 259791,
-     "sha256": "61cfd3b105d76bd6af4f50aa36166f82b902197f4cf57edf7424d37f393056a6"
+     "bytes": 189290,
+     "sha256": "d48f02e73458ac56d94d35d0da7036db5110b92e1a1e7c4824fe278b966e2c88"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 40832,
-     "sha256": "e7e616e7c490964bc5293906753c2fe48e5a3b92daf4ada964c788f218e898ec"
+     "bytes": 15643,
+     "sha256": "64ca63217d822a6e5066c507bab1c5e9c49a8bf0d7ed08ce3d019f5e3356235a"
     }
    },
    "licence": "MIT",
@@ -3129,13 +3129,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 325192,
-     "sha256": "1df74991d567e11401e018f6f4d432d8963625c073ab98b67e37e6acffb7638f"
+     "bytes": 513782,
+     "sha256": "924865cbb9cf39e2ef76ecc3efd4e2d172178e6783edbef40c3eb9ea1fafff7c"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 56779,
-     "sha256": "7aafbb2ba6e27f8c7e19749ce0d15234e4aad2e83def172a48318436d3036c06"
+     "bytes": 59052,
+     "sha256": "e31801d2b06c9d9df9fe09d7c9b13362659316879d9ecc119edbc2b48ad0c019"
     }
    },
    "licence": "MIT",
@@ -3272,13 +3272,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 422310,
-     "sha256": "1d71d347c6148ee8124c4f76b929f103185b4f8ca09ec34fae9c6f87e5ea0632"
+     "bytes": 284877,
+     "sha256": "11dc54bbf7874cd3fd03f32ad78e699f2e3b2bb69ae4d9ce122a7ac9dbb693a2"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 59795,
-     "sha256": "70276209b245585b46404a931af7790570ea7cd2554c9072d5c34dcd2764308d"
+     "bytes": 34003,
+     "sha256": "eea05010b9a3f95c3b2babd9f8e06b17651efb874e1fe6586a132a1e7ad2508a"
     }
    },
    "licence": "MIT",
@@ -3373,13 +3373,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 526354,
-     "sha256": "0b972d0d7c685dca9197458d971464c4f899145595e17337f90b686cf3aa376f"
+     "bytes": 520419,
+     "sha256": "104f166ca5c27bbf3b48fc2ce1649e81f8d433c9a046486d4725e7a2e6d8d0c1"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 152998,
-     "sha256": "e07899c86529771a0be45d39d1ed54372c2801333946af86cd5cfeec5a838760"
+     "bytes": 143802,
+     "sha256": "135f84ff59e81225b4b98d5ebdf5002910458e4684f4609ee0b6ed53a86c2662"
     }
    },
    "licence": "MIT",
@@ -4268,13 +4268,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 498618,
-     "sha256": "7f48de6743fa73bd262947c446efbce204685aac37b3beae2aec202cb32bf3b0"
+     "bytes": 539959,
+     "sha256": "90cc9894afd3d515f909e1eda77044da19d39b94494bc5e3bef7871829744729"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 82215,
-     "sha256": "43218d8f3895abc022e927dc15535438de39d6b62afa5d5b7a833ce29f823d60"
+     "bytes": 52472,
+     "sha256": "d76dd63cd2a4b557c479fabfd03a3436239181d4aa4f4abb6e4e1d51b5ceddcc"
     }
    },
    "licence": "MIT",
@@ -4360,13 +4360,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 393986,
-     "sha256": "65aae062da3803bbeacf94e4b13756ac82d1019b51c793b787c29ae807f8b96c"
+     "bytes": 355385,
+     "sha256": "ebc30ddb89a6b860d67f4cfd2f102d3bb35a54d6a009149c2a642370f329c133"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 49360,
-     "sha256": "2fc80f15883c7a4220aa222c128af0daa8dadfc0f4c0a864ae3e443b68648387"
+     "bytes": 50435,
+     "sha256": "375306d6a952277681901bd454ce334795ab08f19c26a942ebfc8fa73cf96527"
     }
    },
    "licence": "MIT",
@@ -5650,13 +5650,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 530275,
-     "sha256": "125970491c0d911249c671b76e1c8803ad93d924cdd82f37508675f25b79911f"
+     "bytes": 521578,
+     "sha256": "58a42cf2519a90cf740912dd24d916b0793a8c87cc68b58e7109b50647978462"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 127115,
-     "sha256": "d06e3edca174ddd9ac135182a6abcb8aedac426cdb315e98583f269fb674e239"
+     "bytes": 104329,
+     "sha256": "6469316c8a1b789ddb91019dddcb143e93426b0df2a6f34579659342428a2990"
     }
    },
    "licence": "MIT",
@@ -6951,13 +6951,13 @@
    "preview": {
     "video": {
      "path": "preview.mp4",
-     "bytes": 336193,
-     "sha256": "f59bd68a62502006bc94d384bcd60816ce38f9c3223463ef14065cbbabf4b41e"
+     "bytes": 536887,
+     "sha256": "49de0c4b781eac7fc0612cfd755eef0cf36370ff8f2f760693e315e95cc6a231"
     },
     "still": {
      "path": "preview.jpg",
-     "bytes": 47247,
-     "sha256": "5ff25f66c4815669ef4e6c53ee124d7f698c78d2b730cfcc24c7f5de7f6c4a9c"
+     "bytes": 45997,
+     "sha256": "b47928974be99cb15a34925af8a2f92e78dc5c512a42b6d90b4fe90f0738a141"
     }
    },
    "licence": "MIT",
