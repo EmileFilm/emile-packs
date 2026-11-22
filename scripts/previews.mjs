@@ -64,6 +64,7 @@ const lib = f => import(pathToFileURL(path.join(engine, f)).href)
 const { encodePreview, PREVIEW, PREVIEW_SIZE } = await lib('emile/library/previews.mjs')
 const { download } = await lib('lib/fetch.mjs')
 const { ffmpegPath, getTool } = await lib('lib/tools.mjs')
+const { REC709, systemVideo } = await lib('lib/ffmpeg.mjs')
 
 // The footage, each clip downloaded into --footage when it isn't there
 // and checked against its SHA-256
@@ -187,7 +188,7 @@ async function skillCandidate(name) {
     await getTool('ffmpeg')
     fs.mkdirSync(path.join(tmp, 'piece'))
     const piece = path.join(tmp, 'piece', 'shot.mp4')
-    execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-ss', String(a.from), '-t', '4', '-i', a.path, '-an', '-vf', 'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080', '-c:v', 'libx264', '-crf', '18', piece])
+    execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-ss', String(a.from), '-t', '4', '-i', a.path, '-an', '-vf', `scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,${REC709}`, ...systemVideo(80), piece])
     json(emile, ['new', project, '--aspect', '16:9', '--title', 'Preview', '--idea', `A four-second shot showing what the Skill ${name} is for`])
     json(emile, ['materials-add', project, piece])
     const { num, den } = JSON.parse(fs.readFileSync(path.join(project, 'emile.json'), 'utf8')).project.fps
@@ -225,7 +226,7 @@ async function subtitlePreviews(which) {
     await getTool('ffmpeg')
     const piece = path.join(tmp, 'shot.mp4')
     // The ground: four seconds of black
-    execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'color=c=black:s=1920x1080:r=30:d=4', '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', piece])
+    execFileSync(ffmpegPath(), ['-v', 'error', '-y', '-f', 'lavfi', '-i', 'color=c=black:s=1920x1080:r=30:d=4', '-vf', REC709, ...systemVideo(80), piece])
     for (const n of names) {
       const skill = path.join(ROOT, 'guides', 'subtitles', `subtitle-${n}`)
       // A copy: a person's Skills are read as folders, a link is not one
