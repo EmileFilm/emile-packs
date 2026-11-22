@@ -1,0 +1,28 @@
+{
+  "id": "emile/receipt",
+  "kind": "look",
+  "version": "1.0.0",
+  "title": {
+    "en": "Receipt",
+    "zh-CN": "热敏小票"
+  },
+  "description": {
+    "en": "A picture as a till prints it: black dots on off-white paper.",
+    "zh-CN": "收银机打出来的画面：米白的纸上一粒粒黑点。"
+  },
+  "params": [],
+  "filters": [
+    {
+      "id": "emile/dither",
+      "version": "^1",
+      "params": {
+        "pattern": "ordered",
+        "size": 3,
+        "ink": "#1b1b1f",
+        "paper": "#f5f2ea"
+      }
+    }
+  ],
+  "publisher": "emile",
+  "licence": "MIT"
+}

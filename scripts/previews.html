@@ -5,7 +5,7 @@
 // The page scripts/previews.mjs drives: each frame of a pack's preview
 // drawn by Émile's own compositor, as the product draws it.
 //
-// A filter, over its own clip (scripts/footage.json): the footage as it is,
+// A filter or a look, over its own clip (scripts/footage.json): the footage as it is,
 // wiped to the filter from the left, held, wiped back. A transition,
 // between two cards drawn here so its movement reads at a glance (a solid
 // colour each, a big A and a big B): card A, the transition once into
@@ -74,6 +74,17 @@ const out = canvasOf(W, H), g = out.getContext('2d')
 // A filter's frame i: how far the wipe has gone from the left (0–1)
 const wipe = i => (i < 12 ? 0 : i < 36 ? ease((i - 12) / 24) : i < 72 ? 1 : i < 90 ? 1 - ease((i - 72) / 18) : 0)
 
+// What is drawn over the footage at frame i: a filter at its defaults, or a
+// look's filters one over another, bottom first, each as the look sets it
+function over(id, i) {
+  const footage = { op: 'stack', layers: [{ op: 'clip', id: 'a', f: i }] }
+  const list = packs[id].kind === 'look' ? packs[id].filters : [{ id, params: {} }]
+  return list.reduce((src, f) => ({
+    op: 'filter', id: f.id, params: f.params ?? {}, seed: f.seed ?? 1234, frame: i,
+    ...(f.amount != null ? { amount: f.amount } : {}), ...(f.blend ? { blend: f.blend } : {}), src
+  }), footage)
+}
+
 function filterFrame(id, i) {
   const base = looped(i)
   // The footage as it is first: base may be the scratch canvas, which the
@@ -81,7 +92,7 @@ function filterFrame(id, i) {
   g.drawImage(base, 0, 0, W, H)
   const x = Math.round(wipe(i) * W)
   if (x > 0) {
-    drawTree({ op: 'filter', id, params: {}, seed: 1234, frame: i, src: { op: 'stack', layers: [{ op: 'clip', id: 'a', f: i }] } }, { a: base })
+    drawTree(over(id, i), { a: base })
     g.save()
     g.beginPath()
     g.rect(0, 0, x, H)

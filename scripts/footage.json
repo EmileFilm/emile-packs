@@ -161,6 +161,36 @@
    "sha256": "1ce86ffc22070dd72b2a6fb60d9d959d291c00e3fd909bdc95bcd1b46e45fb20",
    "from": 1.2,
    "seconds": 4.5
+  },
+  "pink-phosphor": {
+   "file": "pexels-3842243.mp4",
+   "what": "a pinball table's lit playfield in an arcade",
+   "page": "https://www.pexels.com/video/tilt-shot-of-a-pinball-arcade-3842243/",
+   "download": "https://videos.pexels.com/video-files/3842243/3842243-hd_1280_720_60fps.mp4",
+   "bytes": 1950949,
+   "sha256": "8f99071c85090d3eff13cd069c4656b121e508ede6a910fd354a3f4ed383e2ee",
+   "from": 0.7,
+   "seconds": 4.5
+  },
+  "receipt": {
+   "file": "pexels-7534445.mp4",
+   "what": "a stone bust against a plain wall, the camera moving slowly",
+   "page": "https://www.pexels.com/video/a-concrete-sculpture-7534445/",
+   "download": "https://videos.pexels.com/video-files/7534445/7534445-hd_1280_720_24fps.mp4",
+   "bytes": 1881284,
+   "sha256": "f79fd718b7932c0232b6475739c64089abd4d5b85fe6018098b4837b1c9a6844",
+   "from": 0.3,
+   "seconds": 4.5
+  },
+  "direct-flash": {
+   "file": "pexels-18662635.mp4",
+   "what": "a crowded street at night under neon signs",
+   "page": "https://www.pexels.com/video/a-group-of-people-walking-through-a-crowded-city-street-18662635/",
+   "download": "https://videos.pexels.com/video-files/18662635/18662635-hd_1280_720_60fps.mp4",
+   "bytes": 2330276,
+   "sha256": "d534c07dbd9d93f3f2abec2771a07582ddb56fd7af7934f8c2aadb1fca40629b",
+   "from": 0.4,
+   "seconds": 4.5
   }
  }
 }

@@ -35,7 +35,7 @@ export const GENERATED = ['skills/emile-shaders', 'guides/filters/choosing-filte
 // emile/transitions/wipe/, emile/sounds/whoosh-02/, emile/instruments/piano/.
 // The pack's id stays <publisher>/<name> (emile/grain): the kind is where
 // it is kept, not part of its name
-export const KIND_FOLDER = { filter: 'filters', transition: 'transitions', sound: 'sounds', instrument: 'instruments' }
+export const KIND_FOLDER = { filter: 'filters', transition: 'transitions', look: 'looks', sound: 'sounds', instrument: 'instruments' }
 // Every pack folder of the repository (absolute paths, sorted by id)
 export function packFolders(root) {
   const apart = ['scripts', 'node_modules', 'skills', 'guides', 'docs', 'assets']

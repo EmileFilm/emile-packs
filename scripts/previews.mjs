@@ -77,7 +77,8 @@ async function clip(name) {
   if (!fs.existsSync(file)) {
     console.log(`downloading ${c.page} into ${file}`)
     fs.mkdirSync(path.dirname(file), { recursive: true })
-    await download(c.download, file, c.sha256)
+    // (The engine's download reports its bytes as they come: nothing to show here)
+    await download(c.download, file, c.sha256, () => {})
   }
   if (sha256(file) !== c.sha256) fail(`${file} isn't the clip footage.json records (its SHA-256 differs): download ${c.page} again`)
   return { ...c, path: file }
@@ -112,7 +113,12 @@ async function packPreviews() {
   for (const dir of packDirs) {
     const pack = JSON.parse(fs.readFileSync(path.join(dir, 'pack.json'), 'utf8'))
     // Only what the compositor draws: a sound and an instrument have no shader
-    if (pack.kind !== 'filter' && pack.kind !== 'transition') continue
+    if (!['filter', 'transition', 'look'].includes(pack.kind)) continue
+    // A look has no shader of its own: its filters, drawn one over another
+    if (pack.kind === 'look') {
+      all[pack.id] = { dir, kind: 'look', filters: pack.filters }
+      continue
+    }
     const read = f => fs.readFileSync(path.join(dir, f), 'utf8')
     all[pack.id] = { dir, kind: pack.kind, params: pack.params, glsl: read(pack.backends.glsl), passes: (pack.passes ?? []).map(p => ({ id: p.id, scale: p.scale, glsl: read(p.glsl) })) }
   }
@@ -129,7 +135,7 @@ async function packPreviews() {
     const compositor = pathToFileURL(path.join(engine, 'core', 'compose', 'compositor.js')).href
     await page.goto(`${pathToFileURL(path.join(ROOT, 'scripts', 'previews.html')).href}?compositor=${encodeURIComponent(compositor)}`)
     await page.evaluate(`new Promise(r => { const c = () => window.ready ? r() : setTimeout(c, 20); c() })`)
-    const packs = Object.fromEntries(Object.entries(all).map(([id, p]) => [id, { id, kind: p.kind, params: p.params, glsl: p.glsl, passes: p.passes }]))
+    const packs = Object.fromEntries(Object.entries(all).map(([id, p]) => [id, p.kind === 'look' ? { id, kind: 'look', filters: p.filters } : { id, kind: p.kind, params: p.params, glsl: p.glsl, passes: p.passes }]))
     await page.evaluate(`Preview.setup(${JSON.stringify(packs)})`)
     const n = await page.evaluate('Preview.N')
     for (const id of ids) {

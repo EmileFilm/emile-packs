@@ -1,0 +1,46 @@
+{
+  "id": "emile/pink-phosphor",
+  "kind": "look",
+  "version": "1.0.0",
+  "title": {
+    "en": "Pink phosphor",
+    "zh-CN": "粉色荧光屏"
+  },
+  "description": {
+    "en": "A one-colour monitor whose tube glows pink: two tones, light spilling from the bright parts, a curved face with scan lines.",
+    "zh-CN": "一台单色显示器，显像管发着粉光：两个色调，亮处漏光，微微鼓起的屏面与扫描线。"
+  },
+  "params": [],
+  "filters": [
+    {
+      "id": "emile/duotone",
+      "version": "^1",
+      "params": {
+        "dark": "#16040d",
+        "light": "#ff9ccb",
+        "contrast": 1.7,
+        "balance": 0.5
+      }
+    },
+    {
+      "id": "emile/bloom",
+      "version": "^2",
+      "params": {
+        "threshold": 0.6,
+        "radius": 0.5,
+        "warmth": 0
+      }
+    },
+    {
+      "id": "emile/crt",
+      "version": "^1",
+      "params": {
+        "curvature": 0.3,
+        "scanlines": 0.7,
+        "mask": 0.15
+      }
+    }
+  ],
+  "publisher": "emile",
+  "licence": "MIT"
+}

@@ -31,6 +31,7 @@ One kind of part per section; more kinds will come, each a section of its own.
 | Kind | What | For your own agent | In Émile |
 |---|---|---|---|
 | [Shaders](#shaders) | 15 filters and 4 transitions, GLSL with a WebGL2 runner | [`skills/emile-shaders`](skills/emile-shaders/SKILL.md) | a filter clip over the tracks under it, a transition between two clips |
+| Looks | 3 looks: a named set of filters with their values (`emile/looks/`: pink phosphor, receipt, direct flash finish) | each pack's `SKILL.md` | laid at once, each filter a filter clip on its own track |
 | [Sounds](#sounds) | 112 sound effects, 8 for each kind of moment, CC0 WAV, each marked with the moment it goes on | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
 | [Instruments](#instruments) | 9 sampled instruments (SFZ over CC0 samples) | — (they need an SFZ player; the samples are a release asset) | the film's music, written as a score and played on them |
 | [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, motion, subtitle styles | [`guides/`](guides) | read by Émile's AI with the task they belong to |

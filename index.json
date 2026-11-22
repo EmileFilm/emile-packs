@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.7",
- "published": "2026-11-22T05:54:26.232Z",
+ "tag": "v1.2.8",
+ "published": "2026-11-22T07:16:30.167Z",
  "contract": 4,
  "packs": [
   {
@@ -2122,6 +2122,47 @@
      "path": "shader.glsl",
      "bytes": 2525,
      "sha256": "6eda879c49d9f566418b5d5f962bb7ba8f95e1c0cc76c5f31583ca2897dc7964"
+    }
+   ]
+  },
+  {
+   "id": "emile/direct-flash",
+   "folder": "emile/looks/direct-flash/",
+   "version": "1.0.0",
+   "kind": "look",
+   "category": null,
+   "title": {
+    "en": "Direct flash finish",
+    "zh-CN": "直闪收尾"
+   },
+   "description": {
+    "en": "The finish over a shot made with a small camera's own flash: a little lens fringing and fine grain, to take the sheen off.",
+    "zh-CN": "给小相机直闪拍出的镜头收尾：一点镜头色散与细颗粒，去掉太干净的光泽。"
+   },
+   "params": [],
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 365246,
+     "sha256": "9bc89dff21d567b3f13844c7bcb78178680e5256cd3e02200a678ffdca431637"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 86001,
+     "sha256": "5c4938d31d3d841bd201989449822ca3927a5a93fceac4c390ec5c40ff0198a9"
+    }
+   },
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1247,
+     "sha256": "14bee002264b972c06d8670536a27c460cd9d02d5d87b4b49012ae75eab682fb"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 794,
+     "sha256": "6abeba48c347e9bcde847b19bd48003e30fa6bff9c698d0d8095acb00acc4705"
     }
    ]
   },
@@ -4452,6 +4493,47 @@
    ]
   },
   {
+   "id": "emile/pink-phosphor",
+   "folder": "emile/looks/pink-phosphor/",
+   "version": "1.0.0",
+   "kind": "look",
+   "category": null,
+   "title": {
+    "en": "Pink phosphor",
+    "zh-CN": "粉色荧光屏"
+   },
+   "description": {
+    "en": "A one-colour monitor whose tube glows pink: two tones, light spilling from the bright parts, a curved face with scan lines.",
+    "zh-CN": "一台单色显示器，显像管发着粉光：两个色调，亮处漏光，微微鼓起的屏面与扫描线。"
+   },
+   "params": [],
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 361629,
+     "sha256": "e6683c608fd2e41e84350479f8104ffd6f53e00880d9f702238302919ca9f554"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 60504,
+     "sha256": "4399d511e629a801bf3424cc9f2034ff4a5c5a1d6522ad8503d0c32c8a5da2b8"
+    }
+   },
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1108,
+     "sha256": "90dc2daee38e8a0017a7f73b7f51ae5cfdbbcadb5a695091957fc4fb7a7a0ef6"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 1032,
+     "sha256": "6ce203906a3fbf79c5e0ac52df7c1bca548ecd56443bee729e45d96de08627e7"
+    }
+   ]
+  },
+  {
    "id": "emile/pop-01",
    "folder": "emile/sounds/pop-01/",
    "version": "1.2.1",
@@ -4854,6 +4936,47 @@
      "path": "shader.glsl",
      "bytes": 269,
      "sha256": "b7fb4f74013f5d1015f9f445d761b7585b44e0cecff591a020e491c3ac6d4a7e"
+    }
+   ]
+  },
+  {
+   "id": "emile/receipt",
+   "folder": "emile/looks/receipt/",
+   "version": "1.0.0",
+   "kind": "look",
+   "category": null,
+   "title": {
+    "en": "Receipt",
+    "zh-CN": "热敏小票"
+   },
+   "description": {
+    "en": "A picture as a till prints it: black dots on off-white paper.",
+    "zh-CN": "收银机打出来的画面：米白的纸上一粒粒黑点。"
+   },
+   "params": [],
+   "preview": {
+    "video": {
+     "path": "preview.mp4",
+     "bytes": 362825,
+     "sha256": "1cc1e635a2b20799b0e645680fd861e662714f6efa2eaa83ca096262e37b10a2"
+    },
+    "still": {
+     "path": "preview.jpg",
+     "bytes": 208795,
+     "sha256": "5c094dd4d7cdea3f09048cd1345c572b239a18b9ee934dfc00231f13169a7dd7"
+    }
+   },
+   "licence": "MIT",
+   "files": [
+    {
+     "path": "SKILL.md",
+     "bytes": 1066,
+     "sha256": "45ff3caeb7ef202a0a20a6cd3aa8bb474fac1b0c4f1fbc762605ff6c42670daf"
+    },
+    {
+     "path": "pack.json",
+     "bytes": 584,
+     "sha256": "fa69bb7e41df0f34854fc3591af33198f934e347979209d39e533e87dec269e4"
     }
    ]
   },
@@ -7503,13 +7626,13 @@
    "description": "Which of Émile's free filters fits a moment of the film, how long it holds up there, and the pictures it fails on, all fifteen in one page. Use it before laying a filter over a film or when the person names a feeling rather than a filter; not for transitions.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "b7279140a0b207f77940ea6bd68e617384c1ba918e697339076e0b50d1cb1992",
+   "digest": "b1812da531552f8e929eba981e69142a7606db415e06f1000454788223fede26",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 25101,
-     "sha256": "5df829d3b88f2717c47b04f6baa91965d8097c36bb63b87063a8332095729edb"
+     "bytes": 22826,
+     "sha256": "cc46024226ba55d698496945d3a6d56240d4a3f7f3426edd0373e8a086b62a81"
     }
    ]
   },

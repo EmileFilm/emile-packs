@@ -1,0 +1,34 @@
+{
+  "id": "emile/direct-flash",
+  "kind": "look",
+  "version": "1.0.0",
+  "title": {
+    "en": "Direct flash finish",
+    "zh-CN": "直闪收尾"
+  },
+  "description": {
+    "en": "The finish over a shot made with a small camera's own flash: a little lens fringing and fine grain, to take the sheen off.",
+    "zh-CN": "给小相机直闪拍出的镜头收尾：一点镜头色散与细颗粒，去掉太干净的光泽。"
+  },
+  "params": [],
+  "filters": [
+    {
+      "id": "emile/chromatic-aberration",
+      "version": "^1",
+      "params": {
+        "mode": "lens",
+        "strength": 0.2
+      }
+    },
+    {
+      "id": "emile/grain",
+      "version": "^1",
+      "params": {
+        "amount": 0.25,
+        "size": 1.4
+      }
+    }
+  ],
+  "publisher": "emile",
+  "licence": "MIT"
+}
