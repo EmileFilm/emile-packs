@@ -1,9 +1,3 @@
----
-name: sound-match-cut
-description: A sound match cut, one sound becoming another across a cut because the two shots move or look alike (a splash into the pop of a bottle, a ball's bounce into a heartbeat, a spinning wheel into a fan): an advanced edit that only works when it comes from the picture. How to find a pair in the film, cut it and voice it in Émile. Read when two shots share a motion, a rhythm or a shape.
-kind: tool
----
-
 # Sound match cut
 
 Two shots are joined by a sound that belongs to both: a diver hits the water and the splash becomes the fizz of a drink poured; the click of a pen becomes a camera's shutter; a door slams and becomes a drum hit. The cut becomes an idea: these two are alike. It is one of the most admired moves an editor has, and it only works when the picture gives it.

@@ -1,7 +1,7 @@
 {
  "format": 1,
- "tag": "v1.2.8",
- "published": "2026-11-22T07:16:30.167Z",
+ "tag": "v1.2.9",
+ "published": "2026-11-22T07:56:52.959Z",
  "contract": 4,
  "packs": [
   {
@@ -7654,19 +7654,19 @@
    ]
   },
   {
-   "name": "motion",
-   "folder": "guides/motion/",
-   "title": "How things move",
-   "description": "How things in a film should move, as judgement and not a catalogue. What carries the motion, where the one accent falls, fast next to still, which words are large, and when to leave the frame alone. Read when planning a film and when writing a clip.",
+   "name": "research",
+   "folder": "guides/research/",
+   "title": "Looking things up",
+   "description": "Looking something up for a film, with search_web and read_page: what to search for, which pages to trust, how to check a number or a date, what to keep and how to say where it came from, and when to stop. Read before a film that states facts (a product, a company, a person, an event, a statistic), or when the person asks to find something out.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "46e7dfb6bf2e526730ac16768447583a46ac41ccf4542170354b115c46481d8a",
+   "digest": "b2c96139f6823886cbe1ecc31349b6ceee005435c480a6173276af9df24a45d6",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 6498,
-     "sha256": "97dfc2581397798bf7827431a1d97ebc08e6f9f578438d51ce47280536d77f12"
+     "bytes": 4040,
+     "sha256": "c4708142ee62750ed7b80b2b4786bfbd57ce314525d82ec34194b8811b857db2"
     }
    ]
   },
@@ -7677,98 +7677,13 @@
    "description": "How to give a film its music in Émile: when to write a score on the instrument packs and when to generate music from a prompt, how to choose a tempo the cuts land on, how to shape the music to the film's sections, voice it so it sounds good, leave room for a voice-over, and the mistakes that make film music sound cheap. Read it before write_score or generate_music.",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "38596f20753bdd07a6397d98c9affcd4f9b618056732ef27ea4fafebb8d8ad22",
+   "digest": "96645dd7349de51a660fa690f60b09727b42dd60748986190847c581606bcc4a",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 9873,
-     "sha256": "b03bc9e63766d10dbca027df0da89fd835327e067635c34e6a79682b4ea76fad"
-    }
-   ]
-  },
-  {
-   "name": "sound-ambience-carry",
-   "folder": "guides/sound/sound-ambience-carry/",
-   "title": "A place's sound across the cut",
-   "description": "A place's sound carried across a cut: run on into the next shot (an L-cut) or coming in before it (a J-cut), and a bed under shots that have no sound of their own so the film never drops into silence. Which way, how long, and how in Émile and with ffmpeg. Read for every cut between places, and when footage has no sound.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "bdffa332ff21ffba39069b76dca81d9a7d634cc9fb9b00125d3ec58cb4b53d1b",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 3080,
-     "sha256": "1d5b791579621e511e357eab90f0b7fdd35a19ce52feadce5ba11b9f27502099"
-    }
-   ]
-  },
-  {
-   "name": "sound-match-cut",
-   "folder": "guides/sound/sound-match-cut/",
-   "title": "Sound match cut",
-   "description": "A sound match cut, one sound becoming another across a cut because the two shots move or look alike (a splash into the pop of a bottle, a ball's bounce into a heartbeat, a spinning wheel into a fan): an advanced edit that only works when it comes from the picture. How to find a pair in the film, cut it and voice it in Émile. Read when two shots share a motion, a rhythm or a shape.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "21fc8c77491e891cfc770bd79b7aacc038ddc0b664ca17215f1af24bea87865b",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 2337,
-     "sha256": "f64308e7240cc9391060e74a5ac22942a510f0df0f77e69af72b393701c75b9b"
-    }
-   ]
-  },
-  {
-   "name": "sound-muffle-release",
-   "folder": "guides/sound/sound-muffle-release/",
-   "title": "Muffle, then release",
-   "description": "The held breath before an action and the release on it: everything muffled (a low-pass closing) while someone stands at the edge, and the sound opening, full and bright, on the jump, the landing, the press, the reveal. When, how far, how fast, and how to do it with Émile's low-pass. Read when the picture holds still before something happens.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "958d13c4d17ae05b89e51bb2dcd4e39f7de7a7c0e28c6655bc8bb9df12ecb951",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 2997,
-     "sha256": "ebb963a57e934e31f64c7d342f6a87d72f49c8f19a7aa501a5a630363dea6b1f"
-    }
-   ]
-  },
-  {
-   "name": "sound-music-sections",
-   "folder": "guides/sound/sound-music-sections/",
-   "title": "A music for each section",
-   "description": "More than one music in a film, one for each of its sections, handed over where the picture's feeling changes: the first music rising (a riser), a hit and an impact on the change, the next music starting with them. Where the change goes, how the two overlap, which sounds, and how in Émile. Read when a film's feeling changes partway (calm to exciting, problem to solution, story to call to action).",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "b61526e2004e94e0bbc3116739983e7af3c5f96175904c27ef2446ac384d3b92",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 3235,
-     "sha256": "c43c13333c62b0c9ce25e79c12ca3f07d27419ffdb7dadaae52a8bcc46a5b9f8"
-    }
-   ]
-  },
-  {
-   "name": "sound-strong-ending",
-   "folder": "guides/sound/sound-strong-ending/",
-   "title": "End on a strong sound",
-   "description": "Ending a film on one strong sound instead of a fade: the music cut on its last hit with the picture's last moment, a big boom ringing out over the final shot or into black. Where, which sound, and how in Émile. Read for the end of every film.",
-   "kind": "tool",
-   "licence": "MIT",
-   "digest": "95f68557b4b237d4e2ae2776540ebc0cccaf2cd4d01420329517351508cbf4f3",
-   "preview": null,
-   "files": [
-    {
-     "path": "SKILL.md",
-     "bytes": 1774,
-     "sha256": "9c5035a9a2c4140cb509dd848815d13fc2275eaaad96f3d30475f8ccd9b40321"
+     "bytes": 9907,
+     "sha256": "67a372f23cba444f949a60ba786092f274431ea445fc61b4a44f4b0a8e20802d"
     }
    ]
   },
@@ -7779,13 +7694,38 @@
    "description": "How a film's sound follows its picture's feeling, as an editor does it: look at the cut film first, find its sections and its moments (the leap, the landing, the reveal, the end), mark them on the timeline with a suggested recipe, then choose few and simple moves (a muffle released on the moment, a place's sound carried across a cut, a new music for a new section with a rise and a hit, a strong last sound, a sound match cut). Read before laying any music or sound on a film, and whenever the person asks for its sound to be \"better\", \"more cinematic\" or \"like an ad\".",
    "kind": "tool",
    "licence": "MIT",
-   "digest": "41879c33a8b48c322301957f7088d060590a1a69223eaefea6bf3405bf22e0d8",
+   "digest": "149f85892acdfd4b4df4e87c25d6f506924b585269463f5f7e6b4c52bac34d78",
    "preview": null,
    "files": [
     {
      "path": "SKILL.md",
-     "bytes": 9729,
-     "sha256": "570ac19d2caaa25b8edc2c64ad91fed53311057569c16a01c213f0b83cd24942"
+     "bytes": 9884,
+     "sha256": "401f4d710c3a07d62e974abf312cb79cc05fba5e4c62a3f6c50292902c931aad"
+    },
+    {
+     "path": "references/ambience-carry.md",
+     "bytes": 2450,
+     "sha256": "e6371fb47e24148aea040b3366b106f027b179fd543c1f2fd6cdd981652eae8a"
+    },
+    {
+     "path": "references/match-cut.md",
+     "bytes": 1897,
+     "sha256": "7fd2d8336a5d2a0aa32c9442717635e566d2f36e9709d7b579c9eee050d033d6"
+    },
+    {
+     "path": "references/muffle-release.md",
+     "bytes": 2306,
+     "sha256": "f037448b289c63ac0ea1fd796f20fcf639917a4ef2018f4f6c641acce626ad23"
+    },
+    {
+     "path": "references/music-sections.md",
+     "bytes": 2367,
+     "sha256": "feff60885a6cec2c511a494531dd6beb960e351c09f496c470e62d34be38ceba"
+    },
+    {
+     "path": "references/strong-ending.md",
+     "bytes": 1285,
+     "sha256": "c1a6494ba0fbcbd9d4a328c66bfa3073d9d25764e405a718576f039bfc759c5e"
     }
    ]
   },

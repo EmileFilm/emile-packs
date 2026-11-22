@@ -34,14 +34,14 @@ One kind of part per section; more kinds will come, each a section of its own.
 | Looks | 3 looks: a named set of filters with their values (`emile/looks/`: pink phosphor, receipt, direct flash finish) | each pack's `SKILL.md` | laid at once, each filter a filter clip on its own track |
 | [Sounds](#sounds) | 112 sound effects, 8 for each kind of moment, CC0 WAV, each marked with the moment it goes on | [`skills/emile-sounds`](skills/emile-sounds/SKILL.md) | an effect clip at the moment it is heard |
 | [Instruments](#instruments) | 9 sampled instruments (SFZ over CC0 samples) | — (they need an SFZ player; the samples are a release asset) | the film's music, written as a score and played on them |
-| [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, motion, subtitle styles | [`guides/`](guides) | read by Émile's AI with the task they belong to |
+| [Reference Skills](#reference-skills) | Guides an AI reads before it chooses: scoring, sound across a cut, choosing filters, looking things up, subtitle styles | [`guides/`](guides) | read by Émile's AI with the task they belong to |
 
 ### Where things are
 
 | You want | Look in |
 |---|---|
 | Something to install in your own agent | [`skills/`](skills): each folder is a Skill, copied away whole (`emile-shaders`, `emile-sounds`) |
-| How Émile's AI chooses and uses the parts | [`guides/`](guides), by subject: [`filters/`](guides/filters), [`motion/`](guides/motion), [`music/`](guides/music), [`sound/`](guides/sound), [`subtitles/`](guides/subtitles), [`editing/`](guides/editing) |
+| How Émile's AI chooses and uses the parts | [`guides/`](guides), by subject: [`filters/`](guides/filters), [`music/`](guides/music), [`sound/`](guides/sound), [`subtitles/`](guides/subtitles), [`editing/`](guides/editing), [`research/`](guides/research) |
 | The parts themselves | [`emile/`](emile), by kind: [`filters/`](emile/filters), [`transitions/`](emile/transitions), [`sounds/`](emile/sounds), [`instruments/`](emile/instruments) |
 
 Everything is listed in a signed `index.json`; Émile downloads a part the first time a film uses it and checks every file against the index.
@@ -183,7 +183,7 @@ Any SFZ player plays them (Émile uses [sfizz](https://github.com/sfztools/sfizz
 
 ## Reference Skills
 
-Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](guides/sound/sound-transitions/SKILL.md) (a film's sound following its picture's feeling, as editors do it: look at the cut film first, find its sections and moments, then a checklist of the few moves the picture asks for) with one Skill for each move: [`sound-muffle-release`](guides/sound/sound-muffle-release/SKILL.md) (muffled before the jump, opened on it), [`sound-ambience-carry`](guides/sound/sound-ambience-carry/SKILL.md) (a place's sound carried across a cut), [`sound-music-sections`](guides/sound/sound-music-sections/SKILL.md) (a music for each section, handed over with a riser and a hit), [`sound-strong-ending`](guides/sound/sound-strong-ending/SKILL.md), [`sound-match-cut`](guides/sound/sound-match-cut/SKILL.md); [`scoring`](guides/music/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](guides/filters/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`motion`](guides/motion/SKILL.md) (how things move in a clip), and the subtitle styles (`guides/subtitles/subtitle-<style>/`, each with an example page).
+Guides Émile's AI reads before it chooses, written for an AI and readable by any agent: [`sound-transitions`](guides/sound/sound-transitions/SKILL.md) (a film's sound following its picture's feeling, as editors do it: look at the cut film first, find its sections and moments, then a checklist of the few moves the picture asks for), with a page for each move in its `references/`: [`muffle-release`](guides/sound/sound-transitions/references/muffle-release.md) (muffled before the jump, opened on it), [`ambience-carry`](guides/sound/sound-transitions/references/ambience-carry.md) (a place's sound carried across a cut), [`music-sections`](guides/sound/sound-transitions/references/music-sections.md) (a music for each section, handed over with a riser and a hit), [`strong-ending`](guides/sound/sound-transitions/references/strong-ending.md), [`match-cut`](guides/sound/sound-transitions/references/match-cut.md); [`scoring`](guides/music/scoring/SKILL.md) (a film's music: score or generate, tempo from the cuts, voicing, and which genres to prompt for), [`choosing-filters`](guides/filters/choosing-filters/SKILL.md) (which filter for which moment and kind of film), [`research`](guides/research/SKILL.md) (looking things up: what to search, which pages to trust, how to check a number), and the subtitle styles (`guides/subtitles/subtitle-<style>/`, each with an example page).
 
 ## Use them
 

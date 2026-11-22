@@ -28,7 +28,7 @@ import path from 'node:path'
 export const GENERATED = ['skills/emile-shaders', 'guides/filters/choosing-filters', 'skills/emile-sounds']
 // skills/ holds only what other people's agents install (each folder is
 // copied away whole). The guides Émile's own AI reads are in guides/, by
-// subject (guides/sound/sound-match-cut/, guides/motion/): every folder
+// subject (guides/sound/sound-transitions/, guides/editing/): every folder
 // there with a SKILL.md is one, whatever its depth; a name is one guide.
 // Each as { name, folder }, folder from the repository's root
 // A publisher's packs are in a folder for each kind: emile/filters/grain/,

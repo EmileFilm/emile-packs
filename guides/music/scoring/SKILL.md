@@ -8,7 +8,7 @@ kind: tool
 
 A film for a product or a company is short, and its music carries half its feeling. Good music for it is simple, follows the picture, and is never louder than what is said. This page is how to get there with Émile's two ways of making music.
 
-The music comes after the picture: first look at the cut film and find its sections and moments (`sound-transitions`). A film whose feeling changes gets a music for each section (`sound-music-sections`), each written or generated for its part with `from_seconds`/`to_seconds`; every film ends on a strong sound (`sound-strong-ending`).
+The music comes after the picture: first look at the cut film and find its sections and moments (the Skill `sound-transitions`). A film whose feeling changes gets a music for each section (its `references/music-sections.md`), each written or generated for its part with `from_seconds`/`to_seconds`; every film ends on a strong sound (its `references/strong-ending.md`).
 
 ## Which way
 

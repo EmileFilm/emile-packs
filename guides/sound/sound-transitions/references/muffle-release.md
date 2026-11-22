@@ -1,9 +1,3 @@
----
-name: sound-muffle-release
-description: The held breath before an action and the release on it: everything muffled (a low-pass closing) while someone stands at the edge, and the sound opening, full and bright, on the jump, the landing, the press, the reveal. When, how far, how fast, and how to do it with Émile's low-pass. Read when the picture holds still before something happens.
-kind: tool
----
-
 # Muffle, then release
 
 Before a diver jumps, the world goes quiet and dull, as if heard from inside a held breath; on the jump (or the splash) it all comes back at once, brighter than before. The same works for the finger over a button, the last second of a countdown, a product under a cloth. It needs no new sound: the music and the place's sound you have, muffled and opened.
@@ -28,7 +22,7 @@ On the moment that is the release in the picture, found to the frame:
 | Held | closed until the release |
 | Opens | at once on the release (within 1–2 frames), to full |
 
-Muffle what was playing: the music, the place's bed. Not a riser laid on top for the build (it should cut through the muffle) and never a voice. On the release, make it bigger than before: the new section's music (`sound-music-sections`) and a hit come in on that frame.
+Muffle what was playing: the music, the place's bed. Not a riser laid on top for the build (it should cut through the muffle) and never a voice. On the release, make it bigger than before: the new section's music (`music-sections.md`) and a hit come in on that frame.
 
 ## In Émile
 
@@ -39,14 +33,6 @@ Muffle what was playing: the music, the place's bed. Not a riser laid on top for
 - a video whose own sound plays through it: the same on the video.
 
 `"[]"` takes a low-pass off. Check it: `view_frames` won't show it; read the timeline back.
-
-## With ffmpeg
-
-Music muffled from 12.2 s (to 500 Hz by 14.0 s), opened at 15.35 s:
-
-```bash
-ffmpeg -i music.wav -af "asendcmd=c='12.2 lowpass f 20000;12.6 lowpass f 6000;13.0 lowpass f 2500;13.5 lowpass f 1100;14.0 lowpass f 500;15.35 lowpass f 20000',lowpass=f=20000" out.wav
-```
 
 ## The tired version
 
